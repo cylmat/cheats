@@ -1,2 +1,2 @@
-# usefulcmd
+# Useful commands
 Useful commands and sheets
