@@ -1,4 +1,8 @@
-### BRANCH - MODIFY or DELETE
+### BRANCH
+#### CREATE
+git checkout -b <branch> --track origin/<branch>
+
+#### MODIFY or DELETE
 git branch -m feature/OPFR-1234 feature/OPFR-4321  
 git branch -D feature/OPFR-XXXX  
 git push --delete origin feature/OPFR-XXXX  
