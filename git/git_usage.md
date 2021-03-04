@@ -36,7 +36,7 @@ git revert <commit>
 git reset --hard origin/HEAD
     
 ### TRACKING
-git add -f <ignored_file>
+git add -f <ignored_file>  
 git rm --cached <file_to_ignore> 
 
 ### TAG
