@@ -34,6 +34,10 @@ git log --grep="xxx"
 git reset fichier1 fichier2 rep1 ... 
 git revert <commit>  
 git reset --hard origin/HEAD
+    
+### TRACKING
+git add -f <ignored_file>
+git rm --cached <file_to_ignore> 
 
 ### TAG
 git tag -a CN18.1.0.2 -m CN18.1.0.2  
