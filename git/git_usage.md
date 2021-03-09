@@ -1,17 +1,17 @@
-Git usage
+GIT USAGE
 =========
 
 BRANCH
 ------
-##### CREATE
+##### * Create
 git checkout -b <branch> --track origin/<branch>
 
-##### MODIFY or DELETE
+##### * Modify or delete
 git branch -m feature/OPFR-1234 feature/OPFR-4321  
 git branch -D feature/OPFR-XXXX  
 git push --delete origin feature/OPFR-XXXX  
 
-##### Delete remote branch on local
+##### * Delete remote branch on local
 git fetch --all --prune 
 
 CONFIG
