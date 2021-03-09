@@ -1,7 +1,7 @@
 GIT USAGE
 =========
 
-BRANCH
+BRANCHES
 ------
 ##### * Create
 git checkout -b <branch> --track origin/<branch>
