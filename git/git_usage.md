@@ -65,3 +65,7 @@ git push origin --tags
 git tag -d mon_tag      # (delete)  
 git push origin --delete mon_tag    # (delete remote)  
 git fetch origin "+refs/tags/*:refs/tags/*"     # (recupère les tags supprimés du distant)
+
+* Ref
+* https://gist.github.com/mpeshev/9550375
+* https://gist.github.com/PaulCapestany/cebfbd54b0c25b6bd8b9
