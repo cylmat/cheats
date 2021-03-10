@@ -36,7 +36,7 @@ git diff branch_1 origin/branch_1
 
 FILESYSTEM
 ----------
-* In case of errors, or breaked HEAD  
+**In case of errors, or breaked HEAD**  
 git fsck --full
 
 LOGS
