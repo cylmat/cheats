@@ -41,9 +41,9 @@ git fsck --full
 
 LOGS
 ----
-**Voir la liste de tous les fichiers d'un commit**
-git show --pretty=oneline --name-only e36f071c7424e2
-**Grep**
+**Voir la liste de tous les fichiers d'un commit**  
+git show --pretty=oneline --name-only e36f071c7424e2  
+**Grep**  
 git log --grep="xxx"
 
 RESET & REVERT
