@@ -53,6 +53,11 @@ git reset fichier1 fichier2 rep1 ...
 git revert <commit>  
 git reset --hard origin/HEAD
     
+SHOW
+----
+**List of author of last 5 commits**  
+git show -s --format="%ae" $(git rev-list -5 --all)  
+    
 TRACKING
 --------
 git add -f <ignored_file>  
