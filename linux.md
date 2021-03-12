@@ -10,4 +10,4 @@ awk '{print $1}' RS=' ' FS=: ORS=' ' <<< 'my_input'
 clear: Ctrl+u
 
 ### Ref
-* [corporesano](http://www.corporesano.org/doc-site/grepawksed.html)
+* [corporesano.org: Grep Sed Awk](http://www.corporesano.org/doc-site/grepawksed.html)
