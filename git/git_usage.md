@@ -16,7 +16,11 @@ git fetch --all --prune
 
 CONFIG
 ------
-vim .git/info/exclude      # (exclude files)
+**Exclude files**  
+vim .git/info/exclude  
+
+**Proxy**
+git config http.proxy 'http://user:pass@proxy_url:8080'
 
 CLEAN - Remove untracked files & dirs
 -----
