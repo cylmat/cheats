@@ -1,17 +1,16 @@
-##############
-# VIM SHEETS #
-##############
+VIM SHEETS
+==========
 
----BUFFER
+### BUFFER
 https://vim.fandom.com/wiki/Buffers#Working_with_buffers
 :buffers
 :bp, :bn, :bprev, :bnext
 
----FILE
+### FILE
 :open <file>
 :e
 
----SPLIT SCREEN
+### SPLIT SCREEN
 https://linuxhint.com/vim_split_screen/
 :help split
 :vsplit, :vsp [file], :sp [file]
@@ -22,10 +21,10 @@ C-w |_ (expand h)
 C-w = (reset windows sizes)
 C-w q (close split)
 
----TAB
+### TAB
 https://vim.fandom.com/wiki/Using_tab_pages
 :tabs
 
----TERMINAL
+### TERMINAL
 :ter (open a terminal inside)
 :shell (back to the shell)
