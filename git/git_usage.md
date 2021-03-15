@@ -53,6 +53,7 @@ git log --grep="xxx"
 
 **First commit**
 git rev-list --max-parents=0 HEAD  
+git log --reverse -1
 
 RESET & REVERT
 --------------
