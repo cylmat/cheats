@@ -51,6 +51,9 @@ git show --pretty=oneline --name-only <commit_id>
 **Grep**  
 git log --grep="xxx"
 
+**First commit**
+git rev-list --max-parents=0 HEAD  
+
 RESET & REVERT
 --------------
 git reset fichier1 fichier2 rep1 ... 
