@@ -11,7 +11,7 @@ awk '{print $1}' RS=' ' FS=: ORS=' ' <<< 'my_input'
 echo "here is the string" | cut -d' ' -f 1  
 
 ## SHA 
-export SHA512=$(curl https://archive.sha512 | cut -d' ' -f 1)
+export SHA512=$(curl https://archive.sha512 | cut -d' ' -f 1)  
 echo "${SHA512} archive.bin" | sha512sum --check
 
 ### Shell
