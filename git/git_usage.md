@@ -55,6 +55,11 @@ git log --grep="xxx"
 git rev-list --max-parents=0 HEAD  
 git log --reverse -1
 
+PUSH
+----
+**push specific commit**  
+git push -u origin <commit>:main
+
 RESET & REVERT
 --------------
 git reset fichier1 fichier2 rep1 ... 
