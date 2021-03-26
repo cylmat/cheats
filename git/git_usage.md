@@ -44,16 +44,19 @@ FILESYSTEM
 git fsck --full
 
 LOGS
-----
-**Voir la liste de tous les fichiers d'un commit**  
-git show --pretty=oneline --name-only <commit_id>   
+---- 
+**First branch commit with "develop"**  
+git show -s --oneline $(git log --oneline --format="%H" --reverse develop.. | head -1)  
+
+**First project commit**  
+git rev-list --max-parents=0 HEAD  
+git log --reverse -1  
 
 **Grep**  
-git log --grep="xxx"
+git log --grep="xxx"  
 
-**First commit**
-git rev-list --max-parents=0 HEAD  
-git log --reverse -1
+**List of specific commit's files**  
+git show --pretty=oneline --name-only <commit_id>  
 
 PUSH
 ----
