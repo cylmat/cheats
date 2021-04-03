@@ -61,7 +61,10 @@ git show --pretty=oneline --name-only <commit_id>
 PUSH
 ----
 **push specific commit**  
-git push -u origin <commit>:main
+git push -u origin commit_hash:main
+
+**on specific remote**  
+git push other_repo HEAD:main  
 
 RESET & REVERT
 --------------
