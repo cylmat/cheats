@@ -27,6 +27,10 @@ echo "${SHA512} archive.bin" | sha512sum --check
 ### Shell
 clear: Ctrl+u  
 
+### SSH
+eval `ssh-agent -s`  
+ssh-add ~/.ssh/id_rsa  
+
 **Bash substitution**
 source <(sudo cat /etc/bash.bashrc)
 
