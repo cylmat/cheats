@@ -66,6 +66,11 @@ git push -u origin commit_hash:main
 **on specific remote**  
 git push other_repo HEAD:main  
 
+REBASE
+------
+**Rebase branch with conflict in main favor**  
+git rebase main -s recursive -X theirs  
+
 RESET & REVERT
 --------------
 git reset fichier1 fichier2 rep1 ... 
