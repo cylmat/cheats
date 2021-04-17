@@ -13,5 +13,5 @@ wget [OPTION]... [URL]...
 --spider                    (don't download anything, dry-run)  
 --(d)ebug --(q)uiet  
 
-**In target dir**  
-wget -P /target/dir https://my/url/file.zip  
+**Renamed in target dir**  
+mkdir /dir && wget -O /dir/rename.zip https://my/url/file.zip  
