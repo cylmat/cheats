@@ -8,3 +8,7 @@ exit 1
 
 **Return when sourced or bashed script**  
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"  
+
+$@
+$#
+$_
