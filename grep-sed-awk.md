@@ -3,7 +3,7 @@ Grep
 
 Sed
 ---
-sed -E 's/\w*/\(.*\)/' <<< "[date time] name.type: message"
+sed -E 's/pattern/' <<< "[date time] name.type: message"
 
 Awk
 ---
