@@ -1,6 +1,7 @@
 BASH
 ----
-###
+### Ref
+* https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
 
 **Return when sourced or bashed script**  
 echo "return" #executed from source  
