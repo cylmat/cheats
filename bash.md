@@ -1,5 +1,7 @@
 BASH
 ----
+
+
 **Return when sourced or bashed script**  
 echo "return" #executed from source  
 return 1 2>/dev/null  
