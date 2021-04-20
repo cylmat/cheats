@@ -14,6 +14,7 @@ $#
 $_  
 
 ##Options##  
+```
 for i in "$@"; do  
   case $i in  
     --dest=*)  
@@ -25,3 +26,4 @@ for i in "$@"; do
     ;;  
   esac  
 done  
+```
