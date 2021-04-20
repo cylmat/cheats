@@ -14,7 +14,6 @@ $#
 $_  
 
 ##Options##
-# OPTIONS
 for i in "$@"; do
   case $i in
     --dest=*)
