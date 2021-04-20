@@ -27,3 +27,6 @@ for i in "$@"; do
   esac
 done
 ```
+
+### Ref
+* https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
