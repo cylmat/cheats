@@ -15,15 +15,15 @@ $_
 
 ##Options##  
 ```
-for i in "$@"; do  
-  case $i in  
-    --dest=*)  
-      DEST="${i#*=}"  
-    ;;  
-    --help)  
-      display_usage  
-      exit 0  
-    ;;  
-  esac  
-done  
+for i in "$@"; do
+  case $i in
+    --dest=*)
+      DEST="${i#*=}"
+    ;;
+    --help)
+      display_usage
+      exit 0
+    ;;
+  esac
+done
 ```
