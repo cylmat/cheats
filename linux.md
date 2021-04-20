@@ -27,6 +27,3 @@ ssh-add ~/.ssh/id_rsa
 
 **Bash substitution**
 source <(sudo cat /etc/bash.bashrc)
-
-### Ref
-* [corporesano.org: Grep Sed Awk](http://www.corporesano.org/doc-site/grepawksed.html)
