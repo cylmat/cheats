@@ -30,3 +30,7 @@ done
 
 ### Ref
 * https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
+* https://github.com/dylanaraps/pure-bash-bible
+* https://github.com/Idnan/bash-guide
+* https://github.com/alexanderepstein/Bash-Snippets
+* https://github.com/denysdovhan/bash-handbook
