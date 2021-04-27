@@ -71,6 +71,9 @@ REBASE
 **Rebase branch with conflict in main favor**  
 git rebase main -s recursive -X theirs  
 
+**From root interactive**  
+git rebase --root -i
+
 RESET & REVERT
 --------------
 git reset fichier1 fichier2 rep1 ... 
