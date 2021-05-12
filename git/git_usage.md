@@ -14,6 +14,15 @@ git push --delete origin feature/OPFR-XXXX
 ##### * Delete remote branch on local
 git fetch --all --prune 
 
+##### * Show remote  
+**See from config** 
+git config remote.$(git config branch.master.remote).url
+git config remote.origin.url
+git remote show origin
+
+**See tracking branch**  
+git branch --all -vv
+
 CONFIG
 ------
 **Exclude files**  
