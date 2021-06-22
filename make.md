@@ -4,7 +4,7 @@ SHELL := /bin/bash
 .PHONY: args useful_command
 
 define useful_command  
-	command with args "${1}" "${2}"
+	command with args "${1}" "${2}"  
 endef
 
 call-command:
