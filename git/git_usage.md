@@ -112,3 +112,6 @@ Ref
 * https://gist.github.com/mpeshev/9550375
 * https://gist.github.com/PaulCapestany/cebfbd54b0c25b6bd8b9
 * https://gist.github.com/chrismccoy/8775224
+
+**Git to changelog**  
+* http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;f=build-aux/gitlog-to-changelog
