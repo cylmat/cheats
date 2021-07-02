@@ -14,16 +14,8 @@ Crlf
 tr -d '\r' < input.file > output.file  
 sed 's/^M$//' input.txt > output.txt  
 
-## SHA 
-export SHA512=$(curl https://archive.sha512 | cut -d' ' -f 1)  
-echo "${SHA512} archive.bin" | sha512sum --check
-
 ### Shell
-clear: Ctrl+u  
-
-### SSH
-eval `ssh-agent -s`  
-ssh-add ~/.ssh/id_rsa  
+clear: Ctrl+u   
 
 **Bash substitution**
 source <(sudo cat /etc/bash.bashrc)
