@@ -22,7 +22,16 @@ C-w = (reset windows sizes)
 C-w q (close split)
   
 ### REGISTER
-:reg  all registers
+:reg  all registers  
+"" default register   
+"5 fifth register  
+". last one  
+"% current file path  
+": most recent command  
+"# alternate file  
+"= expression one  
+"/ search register  
+:let @5='' clear register '5'  
 
 ### TAB
 https://vim.fandom.com/wiki/Using_tab_pages  
