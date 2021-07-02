@@ -34,3 +34,5 @@ https://vim.fandom.com/wiki/Using_tab_pages
 
 ## @ref
 * https://vimhelp.org/quickref.txt.html
+* https://vim.rtorr.com/
+* https://vim.fandom.com/wiki/Vim_Tips_Wiki
