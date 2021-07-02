@@ -1,0 +1,21 @@
+code --list-extensions
+
+bmewburn.vscode-intelephense-client
+Calsmurf2904.vscode-phpstan
+damianbal.vs-phpclassgen
+donjayamanne.githistory
+eamodio.gitlens
+fabiospampinato.vscode-diff
+felixfbecker.php-debug
+formulahendry.code-runner
+HookyQR.beautify
+ikappas.phpcs
+lonefy.vscode-JS-CSS-HTML-formatter
+MehediDracula.php-namespace-resolver
+mhutchie.git-graph
+nadim-vscode.symfony-code-snippets
+nadim-vscode.symfony-super-console
+naumovs.color-highlight
+neilbrayfield.php-docblocker
+randrade23.beautify-json
+ryu1kn.partial-diff
