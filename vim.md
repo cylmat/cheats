@@ -20,6 +20,9 @@ C-w n (swap with window n)
 C-w |_ (expand h)  
 C-w = (reset windows sizes)  
 C-w q (close split)
+  
+### REGISTER
+:reg  all registers
 
 ### TAB
 https://vim.fandom.com/wiki/Using_tab_pages  
