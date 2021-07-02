@@ -8,18 +8,21 @@ https://vim.fandom.com/wiki/Buffers#Working_with_buffers
 
 ### FILE
 :open <file>  
-:e
-
-### SPLIT SCREEN
-https://linuxhint.com/vim_split_screen/  
-:help split  
-:vsplit, :vsp [file], :sp [file]  
-C-w <v^> or C-w hjkl  
-C-w C-r (swap two windows)  
-C-w n (swap with window n)  
-C-w |_ (expand h)  
-C-w = (reset windows sizes)  
-C-w q (close split)
+:e  
+  
+### NAVIGATE
+gg begin of file
+G end of file
+0$ begin last line  
+^ g_ first last non-blank char  
+fFtT find next occurence on line  
+  ,; prev next search  
+3/ 3? search next/prev 3d in all text
+  nN next prev of search  
+*#  search for current word  
+{} next/prev paragraph  
+C-D C-U move down up half page  
+% match next/prev ({[]})  
   
 ### REGISTER
 :reg  all registers  
@@ -32,6 +35,17 @@ C-w q (close split)
 "= expression one  
 "/ search register  
 :let @5='' clear register '5'  
+
+### SPLIT SCREEN
+https://linuxhint.com/vim_split_screen/  
+:help split  
+:vsplit, :vsp [file], :sp [file]  
+C-w <v^> or C-w hjkl  
+C-w C-r (swap two windows)  
+C-w n (swap with window n)  
+C-w |_ (expand h)  
+C-w = (reset windows sizes)  
+C-w q (close split)
 
 ### TAB
 https://vim.fandom.com/wiki/Using_tab_pages  
