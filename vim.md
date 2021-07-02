@@ -31,3 +31,6 @@ https://vim.fandom.com/wiki/Using_tab_pages
 ### TERMINAL
 :ter (open a terminal inside)  
 :shell (back to the shell)
+
+## @ref
+* https://vimhelp.org/quickref.txt.html
