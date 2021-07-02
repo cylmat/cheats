@@ -1,0 +1,12 @@
+{
+    "vim.startInInsertMode": true,
+    "vim.handleKeys": {
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-z>": false,
+        "<C-y>": false,
+        "<C-x>": false
+    },
+    "vim.hlsearch": true,
+    "vim.smartRelativeLine": true
+}
