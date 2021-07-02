@@ -16,6 +16,3 @@ sed 's/^M$//' input.txt > output.txt
 
 ### Shell
 clear: Ctrl+u   
-
-**Bash substitution**
-source <(sudo cat /etc/bash.bashrc)
