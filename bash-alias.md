@@ -1,10 +1,12 @@
 BASH
 ----
 **Return when sourced or bashed script**  
+```
 echo "return" #executed from source  
 return 1 2>/dev/null  
 echo "exit" #executed from bash  
 exit 1  
+```
 
 **Return when sourced or bashed script**  
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"  
@@ -28,14 +30,19 @@ for i in "$@"; do
 done
 ```
 
-Alias
+**Bash substitution**
+source <(sudo cat /etc/bash.bashrc)
+
+ALIAS
 -----
 **Wrapping arguments**  
+```
 alias pushing='f(){ git add . && git commit -m "$@" && git push;  unset -f f; }; f'
 
 alias wrap_args='f(){ echo before "$@" after;  unset -f f; }; f'  
 alias wrap_args='sh -c '\''echo before "$@" after'\'' _'  
 alias mkcd='_mkcd(){ mkdir "$1"; cd "$1";}; _mkcd'  
+```
 
 ### Ref
 * https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
