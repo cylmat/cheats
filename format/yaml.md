@@ -2,10 +2,13 @@ Yaml
 ====
 **Merge and reuse**  
 ```
-checkout_top: &checkout
-    - 'get_cart'
-checkout_summary:
+che_top: &checkout
+    - 'cart1'
+    - 'cart2'
+che_summary:
     <<: *checkout
-checkout_slot:
+che_slot:
     <<: *checkout
 ```
+
+https://yaml.org/type/merge.html
