@@ -140,5 +140,5 @@ ANALYZE TABLE payments; OPTIMIZE TABLE test; CHECK TABLE test; REPAIR TABLE test
 mysqlcheck -u root -p --auto-repair --check --optimize --all-databases
 mysqlslap -u root -p --verbose --create-schema=classicmodels --query="SELECT * FROM test;" --iterations=10 --concurrency=50
 
-https://github.com/major/MySQLTuner-perl
+https://github.com/major/MySQLTuner-perl  
 ref: https://severalnines.com/database-blog/mysql-performance-cheat-sheet
