@@ -47,6 +47,23 @@ ELASTIC=0;
 if (( $(curl -v --silent -X GET "host:9200/_cluster/health?pretty" --stderr - | grep "HTTP/1.1 200 OK" | wc -l) == 1 )); then ELASTIC=1; fi
 ```
 
+Stderr-out
+---
+2>&1
+ping -c 1 yhoo.dsd 2>&1
+command1 1>&2 2>/dev/null
+
+# Prompt
+```
+export PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
+PS2=>
+PS3=
+PS4=+
+```
+
+ref:
+* https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+
 ALIAS
 -----
 **Wrapping arguments**  
