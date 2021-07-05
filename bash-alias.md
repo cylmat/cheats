@@ -33,6 +33,20 @@ done
 **Bash substitution**
 source <(sudo cat /etc/bash.bashrc)
 
+Sample
+---
+```
+NGINX=0; if (( $(service nginx status | grep "Active: active (running)" | wc -l) == 1 )); then NGINX=1; fi
+
+### MySQL ###
+if (( $(php -r 'error_reporting(0);$m=new mysqli("host","user","pass","db");echo($m&&$m->client_info)?1:0;') > 0 )); then
+    echo -e ${GREEN}"MySQL ${MYSQL_HOST} running"${RESET};
+fi
+
+ELASTIC=0;
+if (( $(curl -v --silent -X GET "host:9200/_cluster/health?pretty" --stderr - | grep "HTTP/1.1 200 OK" | wc -l) == 1 )); then ELASTIC=1; fi
+```
+
 ALIAS
 -----
 **Wrapping arguments**  
