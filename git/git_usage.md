@@ -45,7 +45,12 @@ DIFF
 ----
 git diff fichier1 fichier2 ...  
 git difftool  
-git diff branch_1 origin/branch_1
+git diff branch_1 origin/branch_1  
+    
+**for environement** 
+git diff --cached (index <> last commit)  
+git diff (index <> working tree)  
+git diff HEAD (last commit <> working tree)  
 
 FILESYSTEM
 ----------
