@@ -8,5 +8,10 @@
         "<C-x>": false
     },
     "vim.hlsearch": true,
-    "vim.smartRelativeLine": true
+    "vim.smartRelativeLine": true,
+    
+     "workbench.colorCustomizations": {
+       "editorUnnecessaryCode.border": "#dd7aab",
+       "editorUnnecessaryCode.foreground": "#dd7aab"
+     }
 }
