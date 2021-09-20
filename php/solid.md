@@ -32,4 +32,13 @@ CUPID: (Dan North, BDD)
 * Idiomatic: Align standards frameworks and house's style    
 * Domain-based: Code for solution, not framework    
 
-GRASP: General Responsibility Assignment Software Patterns: Controller, creator, indirection, information expert, low coupling, high cohesion, polymorphism, protected variations, pure fabrication
+GRASP: General Responsibility Assignment Software Patterns: 
+- Controller: A use case controller should be used to deal with all system events of a use case (eg: UserCtrl - create,delete,manage,etc.. User) 
+- Creator: Assign class B the responsibility to create object A if the following apply, Instances of B contain/aggregate/record instances of A
+- Indirection: The indirection pattern supports low coupling and reuses potential between two elements by assigning the responsibility of mediation between them to an intermediate object (eg: mvC)
+- Information expert: Assign responsibility to the class that has the information needed to fulfill it
+- Low coupling: Change in one class having a lower impact on other classes
+- High cohesion: Evaluative pattern that attempts to keep objects appropriately focused, manageable and understandable.
+- Polymorphism: Responsibility for defining the variation of behaviors based on type is assigned to the type for which this variation happens
+- Protected variations
+- Pure fabrication
