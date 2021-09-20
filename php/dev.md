@@ -1,4 +1,0 @@
-# Functional
-
-- Iterators
-- Spl
