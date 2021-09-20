@@ -8,14 +8,13 @@ SOLID: Robert C. Martin (Uncle Bob)
   - Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
 
 Component cohesion
-
-
-Component coupling
 - REP: Reuse/Release Equivalence Principle (The granular of reuse is the granular of release.)
 - CRP: Common Reuse Principle (The classes in a component are reused together. If you reuse one of the classes in a component, you reuse them all.)
 - CCP: Common Closure Principle 
   * The classes in a component should be closed together against the same kinds of changes. 
   * A change that affects a component affects all the classes in that component and no other components.
+
+Component coupling
 - ADP: Acyclic Dependencies Principle
 - SDP: Stable-Dependency Principle (Depend in the direction of stability.)
 - SAP: Stable-Abstractions Principle (A component should be as abstract as it is stable.)
