@@ -1,6 +1,6 @@
 SOLID: Robert C. Martin (Uncle Bob)   
 * SRP: A class should have one and only one reason to change, meaning that a class should have only one job.  
-* OCP: Objects or entities should be open for extension but closed for modification.  
+* OCP: Objects or entities should be open for extension but closed for modification. (Bertrand Meyer)
   - A module will be said to be open if it is still available for extension. For example, it should be possible to add fields to the data structures it contains, or new elements to the set of functions it performs.
   - A module will be said to be closed if it is available for use by other modules. This assumes that the module has been given a well-defined, stable description (the interface in the sense of information hiding)
 
