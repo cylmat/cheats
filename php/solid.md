@@ -40,5 +40,5 @@ GRASP: General Responsibility Assignment Software Patterns:
 - Low coupling: Change in one class having a lower impact on other classes
 - High cohesion: Evaluative pattern that attempts to keep objects appropriately focused, manageable and understandable.
 - Polymorphism: Responsibility for defining the variation of behaviors based on type is assigned to the type for which this variation happens
-- Protected variations
-- Pure fabrication
+- Protected variations: Wrapping the focus of instability with an interface and using polymorphism to create various implementations of this interface
+- Pure fabrication: Does not represent a concept in the problem domain, called a "service"
