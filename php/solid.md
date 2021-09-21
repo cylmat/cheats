@@ -6,6 +6,7 @@ SOLID: Robert C. Martin (Uncle Bob)
 
 * LSP: Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.  
   - Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it
+  - Derived classes must be substitutable for their base classes.
 * ISP: A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.  
   - Many client-specific interfaces are better than one general-purpose interface
 * DIP: Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
