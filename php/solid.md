@@ -42,3 +42,5 @@ GRASP: General Responsibility Assignment Software Patterns:
 - Polymorphism: Responsibility for defining the variation of behaviors based on type is assigned to the type for which this variation happens
 - Protected variations: Wrapping the focus of instability with an interface and using polymorphism to create various implementations of this interface
 - Pure fabrication: Does not represent a concept in the problem domain, called a "service"
+
+STUPID: Singleton, Tight Coupling, Untestability, Premature Optimizations, Indescriptive Naming et Duplication
