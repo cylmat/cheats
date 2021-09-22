@@ -1,4 +1,4 @@
-SOLID: Robert C. Martin (Uncle Bob)   
+## SOLID Design Principle: Robert C. Martin (Uncle Bob)   
 * SRP: A class should have one and only one reason to change, meaning that a class should have only one job.  
 * OCP: Objects or entities should be open for extension but closed for modification. (Bertrand Meyer)
   - A module will be said to be open if it is still available for extension. For example, it should be possible to add fields to the data structures it contains, or new elements to the set of functions it performs.
@@ -13,19 +13,19 @@ SOLID: Robert C. Martin (Uncle Bob)
   - High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces).
   - Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
 
+## Package Principles   
 Component cohesion
 - REP: Reuse/Release Equivalence Principle (The granular of reuse is the granular of release.)
 - CRP: Common Reuse Principle (The classes in a component are reused together. If you reuse one of the classes in a component, you reuse them all.)
 - CCP: Common Closure Principle 
   * The classes in a component should be closed together against the same kinds of changes. 
   * A change that affects a component affects all the classes in that component and no other components.
-
 Component coupling
 - ADP: Acyclic Dependencies Principle
 - SDP: Stable-Dependency Principle (Depend in the direction of stability.)
 - SAP: Stable-Abstractions Principle (A component should be as abstract as it is stable.)
 
-
+## Object
 CUPID: (Dan North, BDD)   
 * Composable: Small surface & minimal dependencies    
 * Unix philo: Do one thing well   
