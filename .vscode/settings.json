@@ -7,19 +7,20 @@
 		"textMateRules": [
 			{
 				"scope": [
-				//following will be in italic (=FlottFlott)
+					//following will be in italic (=FlottFlott)
 					"comment",
-					"entity.name.type.class", //class names
-					"keyword", //import, export, return…
+					"constant.language",
+					// "entity.name.type.class", //class names
+					// "keyword", //import, export, return…
+					"keyword.control",
+					//"entity.other.attribute-name",
+					//"entity.name.method",
+					//"entity.name.tag",
 					"storage.modifier", //static keyword
 					"storage.type", //class keyword
-					"support.class.builtin",
-					"keyword.control",
-					"constant.language",
-					"entity.other.attribute-name",
+					//"support.class.builtin",
 					"string.quoted.single",
-					"entity.name.method",
-					"entity.name.tag"
+					"string.quoted.double"
 				],
 				"settings": {
 					"fontStyle": "italic",
