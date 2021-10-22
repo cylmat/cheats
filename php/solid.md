@@ -1,4 +1,4 @@
-## SOLID Design Principle: Robert C. Martin (Uncle Bob)   
+## SOLID Design Principle: Michael Feathers (2004), from Robert C. Martin work (Uncle Bob, 2000; “Design Principles and Design Patterns.”)   
 * SRP: A class should have one and only one reason to change, meaning that a class should have only one job.  
 * OCP: Objects or entities should be open for extension but closed for modification. (Bertrand Meyer)
   - A module will be said to be open if it is still available for extension. For example, it should be possible to add fields to the data structures it contains, or new elements to the set of functions it performs.
