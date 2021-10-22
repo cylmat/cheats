@@ -45,3 +45,6 @@ GRASP: General Responsibility Assignment Software Patterns:
 - Pure fabrication: Does not represent a concept in the problem domain, called a "service"
 
 STUPID: Singleton (not ~ shared instance), Tight Coupling, Untestability, Premature Optimizations, Indescriptive Naming et Duplication
+
+@Ref
+[http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod]
