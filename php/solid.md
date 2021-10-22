@@ -48,3 +48,4 @@ STUPID: Singleton (not ~ shared instance), Tight Coupling, Untestability, Premat
 
 @Ref
 [http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod]
+[https://sites.google.com/site/unclebobconsultingllc/home/articles]
