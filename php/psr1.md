@@ -28,18 +28,58 @@ class Foo
 ```
 
 #
-# PSR12
+# PSR12 - Extended Coding Style
 #
+
+2.2 Files
+- Use LF only
+- Php file MUST end with non-blank line LF
+- ?> MUST be omitted tag for php-only files
+2.3 Lines
+- NO hard limit, Soft MUST be 120 length, 80 line length recommanded
+- No end line trailing spaces
+2.4 Indent
+- MUST be 4 spaces indent
+2.5 Keywords
+- Reserved words short and lowercase (ex: bool, int)
+
+3 Namespace, imports
+- Opening <?php tag.
+- File-level docblock.
+- One or more declare statements.
+- The namespace declaration of the file.
+- One or more class-based use import statements.
+- One or more function-based use import statements.
+- One or more constant-based use import statements.
+- The remainder of the code in the file.
+
+4 Class properties
+- Parentheses MUST always be present
+
 
 ```
 <?php
 
+/**
+ * Docblock
+ */
+
 declare(strict_types=1);
+declare(ticks=1) {
+    // some code
+}
 
 namespace Vendor\Package;
 
 use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
 use Vendor\Package\SomeNamespace\ClassD as D;
+
+use Vendor\Package\SomeNamespace\{
+    SubnamespaceOne\ClassA,
+    SubnamespaceOne\ClassB,
+    SubnamespaceTwo\ClassY,
+    ClassZ,
+};
 
 use function Vendor\Package\{functionA, functionB, functionC};
 
@@ -47,6 +87,13 @@ use const Vendor\Package\{ConstantA, ConstantB, ConstantC};
 
 class Foo extends Bar implements FooInterface
 {
+    use FirstTrait; // traits on first line of class
+    use SecondTrait;
+    use C {
+        B::bigTalk insteadof C;
+        C::mediumTalk as FooBar;
+    }
+
     public function sampleFunction(int $a, int $b = null): array
     {
         if ($a === $b) {
