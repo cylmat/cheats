@@ -1,4 +1,6 @@
+#
 # PSR1
+#
 
 Files MUST use only <?php and <?= tags.  
 Files MUST use only UTF-8 without BOM for PHP code.  
@@ -15,16 +17,19 @@ namespace Vendor\Model;
 
 class Foo
 {
+  const VERSION = '1.0';
   const DATE_APPROVED = '2012-06-01';
 
-  $StudlyCaps, $camelCase, or $under_score
+  $StudlyCaps, $camelCase, or $under_score;
 
   function camelCase() {
   }
 }
 ```
 
+#
 # PSR12
+#
 
 ```
 <?php
