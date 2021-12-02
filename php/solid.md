@@ -5,6 +5,9 @@
   - A module will be said to be closed if it is available for use by other modules. This assumes that the module has been given a well-defined, stable description (the interface in the sense of information hiding)
 
 * LSP: Let q(x) be a property provable about objects of x of type T. Then q(y) should be provable for objects y of type S where S is a subtype of T.  
+    + Contravariance of method arguments in the subtype.
+    + Covariance of return types in the subtype.
+    + No new exceptions should be thrown by methods of the subtype, except where those exceptions are themselves subtypes of exceptions thrown by the methods of the supertype.
   - Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it
   - Derived classes must be substitutable for their base classes.
 * ISP: A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use.  
