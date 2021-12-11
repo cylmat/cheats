@@ -1,8 +1,7 @@
 # PSR-3: Logger Interface (RFC 5424) (Jordi Boggiano, Composer)
 
 ```
-interface LoggerInterface
-{
+interface LoggerInterface {
   public function emergency(string $message, array $context = array()): void; // System is unusable.
   // Action must be taken immediately. Entire website down, database unavailable, etc. 
   public function alert(string $message, array $context = array()): void; 
@@ -17,7 +16,9 @@ interface LoggerInterface
   public function info(string $message, array $context = array()): void; // Interesting events.
   public function debug(string $message, array $context = array()): void; // Detailed debug information.
   public function log(mixed $level, string $message, array $context = array()): void; // Logs with an arbitrary level.
-}
+
+interface LoggerAwareInterface {
+    public function setLogger(LoggerInterface $logger): void;
 ```
 
 # PSR-6: Caching Interface (Larry Garfield, Drupal)
@@ -25,18 +26,15 @@ interface LoggerInterface
 - An Item represents a single key/value pair within a Pool (a collection of items in a caching system)
 
 ```
-interface CacheItemInterface
-{
+interface CacheItemInterface {
    public function getKey(): string;
    public function get(): mixed; // can return a "null" cached value
    public function isHit(): bool;
    public function set(mixed $value): static;
    public function expiresAt(\DateTimeInterface|null $expiration): static;
    public function expiresAfter(int|\DateInterval|null $time); // TTL (sec)
-}
 
-interface CacheItemPoolInterface
-{
+interface CacheItemPoolInterface {
    public function getItem(string $key): CacheItemInterface; // @throws InvalidArgumentException
    public function getItems(array $keys = []): @return iterable; // @throws InvalidArgumentException
    public function hasItem(string $key): bool; // @throws InvalidArgumentException
@@ -46,5 +44,4 @@ interface CacheItemPoolInterface
    public function save(CacheItemInterface $item): bool;
    public function saveDeferred(CacheItemInterface $item): bool;
    public function commit(): bool;
-}
 ```
