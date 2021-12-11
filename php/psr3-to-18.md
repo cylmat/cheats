@@ -1,4 +1,5 @@
 # PSR-3: Logger Interface (RFC 5424) (Jordi Boggiano, Composer)
+
 ```
 interface LoggerInterface
 {
@@ -24,3 +25,30 @@ interface LoggerInterface
 ```
 
 # PSR-6: Caching Interface (Larry Garfield, Drupal)
+- If it is not possible to return the exact saved value, MUST respond with a cache miss rather than corrupted data.
+- An Item represents a single key/value pair within a Pool (a collection of items in a caching system)
+
+```
+interface CacheItemInterface
+{
+   public function getKey(): string;
+   public function get(): mixed; // can return a "null" cached value
+   public function isHit(): bool;
+   public function set(mixed $value): static;
+   public function expiresAt(\DateTimeInterface|null $expiration): static;
+   public function expiresAfter(int|\DateInterval|null $time); // TTL (sec)
+}
+
+interface CacheItemPoolInterface
+{
+   public function getItem(string $key): CacheItemInterface; // @throws InvalidArgumentException
+   public function getItems(array $keys = []): @return iterable; // @throws InvalidArgumentException
+   public function hasItem(string $key): bool; // @throws InvalidArgumentException
+   public function clear();
+   public function deleteItem(string $key): bool; // @throws InvalidArgumentException
+   public function deleteItems(array $keys): bool; / @throws InvalidArgumentException
+   public function save(CacheItemInterface $item): bool;
+   public function saveDeferred(CacheItemInterface $item): bool;
+   public function commit(): bool;
+}
+```
