@@ -45,3 +45,10 @@ interface CacheItemPoolInterface {
    public function saveDeferred(CacheItemInterface $item): bool;
    public function commit(): bool;
 ```
+
+# PSR-7: HTTP Message Interface (Matthew Weier O'Phinney)
+interface MessageInterface {
+  getProtocolVersion(), withProtocolVersion($version)
+  getHeaders(), hasHeader($name), getHeader($name), getHeaderLine($name), 
+  withHeader($name, $value), withAddedHeader($name, $value), withoutHeader($name)
+  getBody(), withBody(StreamInterface $body)
