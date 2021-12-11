@@ -1,5 +1,5 @@
 #
-# PSR1
+# PSR 1 - Coding standards
 #
 
 - Files MUST use only <?php and <?= tags.  
@@ -29,7 +29,7 @@ class Foo
 ```
 
 #
-# PSR12 - Extended Coding Style
+# PSR 12 - Extended Coding Style
 #
 
 2. General
@@ -66,18 +66,19 @@ class Foo
 <?php
 
 /**
- * Docblock
+ * File-level docblock
  */
 
 declare(strict_types=1);
 declare(ticks=1) {
-    // some code
+    // declare statements
 }
 
 namespace Vendor\Package;
 
+// use class, fct then const
 use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
-use Vendor\Package\SomeNamespace\ClassD as D;
+use Vendor\Package\AnotherSomeNamespace\ClassD as D;
 
 use Vendor\Package\SomeNamespace\{
     SubnamespaceOne\ClassA,
@@ -88,8 +89,11 @@ use Vendor\Package\SomeNamespace\{
 
 use function Vendor\Package\{functionA, functionB, functionC};
 
-use const Vendor\Package\{ConstantA, ConstantB, ConstantC};
+use const Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
 
+/**
+ * Class-level docblock
+ */
 class Foo extends Bar implements FooInterface
 {
     use FirstTrait; // traits on first line of class
