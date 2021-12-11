@@ -3,24 +3,20 @@
 ```
 interface LoggerInterface
 {
-  // System is unusable.
-  public function emergency($message, array $context = array()); 
+  public function emergency(string $message, array $context = array()): void; // System is unusable.
   // Action must be taken immediately. Entire website down, database unavailable, etc. 
-  public function alert($message, array $context = array()); 
+  public function alert(string $message, array $context = array()): void; 
   // Critical conditions. Application component unavailable, etc.
-  public function critical($message, array $context = array()); 
+  public function critical(string $message, array $context = array()): void; 
   // Runtime errors that do not require immediate action but should typically be logged and monitored.
-  public function error($message, array $context = array()); 
+  public function error(string $message, array $context = array()): void; 
+
   // Exceptional occurrences that are not errors. Use of deprecated APIs, poor use of an API...
-  public function warning($message, array $context = array()); 
-  // Normal but significant events.
-  public function notice($message, array $context = array());
-  // Interesting events.
-  public function info($message, array $context = array());
-  // Detailed debug information.
-  public function debug($message, array $context = array());
-  // Logs with an arbitrary level.
-  public function log($level, $message, array $context = array());
+  public function warning(string $message, array $context = array()): void; 
+  public function notice(string $message, array $context = array()): void; // Normal but significant events.
+  public function info(string $message, array $context = array()): void; // Interesting events.
+  public function debug(string $message, array $context = array()): void; // Detailed debug information.
+  public function log(mixed $level, string $message, array $context = array()): void; // Logs with an arbitrary level.
 }
 ```
 
