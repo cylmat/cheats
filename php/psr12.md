@@ -1,6 +1,6 @@
 # PSR
 
-php-fig.org/psr
+[php-fig.org/psr]
 
 12 - Extended Coding Style
 
@@ -11,9 +11,6 @@ php-fig.org/psr
     4 spaces
     reserved words short and lowercase (ex: bool, int)
     <?php alone on single line
-
-
-### not allowed
 
 ```
 Class declaration
