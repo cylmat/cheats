@@ -94,14 +94,22 @@ use const Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
 /**
  * Class-level docblock
  */
-class Foo extends Bar implements FooInterface
+abstract class Foo extends Bar implements // class, extends, implements on same line
+    \FooInterface
+    \MulitlineInterface
 {
     use FirstTrait; // traits on first line of class
-    use SecondTrait;
-    use C {
-        B::bigTalk insteadof C;
-        C::mediumTalk as FooBar;
+    use CTrait {
+        FirstTrait::bigTalk insteadof C;
+        CTrait::mediumTalk as FooBar;
     }
+
+    private MY_CONSTANT = 987;
+
+    public static string $declaredProperty = '';
+    private $propertie = null;
+
+    abstract protected function zim();
 
     public function sampleFunction(int $a, int $b = null): array
     {
@@ -114,11 +122,36 @@ class Foo extends Bar implements FooInterface
         }
     }
 
-    final public static function bar()
+    final public static function bar(int $arg1, &$arg2, $arg3 = [], &...$parts): ?object
     {
         // method body
     }
+
+    public function aVeryLongMethodName(
+        ClassTypeHint $arg1,
+        &$arg2,
+        array $arg3 = []
+    ): ?string {
+        // method body
+    }
 }
+```
+
+// Side-effect call
+```
+bar();
+$foo->bar(
+    $arg1,
+    $longArgument,
+    $longerArgument
+);
+Foo::bar($arg2, $arg3, [
+  // ...
+], $bar);
+
+$app->get('/hello/{name}', function ($name) use ($app) {
+    return 'Hello ' . $app->escape($name);
+});
 ```
 
 ## PSR2 (deprecated)
