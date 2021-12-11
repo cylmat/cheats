@@ -47,8 +47,30 @@ interface CacheItemPoolInterface {
 ```
 
 # PSR-7: HTTP Message Interface (Matthew Weier O'Phinney)
+```
 interface MessageInterface {
   getProtocolVersion(), withProtocolVersion($version)
   getHeaders(), hasHeader($name), getHeader($name), getHeaderLine($name), 
   withHeader($name, $value), withAddedHeader($name, $value), withoutHeader($name)
   getBody(), withBody(StreamInterface $body)
+  
+  ...
+```
+
+# PSR-11: Container interface (Matthieu Napoli)
+```
+interface ContainerInterface {
+  public function get(string $id): mixed; // @throws NotFoundExceptionInterface, ContainerExceptionInterface
+  public function has(string $id): bool;
+```
+
+# PSR-13: Hypermedia Links (RFC 5988, 6570) (Larry Garfield)
+```
+interface LinkInterface {
+  getHref(), isTemplated(), getRels(), getAttributes()
+interface EvolvableLinkInterface: withHref, withRel, withoutRel, withAttribute, withoutAttribute
+
+interface LinkProviderInterface {
+  getLinks(), getLinksByRel($rel)
+interface EvolvableLinkProviderInterface: withLink, withoutLink
+```
