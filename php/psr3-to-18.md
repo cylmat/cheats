@@ -62,7 +62,7 @@ interface ContainerInterface {
   public function has(string $id): bool;
 ```
 
-# PSR-13: Hypermedia Links (RFC 5988, 6570) (Larry Garfield)
+# PSR-13: Hypermedia Links (RFC 5988, 6570)
 ```
 interface LinkInterface {
   getHref(), isTemplated(), getRels(), getAttributes()
