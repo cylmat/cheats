@@ -1,3 +1,6 @@
+# PSR SUMMARY
+[https://www.php-fig.org/psr]
+
 # PSR-3: Logger Interface
 ```
 interface LoggerInterface {
@@ -19,6 +22,12 @@ interface LoggerInterface {
 interface LoggerAwareInterface {
     public function setLogger(LoggerInterface $logger): void;
 ```
+# PSR-4: Autoloading
+FQCN: \<NamespaceName>(\<SubNamespaceNames>)*\<ClassName>  
+- The fully qualified class name MUST have a top-level namespace name, also known as a "vendor namespace".
+- The fully qualified class name MAY have one or more sub-namespace names.
+- The fully qualified class name MUST have a terminating class name. (Underscores have no special meaning)
+(PSR-0: Each _ character in the CLASS NAME is converted to a DIRECTORY_SEPARATOR)
 
 # PSR-6: Caching Interface
 - If it is not possible to return the exact saved value, MUST respond with a cache miss rather than corrupted data.
@@ -53,7 +62,43 @@ interface MessageInterface {
   withHeader($name, $value), withAddedHeader($name, $value), withoutHeader($name)
   getBody(), withBody(StreamInterface $body)
   
-  ...
+interface RequestInterface extends MessageInterface {
+  public function getRequestTarget(): string;
+  public function withRequestTarget(mixed $requestTarget): static;
+  public function getMethod(): string;
+  public function withMethod(string $method): static;
+  public function getUri(): UriInterface;
+  public function withUri(UriInterface $uri, bool $preserveHost = false): static;
+  
+interface ServerRequestInterface extends RequestInterface {
+  public function getServerParams(): array;
+  public function getCookieParams(): array;
+  public function withCookieParams(array $cookies): static;
+  public function getQueryParams(): array;
+  public function withQueryParams(array $query): static;
+  public function getUploadedFiles(): array;
+  public function withUploadedFiles(array $uploadedFiles): static;
+  public function getParsedBody(): null|array|object;
+  public function withParsedBody(null|array|object $data): static;
+  public function getAttributes(): mixed[];
+  public function getAttribute(string $name, mixed $default = null): mixed;
+  public function withAttribute($string name, mixed $value): static;
+  public function withoutAttribute(string $name): static;
+
+interface ResponseInterface extends MessageInterface {
+  public function getStatusCode(): int;
+  public function withStatus(int $code, string $reasonPhrase = ''): static;
+  public function getReasonPhrase(): string;
+  
+interface StreamInterface {
+  __toString, close, detach, getSize, tell, eof, isSeekable, seek
+  rewind, isWritable, write, isReadable, read, getContents, getMetadata
+  
+interface UriInterface {
+  __toString, getScheme, getAuthority([user-info@]host[:port]), getUserInfo, getHost, getPort, 
+  getPath, getQuery, getFragment, withScheme, withUserInfo, withHost, withPort, withPath, withQuery, withFragment
+  
+interface UploadedFileInterface: getStream, moveTo, getSize, getError, getClientFilename, getClientMediaType
 ```
 
 # PSR-11: Container interface
