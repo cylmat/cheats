@@ -45,6 +45,7 @@ interface CacheItemPoolInterface {
 ```
 
 # PSR-7: HTTP Message Interface
+ RFC 7230 and RFC 7231
 ```
 interface MessageInterface {
   getProtocolVersion(), withProtocolVersion($version)
