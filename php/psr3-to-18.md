@@ -84,3 +84,15 @@ interface ListenerProviderInterface {
 interface StoppableEventInterface {
     public function isPropagationStopped() : bool;
 ```
+
+# PSR-15: HTTP Server Request Handlers
+ - Use PSR-7: HTTP Message  
+Middleware processing of an incoming request and the creation of a resulting response (ResponseInterface), as defined by PSR-7.
+```
+interface RequestHandlerInterface {
+    public function handle(ServerRequestInterface $request): ResponseInterface;
+    
+interface MiddlewareInterface {
+    // If unable to produce the response itself, it may delegate to the provided request handler to do so.
+    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface;
+```
