@@ -64,12 +64,9 @@ interface ContainerInterface {
 
 # PSR-13: Hypermedia Links (RFC 5988, 6570)
 ```
-interface LinkInterface {
-  getHref(), isTemplated(), getRels(), getAttributes()
+interface LinkInterface: getHref, isTemplated, getRels, getAttributes
 interface EvolvableLinkInterface: withHref, withRel, withoutRel, withAttribute, withoutAttribute
-
-interface LinkProviderInterface {
-  getLinks(), getLinksByRel($rel)
+interface LinkProviderInterface: getLinks, getLinksByRel
 interface EvolvableLinkProviderInterface: withLink, withoutLink
 ```
 
