@@ -111,3 +111,29 @@ interface CacheInterface {
   // can return true and immediately after, another script can remove it, making the state of your app out of date!
   public function has(string $key): bool;
 ```
+
+# PSR-17: HTTP Factories
+```
+interface RequestFactoryInterface {
+    public function createRequest(string $method, UriInterface|string $uri): RequestInterface;
+interface ResponseFactoryInterface {
+    public function createResponse(int $code = 200, string $reasonPhrase = ''): ResponseInterface;
+interface ServerRequestFactoryInterface {
+    public function createServerRequest(string $method, UriInterface|string $uri, array $serverParams = []): ServerRequestInterface;
+interface StreamFactoryInterface: createStream, createStreamFromFile, createStreamFromResource (StreamInterface)
+interface UploadedFileFactoryInterface: createUploadedFile (UploadedFileInterface)
+interface UriFactoryInterface { public function createUri(string $uri = '') : UriInterface;
+```
+
+# PSR-18: HTTP Client
+- Sending HTTP requests and receiving HTTP responses
+- Well-formed HTTP request or HTTP response MUST NOT cause an exception 
+- ClientExceptionInterface only if it is unable to send the HTTP request at all
+- The request message is not a well-formed HTTP request or is missing some critical information, the Client MUST throw an instance of RequestExceptionInterface
+- Request cannot be sent due to a network failure of any kind, MUST throw an instance of NetworkExceptionInterface
+```
+interface ClientInterface {
+  public function sendRequest(RequestInterface $request): ResponseInterface; // @throws \Psr\Http\Client\ClientExceptionInterface
+interface RequestExceptionInterface/NetworkExceptionInterface extends ClientExceptionInterface {} {
+  public function getRequest(): RequestInterface;
+```
