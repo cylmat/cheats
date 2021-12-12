@@ -1,5 +1,4 @@
-# PSR-3: Logger Interface (RFC 5424) (Jordi Boggiano, Composer)
-
+# PSR-3: Logger Interface
 ```
 interface LoggerInterface {
   public function emergency(string $message, array $context = array()): void; // System is unusable.
@@ -21,10 +20,9 @@ interface LoggerAwareInterface {
     public function setLogger(LoggerInterface $logger): void;
 ```
 
-# PSR-6: Caching Interface (Larry Garfield, Drupal)
+# PSR-6: Caching Interface
 - If it is not possible to return the exact saved value, MUST respond with a cache miss rather than corrupted data.
 - An Item represents a single key/value pair within a Pool (a collection of items in a caching system)
-
 ```
 interface CacheItemInterface {
    public function getKey(): string;
@@ -46,7 +44,7 @@ interface CacheItemPoolInterface {
    public function commit(): bool;
 ```
 
-# PSR-7: HTTP Message Interface (Matthew Weier O'Phinney)
+# PSR-7: HTTP Message Interface
 ```
 interface MessageInterface {
   getProtocolVersion(), withProtocolVersion($version)
@@ -57,7 +55,7 @@ interface MessageInterface {
   ...
 ```
 
-# PSR-11: Container interface (Matthieu Napoli)
+# PSR-11: Container interface
 ```
 interface ContainerInterface {
   public function get(string $id): mixed; // @throws NotFoundExceptionInterface, ContainerExceptionInterface
@@ -73,4 +71,19 @@ interface EvolvableLinkInterface: withHref, withRel, withoutRel, withAttribute, 
 interface LinkProviderInterface {
   getLinks(), getLinksByRel($rel)
 interface EvolvableLinkProviderInterface: withLink, withoutLink
+```
+
+# PSR-14: Event Dispatcher
+Event - Message produced by an Emitter.
+Listener - Callable that expects to be passed an Event. 
+Emitter - Code that wishes to dispatch an Event. 
+Dispatcher - Service object that is given an Event object by an Emitter. 
+Listener Provider - Responsible for determining what Listeners are relevant for a given Event.
+```
+interface EventDispatcherInterface {
+    public function dispatch(object $event): object; // event
+interface ListenerProviderInterface {
+    public function getListenersForEvent(object $event) : iterable; // callable
+interface StoppableEventInterface {
+    public function isPropagationStopped() : bool;
 ```
