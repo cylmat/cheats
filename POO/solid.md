@@ -50,5 +50,5 @@ GRASP: General Responsibility Assignment Software Patterns:
 STUPID: Singleton (not ~ shared instance), Tight Coupling, Untestability, Premature Optimizations, Indescriptive Naming et Duplication
 
 @Ref
-[http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod]
+[http://www.butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod]  
 [https://sites.google.com/site/unclebobconsultingllc/home/articles]
