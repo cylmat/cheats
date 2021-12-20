@@ -68,7 +68,7 @@ Path
 - /etc/passwd
 
 @Ref
-[https://haydenjames.io/90-linux-commands-frequently-used-by-linux-sysadmins/]
-[https://www.ubuntupit.com/best-linux-commands-to-run-in-the-terminal]
-[https://www.thegeekstuff.com/2010/11/50-linux-commands/]
-[https://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/]
+[https://haydenjames.io/90-linux-commands-frequently-used-by-linux-sysadmins/]  
+[https://www.ubuntupit.com/best-linux-commands-to-run-in-the-terminal]  
+[https://www.thegeekstuff.com/2010/11/50-linux-commands/]  
+[https://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials/]  
