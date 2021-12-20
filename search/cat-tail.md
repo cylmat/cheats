@@ -1,6 +1,3 @@
-Linux
-=====
-
 Cat
 ---
 **Get only first string part**  
