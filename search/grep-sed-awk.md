@@ -14,7 +14,7 @@ awk '{print $1}' RS=' ' FS=: ORS=' ' <<< 'my_input'
 ### Ref
 * [corporesano.org: Grep Sed Awk](http://www.corporesano.org/doc-site/grepawksed.html)
 
-sample to clear----------
+sample to clear----------  
 awk '{ print "echo "$0"" | "/bin/sh"}' file.txt
 cat file.txt | tr -d '\r' | xargs -L 1 -i echo {}
 
