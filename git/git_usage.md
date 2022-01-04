@@ -87,6 +87,9 @@ git rebase main -s recursive -X theirs
 
 **From root interactive**  
 git rebase --root -i
+    
+**Only last 2 commits**
+git rebase HEAD^2 --onto <newbase>   
 
 RESET & REVERT
 --------------
