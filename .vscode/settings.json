@@ -29,6 +29,16 @@
 		]
 	},
 	"search.useIgnoreFiles": true,
+	
+	//"console": "integratedTerminal",
+	"console": "internalConsole",
+	"debug.internalConsoleOptions": "neverOpen",
+	"internalConsoleOptions": "neverOpen",
+	"showOutput": "never",
+	"presentation": {
+		"reveal": "never"
+	},
+	
     "vim.startInInsertMode": true,
     "vim.handleKeys": {
         "<C-c>": false,
