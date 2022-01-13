@@ -4,5 +4,6 @@ if &compatible          # only if not set before:
 endif
 
 
-# ref
-# https://github.com/wellbredgrapefruit/vim_config
+# @ref:
+# - https://vim.fandom.com/wiki/Example_vimrc
+# - https://github.com/wellbredgrapefruit/vim_config
