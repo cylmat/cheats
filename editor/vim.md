@@ -72,9 +72,9 @@ xX delete under/before cursor
 u C-r undo/redo
   
 ## Sample
-verbs: v(isu), c(hange), d(elete), y(ank)
-modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
-text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag)
+- verbs: v(isu), c(hange), d(elete), y(ank)
+- modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
+- text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag)
 
 ---
 ## @ref
