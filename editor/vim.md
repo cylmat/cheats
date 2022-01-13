@@ -70,7 +70,13 @@ rR replace one char / until ESC
 sS remove char/line and write until ESC (like cc)
 xX delete under/before cursor
 u C-r undo/redo
+  
+## Sample
+verbs: v(isu), c(hange), d(elete), y(ank)
+modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
+text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag)
 
+---
 ## @ref
 * https://vimhelp.org/quickref.txt.html
 * https://vim.rtorr.com/
