@@ -71,10 +71,14 @@ sS remove char/line and write until ESC (like cc)
 xX delete under/before cursor
 u C-r undo/redo
   
-## Sample
+## Sample to "speak" vim
 - verbs: v(isu), c(hange), d(elete), y(ank)
 - modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
-- text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag)
+- text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag), "({
+  
+* ci": change inside quote
+* dty: delete until next "y"
+* vap: visual around paragraph
 
 ---
 ## @ref
