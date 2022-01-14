@@ -9,39 +9,31 @@ VIM Samples
 
 @ref: https://vim.fandom.com/wiki/Buffers
 
-########
-# FILE #
-########
+********
+* FILE *
+********
 :open <file>  
 :e  
   
-###############
-# INSERT MODE #
-###############
+***************
+* INSERT MODE *
+***************
 cCMD replace under CMD  
   
-#########
-# MARKS #
-#########
+*********
+* MARKS *
+*********
 :marks
 
 Arbitrary selection of text:  
 ma, mz  
 y`a  
   
-############
-# NAVIGATE #
-############
-gg begin of file  
-9gg 9th line  
-G end of file
-0$ begin last line  
+************
+* NAVIGATE *
+************
 ^ g_ first last non-blank char  
-
-fFtT find next occurence on line  
-  ,; prev next search  
-3/ 3? search next/prev 3d in all text
-  nN next prev of search  
+3/ 3? search next/prev 3d in all text  
 *#  search for current word  
 {} next/prev paragraph  
  
@@ -50,9 +42,9 @@ wWbB next/prev word or WORD
 C-D C-U move down up half page  
 % match next/prev ({[]})  
 
-############
-# REGISTER #
-############
+************
+* REGISTER *
+************
 :reg  all registers  
 "" default register   
 "5 fifth register  
@@ -64,9 +56,9 @@ C-D C-U move down up half page
 "/ search register  
 :let @5='' clear register '5'  
 
-################
-# SPLIT SCREEN #
-################
+****************
+* SPLIT SCREEN *
+****************
 :help split  
 :vsplit, :vsp [file], :sp [file]  
 C-w <v^> or C-w hjkl  
@@ -78,10 +70,10 @@ C-w q (close split)
   
 @ref: https://linuxhint.com/vim_split_screen  
 
-#######
-# TAB #
-####### 
-:tabs  
+*******
+* TAB *
+*******
+:tabs, :tp, :tn  
 
 @ref: https://vim.fandom.com/wiki/Using_tab_pages  
   
@@ -95,15 +87,15 @@ C-w q (close split)
 :.,$v/text/d  -  from here to end delete what doesn't contain "text"  
 :.,+21g/alpha/d  -  delete every line containing "alpha" from here and next 21 lines  
 
-############
-# TERMINAL #
-############
+************
+* TERMINAL *
+************
 :ter (open a terminal inside)  
 :shell (back to the shell)
  
-#########################
-# Sample to "speak" vim #
-#########################
+*************************
+* Sample to "speak" vim *
+*************************
 - verbs: v(isu), c(hange), d(elete), y(ank)
 - modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
 - text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag), "({
@@ -113,7 +105,7 @@ C-w q (close split)
 * vap: visual around paragraph
 
 ---
-## @ref
+**@ref**
 * https://vimhelp.org/quickref.txt.html
 * https://vim.rtorr.com/
 * http://tnerual.eriogerg.free.fr/vimqrc.html
