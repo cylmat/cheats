@@ -77,9 +77,9 @@ C-w q (close split)
 
 @ref: https://vim.fandom.com/wiki/Using_tab_pages  
   
-##########
-# SEARCH #
-##########
+**********
+* SEARCH *
+**********
 :[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
 :[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
   
