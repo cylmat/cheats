@@ -1,9 +1,9 @@
 VIM Samples
 ===========
 
-##########
-# BUFFER #
-##########
+**********
+* BUFFER *
+**********
 :buffers  
 :bp, :bn, :bprev, :bnext
 
