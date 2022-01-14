@@ -1,16 +1,37 @@
-VIM SHEETS
-==========
+VIM Samples
+===========
 
-### BUFFER
-https://vim.fandom.com/wiki/Buffers#Working_with_buffers  
+##########
+# BUFFER #
+##########
 :buffers  
 :bp, :bn, :bprev, :bnext
 
-### FILE
+@ref: https://vim.fandom.com/wiki/Buffers
+
+########
+# FILE #
+########
 :open <file>  
 :e  
   
-### NAVIGATE
+###############
+# INSERT MODE #
+###############
+cCMD replace under CMD  
+  
+#########
+# MARKS #
+#########
+:marks
+
+Arbitrary selection of text:  
+ma, mz  
+y`a  
+  
+############
+# NAVIGATE #
+############
 gg begin of file  
 9gg 9th line  
 G end of file
@@ -28,8 +49,10 @@ wWbB next/prev word or WORD
   
 C-D C-U move down up half page  
 % match next/prev ({[]})  
-  
-### REGISTER
+
+############
+# REGISTER #
+############
 :reg  all registers  
 "" default register   
 "5 fifth register  
@@ -41,8 +64,9 @@ C-D C-U move down up half page
 "/ search register  
 :let @5='' clear register '5'  
 
-### SPLIT SCREEN
-https://linuxhint.com/vim_split_screen/  
+################
+# SPLIT SCREEN #
+################
 :help split  
 :vsplit, :vsp [file], :sp [file]  
 C-w <v^> or C-w hjkl  
@@ -50,28 +74,36 @@ C-w C-r (swap two windows)
 C-w n (swap with window n)  
 C-w |_ (expand h)  
 C-w = (reset windows sizes)  
-C-w q (close split)
+C-w q (close split)  
+  
+@ref: https://linuxhint.com/vim_split_screen  
 
-### TAB
-https://vim.fandom.com/wiki/Using_tab_pages  
-:tabs
+#######
+# TAB #
+####### 
+:tabs  
 
-### TERMINAL
+@ref: https://vim.fandom.com/wiki/Using_tab_pages  
+  
+##########
+# SEARCH #
+##########
+:[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
+:[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
+  
+:27,75 s/this/that  -  change first occurence of "this" to "that" between line 27 and 75  
+:.,$v/text/d  -  from here to end delete what doesn't contain "text"  
+:.,+21g/alpha/d  -  delete every line containing "alpha" from here and next 21 lines  
+
+############
+# TERMINAL #
+############
 :ter (open a terminal inside)  
 :shell (back to the shell)
-  
-### TEXT
-aA append/line
-iI insert/line
-cCMD replace under CMD
-C change until end of line
-oO open new line after/before
-rR replace one char / until ESC
-sS remove char/line and write until ESC (like cc)
-xX delete under/before cursor
-u C-r undo/redo
-  
-## Sample to "speak" vim
+ 
+#########################
+# Sample to "speak" vim #
+#########################
 - verbs: v(isu), c(hange), d(elete), y(ank)
 - modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
 - text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag), "({
@@ -86,3 +118,5 @@ u C-r undo/redo
 * https://vim.rtorr.com/
 * http://tnerual.eriogerg.free.fr/vimqrc.html
 * https://vim.fandom.com/wiki/Vim_Tips_Wiki
+* http://www.viemu.com/vi-vim-cheat-sheet.gif
+* http://www.fprintf.net/vimCheatSheet.html
