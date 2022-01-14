@@ -77,15 +77,17 @@ C-w q (close split)
 
 @ref: https://vim.fandom.com/wiki/Using_tab_pages  
   
-**********
-* SEARCH *
-**********
+********************
+* SEARCH / REPLACE *
+********************
 :[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
 :[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
   
 :27,75 s/this/that  -  change first occurence of "this" to "that" between line 27 and 75  
 :.,$v/text/d  -  from here to end delete what doesn't contain "text"  
 :.,+21g/alpha/d  -  delete every line containing "alpha" from here and next 21 lines  
+  
+:% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
 
 ************
 * TERMINAL *
