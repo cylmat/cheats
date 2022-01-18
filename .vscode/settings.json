@@ -1,8 +1,13 @@
 {
     "editor.fontLigatures": true,
-	"editor.fontFamily": "'Fira Code iScript', Consolas, 'Courier New', monospace",
+	"editor.fontFamily": "'JetBrains Mono', 'Fira Code iScript', Consolas, 'Courier New', monospace",
 	"editor.renderWhitespace": "none",
 	"editor.tabCompletion": "on",
+	  "editor.fontSize": 13,
+	  "editor.fontWeight": "300",
+	  "editor.letterSpacing": 1.2,
+	  "editor.lineHeight": 22,
+	  "editor.fontLigatures": true,
     "editor.tokenColorCustomizations": {
 		"textMateRules": [
 			{
