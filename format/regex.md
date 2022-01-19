@@ -3,6 +3,15 @@
 **not (look-behind)**  
 ^(?!sample)...
 
+**last occurence (<occurence>, not followed by <occurence>)**
+'/(.*;)(?!.*;)$/'
+  
+**non-capturing group** (don't have to be reused)
+(?:)  
+  
+**negative lookaround**
+(?!)  
+
 ## Modifiers
 [https://www.php.net/manual/en/reference.pcre.pattern.modifiers.php]
 - i: ignore case
@@ -24,3 +33,5 @@ e.g.: (?im-sx) is multimatching insensitive, and unset dotall extended
 + https://www.debuggex.com/cheatsheet/regex/pcre
 + https://www.regular-expressions.info/lookaround.html
 + https://www.rexegg.com/regex-quickstart.html
++ https://regex101.com/
++ https://extendsclass.com/regex-tester.html
