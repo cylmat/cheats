@@ -1,15 +1,15 @@
 # REGEXP
 
-**not (look-behind)**  
+**not (look-behind)**    
 ^(?!sample)...
 
-**last occurence (<occurence>, not followed by <occurence>)**
-'/(.*;)(?!.*;)$/'
+**last occurence (<occurence>, not followed by <occurence>)**  
+'/(.*;)(?!.*;)$/'  
   
-**non-capturing group** (don't have to be reused)
-(?:)  
+**non-capturing group** (don't have to be reused)  
+(?:)    
   
-**negative lookaround**
+**negative lookaround**  
 (?!)  
 
 ## Modifiers
