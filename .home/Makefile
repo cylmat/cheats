@@ -5,6 +5,9 @@ SHELL := /bin/bash
 ###
 bash-it:
 	git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && ~/.bash_it/install.sh
+	
+starship:
+	sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 # https://kint-php.github.io/kint/
 kint-bin:
