@@ -1,5 +1,9 @@
 # Listen port
 
+## Arp
+_apt install net-tools_   
+arp -a(ll)  
+
 ## Ifconfig
 _apt install iputils-ping_  
 
