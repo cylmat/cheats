@@ -16,6 +16,7 @@ netstat -p(rogram) -l(isten) -u(dp) -n(umeric) -t(cp)
   
 ## Nslookup
 _apt install dnsutils_  
+ nslookup exemple.com  
   
 ## Ping
 _apt install iputils-ping_    
