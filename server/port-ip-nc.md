@@ -24,7 +24,11 @@ _apt install iputils-ping_
 ## Tcp
 tcpflow -i any -C -J port 1234  
 tcpdump -v port 9000
+  
+### sample
+ifconfig | grep "\binet\b.*\b127.0.0.1\b" | awk '{print $2}' | cut -d '.' -f 1  
 
+---
 Refs
 ----
 * https://guillaume.fenollar.fr/blog/socat-netcat-tester-port-et-envoyer-fichiers/
