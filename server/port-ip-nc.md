@@ -1,10 +1,10 @@
 # Listen port
 
 ## Ifconfig
-**apt install iputils-ping**  
+_apt install iputils-ping_  
 
 ## Netcat
-**apt install netcat**  
+_apt install netcat_  
 nc 172.24.0.1:80  
 nc -l(isten) -v -u(dp) -p <port>    
 nc -z(scan) -v 172.24.0.1 20-500
@@ -14,10 +14,10 @@ netstat -a(ll) -n(umeric) -t(cp)
 netstat -p(rogram) -l(isten) -u(dp) -n(umeric) -t(cp)  
   
 ## Nslookup
-**apt install dnsutils**  
+_apt install dnsutils_  
   
 ## Ping
-**apt install iputils-ping**  
+_apt install iputils-ping_    
 
 ## Tcp
 tcpflow -i any -C -J port 1234  
