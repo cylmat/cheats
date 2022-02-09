@@ -10,6 +10,7 @@ nc -l(isten) -v -u(dp) -p <port>
 nc -z(scan) -v 172.24.0.1 20-500
   
 ## Netstat
+_apt install net-tools_  
 netstat -a(ll) -n(umeric) -t(cp)    
 netstat -p(rogram) -l(isten) -u(dp) -n(umeric) -t(cp)  
   
