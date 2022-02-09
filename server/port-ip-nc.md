@@ -7,16 +7,18 @@ _apt install iputils-ping_
 _apt install netcat_  
 nc 172.24.0.1:80  
 nc -l(isten) -v -u(dp) -p <port>    
-nc -z(scan) -v 172.24.0.1 20-500
+nc -z(scan open) -v 172.24.0.1 20-500
   
 ## Netstat
 _apt install net-tools_  
-netstat -a(ll) -n(umeric) -t(cp)    
+netstat -a(ll) -n(umeric) -t(cp) 2>&1    
 netstat -p(rogram) -l(isten) -u(dp) -n(umeric) -t(cp)  
   
 ## Nmap
 _apt install nmap_  
-nmap 192.168.100.1/24 -p 1-80
+nmap 192.168.100.1/24 -p 1-80  
+nmap -sT(cp) -p- 10.10.1.1  
+(-p-: port 1-65535)      
   
 ## Nslookup
 _apt install dnsutils_  
