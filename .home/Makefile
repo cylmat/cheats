@@ -1,3 +1,9 @@
+####################
+# Only tabs allowed
+# 
+# Check with:
+# cat -etv Makefile
+####################
 SHELL := /bin/bash
 
 #######
