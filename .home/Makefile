@@ -16,15 +16,26 @@ kint-bin:
 #########
 # LINUX #
 #########
+# https://github.com/Bash-it/bash-it
 bash-it:
 	git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && ~/.bash_it/install.sh
-
+# https://busybox.net/
 busybox:
-	apt install busybox
+	apt install -y busybox
 
 # https://starship.rs/
 starship:
 	sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+	
+#######
+# ZSH #
+#######
+# https://ohmyz.sh
+omz:
+	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# https://www.zsh.org/
+zsh:
+	apt install -y zsh
 
 #######
 # VIM #
