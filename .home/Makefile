@@ -35,7 +35,7 @@ omz:
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # https://www.zsh.org/
 zsh:
-	apt install -y zsh
+	apt update && apt install -y fonts-powerline zsh
 
 #######
 # VIM #
