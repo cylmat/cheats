@@ -31,8 +31,10 @@ starship:
 # ZSH #
 #######
 # https://ohmyz.sh
-omz:
+zsh-omz:
 	sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+zsh-autosuggestions:
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # https://www.zsh.org/
 zsh:
 	apt update && apt install -y fonts-powerline zsh
