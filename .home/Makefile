@@ -6,6 +6,19 @@
 ####################
 SHELL := /bin/bash
 
+########
+# BASH #
+########
+# https://github.com/Bash-it/bash-it
+bash-it:
+	git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && ~/.bash_it/install.sh
+# https://github.com/akinomyoga/ble.sh
+ble-sh:
+	apt update && apt install -y gawk
+	git clone --recursive https://github.com/akinomyoga/ble.sh.git
+	make -C ble.sh install PREFIX=~/.local
+	echo 'source ~/.local/share/blesh/ble.sh' >> ~/.bashrc
+
 #######
 # DEV #
 #######
@@ -16,9 +29,6 @@ kint-bin:
 #########
 # LINUX #
 #########
-# https://github.com/Bash-it/bash-it
-bash-it:
-	git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && ~/.bash_it/install.sh
 # https://busybox.net/
 busybox:
 	apt install -y busybox
