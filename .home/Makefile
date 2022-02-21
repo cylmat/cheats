@@ -13,7 +13,7 @@ SHELL := /bin/bash
 bash-it:
 	git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it && ~/.bash_it/install.sh
 # https://github.com/akinomyoga/ble.sh
-ble-sh:
+blesh:
 	apt update && apt install -y gawk
 	git clone --recursive https://github.com/akinomyoga/ble.sh.git
 	make -C ble.sh install PREFIX=~/.local
