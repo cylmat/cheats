@@ -25,6 +25,16 @@ blesh:
 # https://kint-php.github.io/kint/
 kint-bin:
 	curl -LO https://raw.githubusercontent.com/kint-php/kint/master/build/kint.phar
+	
+#########
+# FONTS #
+#########
+powerline:
+	# apt install -y fonts-powerline
+	wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
+	mv PowerlineSymbols.otf /usr/share/fonts/
+	fc-cache -vf
+	mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 
 #########
 # LINUX #
