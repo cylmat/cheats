@@ -10,8 +10,10 @@ endef
 
 call-command:  
 	@$(call useful_command, arg1, args2)
+```
 
 **Call it with MY_ARG="whatever" make args**  
+```
 args:  
 	@echo "${MY_ARG}"
 ```
