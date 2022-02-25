@@ -1,5 +1,6 @@
 # Makefile
 
+```
 SHELL := /bin/bash  
 .PHONY: args useful_command  
 
@@ -13,3 +14,4 @@ call-command:
 **Call it with MY_ARG="whatever" make args**  
 args:  
 	@echo "${MY_ARG}"
+```
