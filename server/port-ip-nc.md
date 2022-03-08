@@ -12,6 +12,7 @@ _apt install netcat_
 nc 172.24.0.1:80  
 nc -l(isten) -v -u(dp) -p <port>    
 nc -z(scan open) -v 172.24.0.1 20-500  
+nc -lnp 9999 
   
 ## Netstat
 _apt install net-tools_  
