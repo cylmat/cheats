@@ -1,5 +1,5 @@
 Grep
-----
+===
 
 Sed
 ---
@@ -22,3 +22,16 @@ cat file.txt | while read in; do echo "$in"; done
 while IFS='$\n' read line; do echo "$line"; done < file.txt
 xargs echo "\n" - <file.txt
 xargs -n 1 -I{} echo Blah {} blabla {}.. < <(seq 1 5)
+
+---
+# Utils
+### cut
+**select fields**  
+echo 'A B C D' | cut -f 1-3  
+
+**change delim**  
+echo 'Pierre,John,Satia,Henrick' | cut -d ',' -f -2
+
+### tr
+cat file.txt | tr [:lower:] [:upper:]  
+cat file.txt|tr –d ’ ’
