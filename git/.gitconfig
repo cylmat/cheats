@@ -93,6 +93,7 @@
     format = html
 [http]
     postBuffer = 52428800
+    proxy = 'http://user:pass@proxy_url:8080'
 [merge]
     tool = vimdiff
     ff = false # false|only
