@@ -1,5 +1,5 @@
 # Commands
---------
+
 ### Add
 git add -(i)nteractive
 git add -(p)atch (answer y/n for each hunk)
