@@ -115,6 +115,9 @@ git commit --amend -m <msg>
 git commit --amend (modify last commit, add files, edit msg)
 git commit --amend --no-edit (sans modif du msg)
 
+- change last commit message
+git commit --amend -m '[OPFR-5694] Modification'
+
 - git < 1.7.9
 git commit --amend -C HEAD
 
@@ -135,6 +138,15 @@ git diff --word-diff-regex=<regex> (--word-diff-regex=.)
 
 - tips
 git diff --stat --cached origin/master (about to commit)
+	
+git diff fichier1 fichier2 ...  
+git difftool  
+git diff branch_1 origin/branch_1  
+    
+- **for environement**  
+git diff --cached (index <> last commit)  
+git diff (index <> working tree)  
+git diff HEAD (last commit <> working tree) 
 
 ### Fetch
 git fetch --all origin
@@ -144,6 +156,10 @@ git fetch <remote> <branch> --dry-run
 git fetch coworkers feature_branch
 git checkout coworkers/feature_branch
 git checkout -b local_feature_branch
+	
+### Filesystem
+**In case of errors, or breaked HEAD**  
+git fsck --full
 
 ### Filter-branch
 - split subfolder to a new repo
@@ -160,7 +176,7 @@ git filter-branch --index-filter 'git rm --cached <file>' HEAD
 - apply a patch from unrelated repository
 git format-patch  --git-dir=<pathToOtherLocalRepo>/.git -k -1 --stdout <otherLocalCommitSHA> | git am -3 -k
 
-### Gc
+### GC
 git gc (garbage collector)	
 
 ### Log
