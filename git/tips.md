@@ -45,10 +45,10 @@ Env variables
 
 Exclude files
 ---
-- exclude files
-.gitignore
-.git/info/exclude
-(config) core.excludesfile '<file>'
+exclude files  
+- .gitignore
+- .git/info/exclude
+- core.excludesfile '<file>'
 
 Init repo
 ---
