@@ -1,14 +1,4 @@
 # Tips
-[status]
-    submodulesummary = 1
-
-[alias]
-    ign = ls-files -o -i --exclude-standard
-
-[alias]
-    uncommit = reset HEAD~1 --mixed
-
-gpg = log --show-signature
 
 
 TAGS
