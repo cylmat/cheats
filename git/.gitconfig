@@ -1,0 +1,64 @@
+# git config --local|global|system --edit
+
+[alias]
+    cftype = cat-file -t
+    cfdump = cat-file -p
+    ladog = log --all --oneline --decorate --graph
+    ldh= log --oneline --decorate develop..HEAD
+    lhist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    lod = log --oneline --decorate
+    rid = rebase -i develop
+    ref = reflog
+    rev-oh = rev-list origin..HEAD
+    subtree_add = "!f() { git subtree add --prefix $2 $1 master --squash; }; f"
+    subtree_up = "!f() { git subtree pull --prefix $2 $1 master --squash; }; f"
+    tidy = "rebase -i @{upstream}.."
+    unstage = 'reset HEAD --'
+
+    # From stackoverflow.com / visualizing-branch-topology-in-git
+    lg1 = log --graph --abbrev-commit --all --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' 
+    lg2 = log --graph --abbrev-commit --all --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' 
+    lg = !"git lg1"
+[branch]
+    master.mergeoptions = --no-ff
+    autosetuprebase always    # (for auto pull rebase )
+[color]
+    ui=true
+    status=auto
+    branch=auto   # (color.branch=auto)
+    branch.upstream=cyan
+[core]
+    autocrlf = input # win
+    editor = vim
+    excludesfile='<file>'
+[diff]
+    wordRegex = . 
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[help]
+    format=html
+[http]
+    postBuffer = 52428800
+[merge]
+    tool = vimdiff
+    ff = false|only
+[pull]
+    rebase = true
+    rebase = preserve
+[push]
+    default = simple|upstream
+[rebase]
+    stat = true # visuel des chagements
+    missingCommitsCheck = warn 
+[ssh]
+    postBuffer = 52428800
+[status]
+    showUntrackedFiles = all
+[tags]
+    sort
+[user]
+    # git config --global user.name "Sam Smith"
+    # git config --global user.email sam@example.com
