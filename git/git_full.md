@@ -33,14 +33,23 @@ git branch --list pr-* (regex)
 git branch --track origin/feat5 (suivre remote branch)
 git branch --set-upstream-to=origin/topic topic
 
+- Modify or delete
+git branch -m feature/OPFR-1234 feature/OPFR-4321  
+git branch -D feature/OPFR-XXXX  
+git push --delete origin feature/OPFR-XXXX 
+
 - créer une nouvelle branche
-git checkout -b feature-branch master 
+git checkout -b <branch> master  
+git checkout -b <branch> --track origin/<branch>  
 
 - remotes
 git remote add new-remote-repo https://bitbucket.com/user/repo.git
 git push <new-remote-repo> experiment~
 git push origin --delete experiment (delete remote)
 git push origin :experiment (delete remote)
+	
+- Delete remote branch on local
+git fetch --all --prune  
 
 - create new remote branch
 (if git push --set-upstream origin test2 doesn't work)
@@ -51,12 +60,18 @@ git branch -f <branch-name> <new-tip-commit>
  or with
 git update-ref 
 
-- to see branch config
-git branch -vv
+- See branch config
+git branch -vv --all
 git config --list OR --get-regex 'branch'
 
 - parent de la branche courante
 git show --summary $(git merge-base test2 master)
+
+- Show remote  
+**See remote from config** 
+git config remote.$(git config branch.master.remote).url
+git config remote.origin.url
+git remote show origin
 
 ### Checkout
 (files, commits, and branches.)
@@ -77,11 +92,15 @@ git cherry-pick <commitSHA> --edit (message) --no-commit (copy only files) --sig
 git cherry-pick -
 git cherry-pick @{-1}
 
-### Clean
+### Clean (Remove untracked files & dirs)
 git clean -n -d   # list all files/directories that would be removed
 git clean -f
 git clean -(i)nteractif
-git clean -x (fichiers ignorés)
+git clean -x (fichiers ignorés)  
+  
+git clean -fd --dry-run --interactive  
+    -x (dont use .gitignore) -e (exclude) <pattern>  
+    -X (use .gitignore)
 
 ### Clone
 - for big project
@@ -542,3 +561,23 @@ numframes=`gifsicle $1 -I | grep -P "\d+ images" --only-matching | grep -P "\d+"
 * https://delicious-insights.com/fr/articles/prompt-git-qui-dechire/
 * https://git-scm.com/book/fr/v2/Git-dans-d%E2%80%99autres-environnements-Git-dans-Bash
 * https://www.journaldunet.fr/web-tech/guide-de-l-entreprise-digitale/1443846-influxdb-une-base-de-donnees-time-series-open-source-sur-optimisee/
+
+Ref cheatsheets
+---
+* https://gist.github.com/mpeshev/9550375
+* https://gist.github.com/PaulCapestany/cebfbd54b0c25b6bd8b9
+* https://gist.github.com/chrismccoy/8775224
+
+**Git to changelog**  
+* http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;f=build-aux/gitlog-to-changelog
+
+References
+----------
++ [atlassian.com](atlassian.com)
++ [githowto](https://githowto.com/)
++ [Tuto](https://www.atlassian.com/fr/git/tutorials)
++ [30 options](https://delicious-insights.com/fr/articles/30-options-git-qui-gagnent-a-etre-connues/)
++ [Gitflow - Nvie](https://nvie.com/posts/a-successful-git-branching-model/)
++ [Beginner](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration)
++ [Cheat sheets](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
++ [git-request-pull] (https://git-scm.com/docs/git-request-pull)
