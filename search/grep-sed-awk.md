@@ -32,6 +32,13 @@ echo 'A B C D' | cut -f 1-3
 **change delim**  
 echo 'Pierre,John,Satia,Henrick' | cut -d ',' -f -2
 
+**last 2 characters** 
+echo 'This' | cut -c -2
+
+### sort
+
 ### tr
 cat file.txt | tr [:lower:] [:upper:]  
 cat file.txt|tr –d ’ ’
+
+### uniq
