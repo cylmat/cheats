@@ -126,11 +126,11 @@ Ref cheatsheets
 
 References
 ----------
-[atlassian.com](atlassian.com)
-[githowto](https://githowto.com/)
-[Tuto](https://www.atlassian.com/fr/git/tutorials)
-[30 options](https://delicious-insights.com/fr/articles/30-options-git-qui-gagnent-a-etre-connues/)
-[Gitflow - Nvie](https://nvie.com/posts/a-successful-git-branching-model/)
-[Beginner](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration)
-[Cheat sheets](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
-[git-request-pull] (https://git-scm.com/docs/git-request-pull)
++ [atlassian.com](atlassian.com)
++ [githowto](https://githowto.com/)
++ [Tuto](https://www.atlassian.com/fr/git/tutorials)
++ [30 options](https://delicious-insights.com/fr/articles/30-options-git-qui-gagnent-a-etre-connues/)
++ [Gitflow - Nvie](https://nvie.com/posts/a-successful-git-branching-model/)
++ [Beginner](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration)
++ [Cheat sheets](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
++ [git-request-pull] (https://git-scm.com/docs/git-request-pull)
