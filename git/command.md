@@ -1,11 +1,4 @@
-https://delicious-insights.com/fr/articles/prompt-git-qui-dechire/
-https://git-scm.com/book/fr/v2/Git-dans-d%E2%80%99autres-environnements-Git-dans-Bash
-https://www.journaldunet.fr/web-tech/guide-de-l-entreprise-digitale/1443846-influxdb-une-base-de-donnees-time-series-open-source-sur-optimisee/
-
-# Get the number of frames
-#numframes=`gifsicle $1 -I | grep -P "\d+ images" --only-matching | grep -P "\d+" --only-matching`
-
-Commands
+# Commands
 --------
 ### Add
 git add -(i)nteractive
@@ -534,5 +527,14 @@ git update-index --skip-worktree <file-list>
 ### Update-ref
 - move branch head place
 git update-ref refs/heads/<branch> <commit>    -m "reset: Reset <branch> to <new commit>"
-git update-ref <ref> <commit>    -m "reset: Reset <branch> to <new commit>"
+git update-ref <ref> <commit>    -m "reset: Reset <branch> to <new commit>"  
+ 
++ Samples  
+Get the number of frames  
+numframes=`gifsicle $1 -I | grep -P "\d+ images" --only-matching | grep -P "\d+" --only-matching`  
 
+---
+@ref:  
+* https://delicious-insights.com/fr/articles/prompt-git-qui-dechire/
+* https://git-scm.com/book/fr/v2/Git-dans-d%E2%80%99autres-environnements-Git-dans-Bash
+* https://www.journaldunet.fr/web-tech/guide-de-l-entreprise-digitale/1443846-influxdb-une-base-de-donnees-time-series-open-source-sur-optimisee/
