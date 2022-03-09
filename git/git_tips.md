@@ -1,12 +1,14 @@
 # Tips
 
 TAGS
+---
 git for-each-ref --sort=taggerdate --format '%(tag)'
 
 tag by date
 git for-each-ref --sort=taggerdate --format '%(tag)%09%(taggerdate:raw)%09%(*authorname)' refs/tags | awk '{print $1"\t\t"strftime("%F  %H:%M", $2)"\t"$4" "$5}'
 
-[alias]
+alias
+---
   tags = "!git for-each-ref --sort=taggerdate --format '%(tag)%09%(taggerdate:raw)%09%(*authorname)%09%(*subject)' refs/tags | awk '{print $1\"\t\t\"strftime(\"%F  %H:%M\", $2)\"\t\"$4\" \"$5\"  \t\t\"$6\" \"$7\" \"$8\" \"$9\" \"$10}'"
 
 verbose
