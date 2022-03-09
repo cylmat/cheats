@@ -39,9 +39,19 @@ tags = !"git for-each-ref \
     --format '%(tag)_,,,_%(taggerdate:raw)_,,,_%(taggername)_,,,_%(subject)' refs/tags \
     | awk 'BEGIN { FS = \"_,,,_\"  } ; { t=strftime(\"%Y-%m-%d  %H:%M\",$2); printf \"%-20s %-18s %-25s %s\\n\", t, $1, $4, $3  }'"
 
+Env variables
+---
+@see https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables  
+
+Exclude files
+---
+- exclude files
+.gitignore
+.git/info/exclude
+(config) core.excludesfile '<file>'
 
 Init repo
-=========
+---
 (on remote server)  
 $ cd repos  
 $ mkdir myrepo && cd myrepo  
@@ -56,14 +66,14 @@ mkdir myrepo.git && cd myrepo.git
 git init --shared=true --bare  
 
 Upload a repo (from local)
-------
+---
 From host:  
 $ mv myrepo.git ~/git-server/repos  
 From remote:  
 $ scp -r myrepo.git user@host:~/git-server/repos  
 
 Clone a repo (from local)  
------
+---
 $ git clone ssh://git@<ip-docker-server>:2222/git-server/repos/myrepo.git  
 $ git clone ssh://git@192.168.99.100:2222/git-server/repos/myrepo.git  
 
