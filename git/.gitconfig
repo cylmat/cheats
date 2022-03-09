@@ -1,3 +1,5 @@
+# @see https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+#
 # git config --local|global|system --edit
 
 [alias]
