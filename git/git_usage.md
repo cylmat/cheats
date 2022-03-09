@@ -115,7 +115,7 @@ git tag -d mon_tag      # (delete)
 git push origin --delete mon_tag    # (delete remote)  
 git fetch origin "+refs/tags/*:refs/tags/*"     # (recupère les tags supprimés du distant)
 
-Ref
+Ref cheatsheets
 ---
 * https://gist.github.com/mpeshev/9550375
 * https://gist.github.com/PaulCapestany/cebfbd54b0c25b6bd8b9
@@ -123,3 +123,14 @@ Ref
 
 **Git to changelog**  
 * http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;f=build-aux/gitlog-to-changelog
+
+References
+----------
+[atlassian.com](atlassian.com)
+[githowto](https://githowto.com/)
+[Tuto](https://www.atlassian.com/fr/git/tutorials)
+[30 options](https://delicious-insights.com/fr/articles/30-options-git-qui-gagnent-a-etre-connues/)
+[Gitflow - Nvie](https://nvie.com/posts/a-successful-git-branching-model/)
+[Beginner](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration)
+[Cheat sheets](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+[git-request-pull] (https://git-scm.com/docs/git-request-pull)
