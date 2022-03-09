@@ -1,61 +1,5 @@
-GIT USAGE
-=========
 
-BRANCHES
-------
-##### * Create
-git checkout -b <branch> --track origin/<branch>
 
-##### * Modify or delete
-git branch -m feature/OPFR-1234 feature/OPFR-4321  
-git branch -D feature/OPFR-XXXX  
-git push --delete origin feature/OPFR-XXXX  
-
-##### * Delete remote branch on local
-git fetch --all --prune 
-
-##### * Show remote  
-**See from config** 
-git config remote.$(git config branch.master.remote).url
-git config remote.origin.url
-git remote show origin
-
-**See tracking branch**  
-git branch --all -vv
-
-CONFIG
-------
-**Exclude files**  
-vim .git/info/exclude  
-
-**Proxy**
-git config http.proxy 'http://user:pass@proxy_url:8080'
-
-CLEAN - Remove untracked files & dirs
------
-git clean -fd --dry-run --interactive  
-    -x (dont use .gitignore) -e (exclude) <pattern>  
-    -X (use .gitignore)
-
-COMMIT
-------
-git commit --amend -m '[OPFR-5694] Modification'    # (change last commit message)
-
-DIFF
-----
-git diff fichier1 fichier2 ...  
-git difftool  
-git diff branch_1 origin/branch_1  
-    
-**for environement** 
-git diff --cached (index <> last commit)  
-git diff (index <> working tree)  
-git diff HEAD (last commit <> working tree)  
-
-FILESYSTEM
-----------
-**In case of errors, or breaked HEAD**  
-git fsck --full
 
 LOGS
 ---- 
@@ -114,23 +58,3 @@ git push origin --tags
 git tag -d mon_tag      # (delete)  
 git push origin --delete mon_tag    # (delete remote)  
 git fetch origin "+refs/tags/*:refs/tags/*"     # (recupère les tags supprimés du distant)
-
-Ref cheatsheets
----
-* https://gist.github.com/mpeshev/9550375
-* https://gist.github.com/PaulCapestany/cebfbd54b0c25b6bd8b9
-* https://gist.github.com/chrismccoy/8775224
-
-**Git to changelog**  
-* http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;f=build-aux/gitlog-to-changelog
-
-References
-----------
-+ [atlassian.com](atlassian.com)
-+ [githowto](https://githowto.com/)
-+ [Tuto](https://www.atlassian.com/fr/git/tutorials)
-+ [30 options](https://delicious-insights.com/fr/articles/30-options-git-qui-gagnent-a-etre-connues/)
-+ [Gitflow - Nvie](https://nvie.com/posts/a-successful-git-branching-model/)
-+ [Beginner](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration)
-+ [Cheat sheets](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
-+ [git-request-pull] (https://git-scm.com/docs/git-request-pull)
