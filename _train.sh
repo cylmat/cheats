@@ -4,7 +4,7 @@
 # Display a random training link
 #
 # Usage:
-# wget -q -O- https://raw.githubusercontent.com/cylmat/cheats/main/_train.sh | bash
+# wget -qO- https://raw.githubusercontent.com/cylmat/cheats/main/_train.sh | bash
 ########
 
 LINKS=(
