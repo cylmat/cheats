@@ -3,7 +3,8 @@
 ########
 # Display a random training link
 #
-# Use with wget 
+# Usage:
+# wget -q -O- https://raw.githubusercontent.com/cylmat/cheats/main/_train.sh | bash
 ########
 
 LINKS=(
