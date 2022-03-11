@@ -1,10 +1,11 @@
 Find | xargs
 ===
 
-- **Find file from root**  
+## Samples
+- Find file from root 
 find / -name <file>
 
-- **Sed each .sh files**  
+- Sed each .sh files
 find . -name "*.sh" -exec sed -i 's/search/replace/' {} \;
 
 - test itération sur les fichiers logs
@@ -22,41 +23,32 @@ ls -1 ./src/*.txt | xargs -n1 basename
 - recherche 'smile' dans chaque fichier json trouvé
 find -maxdepth 1 -regex '.*.json' | xargs grep smile
   
+## find -exec \; vs find -exec \+
+find . -name 'test*' -exec echo {} \;
+- ./test.c
+- ./test.cpp
+- ./test.new
+  
+where find . -name 'test*' -exec echo {} \+
+- ./test.c ./test.cpp ./test.new
+
+---
 # sample
 - https://www.everythingcli.org/find-exec-vs-find-xargs/
 
 1. Search within files
 Search for files only that end with .php and look for the string $test inside those files:
-# find -exec \;
+* find -exec \;
 find . -name \*.php -type f -exec grep -Hn '$test' {} \;
 
-# find -exec \+
-find . -name \*.php -type f -exec grep -Hn '$test' {} \+
-
-# find | xargs -n1
+* find | xargs -n1
 find . -name \*.php -type f -print0 | xargs -0 -n1 grep -Hn '$test'
 
-# find | xargs
-find . -name \*.php -type f -print0 | xargs -0 grep -Hn '$test'
-
-They all seem to do the same. Let’s see if they all find the same amount of results:
 # Getting directory size
 # '| wc -l' will print the number of lines found instead of the results
 
 # time find -exec \;
 find . -name \*.php -type f -exec grep -Hn '$test' {} \; | wc -l
-  2213
-
-# find -exec \+
-find . -name \*.php -type f -exec grep -Hn '$test' {} \+ | wc -l
-  2213
-
-# find | xargs -n1
-find . -name \*.php -type f -print0 | xargs -0 -n1 grep -Hn '$test' | wc -l
-  2213
-
-# find | xargs
-find . -name \*.php -type f -print0 | xargs -0 -grep -Hn '$test' | wc -l
   2213
 
 No difference either, let’s look at the commands in detail.
