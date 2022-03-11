@@ -9,7 +9,9 @@
 
 LINKS=(
     "https://code.golf/random#php"
-    "https://www.root-me.org/fr/Challenges"
+    "https://hackerrank.com/dashboard"
+    "https://root-me.org/fr/Challenges"
+    "https://vimgolf.com"
 )
 
 SIZE=${#LINKS[@]}
