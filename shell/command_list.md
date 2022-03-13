@@ -74,3 +74,5 @@ Path
 - https://www.ubuntupit.com/best-linux-commands-to-run-in-the-terminal
 - https://www.thegeekstuff.com/2010/11/50-linux-commands
 - https://www.thegeekstuff.com/2010/12/50-unix-linux-sysadmin-tutorials
+
++ https://github.com/cheat/cheat
