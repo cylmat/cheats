@@ -11,7 +11,7 @@ LINKS=(
     "https://code.golf/random#php"
     "https://hackerrank.com/dashboard"
     "https://root-me.org/fr/Challenges"
-    "https://vimgolf.com"
+    "https://vimgolf.com?page=$(($RANDOM % 10))"
 )
 
 SIZE=${#LINKS[@]}
