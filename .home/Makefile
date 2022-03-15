@@ -49,6 +49,10 @@ starship:
 	echo 'eval "$(starship init bash)"' >> ~/.bashrc
 	mkdir -p ~/.config && touch ~/.config/starship.toml
 	
+# locales
+locales:
+	apt install -y locales locales-all
+	
 #######
 # ZSH #
 #######
