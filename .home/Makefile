@@ -43,8 +43,7 @@ powerline:
 # http://ftp.be.debian.org/pub/software/scm/git-core/git-manpages-2.30.0.tar.gz
 git-man:
 	wget -P /tmp http://ftp.be.debian.org/pub/software/scm/git-core/git-manpages-2.30.0.tar.gz
-	cd /tmp
-	tar -xzf git-manpages-2.30.0.tar.gz -C /usr/share/man
+	tar -xzf /tmp/git-manpages-2.30.0.tar.gz -C /usr/share/man
 
 #########
 # LINUX #
