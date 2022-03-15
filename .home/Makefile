@@ -60,7 +60,7 @@ starship:
 	mkdir -p ~/.config && touch ~/.config/starship.toml
 	
 manpages:
-	apt install -y manpages
+	apt install -y manpages man-db
 	
 # locales
 locales:
