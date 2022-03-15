@@ -42,6 +42,7 @@ powerline:
 # https://cdn.kernel.org/pub/software/scm/git/
 # http://ftp.be.debian.org/pub/software/scm/git-core/git-manpages-2.30.0.tar.gz
 git-man:
+	apt install -y manpages man-db
 	wget -P /tmp http://ftp.be.debian.org/pub/software/scm/git-core/git-manpages-2.30.0.tar.gz
 	tar -xzf /tmp/git-manpages-2.30.0.tar.gz -C /usr/share/man
 
