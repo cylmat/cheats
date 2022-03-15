@@ -39,11 +39,12 @@ powerline:
 #######
 # GIT #
 #######
+# https://cdn.kernel.org/pub/software/scm/git/
+# http://ftp.be.debian.org/pub/software/scm/git-core/git-manpages-2.30.0.tar.gz
 git-man:
-	GITMAN="man-pages-5.13.tar.gz"
-	wget https://git.kernel.org/pub/scm/docs/man-pages/man-pages.git/snapshot/$GITMAN -O /tmp/$GITMAN
-	cd /tmp/$GITMAN && make install
-	rm /tmp/$GITMAN -rf
+	wget -P /tmp http://ftp.be.debian.org/pub/software/scm/git-core/git-manpages-2.30.0.tar.gz
+	cd /tmp
+	tar -xzf git-manpages-2.30.0.tar.gz -C /usr/share/man
 
 #########
 # LINUX #
@@ -57,6 +58,9 @@ starship:
 	sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 	echo 'eval "$(starship init bash)"' >> ~/.bashrc
 	mkdir -p ~/.config && touch ~/.config/starship.toml
+	
+manpages:
+	apt install -y manpages
 	
 # locales
 locales:
