@@ -35,6 +35,15 @@ powerline:
 	mv PowerlineSymbols.otf /usr/share/fonts/
 	fc-cache -vf
 	mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+	
+#######
+# GIT #
+#######
+git-man:
+	GITMAN="man-pages-5.13.tar.gz"
+	wget https://git.kernel.org/pub/scm/docs/man-pages/man-pages.git/snapshot/$GITMAN -O /tmp/$GITMAN
+	cd /tmp/$GITMAN && make install
+	rm /tmp/$GITMAN -rf
 
 #########
 # LINUX #
