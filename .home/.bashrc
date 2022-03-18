@@ -1,6 +1,14 @@
 # @ref
 # https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c
 
+########
+# BASH #
+########
+if [[ ! -f /usr/share/bash-completion/bash_completion ]]; then
+  apt update && apt install -y bash-completion
+  source /usr/share/bash-completion/bash_completion
+fi;
+
 #######
 # GIT #
 #######
