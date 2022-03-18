@@ -9,7 +9,10 @@
 
 LINKS=(
     "https://code.golf/random#php"
-    "https://hackerrank.com/dashboard"
+    "https://hackerrank.com/domains/algorithms"
+    "https://hackerrank.com/domains/data-structures"
+    "https://hackerrank.com/domains/regex"
+    "https://hackerrank.com/domains/shell"
     "https://root-me.org/fr/Challenges"
     "https://vimgolf.com?page=$(($RANDOM % 10))"
 )
