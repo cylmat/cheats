@@ -12,11 +12,10 @@ fi;
 #######
 # GIT #
 #######
-if [ ! -f ~/git-completion.bash ]; then
+if [[ ! -f ~/git-completion.bash ]]; then
   wget https://github.com/git/git/blob/master/contrib/completion/git-completion.bash -O ~/git-completion.bash
-]
+  source ~/git-completion.bash
 fi
-source ~/git-completion.bash
 
 ###########
 # HISTORY #
