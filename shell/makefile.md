@@ -12,6 +12,14 @@ call-command:
 	@$(call useful_command, arg1, args2)
 ```
 
+```
+depend-command:
+	echo 1
+	
+another-one: depend-command
+	echo 2
+```
+
 **Call it with MY_ARG="whatever" make args**  
 ```
 args:  
