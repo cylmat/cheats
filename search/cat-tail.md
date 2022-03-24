@@ -9,7 +9,4 @@ Crlf
 ---
 **Dos 2 unix**  
 tr -d '\r' < input.file > output.file  
-sed 's/^M$//' input.txt > output.txt  
-
-### Shell
-clear: Ctrl+u   
+sed 's/^M$//' input.txt > output.txt     
