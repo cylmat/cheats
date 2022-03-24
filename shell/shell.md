@@ -13,3 +13,6 @@ error >/dev/null 2>&1
 
 ## Null
 echo "Hello" >/dev/null  
+
+### Shell
+clear: Ctrl+u
