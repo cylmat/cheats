@@ -12,6 +12,9 @@ call-command:
 	@$(call useful_command, arg1, args2)
 ```
 
+** Double $$ **  
+kill $$(ps | grep php | awk '{print $$1}')
+
 ```
 depend-command:
 	echo 1
