@@ -66,6 +66,11 @@ manpages:
 locales:
 	apt install -y locales locales-all
 	
+# Process
+# kill $(ps | grep -oE ^.[0-9]+)
+ps:
+	apt update && apt install procps
+	
 #######
 # ZSH #
 #######
