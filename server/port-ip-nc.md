@@ -20,6 +20,9 @@ netstat -a(ll) -n(umeric) -t(cp) 2>&1
 netstat -p(rogram) -l(isten) -u(dp) -n(umeric) -t(cp)  
 netstat -r(outing)  
   
+**check every opened ports**  
+netstat -plunt | grep LISTEN
+  
 ## Nmap
 _apt install nmap_  
 nmap 192.168.100.1/24 -p 1-80  
