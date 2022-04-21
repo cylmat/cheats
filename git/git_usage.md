@@ -120,6 +120,10 @@ git commit --amend -m '[OPFR-5694] Modification'
 
 - git < 1.7.9  
 git commit --amend -C HEAD  
+	    
+- fixup and rebase 
+git commit --fixup <hash>
+git rebase -i --autosquash
 
 ### Describe
 git describe --tags    
