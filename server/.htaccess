@@ -1,20 +1,32 @@
-###
-# Rewrite all queries to index.php...<queries>
-###
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^((?s).*)$ index.php?_url=/$1 [QSA,L]
-</IfModule>
+
+RewriteEngine On
+RewriteBase /
 
 ###
 # Rewrite all query to "./public" directory
 ###
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-
 RewriteCond %{REQUEST_URI} !^/public
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule (.*) public/$1 [L]
+
+###
+# Rewrite all queries to index.php...<queries>
+###
+RewriteCond %{REQUEST_URI} ^/public/image
+RewriteRule ^((?s).*)$ index.php?_url=/$1 [QSA,L]
+
+###
+# Rewrite all queries to image.php...<queries>
+###
+RewriteCond %{REQUEST_URI} ^/public/image
+RewriteRule .* public/image.php [QSA,L]
 </IfModule>
+
+###
+# REF
+# @see https://httpd.apache.org/docs/2.4/fr/rewrite/flags.html
+#
+# [QSA] Query String Append
+###
