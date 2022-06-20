@@ -11,17 +11,19 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule (.*) public/$1 [L]
 
-###
 # Rewrite all queries to index.php...<queries>
-###
 RewriteCond %{REQUEST_URI} ^/public/image
 RewriteRule ^((?s).*)$ index.php?_url=/$1 [QSA,L]
 
-###
 # Rewrite all queries to image.php...<queries>
-###
 RewriteCond %{REQUEST_URI} ^/public/image
 RewriteRule .* public/image.php [QSA,L]
+
+# Rewrite all queries to image.php...<queries>
+# $1 will be public/image
+RewriteCond %{REQUEST_URI} ^/public/image$
+RewriteRule (.*) images.php?alpha=$1 [QSA,L]
+
 </IfModule>
 
 ###
