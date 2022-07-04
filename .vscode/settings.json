@@ -3,15 +3,16 @@
     "console": "internalConsole",
     "debug.internalConsoleOptions": "neverOpen",
     
-    "editor.fontLigatures": true,
     "editor.fontFamily": "'JetBrains Mono', 'Fira Code iScript', Consolas, 'Courier New', monospace",
-    "editor.renderWhitespace": "none",
-    "editor.tabCompletion": "on",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
     "editor.fontSize": 13,
     "editor.fontWeight": "300",
     "editor.letterSpacing": 1.2,
     "editor.lineHeight": 22,
     "editor.fontLigatures": true,
+    "editor.renderWhitespace": "none",
+    "editor.tabCompletion": "on",
     "editor.tokenColorCustomizations": {
         "textMateRules": [{
             "scope": [
