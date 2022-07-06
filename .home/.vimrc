@@ -55,11 +55,11 @@ map <Space> <Leader>
 " --- or let mapleader="\<Space>"
 
 " Editing
-nnoremap <Leader>r <C-r> " redo
+nnoremap <Leader>r <C-r>
 
 " Numbers 
-nnoremap <Leader>a <C-a> " increment 
-nnoremap <Leader>x <C-x> " decrement 
+nnoremap <Leader>a <C-a>
+nnoremap <Leader>x <C-x>
 
 " Visual
 nnoremap <Leader>v <C-v>
