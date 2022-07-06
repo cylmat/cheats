@@ -1,6 +1,4 @@
-""""""""""
-" .vimrc "
-""""""""""
+" ~/.vimrc
 
 " Reset to vim-defaults, ward off unexpected things 
 if &compatible
@@ -45,6 +43,39 @@ map Y y$
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
+
+""""""""""""""""
+"    VSCODE    "
+" on Windows C:\...home\.vimrc
+""""""""""""""""
+
+" Leader to <Space>
+noremap <Space> <Nop>
+map <Space> <Leader>
+" --- or let mapleader="\<Space>"
+
+" Editing
+nnoremap <Leader>r <C-r> " redo
+
+" Numbers 
+nnoremap <Leader>a <C-a> " increment 
+nnoremap <Leader>x <C-x> " decrement 
+
+" Visual
+nnoremap <Leader>v <C-v>
+
+" Windows
+nnoremap <Leader>w <C-w>
+
+" Sneak plugin
+" nmap s <Plug>Sneak_s
+" nmap S <Plug>Sneak_S
+" map f <Plug>Sneak_s
+" map F <Plug>Sneak_S
+
+""""""""""""
+" -vscode- "
+""""""""""""
 
 "-------
 " @ref:
