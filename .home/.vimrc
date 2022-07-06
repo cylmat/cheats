@@ -48,6 +48,7 @@ nnoremap <C-L> :nohl<CR><C-L>
 "    VSCODE    "
 " on Windows C:\...home\.vimrc
 """"""""""""""""
+ " Change VScode Ctrl binding to Space 
 
 " Leader to <Space>
 noremap <Space> <Nop>
