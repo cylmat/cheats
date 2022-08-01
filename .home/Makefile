@@ -22,6 +22,13 @@ blesh:
 #######
 # DEV #
 #######
+composer-bin:
+	php -r 'copy("https://composer.github.io/installer.sig", "/tmp/installer.sig");'
+	php -r 'copy("https://getcomposer.org/installer", "composer-setup.php");'
+	php -r "if (hash_file('sha384', 'composer-setup.php') === file_get_contents('/tmp/installer.sig')) { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('/tmp/composer-setup.php'); } echo PHP_EOL;"
+	php composer-setup.php --install-dir=bin --filename=composer
+	php -r "unlink('composer-setup.php'); unlink('/tmp/installer.sig');"
+	
 # https://kint-php.github.io/kint/
 kint-bin:
 	curl -LO https://raw.githubusercontent.com/kint-php/kint/master/build/kint.phar
