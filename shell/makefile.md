@@ -25,6 +25,7 @@ another-one: depend-command
 
 **Call it with MY_ARG="whatever" make args**  
 ```
+MY_ARG?=default_value
 args:  
 	@echo "${MY_ARG}"
 ```
