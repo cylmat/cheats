@@ -6,4 +6,5 @@ Review your configured GitHub OAuth token or enter a new one to go over the API 
 Head to https://github.com/settings/tokens/new?scopes=repo&description=Composer+on+sample.hosting.net
 to retrieve a token. It will be stored in "/home/dir/auth.json" for future use by Composer.
 ```
+- https://github.com/settings/tokens
 - composer config --auth github-oauth.github.com ghp_i[token]
