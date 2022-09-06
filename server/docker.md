@@ -17,7 +17,7 @@ APACHE
 ---
 https://blog.silarhi.fr/image-docker-php-apache-parfaite/
 
-tips:
+# tips:
 ###################### Dans VirtualBox
 -> ajouter un repertoire Docker partagé
 ###################### docker-machine ssh
@@ -25,6 +25,17 @@ sudo sed -i "s/10.0.2.3/8.8.8.8/g" /etc/resolv.conf &&
 sudo mkdir /VMshare &&
 sudo mount -t vboxsf Docker /VMshare &&
 sudo mount -t vboxsf REF /REF
+
+tips arguments
+--------------
+- in compose.yml
+args:
+  servername: "my.url_website"
+  buildno: 1
+- in dockerfile
+  ARG buildno
+  ARG servername
+  RUN echo "Build number: $buildno from $servername"
 
 /**
 * //tip:
