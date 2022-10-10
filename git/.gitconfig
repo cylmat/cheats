@@ -82,6 +82,15 @@
     pager = less -x1,5 # Better git diff view
     safecrlf = true
     # whitespace = blank-at-eol,blank-at-eof,space-before-tab,trailing-space
+    
+[credential]
+	helper = store --file ~/.git-credentials
+	helper = cache --timeout 30000
+
+#[credential "https://example.com"]#
+	#username = your_user
+	#helper = "!f() { test \"$1\" = get && echo \"password=$(cat $HOME/.secret)\"; }; f"   
+ 
 [diff]
     wordRegex = . 
 [filter "lfs"]
