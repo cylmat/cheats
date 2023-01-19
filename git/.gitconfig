@@ -86,6 +86,9 @@
 [credential]
 	helper = store --file ~/.git-credentials
 	helper = cache --timeout 30000
+	
+	# ask one time then store it
+	helper=store
 
 #[credential "https://example.com"]#
 	#username = your_user
