@@ -105,6 +105,7 @@
     format = html
 [http]
     postBuffer = 52428800
+    # if error Received HTTP code 407 from proxy after CONNECT
     proxy = 'http://user:pass@proxy_url:8080'
 [merge]
     tool = vimdiff
