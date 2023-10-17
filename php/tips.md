@@ -1,6 +1,6 @@
 # Tips
 
-Syntaxic suger
+Syntaxic sugar
 ---
 ```
 [, $b, $c, 'd' => $d] = $array   
