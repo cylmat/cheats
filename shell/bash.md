@@ -30,6 +30,14 @@ for i in "$@"; do
 done
 ```
 
+### Wrapping arguments
+```
+alias pushing='f(){ git add . && git commit -m "$@" && git push;  unset -f f; }; f'
+alias wrap_args='f(){ echo before "$@" after;  unset -f f; }; f'  
+alias wrap_args='sh -c '\''echo before "$@" after'\'' _'  
+alias mkcd='_mkcd(){ mkdir "$1"; cd "$1";}; _mkcd'
+```
+
 **Bash substitution**
 source <(sudo cat /etc/bash.bashrc)
 
