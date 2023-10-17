@@ -1,6 +1,6 @@
 # FORM and Files
 
-### application/x-www-form-urlencoded ###
+## application/x-www-form-urlencoded
 ```
 curl -X POST -k \
 -H 'Content-Type: application/x-www-form-urlencoded' \
@@ -22,7 +22,7 @@ Content-Length: 27
 field1=value1&field2=value2
 ```
 
-## multipart/form-data ###
+## multipart/form-data
 
 ```
 POST /test HTTP/1.1
