@@ -42,3 +42,8 @@ _sleep : [prop1, prop2] vs __serialize : ['whatever'=>'whatever']
 ## Serializable::serialize vs __serialize
 Serializable::serialize : the destructor is not called as a part of the object's serialization.
 @see https://www.php.net/manual/en/language.oop5.magic.php#object.serialize
+
+---
+@ref:
+* [https://www.php.net/manual/en/types.comparisons.php](https://www.php.net/manual/en/types.comparisons.php)
+* [https://www.php.net/manual/en/language.operators.precedence.php](https://www.php.net/manual/en/language.operators.precedence.php)
