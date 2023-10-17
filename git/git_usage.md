@@ -622,21 +622,6 @@ git update-ref <ref> <commit>    -m "reset: Reset <branch> to <new commit>"
 Get the number of frames    
 numframes=`gifsicle $1 -I | grep -P "\d+ images" --only-matching | grep -P "\d+" --only-matching`    
 
----
-@ref:  
-* https://delicious-insights.com/fr/articles/prompt-git-qui-dechire/
-* https://git-scm.com/book/fr/v2/Git-dans-d%E2%80%99autres-environnements-Git-dans-Bash
-* https://www.journaldunet.fr/web-tech/guide-de-l-entreprise-digitale/1443846-influxdb-une-base-de-donnees-time-series-open-source-sur-optimisee/
-
-Ref cheatsheets
----
-* https://gist.github.com/mpeshev/9550375
-* https://gist.github.com/PaulCapestany/cebfbd54b0c25b6bd8b9
-* https://gist.github.com/chrismccoy/8775224
-
-**Git to changelog**  
-* http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;f=build-aux/gitlog-to-changelog
-
 References
 ----------
 + [atlassian.com](atlassian.com)
@@ -647,3 +632,26 @@ References
 + [Beginner](https://www.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration)
 + [Cheat sheets](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 + [git-request-pull] (https://git-scm.com/docs/git-request-pull)
+
+---
+@see:  
+* https://delicious-insights.com/fr/articles/prompt-git-qui-dechire/
+* https://git-scm.com/book/fr/v2/Git-dans-d%E2%80%99autres-environnements-Git-dans-Bash
+* https://www.journaldunet.fr/web-tech/guide-de-l-entreprise-digitale/1443846-influxdb-une-base-de-donnees-time-series-open-source-sur-optimisee
+- https://delicious-insights.com/fr/articles/git-submodules
+- https://doabledanny.gumroad.com/l/git-commands-cheat-sheet-pdf
+- https://www.30secondsofcode.org/git/p/1
+- https://ohshitgit.com
+
+Cheatsheets
+---
+* https://gist.github.com/mpeshev/9550375
+* https://gist.github.com/PaulCapestany/cebfbd54b0c25b6bd8b9
+* https://gist.github.com/chrismccoy/8775224
+
+**Git to changelog**  
+* http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;f=build-aux/gitlog-to-changelog
+
+---
+- git assume-unchanged
+- git worktree add <répertoire> <branche>
