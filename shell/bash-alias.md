@@ -11,6 +11,9 @@ exit 1
 **Return when sourced or bashed script**  
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"  
 
+# With args #
+alias wrap_args_sample='f(){ echo before "$@" after;  unset -f f; }; f'
+
 $@  
 $#  
 $_  
