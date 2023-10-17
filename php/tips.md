@@ -1,7 +1,6 @@
 # Tips
 
-Syntaxic sugar
----
+## Syntaxic sugar
 ```
 [, $b, $c, 'd' => $d] = $array   
 foreach ($array as ['id' => $id, 'name' => $name])     
@@ -9,9 +8,7 @@ variadic_func( ...$a )
 [$a[2],$a[3]] = [$a[3],$a[2]];   
 preg_replace_callback
 ```
-
-Samples
---- 
+ 
 ## text as callback name:   
 ```
 array_map('intval', preg_split('/ /', $arr_temp, -1, PREG_SPLIT_NO_EMPTY));
