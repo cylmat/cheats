@@ -11,14 +11,11 @@ exit 1
 **Return when sourced or bashed script**  
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"  
 
-# With args #
-alias wrap_args_sample='f(){ echo before "$@" after;  unset -f f; }; f'
-
 $@  
 $#  
 $_  
 
-##Options##  
+## Options##  
 ```
 for i in "$@"; do
   case $i in
@@ -56,7 +53,7 @@ Stderr-out
 ping -c 1 yhoo.dsd 2>&1
 command1 1>&2 2>/dev/null
 
-# Prompt
+## Prompt
 ```
 export PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
 PS2=>
@@ -72,7 +69,6 @@ ALIAS
 **Wrapping arguments**  
 ```
 alias pushing='f(){ git add . && git commit -m "$@" && git push;  unset -f f; }; f'
-
 alias wrap_args='f(){ echo before "$@" after;  unset -f f; }; f'  
 alias wrap_args='sh -c '\''echo before "$@" after'\'' _'  
 alias mkcd='_mkcd(){ mkdir "$1"; cd "$1";}; _mkcd'  
