@@ -1,0 +1,132 @@
+{
+    // @recommendations
+    "recommendations": [
+        "alexcvzz.vscode-sqlite",
+        "alexkrechik.cucumberautocomplete",
+        "berublan.vscode-log-viewer",
+        "bmewburn.vscode-intelephense-client",
+        "breezelin.phpstan",
+        "Cardinal90.multi-cursor-case-preserve",
+        "christian-kohler.path-intellisense",
+        "chrmarti.regex",
+        "damianbal.vs-phpclassgen",
+        "derappelt.symfony-console",
+        "donjayamanne.githistory",
+        "dotup.dotup-vscode-interface-generator",
+        "Durzn.brackethighlighter",
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "eriklynd.json-tools",
+        "fabiospampinato.vscode-diff",
+        "firefox-devtools.vscode-firefox-debug",
+        "Gruntfuggly.todo-tree",
+        "hakcorp.php-awesome-snippets",
+        "hbenl.vscode-test-explorer",
+        "higoka.php-cs-fixer",
+        "ikappas.composer",
+        "ikappas.phpcs",
+        "imperez.smarty",
+        "junstyle.php-cs-fixer",
+        "konstantin.wrapSelection",
+        "marcosvfranco.cucumberautocomplete-behat",
+        "mblode.twig-language-2",
+        "MehediDracula.php-namespace-resolver",
+        "mhutchie.git-graph",
+        "mikestead.dotenv",
+        "ms-vscode-remote.remote-containers",
+        "ms-vscode-remote.remote-ssh",
+        "ms-vscode-remote.remote-ssh-edit",
+        "ms-vscode-remote.remote-wsl",
+        "ms-vscode.remote-explorer",
+        "ms-vscode.test-adapter-converter",
+        "nadim-vscode.infinity-dark-theme",
+        "nadim-vscode.symfony-code-snippets",
+        "nadim-vscode.symfony-super-console",
+        
+        // php
+        "neilbrayfield.php-docblocker",
+        "TheNouillet.symfony-vscode",
+        "recca0120.vscode-phpunit",
+        "phproberto.vscode-php-getters-setters",
+        
+        // snippets
+        "thekalinga.bootstrap4-vscode",
+        "sadeghpm.sql-snippets",
+        "nadim-vscode.twig-code-snippets",
+
+        // linter
+        "streetsidesoftware.code-spell-checker",
+        "swordev.phpstan",
+        
+        // color
+        "oderwat.indent-rainbow",
+        "PKief.material-icon-theme",
+        "IBM.output-colorizer",
+        "vscode-icons-team.vscode-icons",
+        "wayou.vscode-todo-highlight",
+        
+        // db
+        "qwtel.sqlite-viewer",
+
+        // format
+        "yhpnoraa.beauty",
+        "mohsen1.prettify-json",
+        "whatwedo.twig",
+        "redhat.vscode-yaml",
+
+        // server
+        "ms-azuretools.vscode-docker",
+
+        // tools
+        "alefragnani.Bookmarks",
+        "alefragnani.project-manager",
+        "alefragnani.read-only-indicator",
+        "ryu1kn.edit-with-shell",
+        "ryu1kn.partial-diff",
+        "SimonSiefke.svg-preview",
+        "vscodevim.vim",
+        "yatki.vscode-surround",
+
+        // tools-capture
+        "adpyke.codesnap",
+        "pnp.polacode",
+    ]
+}
+
+/*
+berublan.vscode-log-viewer
+bmewburn.vscode-intelephense-client
+breezelin.phpstan
+cardinal90.multi-cursor-case-preserve
+christian-kohler.path-intellisense
+chrmarti.regex
+derappelt.symfony-console
+donjayamanne.githistory
+dotup.dotup-vscode-interface-generator
+eamodio.gitlens
+editorConfig.EditorConfig
+eriklynd.json-tools
+gruntfuggly.todo-tree
+hbenl.vscode-test-explorer
+ikappas.composer
+jeffersonLicet.snipped
+konstantin.wrapSelection
+mblode.twig-language-2
+MehediDracula.php-namespace-resolver
+mhutchie.git-graph
+mintlify.document
+ms-vscode.test-adapter-converter
+nadim-vscode.symfony-code-snippets
+nadim-vscode.symfony-super-console
+neilbrayfield.php-docblocker
+oderwat.indent-rainbow
+phproberto.vscode-php-getters-setters
+pnp.polacode
+recca0120.vscode-phpunit
+redhat.vscode-yaml
+ryu1kn.edit-with-shell
+sonarsource.sonarlint-vscode
+streetsidesoftware.code-spell-checker
+vintharas.learn-vim
+visualStudioExptTeam.vscodeintellicode
+*/
