@@ -1,59 +1,159 @@
 {
-    //"console": "integratedTerminal",
-    "console": "internalConsole",
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "console": "integratedTerminal",
     "debug.internalConsoleOptions": "neverOpen",
-    
-    "editor.fontFamily": "'JetBrains Mono', 'Fira Code iScript', Consolas, 'Courier New', monospace",
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
-    "editor.fontSize": 13,
-    "editor.fontWeight": "300",
-    "editor.letterSpacing": 1.2,
-    "editor.lineHeight": 22,
+    "editor.codeActionsOnSave": {},
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code iScript', Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
-    "editor.renderWhitespace": "none",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "300",
+    "editor.guides.bracketPairs": true,
+    "editor.letterSpacing": 1,
+    "editor.lineHeight": 20,
+    "editor.suggestSelection": "first",
     "editor.tabCompletion": "on",
     "editor.tokenColorCustomizations": {
-        "textMateRules": [{
-            "scope": [
-                //following will be in italic (=FlottFlott)
-                "comment",
-                "constant.language",
-                // "entity.name.type.class", //class names
-                // "keyword", //import, export, return…
-                "keyword.control",
-                //"entity.other.attribute-name",
-                //"entity.name.method",
-                //"entity.name.tag",
-                "storage.modifier", //static keyword
-                "storage.type", //class keyword
-                //"support.class.builtin",
-                "string.quoted.single",
-                "string.quoted.double"
-            ],
-            "settings": {
-                "fontStyle": "italic",
+        "textMateRules": [
+            {
+                "scope": [
+                    //following will be in italic (=FlottFlott)
+                    "comment",
+                    "constant.language",
+                    // "entity.name.type.class", //class names
+                    // "keyword", //import, export, return…
+                    "keyword.control",
+                    //"entity.other.attribute-name",
+                    //"entity.name.method",
+                    //"entity.name.tag",
+                    "storage.modifier", //static keyword
+                    "storage.type", //class keyword
+                    //"support.class.builtin",
+                    "string.quoted.double",
+                    "string.quoted.single"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
             }
-        }]
+        ]
     },
-    "internalConsoleOptions": "neverOpen",
+    "files.associations": {
+        "*.cnf": "properties"
+    },
+    "files.autoSave": "afterDelay",
+    "git-graph.contextMenuActionsVisibility": {},
+    "git-graph.defaultColumnVisibility": {
+        "Author": true,
+        "Commit": true,
+        "Date": true
+    },
     "git.terminalAuthentication": false,
-    "presentation": {
-        "reveal": "never"
+    "intelephense.files.exclude": [
+        "**/.DS_Store/**",
+        "**/.git/**",
+        "**/.hg/**",
+        "**/.history/**",
+        "**/.svn/**",
+        "**/bower_components/**",
+        "**/cache/**",
+        "**/CVS/**",
+        "**/node_modules/**",
+        "**/vendor/**/vendor/**",
+        "**/vendor/**/{Tests,tests}/**"
+    ],
+    "logViewer.watch": [
+        {
+            "pattern": "/var/www/var/log/*.log",
+            "title": "Dev App"
+        }
+    ],
+    "php": {
+        "files.exclude": {
+            "**/.DS_Store": true,
+            "**/.git": true,
+            "**/.hg": true,
+            "**/.svn": true,
+            "**/.vscode": true,
+            "**/cache": true,
+            "**/docs": true,
+            "**/node_modules": true,
+            "**/upgrade": true,
+            "**/uploads": true,
+            "/var/www/var": true
+        }
     },
-    "search.useIgnoreFiles": true,
+    "php-docblocker.author": {
+        "email": "email@email.com",
+        "name": "Name"
+    },
+    "php.suggest.basic": false,
+    "phpGettersSetters.getterTemplate": "/root/.config/getter.js",
+    "phpGettersSetters.setterTemplate": "/root/.config/setter.js",
+    "search.useIgnoreFiles": false,
+    "settingsSync.ignoredExtensions": [],
     "showOutput": "never",
-	
-    "vim.startInInsertMode": true,
+    "sqlite.logLevel": "DEBUG",
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "connectionTimeout": 30,
+            "database": "classicmodels",
+            "name": "localhost",
+            "password": "root",
+            "port": 3306,
+            "server": "127.0.0.1",
+            "username": "root"
+        }
+    ],
+    "symfony-vscode.phpExecutablePath": "/usr/local/bin/php",
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.forceUpload": true,
+    "sync.quietSync": true,
+    "terminal.integrated.defaultProfile.windows": "Debian (WSL)",
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "args": [],
+            "icon": "terminal-cmd",
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ]
+        },
+        "Debian (WSL)": {
+            "args": [
+                "-d",
+                "Debian"
+            ],
+            "path": "C:\\WINDOWS\\System32\\wsl.exe"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "PowerShell": {
+            "icon": "terminal-powershell",
+            "source": "PowerShell"
+        }
+    },
+    "vim.commandLineModeKeyBindings": [],
     "vim.handleKeys": {
+        "<C-a>": false,
         "<C-c>": false,
+        "<C-f>": false,
         "<C-v>": false,
-        "<C-z>": false,
+        "<C-x>": false,
         "<C-y>": false,
-        "<C-x>": false
+        "<C-z>": false
     },
     "vim.hlsearch": true,
     "vim.smartRelativeLine": true,
+    "vim.startInInsertMode": true,
+    "vim.statusBarColors.easymotionmode": "",
+    "window.zoomLevel": -1,
     "workbench.colorCustomizations": {
         "editorUnnecessaryCode.border": "#dd7aab",
         "editorUnnecessaryCode.foreground": "#dd7aab"
