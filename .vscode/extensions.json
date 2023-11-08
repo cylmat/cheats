@@ -7,18 +7,27 @@
         "IBM.output-colorizer",
         "vscode-icons-team.vscode-icons",
         "wayou.vscode-todo-highlight",
+
+        // full
+        "devsense.composer-php-vscode",
+        "devsense.intelli-php-vscode",
+        "devsense.phptools-vscode",
+        "devsense.profiler-php-vscode",
         
         // packs
         "dudemelo.php-essentials",
         "onecentlin.php-productive-pack",
+        "bmewburn.vscode-intelephense-client",
 
         // php
+        "xdebug.php-debug",
         "neilbrayfield.php-docblocker",
+        "coozieki.php-implementor",
         "MehediDracula.php-namespace-resolver",
         "TheNouillet.symfony-vscode",
         "ms-vscode.test-adapter-converter",
         "damianbal.vs-phpclassgen",
-        "bmewburn.vscode-intelephense-client",
+        "blanc-frederic.vs-phpcompanion",
         "firefox-devtools.vscode-firefox-debug",
         "recca0120.vscode-phpunit",
         "phproberto.vscode-php-getters-setters",
@@ -26,8 +35,9 @@
         
         // snippets
         "thekalinga.bootstrap4-vscode",
-        "sadeghpm.sql-snippets",
         "hakcorp.php-awesome-snippets",
+        "phiter.phpstorm-snippets",
+        "sadeghpm.sql-snippets",
         "nadim-vscode.symfony-code-snippets",
         "nadim-vscode.twig-code-snippets",
         
@@ -35,9 +45,13 @@
         "streetsidesoftware.code-spell-checker",
         "higoka.php-cs-fixer",
         "junstyle.php-cs-fixer",
+        "wongjn.php-sniffer",
         "swordev.phpstan",
         "breezelin.phpstan",
         "ikappas.phpcs",
+        "sonarsource.sonarlint-vscode",
+        "fterrag.vscode-php-cs-fixer",
+        "ecodes.vscode-phpmd",
         
         // git
         "mhutchie.git-graph",
@@ -47,16 +61,22 @@
         // format
         "yhpnoraa.beauty",
         "mikestead.dotenv",
+        "zainchen.json",
         "eriklynd.json-tools",
         "mohsen1.prettify-json",
         "mblode.twig-language-2",
+        "nickdemayo.vscode-json-editor",
         "redhat.vscode-yaml",
-        
+
         // db
         "qwtel.sqlite-viewer",
         "alexcvzz.vscode-sqlite",
 
         // server
+        "jeff-hykin.better-dockerfile-syntax",
+        "p1c2u.docker-compose",
+        "techiecouch.docker-essentials",
+        "formulahendry.docker-explorer",
         "ms-azuretools.vscode-docker",
         "ms-vscode-remote.remote-containers",
         "ms-vscode-remote.remote-ssh",
@@ -64,8 +84,14 @@
         "ms-vscode-remote.remote-wsl",
         "ms-vscode.remote-explorer",
 
+        // cheats
+        "andenetalexander.vim-cheatsheet",
+        "dossantosgabriel.linux-cheatsheet",
+        "dzhavat.git-cheatsheet",
+
         // tools
         "alefragnani.Bookmarks",
+        "formulahendry.code-runner",
         "adpyke.codesnap",
         "ryu1kn.edit-with-shell",
         "EditorConfig.EditorConfig",
@@ -74,6 +100,7 @@
         "pnp.polacode",
         "alefragnani.read-only-indicator",
         "chrmarti.regex",
+        "jeffersonLicet.snipped",
         "SimonSiefke.svg-preview",
         "Gruntfuggly.todo-tree",
         "vscodevim.vim",
@@ -91,30 +118,3 @@
         "vscjava.vscode-maven",
     ]
 }
-
-/*
-
-gruntfuggly.todo-tree
-hbenl.vscode-test-explorer
-ikappas.composer
-jeffersonLicet.snipped
-konstantin.wrapSelection
-mblode.twig-language-2
-MehediDracula.php-namespace-resolver
-mhutchie.git-graph
-mintlify.document
-ms-vscode.test-adapter-converter
-nadim-vscode.symfony-code-snippets
-nadim-vscode.symfony-super-console
-neilbrayfield.php-docblocker
-oderwat.indent-rainbow
-phproberto.vscode-php-getters-setters
-pnp.polacode
-recca0120.vscode-phpunit
-redhat.vscode-yaml
-ryu1kn.edit-with-shell
-sonarsource.sonarlint-vscode
-streetsidesoftware.code-spell-checker
-vintharas.learn-vim
-visualStudioExptTeam.vscodeintellicode
-*/
