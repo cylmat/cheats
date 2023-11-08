@@ -1,50 +1,6 @@
 {
     // @recommendations
     "recommendations": [
-        "berublan.vscode-log-viewer",
-        "bmewburn.vscode-intelephense-client",
-        "breezelin.phpstan",
-        "Cardinal90.multi-cursor-case-preserve",
-        "christian-kohler.path-intellisense",
-        "chrmarti.regex",
-        "damianbal.vs-phpclassgen",
-        "derappelt.symfony-console",
-        "donjayamanne.githistory",
-        "dotup.dotup-vscode-interface-generator",
-        "Durzn.brackethighlighter",
-        "eamodio.gitlens",
-        "EditorConfig.EditorConfig",
-        "fabiospampinato.vscode-diff",
-        "Gruntfuggly.todo-tree",
-        "hakcorp.php-awesome-snippets",
-        "hbenl.vscode-test-explorer",
-        "ikappas.composer",
-        "ikappas.phpcs",
-        "junstyle.php-cs-fixer",
-        
-        // php
-        "neilbrayfield.php-docblocker",
-        "MehediDracula.php-namespace-resolver",
-        "TheNouillet.symfony-vscode",
-        "ms-vscode.test-adapter-converter",
-        "firefox-devtools.vscode-firefox-debug",
-        "recca0120.vscode-phpunit",
-        "phproberto.vscode-php-getters-setters",
-        
-        // snippets
-        "thekalinga.bootstrap4-vscode",
-        "sadeghpm.sql-snippets",
-        "nadim-vscode.symfony-code-snippets",
-        "nadim-vscode.twig-code-snippets",
-
-        // linter
-        "streetsidesoftware.code-spell-checker",
-        "higoka.php-cs-fixer",
-        "swordev.phpstan",
-
-        // git
-        "mhutchie.git-graph",
-        
         // color
         "oderwat.indent-rainbow",
         "PKief.material-icon-theme",
@@ -52,16 +8,53 @@
         "vscode-icons-team.vscode-icons",
         "wayou.vscode-todo-highlight",
         
-        // db
-        "qwtel.sqlite-viewer",
-        "alexcvzz.vscode-sqlite",
+        // packs
+        "dudemelo.php-essentials",
+        "onecentlin.php-productive-pack",
 
+        // php
+        "neilbrayfield.php-docblocker",
+        "MehediDracula.php-namespace-resolver",
+        "TheNouillet.symfony-vscode",
+        "ms-vscode.test-adapter-converter",
+        "damianbal.vs-phpclassgen",
+        "bmewburn.vscode-intelephense-client",
+        "firefox-devtools.vscode-firefox-debug",
+        "recca0120.vscode-phpunit",
+        "phproberto.vscode-php-getters-setters",
+        "hbenl.vscode-test-explorer",
+        
+        // snippets
+        "thekalinga.bootstrap4-vscode",
+        "sadeghpm.sql-snippets",
+        "hakcorp.php-awesome-snippets",
+        "nadim-vscode.symfony-code-snippets",
+        "nadim-vscode.twig-code-snippets",
+        
+        // linter
+        "streetsidesoftware.code-spell-checker",
+        "higoka.php-cs-fixer",
+        "junstyle.php-cs-fixer",
+        "swordev.phpstan",
+        "breezelin.phpstan",
+        "ikappas.phpcs",
+        
+        // git
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        
         // format
         "yhpnoraa.beauty",
         "mikestead.dotenv",
+        "eriklynd.json-tools",
         "mohsen1.prettify-json",
         "mblode.twig-language-2",
         "redhat.vscode-yaml",
+        
+        // db
+        "qwtel.sqlite-viewer",
+        "alexcvzz.vscode-sqlite",
 
         // server
         "ms-azuretools.vscode-docker",
@@ -73,35 +66,34 @@
 
         // tools
         "alefragnani.Bookmarks",
-        "alefragnani.project-manager",
-        "alefragnani.read-only-indicator",
+        "adpyke.codesnap",
         "ryu1kn.edit-with-shell",
+        "EditorConfig.EditorConfig",
+        "alefragnani.project-manager",
         "ryu1kn.partial-diff",
+        "pnp.polacode",
+        "alefragnani.read-only-indicator",
+        "chrmarti.regex",
         "SimonSiefke.svg-preview",
+        "Gruntfuggly.todo-tree",
         "vscodevim.vim",
+        "andycui.vscode-log-viewer-gb2312",
+        "berublan.vscode-log-viewer",
         "yatki.vscode-surround",
         "konstantin.wrapSelection",
-
-        // tools-capture
-        "adpyke.codesnap",
-        "pnp.polacode",
+        
+        /////////////// java
+        "redhat.java",
+        "vscjava.vscode-java-debug",
+        "vscjava.vscode-java-dependency",
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-java-test",
+        "vscjava.vscode-maven",
     ]
 }
 
 /*
-andycui.vscode-log-viewer-gb2312
-berublan.vscode-log-viewer
-bmewburn.vscode-intelephense-client
-breezelin.phpstan
-cardinal90.multi-cursor-case-preserve
-christian-kohler.path-intellisense
-chrmarti.regex
-derappelt.symfony-console
-donjayamanne.githistory
-dotup.dotup-vscode-interface-generator
-eamodio.gitlens
-editorConfig.EditorConfig
-eriklynd.json-tools
+
 gruntfuggly.todo-tree
 hbenl.vscode-test-explorer
 ikappas.composer
