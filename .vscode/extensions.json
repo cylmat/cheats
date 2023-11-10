@@ -2,19 +2,24 @@
     // @recommendations
     "recommendations": [
         // color
+        "aaron-bond.better-comments",
         "oderwat.indent-rainbow",
         "PKief.material-icon-theme",
+        "sdras.night-owl",
         "IBM.output-colorizer",
+        "kamikillerto.vscode-colorize",
         "vscode-icons-team.vscode-icons",
+        "johnpapa.vscode-peacock",
         "wayou.vscode-todo-highlight",
         "equinusocio.vsc-material-theme",
+        "esbenp.prettier-vscode",
 
         // full
         "devsense.composer-php-vscode",
         "devsense.intelli-php-vscode",
         "devsense.phptools-vscode",
         "devsense.profiler-php-vscode",
-        
+
         // packs
         "dudemelo.php-essentials",
         "onecentlin.php-productive-pack",
@@ -33,7 +38,7 @@
         "recca0120.vscode-phpunit",
         "phproberto.vscode-php-getters-setters",
         "hbenl.vscode-test-explorer",
-        
+
         // snippets
         "thekalinga.bootstrap4-vscode",
         "hakcorp.php-awesome-snippets",
@@ -41,7 +46,7 @@
         "sadeghpm.sql-snippets",
         "nadim-vscode.symfony-code-snippets",
         "nadim-vscode.twig-code-snippets",
-        
+
         // linter
         "streetsidesoftware.code-spell-checker",
         "higoka.php-cs-fixer",
@@ -53,17 +58,18 @@
         "sonarsource.sonarlint-vscode",
         "fterrag.vscode-php-cs-fixer",
         "ecodes.vscode-phpmd",
-        
+
         // git
         "mhutchie.git-graph",
         "donjayamanne.githistory",
         "eamodio.gitlens",
-        
+
         // format
         "yhpnoraa.beauty",
         "mikestead.dotenv",
         "zainchen.json",
         "eriklynd.json-tools",
+        "yzhang.markdown-all-in-one",
         "mohsen1.prettify-json",
         "mblode.twig-language-2",
         "nickdemayo.vscode-json-editor",
@@ -93,23 +99,27 @@
         // tools
         "alefragnani.Bookmarks",
         "formulahendry.code-runner",
+        "Shan.code-settings-sync",
         "adpyke.codesnap",
         "ryu1kn.edit-with-shell",
         "EditorConfig.EditorConfig",
         "alefragnani.project-manager",
         "ryu1kn.partial-diff",
         "pnp.polacode",
+        "christian-kohler.path-intellisense",
         "alefragnani.read-only-indicator",
         "chrmarti.regex",
         "jeffersonLicet.snipped",
         "SimonSiefke.svg-preview",
+        "TabNine.tabnine-vscode",
         "Gruntfuggly.todo-tree",
         "vscodevim.vim",
         "andycui.vscode-log-viewer-gb2312",
         "berublan.vscode-log-viewer",
         "yatki.vscode-surround",
         "konstantin.wrapSelection",
-        
+        "MS-vsliveshare.vsliveshare",
+
         /////////////// java
         "redhat.java",
         "vscjava.vscode-java-debug",
