@@ -73,6 +73,20 @@ export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" " \\\$ "'
 export PROMPT_COMMAND='__git_ps1 "\e[0;36m\u\e[m@\h:\e[0;36m\w\e[m" "\$ "'
 ```
 
+filter-branch
+---
+```
+git filter-branch -f --tree-filter 'git rm -rf --ignore-unmatch .\**\*.item*' --prune-empty -- --all
+
+  git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch Launcher\lib" --prune-empty -- --all
+  git filter-branch --tree-filter "rm -rf Launcher\lib" --prune-empty -- --all
+  git filter-branch --force --index-filter "git rm --cached --ignore-unmatch 'server/bin/some file.txt'" 
+          --prune-empty --tag-name-filter cat -- --all
+
+  git filter-branch --index-filter 'git update-index --remove **.item' HEAD
+  git filter-branch --index-filter 'git-ls-files sensitive_stuff | xargs -d "\n" git-update-index --remove' HEAD
+```
+
 Init repo
 ---
 (on remote server)  
