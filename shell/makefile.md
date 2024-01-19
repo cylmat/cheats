@@ -29,3 +29,10 @@ MY_ARG?=default_value
 args:  
 	@echo "${MY_ARG}"
 ```
+
+####################
+# Only tabs allowed
+# 
+# Check with:
+# cat -etv Makefile
+####################
