@@ -3,17 +3,6 @@
 # https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c
 ###############################
 
-# Edit
-apt install -y vim
-# Tools
-apt install -y busybox ccze fzf
-# Net
-apt install -y nmap
-# Shell
-apt install -y fish zsh
-
-
-
 ########
 # BASH #
 ########
