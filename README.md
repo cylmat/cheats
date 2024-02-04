@@ -14,3 +14,7 @@ find . -regex '.*.json' | xargs grep smile
 find . -name *.php -type f -exec grep -Hn '$test' {} ;
 find | xargs -n1 find . -name *.php -type f -print0 | xargs -0 -n1 grep -Hn '$test'
 ```
+File
+```
+rsync -av . dest
+```
