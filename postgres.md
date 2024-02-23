@@ -1,5 +1,5 @@
 Sql  
-```plu
+```
 psql -U postgres -c "CREATE DATABASE keycloak;";
 psql -U postgres keycloak < ./data/keycloak/keycloak.pgsql
 ```
