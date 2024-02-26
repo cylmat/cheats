@@ -1,6 +1,31 @@
+### ASYNC
+
+```
+import axios from 'axios';
+const API = `${process.env.API_URL}`;
+export const client = axios.create({ baseURL: API });
+```
+
 ### const
 
 const { appTheme } = useTheme()!;
+
+const API_URL = `${process.env.API_URL}`;  
+export const API_ENDPOINTS = {  
+  LOGIN: `${API_URL}users/login`,  
+};
+
+### DOTENV
+
+```
+import dotenv from 'dotenv';
+dotenv.config();
+// https://vitejs.dev/config/
+export default defineConfig(({ command, mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+  return {}
+})
+```
 
 ### interface
 
