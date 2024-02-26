@@ -1,3 +1,7 @@
+### const
+
+const { appTheme } = useTheme()!;
+
 ### interface
 
 interface IMeteoBlueProps {
@@ -11,6 +15,15 @@ MeteoBlue = (props: IMeteoBlueProps) => {}
 
 for(let key of keys)
 for(let key in localStorage)
+
+### misc
+
+{enabled: !!currentContract}
+
+### params
+
+(props: IMeteoBlueProps & typeof defaultProps)
+MeteoBlueService.getWeather(currentContract?.id ?? "");
 
 ### promise
 
@@ -38,3 +51,7 @@ sessionStorage.setItem('test', 1);
 localStorage.getItem('test')
 localStorage.user = {name: "John"};
 let user = JSON.parse( localStorage.user );
+
+### type
+
+type OrganizationData = { id: string, actions: JSX.Element }
