@@ -5,20 +5,34 @@ import axios from 'axios';
 const API = `${process.env.API_URL}`;
 export const client = axios.create({ baseURL: API });
 
-export const seedUsers = async ({
-  dbUrl = "mongodb://root:root@0.0.0.0:27018/",
+export const seedUsers = async ({  
+  dbUrl = "mongodb://root:root@0.0.0.0:27018/",  
 } = {}) => {}
 
 ```
 
-### Const
+### Const & Types
 
-const { appTheme } = useTheme()!;
+```
+const filterDisplayedTabs = (tabsDisplayed: string[]) => {}
+const { appTheme } = useTheme()! ;
 
 const API_URL = `${process.env.API_URL}`;  
 export const API_ENDPOINTS = {  
   LOGIN: `${API_URL}users/login`,  
 };
+
+const videoNames = response.data.map((video) => video.filename);
+const API_URL = `${process.env.API_URL}`;
+
+type OrganizationData = { id: string, actions: JSX.Element }   
+
+const data: DataType[] = [
+  {
+    key: "1",
+  },
+]
+```
 
 ### DOTENV
 
@@ -32,7 +46,7 @@ export default defineConfig(({ command, mode }) => {
 })
 ```
 
-### interface
+### Interface
 
 ```
 interface IMeteoBlueProps {
@@ -43,21 +57,21 @@ interface IMeteoBlueProps {
 MeteoBlue = (props: IMeteoBlueProps) => {}
 ```
 
-### loop
+### Loop
 
 for(let key of keys)  
 for(let key in localStorage)
 
-### misc
+### Misc
 
 {enabled: !!currentContract}
 
-### params
+### Params
 
 (props: IMeteoBlueProps & typeof defaultProps)  
 MeteoBlueService.getWeather(currentContract?.id ?? "");
 
-### promise
+### Promise
 
 ```
 fetchUserDisplayedWidgets().then((res) => { console.log(res) })
@@ -84,14 +98,4 @@ localStorage.getItem('test')
 localStorage.user = {name: "John"};  
 let user = JSON.parse( localStorage.user );  
 
-### Type
 
-```
-type OrganizationData = { id: string, actions: JSX.Element }   
-
-const data: DataType[] = [
-  {
-    key: "1",
-  },
-]
-```
