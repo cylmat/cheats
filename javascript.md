@@ -1,3 +1,12 @@
+### interface
+
+interface IMeteoBlueProps {
+   showLogo?: boolean;
+   currentContract?: Contract;
+}
+
+MeteoBlue = (props: IMeteoBlueProps) => {}
+
 ### loop
 
 for(let key of keys)
