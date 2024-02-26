@@ -5,6 +5,16 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render()
 const videoNames = response.data.map((video) => video.filename);
 ```
 
+### Declare
+  
+- composant fonctionnel:  
+  const App = ({ message }: AppProps) => <div>{message}</div>;  
+  
+- composant fonctionnel par React ( vérification du type et l'autocomplétion ):  
+  const App: React.FC<{ message: string }> = ({ message }): JSX.Element => (  
+    <div>{message}</div>  
+  );  
+
 ### MODULES
 
 ```
