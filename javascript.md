@@ -4,9 +4,14 @@
 import axios from 'axios';
 const API = `${process.env.API_URL}`;
 export const client = axios.create({ baseURL: API });
+
+export const seedUsers = async ({
+  dbUrl = "mongodb://root:root@0.0.0.0:27018/",
+} = {}) => {}
+
 ```
 
-### const
+### Const
 
 const { appTheme } = useTheme()!;
 
@@ -72,13 +77,21 @@ fetchPromise
    });
 ```
 
-### storage
+### Storage
 
 sessionStorage.setItem('test', 1);  
 localStorage.getItem('test')  
 localStorage.user = {name: "John"};  
 let user = JSON.parse( localStorage.user );  
 
-### type
+### Type
 
-type OrganizationData = { id: string, actions: JSX.Element }  
+```
+type OrganizationData = { id: string, actions: JSX.Element }   
+
+const data: DataType[] = [
+  {
+    key: "1",
+  },
+]
+```
