@@ -22,7 +22,6 @@ const {
   fct1,
   fct2,
 } = require("../controllers/fct");
-```
 
 export declare const SearchBar: FC<SearchBarprops>;
 
@@ -35,6 +34,7 @@ export const client = axios.create({ baseURL: API });
 export const API_ENDPOINTS = {
 LOGIN: `${API_URL}users/login`,
 };
+```
 
 // sample-ex.d.ts
 export interface ICategoryType {id: string;}
@@ -45,6 +45,7 @@ export interface IMetadatas {[key: string]: string;}
 // sample-im.tsx
 import {ICategoryType, IMetadatas} from '@module/widget/dist';
 
+```
 import React, { useEffect, useState } from 'react';
 import { useQuery, useQueryClient } from "react-query";
 import { useHistory } from "react-router";
@@ -55,14 +56,17 @@ import { connect } from "react-redux";
 import { Modal } from "@env/react-theme-components";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render()
+```
 
 ### Misc
 
-<div {...ModulesStyle} style={{ backgroundColor: theme.darkTheme ? "#342525" : "#ffffff" }}>
-{isLoading && <div className='p-4 text-center'>
-<Component/>
-</div>
-}
+```
+<div {...ModulesStyle} style={{ backgroundColor: theme.darkTheme ? "#342525" : "#ffffff" }}>  
+  {isLoading && <div className='p-4 text-center'>  
+    <Component/>  
+    </div>  
+  }
+```
   
 ### Query
 
