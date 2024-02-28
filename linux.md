@@ -25,6 +25,13 @@ sudo cat /etc/sudoers
 * -(a)rchive -(z)compress -(e)remote  
 rsync -av -e 'ssh -p 22000' localhost:src_old_machine_file dst_new_machine_file
 
+### USER
+
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R   
+sudo chmod g+rwx "$HOME/.docker" -R
+
+gpasswd -a $USER docker
+
 ### ZIP
 
 *  -(r)ecursive -(v)erbose   
