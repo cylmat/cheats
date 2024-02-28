@@ -68,8 +68,10 @@ for(let key in localStorage)
 
 ### Params
 
+```
 (props: IMeteoBlueProps & typeof defaultProps)  
 MeteoBlueService.getWeather(currentContract?.id ?? "");
+```
 
 ### Promise
 
