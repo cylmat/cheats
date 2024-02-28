@@ -23,3 +23,8 @@ sudo cat /etc/sudoers
 
 * -(a)rchive -(z)compress -(e)remote  
 rsync -av -e 'ssh -p 22000' localhost:src_old_machine_file dst_new_machine_file
+
+### ZIP
+
+*  -(r)ecursive -(v)erbose 
+zip -rv archive.zip mydir/
