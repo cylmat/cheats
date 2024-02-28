@@ -69,6 +69,12 @@ MeteoBlue = (props: IMeteoBlueProps) => {}
 for(let key of keys)  
 for(let key in localStorage)
 
+### NULLable !
+
+- @https://blog.logrocket.com/understanding-exclamation-mark-typescript/  
+console.log(word.toLowerCase()) // Error: Object is possibly 'null'.ts(2531)  
+console.log(word!.toLowerCase())  
+
 ### Misc
 
 {enabled: !!currentContract}
