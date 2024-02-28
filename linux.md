@@ -3,7 +3,8 @@
 ### DIR
 
 ```sh
-mkdir -pm o=,ug=rwx mydir
+mkdir -p -m o=,ug=rwx alphadir   
+(drwxrwx--- alphadir)
 ```
 
 ### DISK space
