@@ -2,6 +2,7 @@
 
 ### TYPE
 
+```
 interface Props {
     defaultData?: any;
     cancel: () => void;
@@ -10,3 +11,4 @@ interface Props {
 	
 const widgets: any = rest.widgets ? rest.widgets : {};
 const onFormChange = (e: any) => {}
+```
