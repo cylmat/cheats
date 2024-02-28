@@ -10,6 +10,11 @@ export const seedUsers = async ({
 } = {}) => {}
 
 ```
+  
+### Date
+
+let fromOneYear = new Date().setFullYear(new Date().getFullYear() - 1);  
+startDate = startDate ? startDate : new Date(fromOneYear).toDateString();
 
 ### Const & Types
 
