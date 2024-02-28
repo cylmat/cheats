@@ -1,15 +1,15 @@
 @https://www.hostinger.com/tutorials/linux-commands   
 
-### DIR
+### DISK space
+
+du -sh /var   
+
+### MKDIR
 
 ```sh
 mkdir -p -m o=,ug=rwx alphadir   
 (drwxrwx--- alphadir)
 ```
-
-### DISK space
-
-du -sh /var   
 
 ### ROOT / SUDO
 
