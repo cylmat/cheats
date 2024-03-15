@@ -4,6 +4,7 @@ Grep
 ### Ref
 * [corporesano.org: Grep Sed Awk](http://www.corporesano.org/doc-site/grepawksed.html)
 * https://www.funix.org/fr/unix/awk.htm
+* https://www.linuxtricks.fr/wiki/awk-chercher-et-manipuler-du-texte-mais-pas-que
   
 Sed
 ---
