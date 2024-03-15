@@ -1,6 +1,10 @@
 Grep
 ===
 
+### Ref
+* [corporesano.org: Grep Sed Awk](http://www.corporesano.org/doc-site/grepawksed.html)
+* https://www.funix.org/fr/unix/awk.htm
+  
 Sed
 ---
 sed -E 's/pattern/new/' <<< "input string"
@@ -10,9 +14,6 @@ Awk
 **Read each line of file or stdin**  
 awk '{split($1,n,":");print n[1],$2,$3}' my_file  
 awk '{print $1}' RS=' ' FS=: ORS=' ' <<< 'my_input'  
-
-### Ref
-* [corporesano.org: Grep Sed Awk](http://www.corporesano.org/doc-site/grepawksed.html)
 
 sample to clear----------  
 awk '{ print "echo "$0"" | "/bin/sh"}' file.txt
