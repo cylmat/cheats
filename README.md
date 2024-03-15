@@ -29,9 +29,11 @@ cat /etc/passwd | awk -F ":" '{print $1}'
 df | awk '/run/ && !/vm/ {print $0}'
 ```
 
+Cut tr head sort
 ```
 # cut (split tool) -d (delimiter) -f (fields) x-2 (from x to 2)
 echo 'A B C D' | cut -d' ' -f 1-3
+
 # tr (translate) -d (delete)
 cat /etc/passwd | sort | uniq | tr ':' '-' | tr '[:lower:]' '[:upper:]' | tr –d ’-’
 ```
