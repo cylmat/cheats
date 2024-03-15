@@ -23,9 +23,10 @@ find . -name \*.php -type f -print0 | xargs -0 -n1 grep --color -Hn '$test'
 
 Grep sed awk
 ```
-# awk -F (field split)
+# awk /regexp/ -F (field split) $0 (all line) $NF (dernier champs)
 awk -F":" '{print $1,$6}' /etc/passwd
-cat /etc/passwd | awk -F":" '{print $1}'
+cat /etc/passwd | awk -F ":" '{print $1}'
+df | awk '/run/ && !/vm/ {print $0}'
 ```
 
 ```
