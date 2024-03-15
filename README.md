@@ -36,6 +36,15 @@ echo 'A B C D' | cut -d' ' -f 1-3
 
 # tr (translate) -d (delete)
 cat /etc/passwd | sort | uniq | tr ':' '-' | tr '[:lower:]' '[:upper:]' | tr –d ’-’
+
+# join output
+join <(sort fichier1.txt) <(sort fichier2.txt)
+```
+
+Grep
+```
+grep "\(e\|f\)" /etc/passwd
+grep -E "(e|f)" /etc/passwd
 ```
 
 Rsync files
