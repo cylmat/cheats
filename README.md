@@ -42,6 +42,7 @@ rsync -av . dest
 
 Ports
 ```
+# lsof -i (ipv46) -P (no port) -n (no host) 
 sudo lsof -i -P -n | grep LISTEN
 sudo lsof -i:22
 
