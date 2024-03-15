@@ -11,12 +11,12 @@ fetch -o - https://raw
 Find
 ```
 # Trouver une expression dans les fichiers
-find . -maxdepth 1 -name 'test*' -exec echo {} ;
+find . -maxdepth 1 -name 'test*' -exec echo {} \;
 find . -regex '.*.json' | xargs grep smile
-find . -name *.php -type f -exec grep -Hn '$test' {} ;
+find . -name *.php -type f -exec grep -Hn '$test' {} \;
 
 # find -print0 (no return line)
-# xargs -0 (split by 'null') -n1 (one by line)
+# xargs -0 (split by 'null') -n1 (one argument by line)
 # grep -Hn (with filename:linenum)
 find . -name \*.php -type f -print0 | xargs -0 -n1 grep --color -Hn '$test'
 ```
