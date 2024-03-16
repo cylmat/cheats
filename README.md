@@ -45,13 +45,18 @@ grep -E "(e|f)" /etc/passwd
 # sed -n (silent)
 echo "alpha" | sed -e 's/a/b/g'
 sed -e 's/a/b/g' <(echo "alpha")
+```
 
 ### Awk
 
+```
 # awk /regexp/ -F (field split) $0 (all line) $NF (dernier champs)
 awk -F":" '{print $1,$6}' /etc/passwd
 cat /etc/passwd | awk -F ":" '{print $1}'
 df | awk '/run/ && !/vm/ {print $0}'
+
+# begin (once on start) and end (once too)
+awk 'BEGIN{print "ok"} /system/{++n} END{print "in",n,"line"}' /etc/passwd
 ```
 
 Rsync files
