@@ -65,6 +65,8 @@ Pipe and process
 diff <(date -d 'yesterday') <(date -d 'tomorrow')
 # heredoc
 sed 's/We/They/; s/Linux/Windows/' <<< "We love Linux."
+# var
+var=`cat /etc/passwd` ; echo ${#var}
 ```
 
 Ports
