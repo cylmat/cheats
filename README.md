@@ -1,5 +1,10 @@
 ### USEFULS
 
+Bash
+```
+for i in `seq 1 15`;do echo "$i";done
+```
+
 Curl download
 ```
 # curl -f (fail silent) -s (silent) -S (show errors) -L (follow redirects)
