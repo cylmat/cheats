@@ -21,14 +21,6 @@ find . -name *.php -type f -exec grep -Hn '$test' {} \;
 find . -name \*.php -type f -print0 | xargs -0 -n1 grep --color -Hn '$test'
 ```
 
-Grep sed awk
-```
-# awk /regexp/ -F (field split) $0 (all line) $NF (dernier champs)
-awk -F":" '{print $1,$6}' /etc/passwd
-cat /etc/passwd | awk -F ":" '{print $1}'
-df | awk '/run/ && !/vm/ {print $0}'
-```
-
 Cut tr head sort
 ```
 # cut (split tool) -d (delimiter) -f (fields) x-2 (from x to 2)
@@ -41,15 +33,38 @@ cat /etc/passwd | sort | uniq | tr ':' '-' | tr '[:lower:]' '[:upper:]' | tr –
 join <(sort fichier1.txt) <(sort fichier2.txt)
 ```
 
-Grep
+Grep Sed Awk
 ```
+### Grep
+
 grep "\(e\|f\)" /etc/passwd
 grep -E "(e|f)" /etc/passwd
+
+### Sed
+
+# sed -n (silent)
+echo "alpha" | sed -e 's/a/b/g'
+sed -e 's/a/b/g' <(echo "alpha")
+
+### Awk
+
+# awk /regexp/ -F (field split) $0 (all line) $NF (dernier champs)
+awk -F":" '{print $1,$6}' /etc/passwd
+cat /etc/passwd | awk -F ":" '{print $1}'
+df | awk '/run/ && !/vm/ {print $0}'
 ```
 
 Rsync files
 ```
 rsync -av . dest
+```
+
+Pipe and process
+```
+# multiprocess
+diff <(date -d 'yesterday') <(date -d 'tomorrow')
+# heredoc
+sed 's/We/They/; s/Linux/Windows/' <<< "We love Linux."
 ```
 
 Ports
