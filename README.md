@@ -34,7 +34,7 @@ Cut tr head sort
 # cut (split tool) -d (delimiter) -f (fields) x-2 (from x to 2)
 echo 'A B C D' | cut -d' ' -f 1-3
 
-# tr (translate) -d (delete)
+# tr (translate) -d (delete) 'A' to 'B'
 cat /etc/passwd | sort | uniq | tr ':' '-' | tr '[:lower:]' '[:upper:]' | tr –d ’-’
 
 # join output
