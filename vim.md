@@ -1,37 +1,32 @@
 VIM Samples
 ===========
 
-**********
-* BUFFER *
-**********
+### BUFFER 
+
 :buffers  
 :bp, :bn, :bprev, :bnext
 
 @ref: https://vim.fandom.com/wiki/Buffers
 
-********
-* FILE *
-********
+### FILE
+
 :open <file>  
 :e  
   
-***************
-* INSERT MODE *
-***************
+### INSERT MODE
+
 cCMD replace under CMD  
   
-*********
-* MARKS *
-*********
+### MARKS 
+
 :marks
 
 Arbitrary selection of text:  
 ma, mz  
 y`a  
-  
-************
-* NAVIGATE *
-************
+
+### NAVIGATE
+
 ^ g_ first last non-blank char  
 3/ 3? search next/prev 3d in all text  
 *#  search for current word  
@@ -42,9 +37,8 @@ wWbB next/prev word or WORD
 C-D C-U move down up half page  
 % match next/prev ({[]})  
 
-************
-* REGISTER *
-************
+### REGISTER 
+
 :reg  all registers  
 "" default register   
 "5 fifth register  
@@ -56,9 +50,8 @@ C-D C-U move down up half page
 "/ search register  
 :let @5='' clear register '5'  
 
-****************
-* SPLIT SCREEN *
-****************
+### SPLIT SCREEN
+
 :help split  
 :vsplit, :vsp [file], :sp [file]  
 C-w <v^> or C-w hjkl  
@@ -70,16 +63,18 @@ C-w q (close split)
   
 @ref: https://linuxhint.com/vim_split_screen  
 
-*******
-* TAB *
-*******
+### Save
+
+These are :wq <cr>, :x <cr> and ZZ
+
+### TAB
+
 :tabs, :tp, :tn  
 
 @ref: https://vim.fandom.com/wiki/Using_tab_pages  
   
-********************
-* SEARCH / REPLACE *
-********************
+### SEARCH / REPLACE 
+
 :[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
 :[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
   
@@ -89,15 +84,13 @@ C-w q (close split)
   
 :% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
 
-************
-* TERMINAL *
-************
+### TERMINAL 
+
 :ter (open a terminal inside)  
 :shell (back to the shell)
  
-*************************
-* Sample to "speak" vim *
-*************************
+### Sample to "speak" vim 
+
 - verbs: v(isu), c(hange), d(elete), y(ank)
 - modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
 - text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag), "({
