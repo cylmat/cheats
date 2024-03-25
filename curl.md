@@ -11,3 +11,13 @@ curl -X POST -H Host:whoami.docker.localhost http://[120-128].0.0.1 --data "data
 ("-o-" equivalent à "-o -", affiche le contenu)  
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash  
 
+### Command line
+Post with file
+```
+curl "$REQUEST_URL/url" \
+  -H 'Connection: keep-alive' \
+  -H 'accept: */*' \
+  -H "Authorization: $AUTH" \
+  -H 'Content-Type: application/json' \
+  -d "@data/fixtures/data.json"
+```
