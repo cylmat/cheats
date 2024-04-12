@@ -41,6 +41,15 @@ let fromOneYear = new Date().setFullYear(new Date().getFullYear() - 1);
 startDate = startDate ? startDate : new Date(fromOneYear).toDateString();
 ```
 
+### download
+
+const link = document.createElement('a');
+link.setAttribute('download', `${picture.fileName}.${picture.extension}`);
+link.href = window.URL.createObjectURL(new Blob([response.data]));
+link.target = "blank";
+document.body.appendChild(link);
+link.click();
+
 ### DOTENV
 
 ```
