@@ -86,6 +86,14 @@ console.log(word!.toLowerCase())
 MeteoBlueService.getWeather(currentContract?.id ?? "");
 ```
 
+### sort and date
+
+```
+requests.sort(function(a: IPceRequest, b: IPceRequest) {
+    return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+})
+```
+
 ### Promise
 
 ```
