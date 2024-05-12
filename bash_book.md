@@ -1,5 +1,6 @@
-Bash book : Command Line Kung Fu, Jason Cannon
+Bash book
 ===
+_Command Line Kung Fu, Jason Cannon_  
 @https://linuxtrainingacademy.com  
 @http://blog.commandlinekungfu.com
 
