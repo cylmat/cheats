@@ -1,6 +1,6 @@
 Bash book : Command Line Kung Fu, Jason Cannon
 ===
-@https://linuxtrainingacademy.com
+@https://linuxtrainingacademy.com  
 @http://blog.commandlinekungfu.com
 
 ### alias
