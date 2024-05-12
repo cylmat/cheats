@@ -10,28 +10,37 @@ alias d="date +%F"
 
 ### disc
 
+```
 df -hT /boot (disc size)
 df -mt ext4 (mount)
 du -sh /home
+```
 
 ### dir
 
+```
 ls -1 (current dir)
 tree -L 5
+```
 
 ### net & proc
 
+```
 curl ifconfig.me/ip
 ps -fu root (with user root)
+```
 
 ### user
 
+```
 adduser sam
 userdel -r sam
 id sam
+```
 
 ### shell
 
+```
 - last command
 <event>:<number>
 sudo !!
@@ -51,9 +60,11 @@ sudo -c !!
 - multi command
 mkdir -p ~/app/{bin,lib}
 cp /etc/passwd{,.bak}
+```
 
 ### path & usefull
 
+```
 du
 df
 mount
@@ -62,3 +73,4 @@ uptime
 /etc/login
 /etc/passwd
 /var/log/syslog
+```
