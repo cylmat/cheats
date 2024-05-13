@@ -6,9 +6,10 @@ _Command Line Kung Fu, Jason Cannon_
 
 ### alias
 
+```
 alias d="date +%F"
 alias most_used="history | awk '{print $2}' | sort | uniq -c | sort -rn | head"
-```
+
 # Remove header
 # usage: df -h | body sort
 body() {
