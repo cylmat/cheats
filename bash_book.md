@@ -7,6 +7,18 @@ _Command Line Kung Fu, Jason Cannon_
 ### alias
 
 alias d="date +%F"
+alias most_used="history | awk '{print $2}' | sort | uniq -c | sort -rn | head"
+```
+# Remove header
+# usage: df -h | body sort
+body() {
+  # La variable IFS contient les caractères pour scinder les entrées au clavier.
+  # read -r(aw)
+  IFS=`read -r header`
+  printf "%s\n" "$header"
+  "$@"
+}
+```
 
 ### disc
 
@@ -16,18 +28,37 @@ df -mt ext4 (mount)
 du -sh /home
 ```
 
-### dir
+### file & dir
 
 ```
+awk `/start/ ,/stop/` <file> (display between two lines)
+column -t (table)
+cut -c 1-4,18-19 (char)
+cut -d, -f2 (delimiter, field)
+diff <(date -d 'yesterday') <(date -d 'tomorrow')
+grep -E -v "^#|^$" <file> (remove comments & blank)
+less -R (output "raw" chars)
 ls -1 (current dir)
+sed '/^abc$/,/^mno$/{//!b};d' <file> (delete lines except between this)
+sed -e '1,/sys/d' -e '/games/,$d' (display between two lines)
+sort -nrk 2 (numeric, reverse, with key)
+tar zxf file.tgz -C <dir>
 tree -L 5
+uniq -c(ount)
+uptime
+vim scp://user@host//file
 ```
 
 ### net & proc
 
 ```
 curl ifconfig.me/ip
+lsof -Pni (noport, nohost, ipv4)
+nohup & (actif après déconnexion)
 ps -fu root (with user root)
+ps -eo pid,%cpu,cmd | head -1 (display ps header)
+watch df -h /var (watch disk size
+watch -n 1 "ps -ef | grep root" (every 1sec)
 ```
 
 ### user
@@ -52,6 +83,7 @@ sudo -c !!
 !^word (use second word)
 !$ (use last word: "du -sh !$" => "du -sh lastword")
 !!:5 (5th word)
+\ls (run "ls" without alias)
 
 - substitute
 ^str1^str2^ ("grep pluch" => ^ch^s^)
