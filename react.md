@@ -23,14 +23,32 @@ const videoNames = response.data.map((video) => video.filename);
 ```
 
 ### Declare
-  
+
+```
 - composant fonctionnel:  
   const App = ({ message }: AppProps) => <div>{message}</div>  
   
 - composant fonctionnel par React ( vérification du type et l'autocomplétion ):  
   const App: React.FC<{ message: string }> = ({ message }): JSX.Element => (  
     <div>{message}</div>  
-  )  
+  )
+```
+
+### interface
+
+interface Props {
+    requestTypes: RequestTypeReference[];
+    status: WorkflowStatusReference[];
+    showForm?: boolean;
+    onSubmit: (values: ISignalFilter) => any;
+    onClose?: () => void;
+}
+
+const SignalFilterForm: React.FC<Props> = (props) => { ... }
+
+const [searchAutoComplete, setSearchAutoComplete] = useState<IAddress[]>([]);
+const [searchTerm, setSearchTerm] = useState<string>("");
+
 
 ### MODULES
 
@@ -85,6 +103,28 @@ import { Modal } from "@env/react-theme-components";
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render()
 ```
 
+### reducer
+
+```
+const errorReducers = (
+    state = initialState,
+    action: ErrorsActionTypes,
+): IError => {
+    switch (action.type) {
+        case Constants.ERROR:
+            return { isError: action.payload.isError, message: action.payload.message, status: action.payload.status };
+        default:
+            return state;
+    }
+};
+
+function MyButton({ title }: { title: string }) {
+  return (
+    <button>{title}</button>
+  );
+}
+```
+
 ### Misc
 
 ```
@@ -105,7 +145,9 @@ const { data, isError, isLoading, isSuccess } = useQuery(['organizations', my.id
 <div {...ModulesStyle} style={{ backgroundColor: theme.darkTheme ? "#342525" : "#ffffff" }}>
 ```
 
-### tips ----------------
+## -------------------
+## tips --------------
+## -------------------
 
 ### Render error
 
