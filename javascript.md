@@ -91,8 +91,11 @@ console.log(word!.toLowerCase())
 ### Params
 
 ```
-(props: IMeteoBlueProps & typeof defaultProps)  
-MeteoBlueService.getWeather(currentContract?.id ?? "");
+(props: IMeteoProps & typeof defaultProps)  
+MeteoService.getWeather(currentContract?.id ?? "");
+const { appTheme } = useTheme()!;
+type OrganizationData = { id: string, actions: JSX.Element }
+{enabled: !!currentContract}
 ```
 
 ### sort and date
@@ -125,9 +128,9 @@ fetchPromise
 
 ### Storage
 
+```
 sessionStorage.setItem('test', 1);  
 localStorage.getItem('test')  
 localStorage.user = {name: "John"};  
 let user = JSON.parse( localStorage.user );  
-
-
+```
