@@ -97,15 +97,6 @@ LOGIN: `${API_URL}users/login`,
 };
 ```
 
-// sample-ex.d.ts
-export interface ICategoryType {id: string;}
-export interface IMetadatas {[key: string]: string;}
-
-#-- Imports
-
-// sample-im.tsx
-import {ICategoryType, IMetadatas} from '@module/widget/dist';
-
 ```
 import React, { useEffect, useState } from 'react';
 import { useQuery, useQueryClient } from "react-query";
@@ -117,6 +108,24 @@ import { connect } from "react-redux";
 import { Modal } from "@env/react-theme-components";
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render()
+```
+
+```exemple
+// sample-ex.d.ts
+export interface ICategoryType {id: string;}
+export interface IMetadatas {[key: string]: string;}
+
+// sample-im.tsx
+import {ICategoryType, IMetadatas} from '@module/widget/dist';
+```
+
+### Props
+
+```
+const FileImage: React.FC<{picture: ISignalPicture}> = ({picture}) => {}
+	or
+interface ISignalDataPicture { picture: ISignalPicture; }
+const FileImage: React.FC<ISignalDataPicture> = ({picture}) => {}
 ```
 
 ### Reducer
