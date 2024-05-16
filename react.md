@@ -1,20 +1,28 @@
 ### create project
 
 - https://vitejs.dev
-- Next.js / https://remix.run
+- nextjs.org / https://remix.run
 - npm / yarn / https://bun.sh
 - https://redux.js.org / https://recoiljs.org/fr
 
 - React router
+- react-bootstrap.netlify.app
 - React Query or Tanstack Query / https://swr.vercel.app
-- https://supabase.com (Firebase alternative)
+- supabase.com (Firebase alternative)
 - Prisma Orm / Drizzle
 - date-fns / day.js
 - React Hook Form 
-- https://dndkit.com
-- Build and deploy https://vercel.com
+- dndkit.com
+- Build and deploy: vercel.com
 - tailwindcss.com / ShadCN / Radix UI
-- https://rjsf-team.github.io/react-jsonschema-form/
+- rjsf-team.github.io/react-jsonschema-form/
+
+packages
+```
+"dependencies": {
+    "@myenv/widget": "link:..",
+    "@testing-library/jest-dom": "link:../node_modules/@testing-library/jest-dom",
+```
 
 ### COMPONENT
 
@@ -38,15 +46,19 @@ const videoNames = response.data.map((video) => video.filename);
 #### Display
 
 ```
-Variable
+Variable:
 <div className={`signalement-filter-form ${showForm ? "opened" : "closed"}`}>
 
-Style
+Style:
 <div {...ModulesStyle} style={{ backgroundColor: theme.darkTheme ? "#342525" : "#ffffff" }}>  
   {isLoading && <div className='p-4 text-center'>  
     <Component/>  
     </div>  
   }
+
+Svg:
+  import { ReactComponent as MySvgFile } from './file.svg'
+  <MySvgFile />
 ```
 
 ### interface
