@@ -14,6 +14,7 @@
 - https://dndkit.com
 - Build and deploy https://vercel.com
 - tailwindcss.com / ShadCN / Radix UI
+- https://rjsf-team.github.io/react-jsonschema-form/
 
 ### COMPONENT
 
@@ -22,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render()
 const videoNames = response.data.map((video) => video.filename);
 ```
 
-### Declare
+### Declare React
 
 ```
 - composant fonctionnel:  
@@ -34,8 +35,23 @@ const videoNames = response.data.map((video) => video.filename);
   )
 ```
 
+#### Display
+
+```
+Variable
+<div className={`signalement-filter-form ${showForm ? "opened" : "closed"}`}>
+
+Style
+<div {...ModulesStyle} style={{ backgroundColor: theme.darkTheme ? "#342525" : "#ffffff" }}>  
+  {isLoading && <div className='p-4 text-center'>  
+    <Component/>  
+    </div>  
+  }
+```
+
 ### interface
 
+```
 interface Props {
     requestTypes: RequestTypeReference[];
     status: WorkflowStatusReference[];
@@ -48,7 +64,7 @@ const SignalFilterForm: React.FC<Props> = (props) => { ... }
 
 const [searchAutoComplete, setSearchAutoComplete] = useState<IAddress[]>([]);
 const [searchTerm, setSearchTerm] = useState<string>("");
-
+```
 
 ### MODULES
 
@@ -103,7 +119,7 @@ import { Modal } from "@env/react-theme-components";
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render()
 ```
 
-### reducer
+### Reducer
 
 ```
 const errorReducers = (
@@ -125,24 +141,11 @@ function MyButton({ title }: { title: string }) {
 }
 ```
 
-### Misc
+### Query & form
 
 ```
-<div {...ModulesStyle} style={{ backgroundColor: theme.darkTheme ? "#342525" : "#ffffff" }}>  
-  {isLoading && <div className='p-4 text-center'>  
-    <Component/>  
-    </div>  
-  }
-```
-  
-### Query
-
 const { data, isError, isLoading, isSuccess } = useQuery(['organizations', my.id, queryFilter, currentPage], fetchData);
 
-### STYLE
-
-```
-<div {...ModulesStyle} style={{ backgroundColor: theme.darkTheme ? "#342525" : "#ffffff" }}>
 ```
 
 ## -------------------
