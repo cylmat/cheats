@@ -181,3 +181,23 @@ let z: null = null;
 ### readonly
 
 const names: readonly string[] = ["Dylan"];  
+
+---
+
+### js
+
+```
+for(let key of keys) 
+for(let key in localStorage) 
+let user = JSON.parse( localStorage.user );
+```
+
+### interface
+
+```
+interface IMeteoProps {
+    showLogo?: boolean;
+    currentContract?: Contract;
+}
+Meteo = (props: IMeteoProps) => {}
+```
