@@ -1,3 +1,20 @@
+### create project
+
+- https://vitejs.dev
+- Next.js / https://remix.run
+- npm / yarn / https://bun.sh
+- https://redux.js.org / https://recoiljs.org/fr
+
+- React router
+- React Query or Tanstack Query / https://swr.vercel.app
+- https://supabase.com (Firebase alternative)
+- Prisma Orm / Drizzle
+- date-fns / day.js
+- React Hook Form 
+- https://dndkit.com
+- Build and deploy https://vercel.com
+- tailwindcss.com / ShadCN / Radix UI
+
 ### COMPONENT
 
 ```
