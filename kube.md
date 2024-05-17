@@ -1,5 +1,6 @@
 https://kubernetes.io/docs/concepts  
-  
+https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet  
+   
 ### Exemples:
 
 ```
@@ -34,4 +35,12 @@ k logs deploy/global-portal-api-symfony -f
 k -n user-request-int- logs user-request-xxxx  
 
 API_KEY = $(shell kubectl -n container-int get secrets prj-secrets -o jsonpath="{.data.api-key}" | base64 --decode)
+```
+
+install
+```
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+   echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+   sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
