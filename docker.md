@@ -10,7 +10,13 @@ sh -c "nohup sudo -b dockerd --default-ulimit nofile=8192:8192 < /dev/null > /mn
 
 ### Compose
 
-docker compose -f "docker-compose.yaml" up -d --build   
+docker compose -f "docker-compose.yaml" up -d --build  
+
+```
+* run indefinitely
+services-name:
+	commands: tail -f /dev/null 
+```
 
 ```
 # multi commands
@@ -28,4 +34,29 @@ networks:
       external: true
       name: user-request-v2
 ```
- 
+
+### profiles
+
+
+
+* profiles
+
+```
+services-name:
+	profiles:
+        - myProfil
+
+use:
+COMPOSE_PROFILES=debug docker compose up
+docker compose --profile myProfil up
+```
+
+### cli
+
+```
+- cli
+docker run --entrypoint echo ubuntu "Hello World"
+docker run ubuntu tail -f /dev/null
+docker run ubuntu while true; do sleep 1; done
+docker run ubuntu sleep infinity
+```
