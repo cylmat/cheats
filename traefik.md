@@ -1,8 +1,8 @@
 
-### TRAEFIK
-@https://doc.traefik.io/traefik/getting-started/quick-start/
-@http://localhost:8080/api/rawdata
+@https://doc.traefik.io/traefik/getting-started/quick-start  
+@http://localhost:8080/api/rawdata  
 
+```
     container_name: traefik
     # The official v2.8 Traefik docker image
     image: traefik:v2.7
@@ -22,4 +22,5 @@
 
 -> on services
     labels:
-      - "traefik.http.routers.front.rule=Host(`front.zeus.test`)"
+      - "traefik.http.routers.front.rule=Host(`host.test`)"
+```
