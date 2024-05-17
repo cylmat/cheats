@@ -37,10 +37,6 @@ networks:
 
 ### profiles
 
-
-
-* profiles
-
 ```
 services-name:
 	profiles:
