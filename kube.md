@@ -1,18 +1,23 @@
+https://kubernetes.io/docs/concepts  
+  
 ### Exemples:
 
 ```
+k apply -f app-secrets.yaml
+
 k get pod  
-k get deploy   
-k logs svc/api-symfony     
-kube get ns  
+k get deploy  
 k get ns  
-k get po -A | grep user  
+k get ns  
+k get po -A | grep user
+k logs svc/api-symfony     
 k -n user-int logs deploy/user-symfony -f --tail 100 | grep ' 500 '  
-k exec -it   deploy/signal-backend-symfony  -- bash  
+k exec -it   deploy/signal-backend-symfony  -- bash
+
 k get secrets | grep porta  
-k apply -f app-secrets.yaml  
 k get secrets mysecretscontainer -o yaml
 
+kubectl edit ingress geo
 kubectl -n $NAMESPACE apply -f url-secret-$ENV.yaml
 ``` 
 
