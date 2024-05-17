@@ -75,7 +75,8 @@
     changed = yellow bold
     untracked = red bold
 [core]
-    autocrlf = input # win
+    # linux: input, win: true (both sides)
+    autocrlf = input
     editor = vim
     excludesfile = '<file>'
     ignorecase = false
