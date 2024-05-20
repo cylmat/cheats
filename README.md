@@ -79,7 +79,9 @@ sed 's/We/They/; s/Linux/Windows/' <<< "We love Linux."
 var=`cat /etc/passwd` ; echo ${#var}
 ```
 
-Ports
+Networks & Ports
+- ipconfig.me
+
 ```
 # lsof -i (ipv46) -P (no port) -n (no host) 
 sudo lsof -i -P -n | grep LISTEN
