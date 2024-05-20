@@ -56,3 +56,8 @@ docker run ubuntu tail -f /dev/null
 docker run ubuntu while true; do sleep 1; done
 docker run ubuntu sleep infinity
 ```
+
+# Error
+
+- bug on windows:
+- ~/.docker/config.json change credsStore to credStore
