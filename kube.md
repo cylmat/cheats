@@ -23,6 +23,7 @@ kubectl -n $NAMESPACE apply -f url-secret-$ENV.yaml
 ``` 
 
 alias kdep='f(){k get pod | grep "$@" ; unset -f f}; f'   
+API_KEY=$(kubectl -n namespace-int get secrets container-secrets -o jsonpath="{.data.api-key}" | base64 --decode)  
 
 ```
 (service)  
