@@ -5,6 +5,12 @@
 echo '613f892e-953c-418a-9aed-73100d9f6d30' | base64  
 echo 'YWZjNDRjZjctZGMzYy00MzNkLTg1YjItYzEwODU1ZTI4MDM1' | base64 -d  
 
+### Checksum
+
+```
+echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+```
+
 ### DISK space
 
 du -sh /var   
