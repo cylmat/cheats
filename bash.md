@@ -1,5 +1,7 @@
 BASH
-----
+---
+@https://www.epons.org/shell-bash-variables.php  
+
 **Return when sourced or bashed script**  
 ```
 echo "return" #executed from source  
