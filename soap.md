@@ -29,3 +29,6 @@ class MySoapClient extends SoapClient
         $request = preg_replace('/DemandeReseauRequest/', 'tns:DemandeReseauRequest xmlns:tns="http://ReseauGen/V1.0"', $request);
     }
 ```
+
+- get informations wsdl
+https://int.api.sample.com/webesrvice.svc?wsdl
