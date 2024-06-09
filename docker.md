@@ -18,6 +18,15 @@ services-name:
 	commands: tail -f /dev/null 
 ```
 
+ip:
+```
+ipam:
+    driver: default
+    config:
+        - subnet: "${SUBNET:-172.21.21}.0/24"
+    ipv4_address: "${SUBNET:-172.21.21}.10"
+```
+
 ```
 # multi commands
 s_name:
@@ -39,7 +48,7 @@ networks:
 
 ```
 services-name:
-	profiles:
+    profiles:
         - myProfil
 
 use:
