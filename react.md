@@ -214,7 +214,9 @@ const { data, isError, isLoading, isSuccess } = useQuery(['organizations', my.id
 
 ```
 
+---
 ## tips --------------
+---
 
 - useState() reload le component lorsqu'il reçoit une valeur/objet différent.
 
@@ -242,4 +244,28 @@ function App() {
 
 3. Event handler
 <button onClick={() => setCount(1)}>
+```
+
+### debug with "use previous"
+
+@ npm i @simbathesailor/use-what-changed --save
+```
+---------> usePrevious with useEffect and useMemo debugging!!!
+import React from "react";
+function usePrevious(value) {
+  const ref = React.useRef(value);
+  React.useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
+export default usePrevious;
+
+->use
+
+const previousC = usePrevious(c);
+useEffect(() => {
+  if (previousA !== a) {
+    console.log(`a has changed from ${previousA} to ${a}`);
+  }
 ```
