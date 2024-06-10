@@ -21,3 +21,12 @@ curl "$REQUEST_URL/url" \
   -H 'Content-Type: application/json' \
   -d "@data/fixtures/data.json"
 ```
+
+**In target dir**   
+curl -fLo ~ /target/dir --create-dirs https://source-of.file
+
+curl -sk  -X POST  "https://apiv1.exemple/medias" \
+--header 'Authorization: Basic ds16q4s5q1f4sq1=' \
+--header 'Accept: application/json ' \
+--header 'Content-Type: multipart/form-data' \
+-F 'media[file]=@"/var/www/pict.jpg";type=image/jpeg' -vv
