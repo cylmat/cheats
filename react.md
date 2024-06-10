@@ -1,4 +1,4 @@
-### create project
+### Create project
 
 - https://vitejs.dev
 - nextjs.org / https://remix.run
@@ -17,7 +17,7 @@
 - tailwindcss.com / ShadCN / Radix UI
 - rjsf-team.github.io/react-jsonschema-form/
 
-packages
+**packages**
 ```
 "dependencies": {
     "@myenv/widget": "link:..",
@@ -214,9 +214,9 @@ const { data, isError, isLoading, isSuccess } = useQuery(['organizations', my.id
 
 ```
 
-## -------------------
 ## tips --------------
-## -------------------
+
+- useState() reload le component lorsqu'il reçoit une valeur/objet différent.
 
 ### Render error
 
