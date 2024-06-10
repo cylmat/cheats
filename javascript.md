@@ -97,6 +97,22 @@ const { appTheme } = useTheme()!;
 type OrganizationData = { id: string, actions: JSX.Element }
 {enabled: !!currentContract}
 ```
+### sleep
+
+```
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+Or as a one-liner:
+await new Promise(r => setTimeout(r, 2000));
+As a function:
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+or in Typescript:
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+use it as:
+await sleep(<duration>);
+```
 
 ### sort and date
 
