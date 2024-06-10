@@ -1,5 +1,6 @@
 ### Create project
 
+```
 - https://vitejs.dev
 - nextjs.org / https://remix.run
 - npm / yarn / https://bun.sh
@@ -16,6 +17,7 @@
 - Build and deploy: vercel.com
 - tailwindcss.com / ShadCN / Radix UI
 - rjsf-team.github.io/react-jsonschema-form/
+```
 
 **packages**
 ```
