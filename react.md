@@ -141,6 +141,7 @@ const FileImage: React.FC<ISignalDataPicture> = ({picture}) => {}
 ```
 
 ### Reducer
+@ref: https://react-redux.js.org/api/hooks
 
 ```
 const errorReducers = (
@@ -160,6 +161,15 @@ function MyButton({ title }: { title: string }) {
     <button>{title}</button>
   );
 }
+
+--- sample2
+
+import {useDispatch, useSelector} from "react-redux";
+import {setStep} from "../../../store/actions/request";
+
+export const GroupedTemplates = {
+    steppers: (props: any) => {
+        const currentRequest = useSelector((state: any) => state.request.currentRequest)
 ```
 
 ### Query & form
