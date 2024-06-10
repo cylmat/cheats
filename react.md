@@ -115,6 +115,35 @@ const [searchAutoComplete, setSearchAutoComplete] = useState<IAddress[]>([]);
 const [searchTerm, setSearchTerm] = useState<string>("");
 ```
 
+### Effects
+
+@https://react.dev/reference/react/useDebugValue
+```
+ useEffect(() => {
+    // ..
+  }, [serverUrl, roomId]);
+  // -> will run after each change of serverUrl and roomId value
+ 
+# effect clean
+
+useEffect(() => {
+  // Avoid: Cleanup logic without corresponding setup logic
+  return () => {
+    doSomethingCleaning();
+  };
+}, []);
+
+useEffect(() => {
+    const connection = createConnection(serverUrl, roomId);
+    connection.connect();
+    return () => {
+      connection.disconnect();
+    };
+  }, [serverUrl, roomId]);
+ 
+  @https://gist.github.com/markselby9/59640ec27eba6c7a585c6aa71c6522ce
+```
+
 ### MODULES
 
 ```
