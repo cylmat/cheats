@@ -34,6 +34,23 @@ const data: DataType[] = [
 ]
 ```
 
+### clone
+
+```
+string concat:
+      setCoordinates(`${lat}, ${lng}`);
+      
+- cloning object SHALLOW (one level)
+//@https://www.freecodecamp.org/news/clone-an-object-in-javascript/
+      -> immutable obj = {...obj2}
+      
+// Cloning the Object with Object.assign() Method
+let cloneUser = Object.assign({}, userDetails);
+
+- cloning object DEEP (full childs level)
+let cloneUser = JSON.parse(JSON.stringify(userDetails));
+```
+
 ### Date
 
 ```
