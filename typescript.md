@@ -40,11 +40,15 @@ console.log((test as string))
 ### interface
 
 ```
-interface Props {
+export interface Props {
     defaultData?: any;
     cancel: () => void;
     onSubmit: FormProps<any>["onSubmit"];
 	formProps?: Partial<FormProps<any>>;
+    variant?:
+    | 'primary'
+    | 'secondary'
+    | 'success';
 	
 const widgets: any = rest.widgets ? rest.widgets : {};
 const onFormChange = (e: any) => {}
