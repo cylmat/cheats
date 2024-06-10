@@ -1,6 +1,4 @@
-BASH
----
-@https://www.epons.org/shell-bash-variables.php  
+
 
 **Return when sourced or bashed script**  
 ```
@@ -71,8 +69,34 @@ PS3=
 PS4=+
 ```
 
-ref:
+
+## Tr
+```
+echo "Hello!" | tr "[:lower:]" "[:upper:]"
+HELLO!
+```
+
+## Redirection shell
+echo "Error" 1 >& 2  
+error 2>/dev/null >/dev/null
+error >/dev/null 2>&1
+
+## Null
+echo "Hello" >/dev/null  
+
+## Shell
+clear: Ctrl+u
+
+## Onliner Sample
+```
+tail file | awk '{d=$1} sub(/.*{/,""){$0="{\"date\": \""d"\", " $0} 1' | jq -r '.date + " " + .log'
+```
+---
+## @ref: 
+- https://www.bashoneliners.com
+- https://www.commandlinefu.com
 * https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+* @https://www.epons.org/shell-bash-variables.php  
 
 ### Ref
 * https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html
