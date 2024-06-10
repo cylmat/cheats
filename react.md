@@ -24,6 +24,41 @@ packages
     "@testing-library/jest-dom": "link:../node_modules/@testing-library/jest-dom",
 ```
 
+## Full page sample with Fragment
+
+```
+
+export const BlockRelatedElements: React.FC = ({}) => {
+    return (<React.Fragment>aez</React.Fragment>);
+}
+
+const displayRelatedElement = (): ReactNode => {
+  return (
+    <React.Fragment>
+	<div className="work-detail-box p-3" key={'block-related'}>
+	    <SzTypographie variant="h1">{trans('related.element')}</SzTypographie>
+	    <div className="row p-3">
+		<div className="col">
+		    <SzData className="mx-3">
+			<SzData.Text>{trans('related')}</SzData.Text>
+			alpha
+		    </SzData>
+		</div>
+	    </div>
+	</div>
+    </React.Fragment>
+  );
+}
+
+export const BlockRelatedElements: React.FC<IBlock1> = ({}) => {
+return (
+        <React.Fragment>
+          {displayRelatedElement}
+	</React.Fragment>
+    )
+}
+```
+
 ### COMPONENT
 
 ```
