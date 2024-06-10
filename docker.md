@@ -8,7 +8,7 @@ docker build --pull --rm -f ".\Dockerfile" -t name:latest "api" --build-arg="ARG
 
 sh -c "nohup sudo -b dockerd --default-ulimit nofile=8192:8192 < /dev/null > /mnt/wsl/shared-docker/dockerd.log 2>&1"  
 
-...
+```
 # Docker
 DOCKER_DISTRO="Ubuntu"
 DOCKER_DIR="/mnt/wsl/shared-docker"
@@ -28,7 +28,9 @@ docker compose -f "docker-compose.yaml" up -d --build
 ```
 * run indefinitely
 services-name:
-    commands: tail -f /dev/null 
+    commands: tail -f /dev/null
+    commands: while true; do sleep 1; done
+    commands: sleep infinity
 ```
 
 ip:
@@ -72,12 +74,11 @@ docker compose --profile myProfil up
 ### cli
 
 ```
-- cli
 docker run --entrypoint echo ubuntu "Hello World"
-docker run ubuntu tail -f /dev/null
-docker run ubuntu while true; do sleep 1; done
-docker run ubuntu sleep infinity
 ```
+
+### restart
+- docker compose -f docker-compose.yml restart user-request
 
 # Error
 
