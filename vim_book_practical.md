@@ -3,6 +3,8 @@ Drew Neil
 
 Vimcasts.org
 Tips: use dot, dont repeat yslf, make changes repeatable, repeat substit with '&'
+-> Tpope unimpaired mapping (buffer, arg, quickfix, tags..)
+:compiler, :make, :shell
 
 . Repeat
 * search
@@ -117,3 +119,77 @@ C-rC-w copy current word to prompt
 :* then cw <newtype>
 :%s//C-rC-w/g
 
+34 recall cmd from hist
+(With up and down)
+.vimrc Set history=200
+(Use with search too)
+
+Cmdline history window:
+(e.g. :write | !ruby %) 
+% is current filename
+q: (or in cmd type C-f) => cmdwin
+q/ cmdline search
+
+35 run cmd in shell
+:! Run shell cmd (not :ls)
+:ls show buffer commands
+:shell
+Or run C-z, jobs, fg (switch to vim)
+
+:read <cmd> place cmd in buffer
+:write cmd (put in buffer)
+:write !sh (buffer to sh)
+:write! sh (override "sh" file)
+
+:2,$!sort -t',' -k2 (filter range on key2)
+:range!
+
+e.g. !G => open Ex with range
+:1,4write !cmd
+:1,4!<filter>
+
+36 run multiple as batch, example:
+(<ol><a href="myurl.com">txt</a></ol>)
+
+global/href/j(oin)
+vglobal/href/d(el)
+%normal A: http://vimcasts.org
+%normal yi"$p
+:%substitute/\v^[^\>]+\>\s//g
+
+(remove the opening <a href=""> tag)
+then put cmds history in batch.vim
+
+:source batch.vim (run all cmds)
+$ vim *.html (every files in args)
+
+:args (show all)
+:first, :source batch.vim, :next...
+:argdo source batch.vim
+
+37 files in buffer
+$ vim *.txt
+:ls (list buffers)
+:bn(ext)
+C-^ (alt %current and #alt)
+
+:buffer N
+:buffer <"bufname firstchars">
+:bufdo <cmd>
+:bd(elete) N,M,O
+:N,Mbd(elete)
+
+38 buffer collection
+:args **/*.js **/*.css
+:args `cat myfile.txt` 
+
+39 hidden files (unsaved)
+set hidden (use ! for all)
+:bn(ext)! or :bufdo
+:e(dit)!
+:qa(ll)!
+:wa(ll)! or :argdo write
+:wn
+:cnext or :cfdo
+
+40 divide windows
