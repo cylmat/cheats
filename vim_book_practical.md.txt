@@ -192,4 +192,88 @@ set hidden (use ! for all)
 :wn
 :cnext or :cfdo
 
-40 divide windows
+40 windows (viewport of buffer)
+C-w>s or v (horiz or vert)
+:edit <file>
+Or :sp(lit) <file> or :vsp file
+C-w>(C-again)whjkl
+:cl(ose), :on(ly)
+
+Resize (->windows-moving)
+C-w>=_| (maxi)
+N C-w>_|
+
+41 tabs (multi windows)
+:lcd <path> (set current work dir)
+:windo lcd <path> (all dir)
+:tabe(dit) <file>
+
+C-w>T move to new tab
+:close
+:tabc(lose)
+:tabo(nly)
+:tabn(ext) N or Ngt, or gt
+:tabp(rev) or gT
+:tabmove N (0 or empty->end)
+
+42 open save files
+:pwd
+:edit <Tab><Tab>...
+:edit %<Tab> (% use active buffer path)
+:edit %:h <Tab> (remove filename)
+
+```
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h') . '/' : '%%'
+```
+(Use :edit, :write, :saveas, :read)
+
+43 find a file
+:set path+=app/**
+(See Tim Pope rails.vim)
+:find Main.js<Tab> (use wildmode)
+
+44 filesystem netrw
+https://vimhelp.org/pi_netrw.txt.html#netrw-%2525
+
+```
+Set nocompatible
+Filetype plugin on
+```
+
+vim .
+:e(dit) . or :e.
+:E(xplore), :Sexplore, :Vexplore
+C-^ switch back to buffer
+% create new file, d directory
+rename, del
+sftp, scp, curl...
+
+45 save nonexists
+C-g (echo name n stats of current file)
+:edit <non-exists-dir>
+:!mkdir -p %:h
+:write
+
+46 save as root
+C-g (show readonly)
+(Write buffer to current file: )
+:w !sudo tee % > /dev/null
+
+48 real vs display line
+set wrap
+gj/gk  go up/down on display line
+g0 first display char
+g^ first display non-blank
+g$ end of display
+
+49 word motion
+(word = alpha-digit-_ or nonblank)
+w,b,e,ge
+(WORD = nonblank sep by whitespace)
+W,B,E,gE
+
+52 text-objects (block)
+wWspt (word, sentence, paragraph, tag)
+(e.g: vi} a" i> a`) expand more and more
+cit (jumps to next tag and change it)
+
