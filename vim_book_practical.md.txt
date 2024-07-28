@@ -277,3 +277,60 @@ wWspt (word, sentence, paragraph, tag)
 (e.g: vi} a" i> a`) expand more and more
 cit (jumps to next tag and change it)
 
+54 marks
+ma..mz mark in local buffer
+mA..mZ mark globally
+'{mark} go to mark line
+`{mark} go to mark position
+
+Automarks (use ')
+' last jump
+. last change
+^ last insert
+[ start of last change or yank
+] end of c or y
+< start of visual
+> end of v
+
+55 jump parenthesis
+(Plugin matchit.vim, surround.vim)
+% switch matching one
+`` or C-o (jump to last position)
+e.g. f[ -> % -> r) -> `` -> r(
+
+```
+Set nocompatible
+Filetype plugin on
+runtime macros/matchit.vim
+```
+
+56 jumps list
+(Motion within file, jumps between files)
+C-o jump list backware
+C-i jump forward
+:jumps
+
+Are jumps :
+[count]G, /search, %, ), }, HML, 'marks
+gf jump to filename
+C-] jump to definition
+
+Caution : In Insert, C-i = <Tab>
+
+57 changes list
+u / C-r
+:changes
+g; / g,
+`. (go to last change)
+`^ (go on last change in insert mode)
+gi (use ^ mark and use insert mode)
+
+58 jumps to filename
+vim -u NONE - N <file> (no plugin)
+gf (go to file)
+(for input "require" TS modules)
+:set suffixesadd+=.tsx
+C-o (go back)
+:set path? (See list)
+C-] (go to method definition)
+
