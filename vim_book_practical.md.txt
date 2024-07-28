@@ -334,3 +334,11 @@ C-o (go back)
 :set path? (See list)
 C-] (go to method definition)
 
+
+:grep
+:vimgrep /foo/ **
+
+60 yank paste
+xp, ddp
+(Black hole register: "_)
+"_dw (really delete word)
