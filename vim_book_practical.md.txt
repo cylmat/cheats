@@ -9,6 +9,7 @@ Tips: use dot, dont repeat yslf, make changes repeatable, repeat substit with '&
 omap option : custom map
 :set shiftwidth=4 softtabstop=4 expandtab​ (tab as 4 spaces)
 Tips : remape Capslock to Esc or Ctrl
+https://vimhelp.org/index.txt.html#%5B [braquets]
 )
 
 . repeat last change
@@ -18,12 +19,12 @@ g*, g# (search into word)
 s <=> cl, S <=> ^C, I <=> ^i
 gUgU or gU : lower current line
 gUap (upper all paragraph)
-gc{motion} or gcc : comment (gcae comment file)
+gc<motion> or gcc : comment (gcae comment file)
 = (autoindent)
 K : look man page
-gr,gR : virtual replace mode
-c : change selection
-C-D, C-U : up, down
+gr, gR : virtual replace mode
+c<motion> : change selection
+C-D, C-U : pgup, pgdown
 3G go line 3
 
 zt, z<Enter> (center window with cursor on top)
@@ -32,15 +33,15 @@ zb, z- (center window cursor on bottom)
 ZZ <=> :x (write buffer and exit)
 ZQ <=> :q!
 
-Insert mode ____
-Select mode: visual then 'A'
+--- Insert mode ---
+(Select mode: gh, gH, gC-h)
+(C-g> switch to Visual) 
 
 13 correct in insert
-C-hwu> : delete back
+C-h, C-w, C-u> : delete back char, word, line
 
-14 get back to normal
-C-[> like Esc
-C-o> : switch to InsertNormal (fire one normal command then back to Insert)
+14 (InsertNormal) get back to normal
+C-o>{cmd} : fire one Normal command then switch to Insert
 C-o>zz : middle the screen then Insert
 
 15 past from register
@@ -60,13 +61,13 @@ ga : get unicode char of current word
 18 replace mode
 gr,gR replace in virtual mode (tab as space)
 
-Visual___ v,V,C-v
+--- Visual --- v,V,C-v
 gv : reselect last visual
 o : toggle the free end
 Vr- : replace line with -
 C-g : toggle select mode (typing switch to insert mode)
 
-Command__ 
+--- Command --- 
 27 (normal on current, cmd on long range)
 C-w or C-u delete to start word/line
 C-v or C-k insert unusual char
@@ -229,6 +230,7 @@ C-w>T move to new tab
 :edit %:h <Tab> (remove filename)
 
 ```
+' (map %% as %:h) 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h') . '/' : '%%'
 ```
 (Use :edit, :write, :saveas, :read)
