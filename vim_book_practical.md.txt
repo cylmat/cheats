@@ -16,7 +16,7 @@ https://vimhelp.org/index.txt.html#%5B [braquets]
 *, # (search exact word)
 g*, g# (search into word)
 >G indent all until eof
-s <=> cl, S <=> ^C, I <=> ^i
+s <=> cl, S <=> ^C or cc, I <=> ^i
 gUgU or gU : lower current line
 gUap (upper all paragraph)
 gc<motion> or gcc : comment (gcae comment file)
