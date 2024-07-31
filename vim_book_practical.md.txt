@@ -5,7 +5,7 @@ Vimcasts.org
 (
 Tips: use dot, dont repeat yslf, make changes repeatable, repeat substit with '&'
 -> Tpope unimpaired mapping (buffer, arg, quickfix, tags..)
-:compiler, :make, :shell
+:compiler, :make, :shell, :version
 omap option : custom map
 :set shiftwidth=4 softtabstop=4 expandtab​ (tab as 4 spaces)
 Tips : remape Capslock to Esc or Ctrl
@@ -347,7 +347,15 @@ C-] (go to method definition)
 :grep
 :vimgrep /foo/ **
 
-60 yank paste
+60 yank paste, unnamed register
+" is the unnamed (default) register""p => p(used with x,s,d,c,y)
 xp, ddp
 (Black hole register: "_)
 "_dw (really delete word)
+
+61 named register
+"<reg>cmd (e.g. "ad):cmd <reg> (e.g. :put c)"ayy, "ap(Yank register: 0)yiw, "0p:reg "0 (display it)
+Uppercase append(Sample used with)"ayiw, => Sample, w"Ayiw => Sample used)"_dw (blackhole register)"= (expression register)
+Clipboard "+ or "*(e.g. Win Ctrl-c, Vim "+p or C-r>+)"+yit (copy to clipboard)
+
+ReadOnly registers"% file, "# alt, ". insert, ": ex cmd, %/ search
