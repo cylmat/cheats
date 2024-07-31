@@ -91,7 +91,7 @@ C-v or C-k insert unusual char
 :%normal i//
 :1,20substitute/pattern/string/flag
 :1,20global/pattern/<command>
-:edit,write,tabnew,split,prev,next,bp(rev),bn(ext),c(opy)next,tnext
+:edit,write,split,prev,next,bp(rev),bn(ext),c(opy)next,tnext
 
 :p or :print line in command
 :$ end of file
@@ -199,7 +199,7 @@ set hidden (use ! for all)
 :wn
 :cnext or :cfdo
 
-40 windows (viewport of buffer)
+40 ---windows--- (viewport of buffer)
 C-w>s or v (horiz or vert)
 :edit <file>
 Or :sp(lit) <file> or :vsp file
@@ -210,7 +210,8 @@ Resize (->windows-moving)
 C-w>=_| (maxi)
 N C-w>_|
 
-41 tabs (multi windows)
+41 ---tabs--- (multi windows)
+:tabnew
 :lcd <path> (set current work dir)
 :windo lcd <path> (all dir)
 :tabe(dit) <file>
