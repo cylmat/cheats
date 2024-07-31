@@ -92,6 +92,15 @@ const point: Point = {x: 9, y: 5}
 logPoint(point)
 ```
 
+### object
+
+return errors.map((error: {name: string, message: string}) => {
+    if (error.name === "pattern") {
+    error.message = "Only digits are allowed"
+}
+    return error;
+});
+
 ### keyof
 
 interface Person {name: string, age: number}  
