@@ -2,6 +2,9 @@
 
 ```
 docker build --pull --rm -f ".\Dockerfile" -t name:latest "api" --build-arg="ARG=VAL" --target base --build-context context=".\"
+
+docker compose down --remove-orphans
+docker compose up -d --build
 ```
 
 ### Daemon
