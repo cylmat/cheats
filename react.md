@@ -20,6 +20,7 @@
 ```
 
 **packages.json**
+https://docs.npmjs.com/cli/v6/configuring-npm/package-json#local-paths  
 ```
 "dependencies": {
     "@myenv/widget": "link:..",
