@@ -19,11 +19,12 @@
 - rjsf-team.github.io/react-jsonschema-form/
 ```
 
-**packages**
+**packages.json**
 ```
 "dependencies": {
     "@myenv/widget": "link:..",
     "@testing-library/jest-dom": "link:../node_modules/@testing-library/jest-dom",
+    "my_dependendy": "file:../../my_dir",
 ```
 
 ## Full page sample with Fragment
