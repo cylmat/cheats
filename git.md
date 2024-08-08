@@ -1,10 +1,12 @@
 ### Credentials
 
-```
 git config --global credential.helper 'store --file ~/.my-credentials'
-```
 
-### MISC
+### Search
+  
+Search in all files : git rev-list --all | xargs git grep -F '<Your search string>'
+
+### Misc
 
 ```
 PREVIOUS_BRANCH=`git rev-parse --abbrev-ref HEAD -- | head -n 1`    
@@ -18,3 +20,7 @@ git submodule init
 git submodule update --init --recursive
 git submodule foreach sh -c 'git pull'  
 ```
+
+### Worktree
+
+Remove untracked changes : git clean -f -d
