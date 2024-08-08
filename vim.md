@@ -40,8 +40,9 @@ C-D C-U move down up half page
 ### REGISTER 
 
 :reg  all registers  
-"" default register   
-"5 fifth register  
+"" default register  
+"0 last yank
+"5 5th delete text  
 ". last one  
 "% current file path  
 ": most recent command  
@@ -49,6 +50,10 @@ C-D C-U move down up half page
 "= expression one  
 "/ search register  
 :let @5='' clear register '5'  
+
+"0 to "9.
+"0 will always have the content of the latest yank, 
+and the others will have last 9 deleted text, being "1 the newest, and "9 the oldes
 
 ### SPLIT SCREEN
 
