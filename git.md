@@ -1,4 +1,22 @@
-https://acompiler.com/git-tips/  
+https://acompiler.com/git-tips/ 
+
+### Autocompletion
+
+https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash  
+https://www.oliverspryn.com/blog/adding-git-completion-to-zsh  
+
+```
+mkdir -p ~/.zsh  && cd ~/.zsh       
+curl -o git-completion.zsh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+```
+
+Load Git completion :  
+-> in ~/.zsh  
+```
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath) 
+autoload -Uz compinit && compinit
+```
 
 ### Credentials
 
