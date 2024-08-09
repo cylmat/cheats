@@ -35,7 +35,22 @@ type StringMap = { [key: string]: unknown };
 ### casting
 
 const test: unknown = 7  
-console.log((test as string))  
+console.log((test as string))
+
+### enum
+
+```
+type InputType = 'text' | 'email' | 'password' | 'number'
+
+const formatInputType = (schemaType: string[]): InputType => {
+        for (let val of schemaType) {
+            if (val.match(/(number|text|email|password)/)) {
+                return val as InputType
+            }
+        }
+        return 'text' // default
+    }
+```
 
 ### interface
 
