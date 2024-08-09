@@ -4,26 +4,28 @@ https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet
 ### Exemples:
 
 ```
-k apply -f app-secrets.yaml
-
 k get pod  
 k get deploy  
-k get ns  
 k get ns  
 k get po -A | grep user
 k logs svc/api-symfony     
 k -n user-int logs deploy/user-symfony -f --tail 100 | grep ' 500 '  
-k exec -it   deploy/signal-backend-symfony  -- bash
+k exec -it  deploy/backend-symfony  -- bash
+k exec -it svc/request-consumer-symfony -- bash  
+```
+
+### deploy / ingress
+
+k edit deploy <pod-service>  
+kubectl edit ingress geo
+
+### secrets
 
 k get secrets | grep porta  
 k get secrets mysecretscontainer -o yaml
-
-kubectl edit ingress geo
-kubectl -n $NAMESPACE apply -f url-secret-$ENV.yaml
-``` 
-
-alias kdep='f(){k get pod | grep "$@" ; unset -f f}; f'   
-API_KEY=$(kubectl -n namespace-int get secrets container-secrets -o jsonpath="{.data.api-key}" | base64 --decode)  
+k apply -n env-int -f url-secret-int.yaml
+k apply -f app-secrets.yaml
+kubectl -n $NAMESPACE apply -f url-secret-$ENV.yaml 
 
 ```
 (service)  
@@ -60,3 +62,9 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
    echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
+
+### alias
+
+alias kdep='f(){k get pod | grep "$@" ; unset -f f}; f'     
+API_KEY=$(kubectl -n namespace-int get secrets container-secrets -o jsonpath="{.data.api-key}" | base64 --decode)  
+
