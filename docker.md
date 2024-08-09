@@ -103,4 +103,5 @@ docker run --entrypoint echo ubuntu "Hello World"
 
 * if HOST NOT FOUND  
 in /etc/wsl.conf:  
-Remove/add [network] generateResolvConf = false 
+Remove/add [network] generateResolvConf = false
+
