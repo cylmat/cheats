@@ -38,7 +38,22 @@ k -n user-request-int- logs user-request-xxxx
 API_KEY = $(shell kubectl -n container-int get secrets prj-secrets -o jsonpath="{.data.api-key}" | base64 --decode)
 ```
 
-install
+### context
+
+cluster
+```
+kubectl config set-cluster preprod-cluster --server=https://aks.azmk8s.io --certificate-authority=/tmp/ca.crt --embed-certs=true
+kubectl config set-credentials preprod-dev-user --token=eyJh28ifQ.eyJpc31jeXJpbCJ9.QvK8SqpDeoR76y4r
+```
+
+context
+```
+kubectl config  set-context lab-dev  --cluster=dev-cluster  --user=dev-user-joe  --namespace=default
+kubectl config  use-context lab-dev
+```
+
+### install
+
 ```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
    curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
