@@ -12,6 +12,7 @@ VIM Samples
 
 :open <file>  
 :e  
+Ctrl-^, (edit alternate/previous file, like ":e #").  
   
 ### INSERT MODE
 
@@ -37,11 +38,13 @@ wWbB next/prev word or WORD
 C-D C-U move down up half page  
 % match next/prev ({[]})  
 
-### REGISTER 
 
-:reg  all registers 
-(4 readonly: .%:#)
+### REGISTERS 
 
+:reg  all registers   
+(4 readonly: .%:#) 
+
+```
 "" default unnamed register (d,c,s,x)  
 ". last one  
 "0 last yank  
@@ -49,15 +52,23 @@ C-D C-U move down up half page
 "% current file path    
 ": most recent command  (@: to run this command again.)    
 "# alternate file  (:h alternate-file, last edited file)  
+  ":e #"
+
 "= expression one  (in INSERTMODE use <Ctrl-r>=) 
-  ex: <Ctrl-r>=ls
-"/ search register   
+  <Ctrl-r>=system('ls') -> import "!ls" under cursor
+
+"/ search register
+  use <Ctrl-r> / to import last search into command line
+  :%s/<Ctrl-r />/TERM/g (=> will display ":%s/search/TERM/g" in command line)
+  (replace last "/search" terme by TERM)
+
 :let @5='' clear register '5'   
 let @+=@% ("let" write to a register, copy the current file to the clipboard) 
 
 "0 to "9.
 "0 will always have the content of the latest yank, 
 and the others will have last 9 deleted text, being "1 the newest, and "9 the oldes
+```
 
 ### SPLIT SCREEN
 
