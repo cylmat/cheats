@@ -95,6 +95,20 @@ MeteoBlue = (props: IMeteoBlueProps) => {}
 for(let key of keys)  
 for(let key in localStorage)
 
+**foreach**
+https://masteringjs.io/tutorials/fundamentals/foreach-object
+```
+Object.entries(requestObject).forEach(([key, items]: [string, any]) => {
+            if (key === 'data') {
+                Object.entries(items).forEach(([dataKey, dataElement]: [string, any]) => {
+                    requestWithDataAs[dataKey] = dataElement
+                })
+            } else {
+                requestWithData[`__${key}`] = items
+            }
+        })
+```
+
 ### NULLable !
 
 - @https://blog.logrocket.com/understanding-exclamation-mark-typescript/  
