@@ -39,17 +39,21 @@ C-D C-U move down up half page
 
 ### REGISTER 
 
-:reg  all registers  
-"" default register  
-"0 last yank
-"5 5th delete text  
+:reg  all registers 
+(4 readonly: .%:#)
+
+"" default unnamed register (d,c,s,x)  
 ". last one  
-"% current file path  
-": most recent command  
-"# alternate file  
-"= expression one  
-"/ search register  
-:let @5='' clear register '5'  
+"0 last yank  
+"5 5th delete text    
+"% current file path    
+": most recent command  (@: to run this command again.)    
+"# alternate file  (:h alternate-file, last edited file)  
+"= expression one  (in INSERTMODE use <Ctrl-r>=) 
+  ex: <Ctrl-r>=ls
+"/ search register   
+:let @5='' clear register '5'   
+let @+=@% ("let" write to a register, copy the current file to the clipboard) 
 
 "0 to "9.
 "0 will always have the content of the latest yank, 
