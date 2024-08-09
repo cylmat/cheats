@@ -5,7 +5,6 @@ https://kubernetes.io/fr/docs/reference/kubectl/cheatsheet
 
 ```
 k get pod  
-k get deploy  
 k get ns  
 k get po -A | grep user
 k logs svc/api-symfony     
@@ -16,8 +15,10 @@ k exec -it svc/request-consumer-symfony -- bash
 
 ### deploy / ingress
 
+k get deploy  
 k edit deploy <pod-service>  
 kubectl edit ingress geo
+k get cronjob
 
 ### secrets
 
