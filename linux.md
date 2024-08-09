@@ -40,6 +40,7 @@ rsync -av -e 'ssh -p 22000' localhost:src_old_machine_file dst_new_machine_file
 
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R   
 sudo chmod g+rwx "$HOME/.docker" -R
+sudo usermod -aG docker $USER
 
 gpasswd -a $USER docker
 
