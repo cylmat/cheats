@@ -15,6 +15,9 @@ sudo groupadd docker
 ls /var/run/docker.sock -la  
 sudo vim /usr/lib/systemd/system/docker.service  
 
+sudo apt search nftables | grep ^i  
+sudo update-alternatives --config iptables  
+
 ```
 # Docker
 DOCKER_DISTRO="Ubuntu"
