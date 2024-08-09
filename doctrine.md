@@ -1,9 +1,11 @@
 ### DQL
 
+command line
 ```
 Select c from App\Entity\Category as c where c.id = 48
 ```
 
+criteria
 ```
 $criteria = Criteria::create()
     ->where(Criteria::expr()->eq('type', $type))
@@ -11,6 +13,17 @@ $criteria = Criteria::create()
     ->orWhere(Criteria::expr()->eq('isSimplified', 0));
 
 $administrativesDivisions = $this->entityManager->getRepository(AdministrativeDivision::class)->matching($criteria);
+```
+
+expression
+```
+$qb = $this->createQueryBuilder('n');
+$qb
+->where($qb->expr()->in('n.contract', ':contract'))
+->setParameter('contract', $contractPortal);
+
+return $qb->addOrderBy('n.date', 'DESC');
+```
 ```
 
 ### cache
