@@ -61,6 +61,12 @@ s_name:
     - -param2
     - -c3
     - etc...
+ 
+  entrypoint: >
+	 /bin/sh -c "
+		mc alias set myminio http://minio:9000 minioadmin minioadmin
+	 "
+
 
 # ext networks
 networks:
