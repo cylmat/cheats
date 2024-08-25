@@ -9,8 +9,17 @@ Tips: use dot, dont repeat yslf, make changes repeatable, repeat substit with '&
 omap option : custom map
 :set shiftwidth=4 softtabstop=4 expandtab​ (tab as 4 spaces)
 Tips : remape Capslock to Esc or Ctrl
+https://vimhelp.org/pi_netrw.txt.html#netrw-ref (net protocols)  
+https://vimhelp.org/map.txt.html#map-modes (map)  
+
+Ref:  
 https://vimhelp.org/index.txt.html#%5B [braquets]
-)
+https://vimhelp.org/motion.txt.html  
+
+Objets:  
+https://vimhelp.org/motion.txt.html#WORD
+https://vimhelp.org/motion.txt.html#text-objects
+)  
 
 . repeat last change
 *, # (search exact word)
@@ -26,6 +35,7 @@ gr, gR : virtual replace mode
 c<motion> : change selection
 C-D, C-U : pgup, pgdown
 3G go line 3
+
 
 zt, z<Enter> (center window with cursor on top)
 zz, z. (center window on cursor)
@@ -68,6 +78,9 @@ Vr- : replace line with -
 C-g : toggle select mode (typing switch to insert mode)
 
 --- Command --- 
+https://vimhelp.org/cmdline.txt.html#cmdline-special
+
+
 27 (normal on current, cmd on long range)
 C-w or C-u delete to start word/line
 C-v or C-k insert unusual char
@@ -332,7 +345,7 @@ u / C-r
 g; / g,
 `. (go to last change)
 `^ (go on last change in insert mode)
-gi (use ^ mark and use insert mode)
+gi (use ^ mark then use insert mode)
 
 58 jumps to filename
 vim -u NONE - N <file> (no plugin)
