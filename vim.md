@@ -1,6 +1,22 @@
 VIM Samples
 ===========
 
+Ref
+---
+Vi & Vim:  
+https://vimhelp.org/vi_diff.txt.html#vi-differences  
+https://www.shell-tips.com/linux/vi-vs-vim/#gsc.tab=0  
+
+Motion & braquets:  
+https://vimhelp.org/index.txt.html#%5B  
+https://vimhelp.org/motion.txt.html  
+https://vimhelp.org/map.txt.html#map-modes
+
+Objets:  
+https://vimhelp.org/motion.txt.html#WORD
+https://vimhelp.org/motion.txt.html#text-objects
+---
+
 ### BUFFER 
 
 :buffers  
