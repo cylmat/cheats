@@ -88,9 +88,9 @@ C-D C-U move down up half page
 
 ### REGEXP
 https://vimregex.com
+
 :h s_flags  (help flags)
 - c (confirm each)
-- d (delete matches)
 - g (all line occurences)
 - i (ignore case)
 - I (don't ignore case)
