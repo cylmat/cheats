@@ -84,7 +84,7 @@ C-g : toggle select mode (typing switch to insert mode)
 https://vimhelp.org/cmdline.txt.html#cmdline-special
 
 
-27 (Normal on current, Command on long range)  
+27 (Normal on current text, Command on long range)  
 (C-w or C-u delete to start word/line)
 (C-v or C-k insert unusual char)
 
@@ -106,20 +106,20 @@ https://vimhelp.org/cmdline.txt.html#cmdline-special
 :'<,'>t0 (copy last visual to start of file)
 @: repeat last command
 
-30 Execute normal command on range  
-:1,20normal <command> (e.g. '.')
-:%normal A;
-:%normal i//
+30 Execute "Normal command" on range  
+:1,20norm(al) <command> (e.g. '.')
+:%norm A;   (append ";" on every line)
+:%norm i//  (comment all lines)
 :1,20s(ubstitute)/pattern/string/flag
-:1,20global/pattern/<command>  
+:1,20g(lobal)/pattern/<command>  
 
-:edit,write,split,prev,next  
-:bp(rev),bn(ext),c(opy)next,tnext
+(works with :edit,:write,:split,:prev,:next  
+:bp(rev),:bn(ext),:cnext,:tnext)
 
-:p or :print line in command
+:p(rint) <count> <flag> (print line on cmd)
 :$ end of file
-:3p go line3 then print
-(3G-dd => :3d)
+:3p (go line3 then print)
+(:3d => 3Gdd)
 :.,$ current line to eofile
 :%y all lines yanked (equiv :1,$y)
 
