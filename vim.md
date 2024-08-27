@@ -86,6 +86,17 @@ C-D C-U move down up half page
 * dty: delete until next "y"
 * vap: visual around paragraph
 
+### REGEXP
+https://vimregex.com
+:h s_flags  (help flags)
+- c (confirm each)
+- d (delete matches)
+- g (all line occurences)
+- i (ignore case)
+- I (don't ignore case)
+- n (report number of matches)
+- p/#/l (print line substitued, number, text)
+
 
 ### REGISTERS 
 
