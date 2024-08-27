@@ -46,10 +46,18 @@ zo to unfold
 zc closes the fold  
 There is also zM and zR to close / open all the folds in the file  
 za toggle folds (zo/zc)  
+
+### GLOBAL
+
+(ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
+(ex: :g/console/g/two/d -> find "console", then "two" inside it, then delete)  
+
+change delimiters, :g@console@d
+g@one@s+const+let+g (use global and sub)    
   
 ### INSERT MODE
 
-cCMD replace under CMD  
+c<CMD> replace under CMD  
 
 ### JUMPS
 
