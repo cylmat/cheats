@@ -56,6 +56,7 @@ C-o>{cmd} : fire one Normal command then switch to Insert
 C-o>zz : middle the screen then Insert
 
 15 past from register
+(C-r is register in Insert mode)
 C-r>0 : yank from register 0 by char
 C-r>C-p>0 : yank all line from 0
 
