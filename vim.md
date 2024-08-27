@@ -16,10 +16,10 @@ Objets:
 - https://vimhelp.org/motion.txt.html#WORD
 - https://vimhelp.org/motion.txt.html#text-objects
 
-Substitutes:
+Substitutes and commands :
 - s/pattern/text   substitute first occurence  
 - s/pattern/text/g substitute all occurences on line
-- g/pattern/text   substitute occurence on all lines
+- g/pattern/text   execute command on all lines
 ---
 
 ### BUFFER 
