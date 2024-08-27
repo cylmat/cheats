@@ -45,10 +45,10 @@ ZQ <=> :q!
 
 --- Insert mode ---
 (Select mode: gh, gH, gC-h)
-(C-g> switch to Visual) 
+(Select mode: C-g> switch to Visual) 
 
 13 correct in insert
-C-h, C-w, C-u> : delete back char, word, line
+(C-h, C-w, C-u> : delete back char, word, line)
 
 14 (InsertNormal) get back to normal
 C-o>{cmd} : fire one Normal command then switch to Insert
@@ -81,9 +81,9 @@ C-g : toggle select mode (typing switch to insert mode)
 https://vimhelp.org/cmdline.txt.html#cmdline-special
 
 
-27 (normal on current, cmd on long range)
-C-w or C-u delete to start word/line
-C-v or C-k insert unusual char
+27 (Normal on current, Command on long range)
+(C-w or C-u delete to start word/line)
+(C-v or C-k insert unusual char)
 
 28 use range
 :1,20delete x : range to register x
