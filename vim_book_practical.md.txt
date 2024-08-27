@@ -116,7 +116,7 @@ https://vimhelp.org/cmdline.txt.html#cmdline-special
 :1,20norm(al) <command> (e.g. '.')
 :%norm A;   (append ";" on every line)
 :%norm i//  (comment all lines)
-:1,20s(ubstitute)/pattern/string/flag
+:1,20s(ubstitute)/pattern/string/flag (or :su)
 :1,20g(lobal)/pattern/<command>  
 
 (works with :edit,:write,:split,:prev,:next  
