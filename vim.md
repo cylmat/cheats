@@ -20,6 +20,9 @@ Substitutes and commands :
 - s/pattern/text   substitute first occurence  
 - s/pattern/text/g substitute all occurences on line
 - g/pattern/text   execute command on all lines
+
+Tutos:  
+- https://learnvim.irian.to
 ---
 
 ### BUFFER 
