@@ -8,11 +8,13 @@ Tips: use dot, dont repeat yslf, make changes repeatable, repeat substit with '&
 -> Tpope unimpaired mapping (buffer, arg, quickfix, tags..)
 :compiler, :make, :shell, :version
 omap option : custom map
-:set shiftwidth=4 softtabstop=4 expandtab​ (tab as 4 spaces)
-:set wildmenu wildmode=full (zsh-like Cmd autosuggestion)
 Tips : remape Capslock to Esc or Ctrl
 https://vimhelp.org/pi_netrw.txt.html#netrw-ref (net protocols)  
 https://vimhelp.org/map.txt.html#map-modes (map)  
+
+Set:
+:set shiftwidth=4 softtabstop=4 expandtab​ (tab as 4 spaces)
+:set wildmenu wildmode=full (zsh-like Cmd autosuggestion)
 
 Ref:  
 https://vimhelp.org/index.txt.html#%5B [braquets]
