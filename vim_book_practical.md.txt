@@ -99,8 +99,8 @@ https://vimhelp.org/cmdline.txt.html#cmdline-special
 :1,20co(py) <addr> (:1,10t0) 'co' or 't'
 (:t. eq to yyp)
 :6G yy C-o p => :6t.
-:1,20mo(ve) <addr> (:m)
-(visu dGp equi to :m$)
+:1,20m(o)(ve) <addr>
+(:m$ => dGp)
 :1,20join
 
 30 Execute normal command  
