@@ -140,8 +140,8 @@ C-d or Tab : reveal autocompletion
 :tab,set,help
 
 :command-complete
-:wildmode=longest,list (bashlike)
-:wildmode :wildmode=full (zsh)
+:wildmode=longest,list (bash-like)
+:wildmode :wildmode=full (zsh-like)
 
 Navigate with Tab, C-n, C-p, left, right
 
