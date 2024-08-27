@@ -118,7 +118,8 @@ https://vimhelp.org/cmdline.txt.html#cmdline-special
 :%norm i//  (comment all lines)
 :1,20s(ubstitute)/pattern/string/flag (or :su)
 :1,20g(lobal)/pattern/<command>  (execute cmd on all lines)  
-(ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
+(ex :g/alf/norm gUU -> uppercase lines where "alf" is present) 
+(ex: :g/console/g/two/d -> find "console", then "two" inside it, then delete)
 
 (works with :edit,:write,:split,:prev,:next  
 :bp(rev),:bn(ext),:cnext,:tnext)
