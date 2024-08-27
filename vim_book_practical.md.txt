@@ -48,7 +48,8 @@ ZQ <=> :q!
 (Select mode: C-g> switch to Visual) 
 
 13 correct in insert
-(C-h, C-w, C-u> : delete back char, word, line)
+(Delete only what was inserted, not existing text!)
+C-h, C-w, C-u> : delete back char, word, line
 
 14 (InsertNormal) get back to normal
 C-o>{cmd} : fire one Normal command then switch to Insert
