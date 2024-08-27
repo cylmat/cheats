@@ -96,20 +96,24 @@ https://vimhelp.org/cmdline.txt.html#cmdline-special
 :/<html>/+1,/<\/html>/-1p
 
 29 duplicate or move  
-:1,20co(py) <addr> (:1,10t0) 'co' or 't'
+:1,20co(py) <addr> (:1,10t0) or 't'
 (:t. eq to yyp)
-:6G yy C-o p => :6t.
-:1,20m(o)(ve) <addr>
+:6Gyy then C-o>p => :6t. (is shorter)
+:1,20mo(ve) <addr>  or 'm'
 (:m$ => dGp)
 :1,20join
+:'<,'>t0 (copy last visual to start of file)
+@: repeat last command
 
-30 Execute normal command  
+30 Execute normal command on range  
 :1,20normal <command> (e.g. '.')
 :%normal A;
 :%normal i//
-:1,20substitute/pattern/string/flag
-:1,20global/pattern/<command>
-:edit,write,split,prev,next,bp(rev),bn(ext),c(opy)next,tnext
+:1,20s(ubstitute)/pattern/string/flag
+:1,20global/pattern/<command>  
+
+:edit,write,split,prev,next  
+:bp(rev),bn(ext),c(opy)next,tnext
 
 :p or :print line in command
 :$ end of file
@@ -118,7 +122,7 @@ https://vimhelp.org/cmdline.txt.html#cmdline-special
 :.,$ current line to eofile
 :%y all lines yanked (equiv :1,$y)
 
-Visualselection: e.g. 2G-VG then ':'
+(Visualselection, ex: 2G-VG then ':')
 :'<,'> from to visual selection
 :pattern,pattern (:<html+1,\/html>-1y)
 :.,.+3 current to plus3
