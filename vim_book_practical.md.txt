@@ -118,6 +118,7 @@ https://vimhelp.org/cmdline.txt.html#cmdline-special
 :%norm i//  (comment all lines)
 :1,20s(ubstitute)/pattern/string/flag (or :su)
 :1,20g(lobal)/pattern/<command>  (execute cmd on all lines)  
+(ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
 
 (works with :edit,:write,:split,:prev,:next  
 :bp(rev),:bn(ext),:cnext,:tnext)
@@ -135,7 +136,7 @@ https://vimhelp.org/cmdline.txt.html#cmdline-special
 :.,.+3 current to plus3
 :'m (to mark)
 C-o reverse last command
-u : undo
+u: undo
 
 31 last
 @: repeat last ex cmd
