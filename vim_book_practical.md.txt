@@ -16,6 +16,8 @@ https://vimhelp.org/map.txt.html#map-modes (map)
 Set:
 :set shiftwidth=4 softtabstop=4 expandtab​ (tab as 4 spaces)
 :set wildmenu wildmode=full (zsh-like Cmd autosuggestion)
+:set expandtab? (get current "option" value)
+:echo &expandtab (get current "variable" value)
 
 Ref:  
 https://vimhelp.org/index.txt.html#%5B [braquets]
