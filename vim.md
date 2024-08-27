@@ -4,8 +4,8 @@ VIM Samples
 Ref
 ---
 Vi & Vim:  
-https://vimhelp.org/vi_diff.txt.html#vi-differences  
-https://www.shell-tips.com/linux/vi-vs-vim/#gsc.tab=0  
+https://vimhelp.org/vi_diff.txt.html#vi-differences   
+https://www.shell-tips.com/linux/vi-vs-vim/#gsc.tab=0   
 
 Motion & braquets:  
 https://vimhelp.org/index.txt.html#%5B  
@@ -42,6 +42,13 @@ za toggle folds (zo/zc)
 ### INSERT MODE
 
 cCMD replace under CMD  
+
+### JUMPS
+
+`[ Jump to beginning of last yanked text  
+`] Jump to end of last yanked text  
+g; Jump to the last change you made  
+g, Jump back forward through the change list  
   
 ### MARKS 
 
@@ -62,6 +69,17 @@ wWbB next/prev word or WORD
   
 C-D C-U move down up half page  
 % match next/prev ({[]})  
+
+
+### Objects to "speak" vim 
+
+- verbs: v(isu), c(hange), d(elete), y(ank)
+- modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
+- text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag), "({
+  
+* ci": change inside quote
+* dty: delete until next "y"
+* vap: visual around paragraph
 
 
 ### REGISTERS 
@@ -95,6 +113,11 @@ let @+=@% ("let" write to a register, copy the current file to the clipboard)
 and the others will have last 9 deleted text, being "1 the newest, and "9 the oldes
 ```
 
+### REPEAT
+
+& Repeat last substitution on current line  
+g& Repeat last substitution on all lines  
+
 ### SPLIT SCREEN
 
 :help split  
@@ -111,12 +134,6 @@ C-w q (close split)
 ### Save
 
 These are :wq <cr>, :x <cr> and ZZ
-
-### TAB
-
-:tabs, :tp, :tn  
-
-@ref: https://vim.fandom.com/wiki/Using_tab_pages  
   
 ### SEARCH / REPLACE 
 
@@ -129,21 +146,16 @@ These are :wq <cr>, :x <cr> and ZZ
   
 :% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
 
+### TAB
+
+:tabs, :tp, :tn  
+@ref: https://vim.fandom.com/wiki/Using_tab_pages  
+
 ### TERMINAL 
 
 :ter (open a terminal inside)  
 :shell (back to the shell)
  
-### Sample to "speak" vim 
-
-- verbs: v(isu), c(hange), d(elete), y(ank)
-- modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
-- text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag), "({
-  
-* ci": change inside quote
-* dty: delete until next "y"
-* vap: visual around paragraph
-
 ---
 **@ref**
 * https://vimhelp.org/quickref.txt.html
