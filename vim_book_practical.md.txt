@@ -1,8 +1,9 @@
 # Practical Vim
-Drew Neil
+Drew Neil  
+https://github.com/eposts/Rich/blob/master/blog/Linux/Practical%20Vim%20Edit%20Text%20at%20the%20Speed%20of%20Thought.pdf  
 
 Vimcasts.org  
-https://github.com/eposts/Rich/blob/master/blog/Linux/Practical%20Vim%20Edit%20Text%20at%20the%20Speed%20of%20Thought.pdf  
+https://vimtricks.com  
 (
 Tips: use dot, dont repeat yslf, make changes repeatable, repeat substit with '&'
 -> Tpope unimpaired mapping (buffer, arg, quickfix, tags..)
