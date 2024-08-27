@@ -29,6 +29,15 @@ https://vimhelp.org/motion.txt.html#text-objects
 :open <file>  
 :e  
 Ctrl-^, (edit alternate/previous file, like ":e #").  
+
+### FOLDING
+(z looks like a folded piece of paper)  
+
+zf operator creates a fold   
+zo to unfold  
+zc closes the fold  
+There is also zM and zR to close / open all the folds in the file  
+za toggle folds (zo/zc)  
   
 ### INSERT MODE
 
