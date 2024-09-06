@@ -1,18 +1,15 @@
 **Return when sourced or bashed script**  
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"  
 
-$@  
-$#  
-$_  
-
-## Arithmetic operation
+### Arithmetic operation
 
 use $(()) ex: 
 ```
 i=$(($i%12))
 ```
 
-## Options##  
+### Options
+
 ```
 for i in "$@"; do
   case $i in
@@ -33,6 +30,24 @@ One random num from 0 to 9
 ```
 shuf -i0-9 -n1
 echo $(($RANDOM%(20-10+1)+10))
+```
+
+### Variables
+
+@https://www.epons.org/shell-bash-variables.php
+```
+$$   PID du shell courant 
+$!   PID du dernier travail lancé en arrière plan 
+$?   code retour de la dernière commande
+$0   nom du script 
+$1 $2 ... ${10}   paramètres positionnels (1, 2 et 10) 
+$#   nombre de paramètres positionnels 
+$*   ou $@   ensemble des paramètres positionnels, équivalant à $1 $2 ... ${n} 
+"$*" ensemble des paramètres positionnels, équivalant à "$1 $2 ... ${n}" 
+"$@" ensemble des paramètres positionnels, équivalant à "$1" "$2" ... "${n}"
+$var ou ${var}  contenu de la variable 
+"var" ${#var}   longueur de la variable "var"    
+$_   equivalent to argv[0]
 ```
 
 ### Wrapping arguments
