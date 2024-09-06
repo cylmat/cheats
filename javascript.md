@@ -8,7 +8,7 @@ if({}) === true
 (arrays are objects, objects are truthy.)
 ```
 
-### ASYNC
+### Axios
 
 ```
 import axios from 'axios';
@@ -18,7 +18,33 @@ export const client = axios.create({ baseURL: API });
 export const seedUsers = async ({  
   dbUrl = "mongodb://root:root@0.0.0.0:27018/",  
 } = {}) => {}
+```
 
+### ASYNC
+
+@https://fr.javascript.info
+```
+// async devant veut dire que la function renvoi une promesse .then()
+async function f() { 
+return 1;
+
+// equivalent à return Promise.resolve(1);
+// error
+await Promise.reject(new Error("Whoops!")); }
+
+// await promise <=> promise.then f().then(alert); // 1
+
+// attendre 3 secondes
+await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+async function f() { let response = await fetch('http://no-such-url'); }
+
+// try catch
+try { let response = await fetch('http://no-such-url'); } catch(err) { 
+   alert(err); // TypeError: failed to fetch
+}
+//or
+// f() devient une promesse rejetée
+f().catch(alert); // TypeError: failed to fetch // (*)
 ```
   
 ### Const & Types
