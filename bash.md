@@ -5,6 +5,13 @@ $@
 $#  
 $_  
 
+## Arithmetic operation
+
+use $(()) ex: 
+```
+i=$(($i%12))
+```
+
 ## Options##  
 ```
 for i in "$@"; do
