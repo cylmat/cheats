@@ -24,6 +24,7 @@ mkdir -p -m o=,ug=rwx alphadir
 
 ### ROOT / SUDO
 
+@https://doc.ubuntu-fr.org/sudoers  
 @https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-fr  
 
 ```
