@@ -1,3 +1,13 @@
+carreful !!!  
+
+```
+Boolean([]); = true
+[] && 1 === true
+if({}) === true
+
+(arrays are objects, objects are truthy.)
+```
+
 ### ASYNC
 
 ```
