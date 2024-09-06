@@ -247,9 +247,9 @@ const { data, isError, isLoading, isSuccess } = useQuery(['organizations', my.id
 
 ```
 
----
-## tips --------------
----
+--- -----------------------------------------------------------------------------
+## TIPS & ERRORS --------------
+--- ----------------------------------------------------------------------------
 
 - useState() reload le component lorsqu'il reçoit une valeur/objet différent.
 
@@ -279,7 +279,28 @@ function App() {
 <button onClick={() => setCount(1)}>
 ```
 
-### debug with "use previous"
+### use dispatch outside of component
+
+@https://medium.com/@sirwacheski/how-to-access-react-state-values-outside-of-a-component-a43e01bcfda0
+
+-> shared reducer
+```
+// Shared reducer state //
+export const sharedReducersState = {
+    "request": initialState
+}
+// Use useSharedSelector to share data between React Component and not-component fonctions
+export function useSharedSelector(selector: (state: any) => any) {
+    return selector(sharedReducersState)
+}
+
+const requestReducers = (state = initialState, action: any): any => {
+    switch (action.type) {
+        case Constants.SET_STEP:
+            sharedReducersState.request = {...state, step: action.payload}
+```
+
+### Debug with "use previous"
 
 @ npm i @simbathesailor/use-what-changed --save
 ```
