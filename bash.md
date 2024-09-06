@@ -27,6 +27,14 @@ for i in "$@"; do
 done
 ```
 
+### Random
+
+One random num from 0 to 9
+```
+shuf -i0-9 -n1
+echo $(($RANDOM%(20-10+1)+10))
+```
+
 ### Wrapping arguments
 ```
 alias pushing='f(){ git add . && git commit -m "$@" && git push;  unset -f f; }; f'
