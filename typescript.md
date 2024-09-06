@@ -164,6 +164,19 @@ function createLoggedPair<S extends string | number, T extends string | number>(
 }
 ```
 
+### return type
+
+@https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype
+```
+const rootReducer = combineReducers({
+    addressAutoComplete: addressAutoCompleteReducers,
+    request: requestReducers,
+    user: userReducers
+})
+
+export type RootState = ReturnType<typeof rootReducer>
+```
+
 ### utilities
 
 ```
