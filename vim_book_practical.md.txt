@@ -18,6 +18,9 @@ Set:
 :set wildmenu wildmode=full (zsh-like Cmd autosuggestion)
 :set expandtab? (get current "option" value)
 :echo &expandtab (get current "variable" value)
+:highlight (highlight all search pattern matches)
+
+:set! all (display one per line)
 
 Ref:  
 https://vimhelp.org/index.txt.html#%5B [braquets]
@@ -51,6 +54,7 @@ ZZ <=> :x (write buffer and exit)
 ZQ <=> :q!
 
 --- Insert mode ---
+
 (Select mode: gh, gH, gC-h)
 (Select mode: C-g> switch to Visual) 
 
@@ -229,6 +233,7 @@ set hidden (use ! for all)
 :cnext or :cfdo
 
 40 ---windows--- (viewport of buffer)
+
 C-w>s or v (horiz or vert)
 :edit <file>
 Or :sp(lit) <file> or :vsp file
@@ -240,6 +245,7 @@ C-w>=_| (maxi)
 N C-w>_|
 
 41 ---tabs--- (multi windows)
+
 :tabnew
 :lcd <path> (set current work dir)
 :windo lcd <path> (all dir)
@@ -336,9 +342,7 @@ Automarks (use ')
 `` or C-o (jump to last position)
 e.g. f[ -> % -> r) -> `` -> r(
 
-```
-Set nocompatible
-Filetype plugin on
+```plugin
 runtime macros/matchit.vim
 ```
 
@@ -376,15 +380,25 @@ C-] (go to method definition)
 :grep
 :vimgrep /foo/ **
 
+--- registers ---
+
 60 yank paste, unnamed register
 " is the unnamed (default) register""p => p(used with x,s,d,c,y)
 xp, ddp
 (Black hole register: "_)
 "_dw (really delete word)
+". last inserted text
 
+------------------------------------------------to validate
 61 named register
-"<reg>cmd (e.g. "ad):cmd <reg> (e.g. :put c)"ayy, "ap(Yank register: 0)yiw, "0p:reg "0 (display it)
-Uppercase append(Sample used with)"ayiw, => Sample, w"Ayiw => Sample used)"_dw (blackhole register)"= (expression register)
+"<reg>cmd (e.g. "ad):cmd <reg> (e.g. :put c)
+"ayy
+"ap(Yank register: 0)yiw
+"0p:reg
+"0 (display it)
+Uppercase append(Sample used with)
+"ayiw, => Sample, w
+"Ayiw => Sample used)"_dw (blackhole register)"= (expression register)
 Clipboard "+ or "*(e.g. Win Ctrl-c, Vim "+p or C-r>+)"+yit (copy to clipboard)
 
 ReadOnly registers"% file, "# alt, ". insert, ": ex cmd, %/ search
