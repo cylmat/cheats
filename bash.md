@@ -50,6 +50,8 @@ $var ou ${var}  contenu de la variable
 $_   equivalent to argv[0]
 ```
 
+- ps --pid $$ -oargs= (display current shell name, -zsh)
+
 ### Wrapping arguments
 ```
 alias pushing='f(){ git add . && git commit -m "$@" && git push;  unset -f f; }; f'
