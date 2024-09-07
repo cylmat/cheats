@@ -116,7 +116,7 @@ https://vimregex.com
 
 ```
 "" default unnamed register (d,c,s,x)  
-". last one  
+". last inserted text
 "0 last yank  
 "5 5th delete text    
 "% current file path    
