@@ -46,6 +46,33 @@ try { let response = await fetch('http://no-such-url'); } catch(err) {
 // f() devient une promesse rejetée
 f().catch(alert); // TypeError: failed to fetch // (*)
 ```
+
+sample
+```
+### js async sample
+
+const getUserOrganizationsRequestTypes = async (): Promise<any[]> => {
+            return UserReferenceRepository.getAllFromUser(user.data.id).then((response: any) => {
+                let organizationIds = response.data.map((organization: OrganizationType) => organization.id)
+                
+                return await Promise.all(organizationIds.map(async (organizationId: string) => {
+                    const response = await RequestTypeReferenceRepository.getAll(organizationId);
+                    return response.data.map((reference: RequestTypeReference) => reference.requestType);
+                }));
+            });
+        }
+
+}
+
+// Equivalence
+ return RequestTypeReferenceRepository.getAll(organizationId).then((response: any) => {
+                        return response.data.map((reference: RequestTypeReference) => reference.requestType)
+                    })
+=>
+const response = await RequestTypeReferenceRepository.getAll(organizationId);
+                    return response.data.map((reference: RequestTypeReference) => reference.requestType);
+
+```
   
 ### Const & Types
 
