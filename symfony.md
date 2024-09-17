@@ -1,3 +1,14 @@
+### Env var by default
+
+Use this if no env found
+```
+parameters:
+      env(BUILD_VERSION): 'unknown'
+      env(CONTENT_DIRECTORY): ~
+
+      # use
+      api_version: '%env(BUILD_VERSION)%'
+```
 
 ### services
 
