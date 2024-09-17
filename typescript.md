@@ -37,6 +37,20 @@ type StringMap = { [key: string]: unknown };
 const test: unknown = 7  
 console.log((test as string))
 
+### dynamic type key
+
+https://www.geeksforgeeks.org/how-to-create-objects-with-dynamic-keys-in-typescript
+```
+const generateNextStatusesRender = (
+    updatableStatuses: { [status: string]: boolean },
+    userOrganizations: []
+) => {/* ... */}
+
+export interface IUpdatableStatuses {
+    [status: string]: boolean;
+}
+```
+
 ### enum
 
 ```
