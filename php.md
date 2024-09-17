@@ -8,6 +8,13 @@ variadic_func( ...$a )
 [$a[2],$a[3]] = [$a[3],$a[2]];   
 preg_replace_callback
 ```
+
+### query as boolean
+
+```
+// called from http://myurl?booleanQuery=false
+$myquery = json_decode($request->query->get('booleanQuery')); // json_decode evaluate boolean value on string
+```
  
 ## text as callback name:   
 ```
