@@ -33,18 +33,20 @@ API_KEY=$(kubectl -n namespace-int get secrets container-secrets -o jsonpath="{.
 
 ### deploy / ingress
 
-k get deploy  
-k edit deploy <pod-service>  
-kubectl edit ingress geo
-k get cronjob
+k get deploy   
+k edit deploy <pod-service>   
+kubectl edit ingress geo   
+k get cronjob  
 
 ### secrets
 
+```
 k get secrets | grep porta  
 k get secrets mysecretscontainer -o yaml
 k apply -n env-int -f url-secret-int.yaml
 k apply -f app-secrets.yaml
-kubectl -n $NAMESPACE apply -f url-secret-$ENV.yaml 
+kubectl -n $NAMESPACE apply -f url-secret-$ENV.yaml
+```
 
 ### context
 
