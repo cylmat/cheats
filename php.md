@@ -9,6 +9,14 @@ variadic_func( ...$a )
 preg_replace_callback
 ```
 
+## csv files & bom
+
+see @https://csv.thephpleague.com/9.0/connections/bom  
+```
+with bom: "\xEF\xBB\xBF" (UTF-8)
+fwrite($fw, "\xEF\xBB\xBF" . file_get_contents(__DIR__.'/local/export-with-bom.csv'));
+```
+
 ## for loop : declare array
 ```
 for ($l = array(1,1), $i = 2, $x = 0; $i < $length; $i++)
