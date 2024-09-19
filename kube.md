@@ -13,6 +13,24 @@ k exec -it  deploy/backend-symfony  -- bash
 k exec -it svc/request-consumer-symfony -- bash  
 ```
 
+```
+(service)  
+k logs svc/global-portal-api-symfony -f   
+
+(deploy)  
+k logs deploy/global-portal-api-symfony -f   
+
+(SAMPLES)  
+k -n user-request-int- logs user-request-xxxx  
+
+API_KEY = $(shell kubectl -n container-int get secrets prj-secrets -o jsonpath="{.data.api-key}" | base64 --decode)
+```
+
+### alias
+
+alias kdep='f(){k get pod | grep "$@" ; unset -f f}; f'     
+API_KEY=$(kubectl -n namespace-int get secrets container-secrets -o jsonpath="{.data.api-key}" | base64 --decode)  
+
 ### deploy / ingress
 
 k get deploy  
@@ -27,19 +45,6 @@ k get secrets mysecretscontainer -o yaml
 k apply -n env-int -f url-secret-int.yaml
 k apply -f app-secrets.yaml
 kubectl -n $NAMESPACE apply -f url-secret-$ENV.yaml 
-
-```
-(service)  
-k logs svc/global-portal-api-symfony -f   
-
-(deploy)  
-k logs deploy/global-portal-api-symfony -f   
-
-(SAMPLES)  
-k -n user-request-int- logs user-request-xxxx  
-
-API_KEY = $(shell kubectl -n container-int get secrets prj-secrets -o jsonpath="{.data.api-key}" | base64 --decode)
-```
 
 ### context
 
@@ -64,8 +69,9 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
-### alias
+### nginx command & cache
 
-alias kdep='f(){k get pod | grep "$@" ; unset -f f}; f'     
-API_KEY=$(kubectl -n namespace-int get secrets container-secrets -o jsonpath="{.data.api-key}" | base64 --decode)  
+``` 
+k exec -it deploy/global-portal-api-symfony -- su nginx -s /bin/sh -c 'bin/console cache:pool:clear cache.app' 
+```
 
