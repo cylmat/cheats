@@ -1,5 +1,16 @@
 ### USEFULS
 
+Awk
+```
+# awk /regexp/ -F (field split) $0 (all line) $NF (dernier champs)
+awk -F":" '{print $1,$6}' /etc/passwd
+cat /etc/passwd | awk -F ":" '{print $1}'
+df | awk '/run/ && !/vm/ {print $0}'
+
+# begin (once on start) and end (once too)
+awk 'BEGIN{print "ok"} /system/{++n} END{print "in",n,"line"}' /etc/passwd
+```
+
 Bash
 ```
 for i in `seq 1 15`;do echo "$i";done
@@ -11,19 +22,6 @@ Curl download
 curl -fsSL https://raw
 wget -O- https://raw
 fetch -o - https://raw
-```
-
-Find
-```
-# Trouver une expression dans les fichiers
-find . -maxdepth 1 -name 'test*' -exec echo {} \;
-find . -regex '.*.json' | xargs grep smile
-find . -name *.php -type f -exec grep -Hn '$test' {} \;
-
-# find -print0 (no return line)
-# xargs -0 (split by 'null') -n1 (one argument by line)
-# grep -Hn (with filename:linenum)
-find . -name \*.php -type f -print0 | xargs -0 -n1 grep --color -Hn '$test'
 ```
 
 Crypto
@@ -45,6 +43,19 @@ cat /etc/passwd | sort | uniq | tr ':' '-' | tr '[:lower:]' '[:upper:]' | tr –
 join <(sort fichier1.txt) <(sort fichier2.txt)
 ```
 
+Find
+```
+# Trouver une expression dans les fichiers
+find . -maxdepth 1 -name 'test*' -exec echo {} \;
+find . -regex '.*.json' | xargs grep smile
+find . -name *.php -type f -exec grep -Hn '$test' {} \;
+
+# find -print0 (no return line)
+# xargs -0 (split by 'null') -n1 (one argument by line)
+# grep -Hn (with filename:linenum)
+find . -name \*.php -type f -print0 | xargs -0 -n1 grep --color -Hn '$test'
+```
+
 Grep Sed Awk
 ```
 ### Grep
@@ -57,18 +68,6 @@ grep -E "(e|f)" /etc/passwd
 # sed -n (silent)
 echo "alpha" | sed -e 's/a/b/g'
 sed -e 's/a/b/g' <(echo "alpha")
-```
-
-### Awk
-
-```
-# awk /regexp/ -F (field split) $0 (all line) $NF (dernier champs)
-awk -F":" '{print $1,$6}' /etc/passwd
-cat /etc/passwd | awk -F ":" '{print $1}'
-df | awk '/run/ && !/vm/ {print $0}'
-
-# begin (once on start) and end (once too)
-awk 'BEGIN{print "ok"} /system/{++n} END{print "in",n,"line"}' /etc/passwd
 ```
 
 Rsync files
@@ -94,6 +93,7 @@ Networks & Ports
 sudo lsof -i -P -n | grep LISTEN
 sudo lsof -i:22
 
+sudo netstat -abno|findstr <port>
 sudo netstat -tulpn | grep LISTEN
 sudo nmap -sTU -O 127.0.0.1
 
