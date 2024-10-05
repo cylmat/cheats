@@ -54,3 +54,30 @@ doctrine:
  * @ORM\ManyToMany(targetEntity="Entity", inversedBy="interventions", cascade={"persist", "remove"}, fetch="EXTRA_LAZY")
  */
 ```
+
+### uuid
+
+```
+use Ramsey\Uuid\Doctrine\UuidGenerator;
+use Ramsey\Uuid\UuidInterface;
+
+#[ORM\Entity(repositoryClass: AddressRepository::class)]
+class Address
+{
+    #[ORM\Id]
+    #[ORM\Column(type: 'uuid')]
+    #[ORM\GeneratedValue(strategy: 'CUSTOM')]
+    #[ORM\CustomIdGenerator(class: UuidGenerator::class)]
+    private UuidInterface $id;
+```
+
+```
+//Fixtures
+//---ramsey
+$uuidValue = $defaultUuidValue ?? (new UuidGenerator())->generateId($manager, $entity)->toString();
+$uuid = (new UuidFactory())->fromString($uuidValue);
+
+$metadata = $manager->getClassMetaData($entity::class);
+$metadata->setIdGenerator(new AssignedGenerator());
+$metadata->setFieldValue($entity, 'id', $uuid);
+```
