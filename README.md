@@ -26,6 +26,13 @@ find . -name *.php -type f -exec grep -Hn '$test' {} \;
 find . -name \*.php -type f -print0 | xargs -0 -n1 grep --color -Hn '$test'
 ```
 
+Crypto
+```
+echo -n Welcome | md5sum
+md5sum <<<"my string"
+printf '%s' "my string" | md5sum
+```
+
 Cut tr head sort
 ```
 # cut (split tool) -d (delimiter) -f (fields) x-2 (from x to 2)
