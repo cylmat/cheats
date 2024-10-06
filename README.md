@@ -89,13 +89,19 @@ Networks & Ports
 - ipconfig.me
 
 ```
+# https://manned.org/lsof
 # lsof -i (ipv46) -P (no port) -n (no host) 
 sudo lsof -i -P -n | grep LISTEN
 sudo lsof -i:22
 
+# https://man7.org/linux/man-pages/man8/netstat.8.html
 sudo netstat -abno|findstr <port>
 sudo netstat -tulpn | grep LISTEN
 sudo nmap -sTU -O 127.0.0.1
 
+# https://www.tcpdump.org
+tcpdump -n -i ppp0
+
+# https://manned.org/ss.8
 sudo ss -tulpn | grep LISTEN
 ```
