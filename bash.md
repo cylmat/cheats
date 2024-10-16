@@ -20,6 +20,9 @@ for i in "$@"; do
       display_usage
       exit 0
     ;;
+    *)
+      echo "Default option executed"
+    ;;
   esac
 done
 ```
