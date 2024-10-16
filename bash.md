@@ -1,3 +1,6 @@
+Ref
+- https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bourne-Shell-Builtins
+
 **Return when sourced or bashed script**  
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"  
 
@@ -11,8 +14,9 @@ i=$(($i%12))
 ### Options
 
 ```
-if [ -z "$opt" ]; then
-  echo "Default option executed (by default)"
+opt="$@"
+if [[ -z "$opt" ]]; then
+  display_usage
 fi
 
 for i in "$@"; do
