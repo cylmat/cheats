@@ -11,8 +11,7 @@ i=$(($i%12))
 ### Options
 
 ```
-if [ -z "$opt" ]
-then
+if [ -z "$opt" ]; then
   echo "Default option executed (by default)"
 fi
 
