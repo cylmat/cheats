@@ -106,7 +106,7 @@ $qb
 return $qb->addOrderBy('n.date', 'DESC');
 ```
 
-### uuid
+### Uuid
 
 ```
 use Ramsey\Uuid\Doctrine\UuidGenerator;
