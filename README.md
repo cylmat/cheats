@@ -70,6 +70,12 @@ echo "alpha" | sed -e 's/a/b/g'
 sed -e 's/a/b/g' <(echo "alpha")
 ```
 
+Generate pass
+```
+PASS=date +%s | sha256sum | base64 | head -c 16 ; echo
+echo -n $PASS | base64 -w 0
+```
+
 Rsync files
 ```
 rsync -av . dest
