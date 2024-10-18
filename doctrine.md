@@ -1,12 +1,8 @@
 
 ### Associations
 
-```
-
-Doctrine associations
-=====================
 @https://www.doctrine-project.org/projects/doctrine-orm/en/3.2/reference/association-mapping.html
-
+```
 ---------------
 Many To One UNI
 (Many Users have One Address)
