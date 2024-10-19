@@ -11,6 +11,24 @@ use $(()) ex:
 i=$(($i%12))
 ```
 
+### Array
+
+```
+# create array 
+ARR=("a" "b" "c")
+echo "${ARR[1]}"
+
+# array value
+for str in ${ARR[@]}; do
+  echo $str
+done
+
+# array indice
+for i in ${!myArray[@]}; do
+  echo "element $i is ${myArray[$i]}"
+done
+```
+
 ### Options
 
 ```
