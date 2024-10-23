@@ -75,6 +75,15 @@ networks:
       name: user-request-v2
 ```
 
+### heredoc
+
+```
+RUN cat <<EOF > /tmp/run_docker.sh
+#!/usr/bin/env bash
+for r in "\$@"; do cat "/tmp/recipes/\${r}" | sh; done
+EOF
+```
+
 ### profiles
 
 ```
