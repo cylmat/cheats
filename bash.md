@@ -31,6 +31,65 @@ done
 
 ### Options
 
+longoptions with getopt
+```
+#https://www.baeldung.com/linux/bash-parse-command-line-arguments
+VALID_ARGS=$(getopt -o abg:d: --long alpha,beta,gamma:,delta: -- "$@")
+if [[ $? -ne 0 ]]; then
+    exit 1;
+fi
+
+eval set -- "$VALID_ARGS"
+while [ : ]; do
+  case "$1" in
+    -a | --alpha)
+        echo "Processing 'alpha' option"; shift
+        ;;
+    -b | --beta)
+        echo "Processing 'beta' option"; shift
+        ;;
+    -g | --gamma)
+        echo "Processing 'gamma' option. Input argument is '$2'"; shift 2
+        ;;
+    -d | --delta)
+        echo "Processing 'delta' option. Input argument is '$2'"; shift 2
+        ;;
+    --) shift; 
+        break 
+        ;;
+  esac
+done
+```
+
+getopts (only short options)
+```
+
+while getopts ":hn:" option; do
+    case $option in
+            h) # display Help
+                echo "options"
+                exit;;
+            n) # Enter a name
+                echo "555: options $OPTARG"
+                Name=$OPTARG;;
+            \?) # Invalid option
+                echo "Error: Invalid option"
+                exit;;
+            :) # Missing argument
+                echo "Option -$OPTARG requires an argument." >&2
+                exit 1;;
+            *)  # If unknown (any other) option:
+                exit_abnormal;;
+    esac
+done
+
+
+for opt in "$@"; do case $opt in
+    --test=*) echo ""
+esac; done
+```
+
+manually
 ```
 opt="$@"
 if [[ -z "$opt" ]]; then
