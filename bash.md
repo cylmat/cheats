@@ -32,9 +32,12 @@ done
 ### Options
 
 longoptions with getopt
+- https://www.baeldung.com/linux/bash-parse-command-line-arguments
 ```
-#https://www.baeldung.com/linux/bash-parse-command-line-arguments
+
 VALID_ARGS=$(getopt -o abg:d: --long alpha,beta,gamma:,delta: -- "$@")
+
+# if last command return is not zero, exit with error
 if [[ $? -ne 0 ]]; then
     exit 1;
 fi
