@@ -73,6 +73,11 @@ s_name:
 		mc alias set myminio http://minio:9000 minioadmin minioadmin
 	 "
 
+# current pid
+   service:
+      environnment:
+        - PUID=${PUID}
+        - PGID=${PGID}
 
 # ext networks
 networks:
