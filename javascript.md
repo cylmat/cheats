@@ -26,8 +26,7 @@ export const seedUsers = async ({
 https://www.pierre-giraud.com/javascript-apprendre-coder-cours/async-await/
 ```
 // async devant veut dire que la function renvoi une promesse .then()
-async function f() { 
-return 1;
+async function f() {  return 1; }
 
 // equivalent à return Promise.resolve(1);
 // error
