@@ -36,7 +36,9 @@ Search in all files : git rev-list --all | xargs git grep -F '<Your search strin
 ```
 git submodule init
 git submodule update --init --recursive
-git submodule foreach sh -c 'git pull'  
+git submodule foreach sh -c 'git pull'
+
+git pull --recurse-submodules 
 ```
 
 ### Worktree
