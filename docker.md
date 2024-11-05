@@ -7,6 +7,12 @@ docker compose down --remove-orphans
 docker compose -f 'docker-compose.yml' up -d --build
 ```
 
+### Command as user
+
+```
+docker compose exec sites su nginx -s /bin/sh -c "php -d memory_limit=-1 bin/console doctrine:fixtures:load --no-interaction"
+```
+
 ### Daemon
 
 sh -c "nohup sudo -b dockerd --default-ulimit nofile=8192:8192 < /dev/null > /mnt/wsl/shared-docker/dockerd.log 2>&1"  
