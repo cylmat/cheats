@@ -158,6 +158,22 @@ useEffect(() => {
   @https://gist.github.com/markselby9/59640ec27eba6c7a585c6aa71c6522ce
 ```
 
+### Loading comp
+
+```
+type Props = PropsWithChildren<{
+  isLoading: boolean;
+}>;
+
+const LoadingWrapper = ({ children, isLoading }: Props): JSX.Element => {
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  return <>{children}</>;
+};
+```
+
 ### MODULES
 
 ```
