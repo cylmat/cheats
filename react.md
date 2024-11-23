@@ -19,6 +19,12 @@
 - rjsf-team.github.io/react-jsonschema-form/
 ```
 
+### CAREFUL
+
+```
+React selector must be: https://en.wikipedia.org/wiki/Pure_function
+```
+
 **packages.json**
 https://docs.npmjs.com/cli/v6/configuring-npm/package-json#local-paths  
 ```
