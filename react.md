@@ -63,6 +63,12 @@ return (
 }
 ```
 
+### CSS
+
+```
+<img  style={{width:"100px"} as CSSProperties} alt="fs" src="png-image_4013555.jpg" />
+```
+
 ### COMPONENT
 
 ```
