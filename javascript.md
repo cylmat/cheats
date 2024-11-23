@@ -199,6 +199,12 @@ MeteoService.getWeather(currentContract?.id ?? "");
 const { appTheme } = useTheme()!;
 type OrganizationData = { id: string, actions: JSX.Element }
 {enabled: !!currentContract}
+
+// functions
+onClose(): any;
+interface ISuccessModalProps {
+    onClose(): any; 
+}
 ```
 ### sleep
 
