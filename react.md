@@ -45,7 +45,7 @@ export const BlockRelatedElements: React.FC = ({}) => {
 }
 
 const displayRelatedElement = (): ReactNode => {
-  return (
+  return (  <--------- "(" allow to insert javascript into JSX..
     <React.Fragment>
 	<div className="work-detail-box p-3" key={'block-related'}>
 	    <SzTypographie variant="h1">{trans('related.element')}</SzTypographie>
