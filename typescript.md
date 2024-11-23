@@ -37,6 +37,19 @@ type StringMap = { [key: string]: unknown };
 const test: unknown = 7  
 console.log((test as string))
 
+### default value
+
+```
+export interface FileUploaderProps {
+    showCurrentFiles?: boolean;
+    canDeleteFile?: boolean;
+}
+const FileUploader: React.FC<FileUploaderProps> = ({
+    canDeleteFile = false,
+    showCurrentFiles = false,
+}) => {
+```
+
 ### dynamic type key
 
 https://www.geeksforgeeks.org/how-to-create-objects-with-dynamic-keys-in-typescript
