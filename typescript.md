@@ -43,6 +43,7 @@ console.log((test as string))
 export interface FileUploaderProps {
     showCurrentFiles?: boolean;
     canDeleteFile?: boolean;
+    myfct(): () => {} 
 }
 const FileUploader: React.FC<FileUploaderProps> = ({
     canDeleteFile = false,
