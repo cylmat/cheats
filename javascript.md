@@ -121,6 +121,15 @@ let fromOneYear = new Date().setFullYear(new Date().getFullYear() - 1);
 startDate = startDate ? startDate : new Date(fromOneYear).toDateString();
 ```
 
+### double exlamarks
+
+```
+// double !! exclamation mark => cast object/string/other to boolean
+//  !object => boolean, then negate again with !boolean
+
+const isEditionForm = !!contactId 
+```
+
 ### download
 
 const link = document.createElement('a');
