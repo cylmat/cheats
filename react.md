@@ -251,6 +251,34 @@ const { data, isError, isLoading, isSuccess } = useQuery(['organizations', my.id
 ## TIPS & ERRORS --------------
 --- ----------------------------------------------------------------------------
 
+### unmounted error
+
+@https://medium.com/doctolib/react-stop-checking-if-your-component-is-mounted-3bb2568a4934
+https://legacy.reactjs.org/blog/2015/12/16/ismounted-antipattern.html@
+```
+const useIsMounted = () => {
+  const isMounted = useRef(true)
+  
+  useEffect(
+    () => () => {
+      isMounted.current = false
+    },
+    []
+  )
+  
+  return isMounted
+}
+
+const MyComponent = () => {
+  const isMounted = useIsMounted()
+  const [state, setState] = useState()
+  
+  someAsyncOperation().then(data => {
+    if (isMounted.current) setState(data)
+  })
+}
+```
+
 - useState() reload le component lorsqu'il reçoit une valeur/objet différent.
 
 ### Render error
