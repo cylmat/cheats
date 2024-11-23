@@ -22,6 +22,8 @@
 ### CAREFUL
 
 ```
+USE COMPONENTS COMPOSITIONS
+Separation of concerns : https://tkdodo.eu/blog/component-composition-is-great-btw
 React selector must be: https://en.wikipedia.org/wiki/Pure_function
 ```
 
