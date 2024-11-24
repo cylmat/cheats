@@ -277,6 +277,28 @@ const { data, isError, isLoading, isSuccess } = useQuery(['organizations', my.id
 
 ```
 
+### STATE
+@https://react-redux.js.org/using-react-redux/connect-mapstate
+
+```
+# mapstatetoprops
+const mapStateToProps = (
+   state: { 
+      contract: { currentContract: Contract },
+      user: { info: User }
+   }
+) => ({
+    currentContract: state.contract.currentContract,
+    loggedUser: state.user.info
+});
+export default connect(mapStateToProps)(HomePage);
+
+# use it:
+    public static async getLogged(state: {user: UserState }) {
+        let user = state.user.info
+}
+```
+
 --- -----------------------------------------------------------------------------
 ## TIPS & ERRORS --------------
 --- ----------------------------------------------------------------------------
