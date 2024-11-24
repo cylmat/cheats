@@ -103,6 +103,7 @@ sudo lsof -i:22
 # https://man7.org/linux/man-pages/man8/netstat.8.html
 sudo netstat -ano | grep 80
 sudo netstat -tulpn | grep LISTEN
+# scan TCP, scan UDP, enable OS detect
 sudo nmap -sTU -O 127.0.0.1
 
 # https://www.tcpdump.org
