@@ -101,7 +101,7 @@ sudo lsof -i -P -n | grep LISTEN
 sudo lsof -i:22
 
 # https://man7.org/linux/man-pages/man8/netstat.8.html
-sudo netstat -abno|findstr <port>
+sudo netstat -ano | grep 80
 sudo netstat -tulpn | grep LISTEN
 sudo nmap -sTU -O 127.0.0.1
 
