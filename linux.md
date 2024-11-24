@@ -1,5 +1,9 @@
 @https://www.hostinger.com/tutorials/linux-commands   
 
+```
+"unix: do one thing, and do it well"
+```
+
 ### BASE 64
 
 echo '613f892e-953c-418a-9aed-73100d9f6d30' | base64  
