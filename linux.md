@@ -28,6 +28,11 @@ mkdir -p -m o=,ug=rwx alphadir
 @https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-fr  
 
 ```
+# run as user "nginx"
+su nginx -run /bin/sh -c "cache:invalidate"
+```
+
+```
 visudo  
 sudo cat /etc/sudoers  
 ```
