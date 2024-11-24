@@ -118,5 +118,6 @@ nc -v -n 8.8.8.8 1-1000
 nc -l localhost 80
 
 # https://manned.org/ss.8
-sudo ss -tulpn | grep LISTEN
+# socket statistics
+sudo ss -plunt | grep LISTEN
 ```
