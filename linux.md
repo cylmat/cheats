@@ -36,6 +36,7 @@ mkdir -p -m o=,ug=rwx alphadir
 su nginx -run /bin/sh -c "cache:invalidate"
 ```
 
+@https://doc.ubuntu-fr.org/sudoers
 ```
 visudo  
 sudo cat /etc/sudoers  
