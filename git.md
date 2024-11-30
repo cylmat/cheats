@@ -1,7 +1,8 @@
 Ref: 
 - https://acompiler.com/git-tips
-- https://maciejb2k.github.io/no-bs-git (Git no bs)
 - https://github.com/git-tips/tips
+- https://github.com/arslanbilal/git-cheat-sheet
+- https://maciejb2k.github.io/no-bs-git (Git no bs)
 
 ### Autocompletion
 
