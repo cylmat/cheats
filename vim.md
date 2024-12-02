@@ -23,6 +23,9 @@ Substitutes and commands :
 
 Tutos:  
 - https://learnvim.irian.to
+
+Settings
+:noh(ighlight)
 ---
 
 ### BUFFER 
@@ -54,6 +57,12 @@ za toggle folds (zo/zc)
 
 change delimiters, :g@console@d
 g@one@s+const+let+g (use global and sub)    
+
+:g => :1,$g or :%g
+:g/^#/y A (append comment in "a" register)
+(Register "e replace, "E append in e)
+:g!/;$/norm A; (add ; only if not find)
+:g/^#/norm 0x (decrease the depth of markdown title)
   
 ### INSERT MODE
 
@@ -86,7 +95,6 @@ wWbB next/prev word or WORD
 C-D C-U move down up half page  
 % match next/prev ({[]})  
 
-
 ### Objects to "speak" vim 
 
 - verbs: v(isu), c(hange), d(elete), y(ank)
@@ -97,7 +105,38 @@ C-D C-U move down up half page
 * dty: delete until next "y"
 * vap: visual around paragraph
 
+w word
+s sentence
+b,(,) block inside ()
+B,{,} block inside {}
+<,>
+[,]
+t tag
+
+### NORMAL
+
+g~ change capitalized
+
+C change to eol
+D delete to eol
+X delete char before
+s => ch + Insert
+~ change one char capital
+K keyword search
+
+gi: go last Insert place
+.: repeat last change
+gn, gN apply change to next search match
+gp, gP like p,P and put cursor after
+:reg <register>
+:x => wq
+:wqall
+:[range]action [register]
+-> 1,4d a (del 1 to 4 in register a)
+:.,+2y (yank from current to +2 line)
+
 ### REGEXP
+
 https://vimregex.com
 
 :h s_flags  (help flags)
@@ -145,7 +184,7 @@ and the others will have last 9 deleted text, being "1 the newest, and "9 the ol
 & Repeat last substitution on current line  
 g& Repeat last substitution on all lines  
 
-### SPLIT SCREEN
+### WINDOWS (SPLIT SCREEN)
 
 :help split  
 :vsplit, :vsp [file], :sp [file]  
@@ -155,6 +194,8 @@ C-w n (swap with window n)
 C-w |_ (expand h)  
 C-w = (reset windows sizes)  
 C-w q (close split)  
+
+C-w>s or C-w>v => :sp or :vsp
   
 @ref: https://linuxhint.com/vim_split_screen  
 
@@ -174,14 +215,25 @@ These are :wq <cr>, :x <cr> and ZZ
 :% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
 
 ### TAB
+@ref: https://vim.fandom.com/wiki/Using_tab_pages 
 
 :tabs, :tp, :tn  
-@ref: https://vim.fandom.com/wiki/Using_tab_pages  
+:tab(new,n,p)
+:tabo(nly)
 
 ### TERMINAL 
 
 :ter (open a terminal inside)  
 :shell (back to the shell)
+
+---------------
+--- PLUGINS ---
+---------------
+
+### Vimsurround
+
+d/c/y s(urround)
+ds', cs'" (del or change ' to ")
  
 ---
 **@ref**
