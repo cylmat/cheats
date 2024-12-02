@@ -19,6 +19,9 @@
 - rjsf-team.github.io/react-jsonschema-form/
 ```
 
+Info
+- https://nextjs.org/docs/app/building-your-application/data-fetching/fetching
+
 ### CAREFUL
 
 ```
