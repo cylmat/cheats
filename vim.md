@@ -234,6 +234,39 @@ These are :wq <cr>, :x <cr> and ZZ
 
 d/c/y s(urround)
 ds', cs'" (del or change ' to ")
+
+--------------
+--- VSCODE ---
+--------------
+
+
+Vim.leader: <Space>
+Leader>f/b
+Leader>t+t/n/p/o (tab new,n,p,only)
+"before":[]... "commands":[:tabn]...
+(Sample cmd: workbench.action.files.save) (from Open Keyboard Shortcut)
+
+C-S-p command
+C-p file
+C-S-o symbol in file
+C-t symbol in workspace
+
+Multiple cursor go in VisualMode
+On a word type C-d, C-d... (or gb)
+Search with /, then gb, gb...
+
+Multiline: use Visual blocks with C-V
+then I or A to multitype
+
+Repeat : .change ,;nN/?search @@:@ex
+
+:Execute (is like :norm but evaluate special chars)
+:exe(cute) "%normal wcit<a href=\"\">\<ESC>pa</a>\<ES\ 2 C>"
+:$put a (put reg "a" at end of file)
+
+VsCodeVim Module:
+- af Visual mode block
+- gh Hovering the mouse
  
 ---
 **@ref**
