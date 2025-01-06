@@ -12,7 +12,7 @@ $object2->getData() === 'data1';
 ```
 
 -----------soluce (clone) 
-// Cloning avoid to update instantly doctrine object to later add duplicate validation in manager
+// Cloning avoid to update instantly doctrine object to later add validation in manager
 
 ```
 USE $form = $this->createForm(IndicatorSourceFormType::class, clone $indicatorSource);
