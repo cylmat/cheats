@@ -9,11 +9,10 @@ $object2 = $entityManager->getObject();
 $object2->getData() === 'data1';
 ```
 
+# POST DATA
 
+### use object or id
 
-### POST DATA
-
-- use object or id
 ```
 POSTMan: {
     "id": "9e86188b-9b14-4bb3-9491-accf9c07f098",
@@ -32,10 +31,11 @@ or {
      "key": "siteCode1",
      "value": "MNP"
 }
+```
 
 ------------- soluce: 
 in Form Builder:  use  EntityType::class ->  "select field" to convert id to object
-
+```
 $formBuilder
      ->add('key', TextType::class, ['label' => 'Key'])
      ->add('value', TextType::class, ['label' => 'Value'])
@@ -55,3 +55,37 @@ $formBuilder->addEventListener(FormEvents::PRE_SUBMIT,
           $formEvent->setData($data);
       });
 ```
+
+
+### TO AVOID UPDATE child entity (for exemple a referential)
+
+// if static referential is updated instead of child data
+```
+ private function copyCurrentDataToUpdatedObject(Industrial $updatedIndustrial): void
+ {
+     $metadata = $updatedIndustrial->getIndustrialMetadata();
+     foreach ($metadata as $key) {
+         $metadata[$key]->setIndustrial($updatedIndustrial);
+
+        // SET A NEW "indicator" instead of update current one (so doesn't update it)
+         $existingIndicator =  $this->indicatorManager->getIndicator( $metadata[$key]->getIndicator() );
+         $metadata[$key]->setIndicator($existingIndicator);
+         $this->entityManager->persist($metadata[$key]);
+     }
+ }
+
+private function copyCurrentContactsIntoUpdatedSite(Industrial $updatedIndustrial): void
+{
+     $updatedIndustrial->getIndustrialDescription()->setContacts(new ArrayCollection()); // EMPTY ENTITY VALUES
+
+     $contacts = $this->contactManager->getContacts($updatedIndustrial->getId())->getArrayResult(); 
+     foreach ($contacts as $contact) {
+         if ($object = $this->contactManager->getById($contact['id'])) {
+             $contact = clone $object; // MANDATORY to avoid reference conflict
+             $this->entityManager->persist($contact); // add existing contact
+             $updatedIndustrial->addContact($contact);
+         }
+     }
+}
+```
+
