@@ -20,6 +20,20 @@ or
 $em->detach($entity)
 ```
 
+## VALIDATION Manager
+
+```
+*** Doctrine's UniqueEntity(multiple fields) FAILED !!
+------ soluce: use manager validation
+
+ private function validateUniqueEntity(Industrial $clonedIndustrial): void
+ {
+     foreach ($this->industrialRepository->fetchAll() as $exist)
+         if ( $exist->getName() === $name = $clonedIndustrial->getName() )
+             throw new \Exception("Entity with name '$name' already exists"); 
+ }
+```
+
 # POST DATA
 
 ### use object or id
