@@ -4,7 +4,7 @@
 
 WORKS BY OBJECT REFERENCE ! AND NOT BY ID
 ```
-# [ MapEntity ] Entity $object
+# [ MapEntity(mapping: ['objectId' => 'id']) ] Entity $object
 $object->setData('data1');
 
 $object2 = $entityManager->getObject();
