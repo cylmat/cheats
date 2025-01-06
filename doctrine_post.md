@@ -1,5 +1,7 @@
 - tips
- 
+ !! Caution !! #[MapEntity] with Symfony form on Update 
+-> is reference and modify repository fetched objects with $form->handleRequest($request)
+
 WORKS BY OBJECT REFERENCE ! AND NOT BY ID
 ```
 # [ MapEntity ] Entity $object
@@ -7,6 +9,15 @@ $object->setData('data1');
 
 $object2 = $entityManager->getObject();
 $object2->getData() === 'data1';
+```
+
+-----------soluce (clone) 
+// Cloning avoid to update instantly doctrine object to later add duplicate validation in manager
+
+```
+USE $form = $this->createForm(IndicatorSourceFormType::class, clone $indicatorSource);
+or
+$em->detach($entity)
 ```
 
 # POST DATA
