@@ -1,3 +1,13 @@
+- tips
+ 
+WORKS BY OBJECT REFERENCE ! AND NOT BY ID
+```
+# [ MapEntity ] Entity $object
+$object->setData('data1');
+
+$object2 = $entityManager->getObject();
+$object2->getData() === 'data1';
+```
 
 ### Associations
 
