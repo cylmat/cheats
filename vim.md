@@ -24,34 +24,49 @@ Substitutes and commands :
 Tutos:  
 - https://learnvim.irian.to
 
-Settings
+### Settings
+
+```
 :noh(ighlight)
+:nu(mber)
+:r(el)nu(mber)
+```
 ---
 
 ### BUFFER 
 
+@ref: https://vim.fandom.com/wiki/Buffers
+
+```
 :buffers  
 :bp, :bn, :bprev, :bnext
-
-@ref: https://vim.fandom.com/wiki/Buffers
+```
 
 ### FILE
 
+```
 :open <file>  
 :e  
-Ctrl-^, (edit alternate/previous file, like ":e #").  
+Ctrl-^, (edit alternate/previous file, like ":e #").
+```
 
 ### FOLDING
+
+```
 (z looks like a folded piece of paper)  
 
 zf operator creates a fold   
 zo to unfold  
 zc closes the fold  
 There is also zM and zR to close / open all the folds in the file  
-za toggle folds (zo/zc)  
+za toggle folds (zo/zc)
+```
 
 ### GLOBAL
 
+https://vim.fandom.com/wiki/Power_of_g
+
+```
 (ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
 (ex: :g/console/g/two/d -> find "console", then "two" inside it, then delete)  
 
@@ -63,17 +78,39 @@ g@one@s+const+let+g (use global and sub)
 (Register "e replace, "E append in e)
 :g!/;$/norm A; (add ; only if not find)
 :g/^#/norm 0x (decrease the depth of markdown title)
-  
+
+:g/pattern/<cmd> execute command on all lines
+:g/NOTE/m$ (move all line containing NOTE to eof)
+:g/^\s*$/d (Delete all blank lines)
+:g/\d/echo line('.')    (echo all lines that contain a digit)
+:g/^/pu =\"\n\" (space after all lines)
+:.,$g/Lesson/exe "norm! A;" (add ; to end of line containing "Lesson" from line to eof)
+
+(effect of these two command ?)
+qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
+:5,18g/^foo/s/^.\{-}=/
+
+:v/... or :g!/...   (do NOT match grep)
+  ```
+
+### history
+
+```
+:history (or :Ctrl-f)
+```
+
 ### INSERT MODE
 
 c<CMD> replace under CMD  
 
 ### JUMPS
 
+```
 `[ Jump to beginning of last yanked text  
 `] Jump to end of last yanked text  
 g; Jump to the last change you made  
-g, Jump back forward through the change list  
+g, Jump back forward through the change list
+```  
   
 ### MARKS 
 
@@ -85,6 +122,7 @@ y`a
 
 ### NAVIGATE
 
+```
 ^ g_ first last non-blank char  
 3/ 3? search next/prev 3d in all text  
 *#  search for current word  
@@ -94,9 +132,11 @@ wWbB next/prev word or WORD
   
 C-D C-U move down up half page  
 % match next/prev ({[]})  
+```
 
 ### Objects to "speak" vim 
 
+```
 - verbs: v(isu), c(hange), d(elete), y(ank)
 - modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
 - text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag), "({
@@ -112,9 +152,11 @@ B,{,} block inside {}
 <,>
 [,]
 t tag
+```
 
 ### NORMAL
 
+```
 g~ change capitalized
 
 C change to eol
@@ -134,9 +176,11 @@ gp, gP like p,P and put cursor after
 :[range]action [register]
 -> 1,4d a (del 1 to 4 in register a)
 :.,+2y (yank from current to +2 line)
+```
 
 ### REGEXP
 
+```
 https://vimregex.com
 
 :h s_flags  (help flags)
@@ -146,7 +190,7 @@ https://vimregex.com
 - I (don't ignore case)
 - n (report number of matches)
 - p/#/l (print line substitued, number, text)
-
+```
 
 ### REGISTERS 
 
@@ -154,6 +198,7 @@ https://vimregex.com
 (4 readonly: .%:#) 
 
 ```
+
 "" default unnamed register (d,c,s,x)  
 ". last inserted text
 "0 last yank  
@@ -172,7 +217,8 @@ https://vimregex.com
   (replace last "/search" terme by TERM)
 
 :let @5='' clear register '5'   
-let @+=@% ("let" write to a register, copy the current file to the clipboard) 
+let @+=@% ("let" write to a register, copy the current file to the clipboard)
+:let @a=@_ (clearing register "a)
 
 "0 to "9.
 "0 will always have the content of the latest yank, 
@@ -181,11 +227,16 @@ and the others will have last 9 deleted text, being "1 the newest, and "9 the ol
 
 ### REPEAT
 
+```
 & Repeat last substitution on current line  
 g& Repeat last substitution on all lines  
+```
 
 ### WINDOWS (SPLIT SCREEN)
 
+@ref: https://linuxhint.com/vim_split_screen 
+
+```
 :help split  
 :vsplit, :vsp [file], :sp [file]  
 C-w <v^> or C-w hjkl  
@@ -196,8 +247,7 @@ C-w = (reset windows sizes)
 C-w q (close split)  
 
 C-w>s or C-w>v => :sp or :vsp
-  
-@ref: https://linuxhint.com/vim_split_screen  
+```
 
 ### Save
 
@@ -205,6 +255,7 @@ These are :wq <cr>, :x <cr> and ZZ
   
 ### SEARCH / REPLACE 
 
+```
 :[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
 :[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
   
@@ -213,13 +264,17 @@ These are :wq <cr>, :x <cr> and ZZ
 :.,+21g/alpha/d  -  delete every line containing "alpha" from here and next 21 lines  
   
 :% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
+```
 
 ### TAB
+
 @ref: https://vim.fandom.com/wiki/Using_tab_pages 
 
+```
 :tabs, :tp, :tn  
 :tab(new,n,p)
 :tabo(nly)
+```
 
 ### TERMINAL 
 
@@ -238,7 +293,6 @@ ds', cs'" (del or change ' to ")
 --------------
 --- VSCODE ---
 --------------
-
 
 Vim.leader: <Space>
 Leader>f/b
