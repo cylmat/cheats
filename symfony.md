@@ -1,13 +1,19 @@
-### Env var by default
+### Default environment variables
 
-Use this if no env found
 ```
 parameters:
-      env(BUILD_VERSION): 'unknown'
+      env(BUILD_VERSION): 'default value'
       env(CONTENT_DIRECTORY): ~
 
       # use
       api_version: '%env(BUILD_VERSION)%'
+```
+
+### Query as boolean
+
+```
+// called from http://myurl?booleanQuery=false
+$myquery = json_decode($request->query->get('booleanQuery')); // json_decode evaluate boolean value on string
 ```
 
 ### services
