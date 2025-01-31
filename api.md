@@ -2,6 +2,7 @@
 
 ```
 https://hn.algolia.com/api/v1/search?query=react
+https://dummyjson.com/users/1
 ```
 
 ### Openapi
