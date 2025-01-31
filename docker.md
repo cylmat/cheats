@@ -81,9 +81,9 @@ s_name:
 
 # ext networks
 networks:
-    default:
+    my_ext_networks:
       external: true
-      name: user-request-v2
+      name: default_existing_networks
 ```
 
 ### heredoc
