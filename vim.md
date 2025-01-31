@@ -23,6 +23,7 @@ Substitutes and commands :
 
 Tutos:  
 - https://learnvim.irian.to
+- https://vimtricks.com
 
 ### Settings
 
@@ -90,8 +91,10 @@ g@one@s+const+let+g (use global and sub)
 qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 :5,18g/^foo/s/^.\{-}=/
 
-:v/... or :g!/...   (do NOT match grep)
-  ```
+(do NOT match grep)
+:g!/pattern/d – Remove lines that do NOT match the pattern.
+:v/^.*DWN.*/d – Remove lines that do NOT match ^..DWN..$
+```
 
 ### history
 
@@ -101,7 +104,10 @@ qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 
 ### INSERT MODE
 
+```
 c<CMD> replace under CMD  
+Insert: C-o (temporary normal mode)
+```
 
 ### JUMPS
 
@@ -132,6 +138,12 @@ wWbB next/prev word or WORD
   
 C-D C-U move down up half page  
 % match next/prev ({[]})  
+```
+
+### NORMAL
+
+```
+gv (go to last visual selection)
 ```
 
 ### Objects to "speak" vim 
