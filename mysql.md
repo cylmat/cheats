@@ -23,10 +23,12 @@ mysql --default-character-set=utf8 -h myhost -u "user" -ppass
 
 ### Create user
 
+mysql -u root -e "
 ```
-CREATE DATABASE db CHARACTER SET UTF8;
+CREATE DATABASE IF NOT EXISTS db CHARACTER SET UTF8;
 CREATE USER 'user'@'%' IDENTIFIED BY 'pass';
 ALTER USER 'user'@'%' IDENTIFIED BY 'new_pass';
 GRANT ALL PRIVILEGES ON db.* TO 'user'@'%';
 FLUSH PRIVILEGES;
 ```
+"
