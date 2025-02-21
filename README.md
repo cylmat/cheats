@@ -49,6 +49,9 @@ FAKER
 ```
 pip install Faker
 echo "from faker import Faker \nfake=Faker()\nprint(fake.text(2500))" | python3 > ~/fake
+
+# dictionnary data
+apt install -y wamerican && cat /usr/share/dict/words 
 ```
 
 Find
