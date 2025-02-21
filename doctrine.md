@@ -116,6 +116,16 @@ $qb
 return $qb->addOrderBy('n.date', 'DESC');
 ```
 
+### SSL
+
+```
+doctrine:
+    dbal:
+        url: '%env(resolve:DATABASE_URL)%'
+        options:
+            !php/const:PDO::MYSQL_ATTR_SSL_CA: "/var/www/html/BaltimoreCyberTrustRoot.crt.pem"
+```
+
 ### Uuid
 
 ```
