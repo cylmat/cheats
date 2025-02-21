@@ -1,5 +1,6 @@
 Ref
 - https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bourne-Shell-Builtins
+- https://github.com/onceupon/Bash-Oneliner
 
 **Return when sourced or bashed script**  
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"  
