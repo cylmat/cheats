@@ -45,6 +45,12 @@ cat /etc/passwd | sort | uniq | tr ':' '-' | tr '[:lower:]' '[:upper:]' | tr –
 join <(sort fichier1.txt) <(sort fichier2.txt)
 ```
 
+FAKER
+```
+pip install Faker
+echo "from faker import Faker \nfake=Faker()\nprint(fake.text(2500))" | python3 > ~/fake
+```
+
 Find
 ```
 # Trouver une expression dans les fichiers
