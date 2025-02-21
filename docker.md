@@ -7,6 +7,12 @@ docker compose down --remove-orphans
 docker compose -f 'docker-compose.yml' up -d --build
 ```
 
+### cli
+
+```
+docker run --entrypoint echo ubuntu "Hello World"
+```
+
 ### Command as user
 
 ```
@@ -107,10 +113,11 @@ COMPOSE_PROFILES=debug docker compose up
 docker compose --profile myProfil up
 ```
 
-### cli
+### volume
 
+Remove all dangling
 ```
-docker run --entrypoint echo ubuntu "Hello World"
+docker volume rm $(docker volume ls -qf dangling=true)
 ```
 
 ### restart
