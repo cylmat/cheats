@@ -1,5 +1,7 @@
 ### USEFULS
 
+[Bash Oneliner](https://github.com/onceupon/Bash-Oneliner)
+
 Awk
 ```
 # awk /regexp/ -F (field split) $0 (all line) $NF (dernier champs)
