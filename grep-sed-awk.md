@@ -1,5 +1,7 @@
 ### GREP IN FILES
 
+- [Manipulation de texte avancée - gitlab.mbb.cnrs.fr](https://gitlab.mbb.cnrs.fr/f/site/form1/ttext/)
+
 ```
 #   -li(n)e -(w)ord -(r)ecursive -r(e)gexp
 * grep -nwr 'dossier' -e 'expression'  
