@@ -100,6 +100,7 @@ qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 
 ```
 :history (or :Ctrl-f)
+history -> :his /
 ```
 
 ### INSERT MODE
