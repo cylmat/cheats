@@ -53,7 +53,10 @@ zb, z- (center window cursor on bottom)
 ZZ <=> :x (write buffer and exit)
 ZQ <=> :q!
 
+
+-------------------
 --- Insert mode ---
+-------------------
 
 (Select mode: gh, gH, gC-h)
 (Select mode: C-g> switch to Visual) 
@@ -84,13 +87,20 @@ ga : get unicode char of current word
 18 replace mode
 gr,gR replace in virtual mode (tab as space)
 
---- Visual --- v,V,C-v
+
+--------------
+--- Visual --- 
+--------------
+v,V,C-v
 gv : reselect last visual
 o : toggle the free end
 Vr- : replace line with -
 C-g : toggle select mode (typing switch to insert mode)
 
+
+---------------
 --- Command --- 
+---------------
 https://vimhelp.org/cmdline.txt.html#cmdline-special
 
 
@@ -213,6 +223,10 @@ $ vim *.txt
 :bn(ext)
 C-^ (alt %current and #alt)
 
+
+--------------
+--- Buffer ---
+--------------
 :buffer N
 :buffer <"bufname firstchars">
 :bufdo <cmd>
@@ -232,7 +246,11 @@ set hidden (use ! for all)
 :wn
 :cnext or :cfdo
 
-40 ---windows--- (viewport of buffer)
+
+---------------
+--- Windows ---
+---------------
+40 (viewport of buffer)
 
 C-w>s or v (horiz or vert)
 :edit <file>
@@ -244,8 +262,11 @@ Resize (->windows-moving)
 C-w>=_| (maxi)
 N C-w>_|
 
-41 ---tabs--- (multi windows)
 
+------------ 
+--- Tabs --- 
+------------ 
+41 (multi windows)
 :tabnew
 :lcd <path> (set current work dir)
 :windo lcd <path> (all dir)
@@ -321,6 +342,10 @@ wWspt (word, sentence, paragraph, tag)
 (e.g: vi} a" i> a`) expand more and more
 cit (jumps to next tag and change it)
 
+
+-------------
+--- Marks ---
+-------------
 54 marks
 ma..mz mark in local buffer
 mA..mZ mark globally
@@ -380,7 +405,9 @@ C-] (go to method definition)
 :grep
 :vimgrep /foo/ **
 
+-----------------
 --- registers ---
+-----------------
 
 60 yank paste, unnamed register
 " is the unnamed (default) register""p => p(used with x,s,d,c,y)
