@@ -32,6 +32,12 @@ Tutos:
 :nu(mber)
 :r(el)nu(mber)
 ```
+
+unset options
+```
+set rnu!
+set nornu
+```
 ---
 
 ### BUFFER 
