@@ -44,8 +44,7 @@ K : look man page
 gr, gR : virtual replace mode
 c<motion> : change selection
 C-D, C-U : pgup, pgdown
-3G go line 3
-
+3G <=> :48 (go to line 3)
 
 zt, z<Enter> (center window with cursor on top)
 zz, z. (center window on cursor)
@@ -102,26 +101,23 @@ C-g : toggle select mode (typing switch to insert mode)
 --- Command --- 
 ---------------
 https://vimhelp.org/cmdline.txt.html#cmdline-special
-
-
-27 (Normal on current text, Command on long range)  
-(C-w or C-u delete to start word/line)
-(C-v or C-k insert unusual char)
+@: repeat last command
+q: open history
 
 28 use range and offset  
-:1,20d(elete) x : del range into register "x"
+:1,20d(elete) x (del range into register "x")
 :1,20y(ank) x
-:20put x : line to reg x
+:20put x (line from reg x)
 
 (ex: run "p" on every <html> except itself) 
 :/<html>/+1,/<\/html>/-1p
 
 29 duplicate or move  
 :1,20co(py) <addr> (:1,10t0) or 't'
-(:t. eq to yyp)
+(:t. <=> to yyp)
 :6Gyy then C-o>p => :6t. (is shorter)
 :1,20mo(ve) <addr>  or 'm'
-(:m$ => dGp)
+:m$ <=> dGp  (move current line to end of file)
 :1,20join
 :'<,'>t0 (copy last visual to start of file)
 @: repeat last command
@@ -141,7 +137,7 @@ https://vimhelp.org/cmdline.txt.html#cmdline-special
 :3p (go line3 then print)
 (:3d => 3Gdd)
 :.,$ current line to eofile
-:%y all lines yanked (equiv :1,$y)
+:%y all lines yanked (<=> :1,$y)
 
 (Visualselection, ex: 2G-VG then ':')
 :'<,'> from to visual selection
@@ -177,7 +173,7 @@ C-rC-w copy current word to prompt
 Cmdline history window:
 (e.g. :write | !ruby %) 
 % is current filename
-q: (or in cmd type C-f) => cmdwin
+q: (or in cmd type C-f) => open command history
 q/ cmdline search
 
 35 run cmd in shell
@@ -408,6 +404,7 @@ C-] (go to method definition)
 -----------------
 --- registers ---
 -----------------
+"*y or "+yy (yank to clipboard)  
 
 60 yank paste, unnamed register
 " is the unnamed (default) register""p => p(used with x,s,d,c,y)
@@ -416,7 +413,14 @@ xp, ddp
 "_dw (really delete word)
 ". last inserted text
 
+
+
+
+
 ------------------------------------------------to validate
+27 (Normal on current text, Command on long range)  
+(C-w or C-u delete to start word/line)
+(C-v or C-k insert unusual char)
 61 named register
 "<reg>cmd (e.g. "ad):cmd <reg> (e.g. :put c)
 "ayy
