@@ -108,6 +108,7 @@ q: open history
 :1,20d(elete) x (del range into register "x")
 :1,20y(ank) x
 :20put x (line from reg x)
+:.-2,.2y i  (copy cursor-2 cursor+2 to reg "i")
 
 (ex: run "p" on every <html> except itself) 
 :/<html>/+1,/<\/html>/-1p
@@ -202,6 +203,9 @@ vglobal/href/d(el)
 %normal A: http://vimcasts.org
 %normal yi"$p
 :%substitute/\v^[^\>]+\>\s//g
+
+sample:
+:g/^fu.*().{$/normal! @q (exec macro "q" on each "function(){..." )
 
 (remove the opening <a href=""> tag)
 then put cmds history in batch.vim
