@@ -113,7 +113,7 @@ Insert: C-o (temporary normal mode)
 --------------------------------------------------------------------------------------
 ## 3. Command Mode int
 
-a. Settings
+* Settings
 ```
 :set wildmenu, :hlsearch, :nu  (number), :rnu (relative number)
 
@@ -121,7 +121,7 @@ unset options
 :set rnu!, :set nornu
 ```
 
-b. Global
+* Global
 https://vim.fandom.com/wiki/Power_of_g
 ```
 (ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
@@ -152,7 +152,7 @@ qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 :v/^.*DWN.*/d – Remove lines that do NOT match ^..DWN..$
 ```
 
-c. Substitutes
+* Substitutes
 ```
 - s/pattern/text   substitute first occurence  
 - s/pattern/text/g substitute all occurences on line
@@ -170,13 +170,13 @@ c. Substitutes
 :% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
 ```
 
-e. History
+* History
 ```
 :history (or :Ctrl-f)
 history -> :his /
 ```
 
-f. Registers 
+* Registers 
 ```
 :reg  all registers   
 (4 readonly: .%:#) 
@@ -207,7 +207,7 @@ let @+=@% ("let" write to a register, copy the current file to the clipboard)
 and the others will have last 9 deleted text, being "1 the newest, and "9 the oldes
 ```
 
-c. Save
+* Save
 ```
 :wq <cr>, :x <cr> and ZZ
 ```
@@ -217,21 +217,21 @@ c. Save
 --------------------------------------------------------------------------------------
 ## 4. Command Mode ext
 
-a. Buffer
+* Buffer
 @ref: https://vim.fandom.com/wiki/Buffers
 ```
 :buffers
 :bp, :bn, :bprev, :bnext
 ```
 
-b. File
+* File
 ```
 :open <file>  
 :e  
 Ctrl-^, (edit alternate/previous file, like ":e #").
 ```
 
-c. Tabs
+* Tabs
 - https://vim.fandom.com/wiki/Using_tab_pages 
 ```
 :tabs, :tp, :tn  
@@ -239,7 +239,7 @@ c. Tabs
 :tabo(nly)
 ```
 
-d. Windows Screen
+* Windows Screen
 - https://linuxhint.com/vim_split_screen
 ```
 :help split  
@@ -254,7 +254,7 @@ C-w q (close split)
 C-w>s or C-w>v => :sp or :vsp
 ```
 
-e. Other
+* Other
 ```
 :ter (open a terminal inside)  
 :shell (back to the shell)
@@ -263,7 +263,7 @@ e. Other
 --------------------------------------------------------------------------------------
 ## 5. Common
 
-a. Objects to "speak" vim  
+* Objects to "speak" vim  
 (https://vimhelp.org/motion.txt.html#text-objects)  
 ```
 - verbs: v(isu), c(hange), d(elete), y(ank)
@@ -283,7 +283,7 @@ B,{,} block inside {}
 t tag
 ```
 
-b. Regexp
+* Regexp
 https://vimregex.com
 ```
 :h s_flags  (help flags)
@@ -299,16 +299,16 @@ https://vimregex.com
 ---------------
 --- PLUGINS ---
 
-
-### Vimsurround
-
+* Vimsurround
+```
 d/c/y s(urround)
 ds', cs'" (del or change ' to ")
+```
 
 --------------
 --- VSCODE ---
 
-
+```
 Vim.leader: <Space>
 Leader>f/b
 Leader>t+t/n/p/o (tab new,n,p,only)
@@ -332,6 +332,7 @@ Repeat : .change ,;nN/?search @@:@ex
 :Execute (is like :norm but evaluate special chars)
 :exe(cute) "%normal wcit<a href=\"\">\<ESC>pa</a>\<ES\ 2 C>"
 :$put a (put reg "a" at end of file)
+```
 
 VsCodeVim Module:
 - af Visual mode block
