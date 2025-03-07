@@ -1,55 +1,50 @@
 VIM Samples
 ===========
 
-Ref
----
-Motion & braquets:  
-- https://vimhelp.org/index.txt.html#%5B  
-- https://vimhelp.org/motion.txt.html  
-- https://vimhelp.org/map.txt.html#map-modes
+1. Normal Mode
+  a. Folding
+  b. Jumps
+  c. Marks
+  d. Navigate
+3. Insert Mode
+4. Command Mode
+  a. Settings
+  b. Buffer
+  c. File
+  d. Global
+  e. History
+  f. Substitutes and commands
 
-Tutos:  
-- https://learnvim.irian.to
-- https://vimtricks.com
 
-### Settings
 
-```
-:set wildmenu
-:hlsearch  (highlight)
-:nu  (number)
-:rnu (rel number)
-```
-
-unset options
-```
-set rnu!
-set nornu
-```
-
-### Substitutes and commands
-```
-- s/pattern/text   substitute first occurence  
-- s/pattern/text/g substitute all occurences on line
-- g/pattern/text   execute command on all lines
-```
-
-### BUFFER 
-@ref: https://vim.fandom.com/wiki/Buffers
+------------------------------------------
+## 1. Normal Mode
+------------------------------------------
 
 ```
-:buffers  
-:bp, :bn, :bprev, :bnext
+g~ change capitalized
+gv (go to last visual selection)
+
+C change to eol
+D delete to eol
+X delete char before
+s => ch + Insert
+~ change one char capital
+K keyword search
+
+gi: go last Insert place
+.: repeat last change
+gn, gN apply change to next search match
+gp, gP like p,P and put cursor after
+:reg <register>
+:x => wq
+:wqall
+:[range]action [register]
+-> 1,4d a (del 1 to 4 in register a)
+:.,+2y (yank from current to +2 line)
 ```
 
-### FILE
-```
-:open <file>  
-:e  
-Ctrl-^, (edit alternate/previous file, like ":e #").
-```
-
-### FOLDING
+a. Folding
 ```
 (z looks like a folded piece of paper)  
 
@@ -60,9 +55,75 @@ There is also zM and zR to close / open all the folds in the file
 za toggle folds (zo/zc)
 ```
 
-### GLOBAL
-https://vim.fandom.com/wiki/Power_of_g
+b. Jumps
+```
+`[ Jump to beginning of last yanked text  
+`] Jump to end of last yanked text  
+g; Jump to the last change you made  
+g, Jump back forward through the change list
+```  
+  
+c. Marks
+```
+:marks
+ma, mz  
+y`a
+```  
 
+d. Navigate
+```
+^ g_ first last non-blank char  
+3/ 3? search next/prev 3d in all text  
+*#  search for current word  
+{} next/prev paragraph  
+ 
+wWbB next/prev word or WORD  
+  
+C-D C-U move down up half page  
+% match next/prev ({[]})  
+```
+
+
+
+------------------------------------------
+## 2. Insert Mode
+------------------------------------------
+
+```
+c<CMD> replace under CMD  
+Insert: C-o (temporary normal mode)
+```
+
+
+
+------------------------------------------
+## 3. Command Mode
+------------------------------------------
+
+a. Settings
+```
+:set wildmenu, :hlsearch, :nu  (number), :rnu (relative number)
+
+unset options
+:set rnu!, :set nornu
+```
+
+b. Buffer
+@ref: https://vim.fandom.com/wiki/Buffers
+```
+:buffers
+:bp, :bn, :bprev, :bnext
+```
+
+c. FILE
+```
+:open <file>  
+:e  
+Ctrl-^, (edit alternate/previous file, like ":e #").
+```
+
+d. GLOBAL
+https://vim.fandom.com/wiki/Power_of_g
 ```
 (ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
 (ex: :g/console/g/two/d -> find "console", then "two" inside it, then delete)  
@@ -92,46 +153,10 @@ qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 :v/^.*DWN.*/d – Remove lines that do NOT match ^..DWN..$
 ```
 
-### history
+e. history
 ```
 :history (or :Ctrl-f)
 history -> :his /
-```
-
-### INSERT MODE
-```
-c<CMD> replace under CMD  
-Insert: C-o (temporary normal mode)
-```
-
-### JUMPS
-```
-`[ Jump to beginning of last yanked text  
-`] Jump to end of last yanked text  
-g; Jump to the last change you made  
-g, Jump back forward through the change list
-```  
-  
-### MARKS 
-
-:marks
-```
-ma, mz  
-y`a
-```  
-
-### NAVIGATE
-
-```
-^ g_ first last non-blank char  
-3/ 3? search next/prev 3d in all text  
-*#  search for current word  
-{} next/prev paragraph  
- 
-wWbB next/prev word or WORD  
-  
-C-D C-U move down up half page  
-% match next/prev ({[]})  
 ```
 
 ### Objects to "speak" vim 
@@ -156,28 +181,11 @@ B,{,} block inside {}
 t tag
 ```
 
-### NORMAL
+### f. Substitutes and commands
 ```
-g~ change capitalized
-gv (go to last visual selection)
-
-C change to eol
-D delete to eol
-X delete char before
-s => ch + Insert
-~ change one char capital
-K keyword search
-
-gi: go last Insert place
-.: repeat last change
-gn, gN apply change to next search match
-gp, gP like p,P and put cursor after
-:reg <register>
-:x => wq
-:wqall
-:[range]action [register]
--> 1,4d a (del 1 to 4 in register a)
-:.,+2y (yank from current to +2 line)
+- s/pattern/text   substitute first occurence  
+- s/pattern/text/g substitute all occurences on line
+- g/pattern/text   execute command on all lines
 ```
 
 ### REGEXP
@@ -326,13 +334,20 @@ VsCodeVim Module:
  
 ---
 **@ref**
+Motion & braquets:  
+- https://vimhelp.org/index.txt.html#%5B  
+- https://vimhelp.org/motion.txt.html  
+- https://vimhelp.org/map.txt.html#map-modes
+help
 * https://vimhelp.org/quickref.txt.html
 * https://vim.rtorr.com
 * http://tnerual.eriogerg.free.fr/vimqrc.html
 * https://vim.fandom.com/wiki/Vim_Tips_Wiki
 * http://www.viemu.com/vi-vim-cheat-sheet.gif
 * http://www.fprintf.net/vimCheatSheet.html
-
+Tutos:  
+- https://learnvim.irian.to
+- https://vimtricks.com
 see also: 
 - https://vimhelp.org/vi_diff.txt.html#vi-differences
 - https://www.shell-tips.com/linux/vi-vs-vim/#gsc.tab=0 
