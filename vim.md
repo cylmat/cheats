@@ -12,15 +12,6 @@ Motion & braquets:
 - https://vimhelp.org/motion.txt.html  
 - https://vimhelp.org/map.txt.html#map-modes
 
-Objets:  
-- https://vimhelp.org/motion.txt.html#WORD
-- https://vimhelp.org/motion.txt.html#text-objects
-
-Substitutes and commands :
-- s/pattern/text   substitute first occurence  
-- s/pattern/text/g substitute all occurences on line
-- g/pattern/text   execute command on all lines
-
 Tutos:  
 - https://learnvim.irian.to
 - https://vimtricks.com
@@ -38,10 +29,15 @@ unset options
 set rnu!
 set nornu
 ```
----
+
+### Substitutes and commands
+```
+- s/pattern/text   substitute first occurence  
+- s/pattern/text/g substitute all occurences on line
+- g/pattern/text   execute command on all lines
+```
 
 ### BUFFER 
-
 @ref: https://vim.fandom.com/wiki/Buffers
 
 ```
@@ -50,7 +46,6 @@ set nornu
 ```
 
 ### FILE
-
 ```
 :open <file>  
 :e  
@@ -58,7 +53,6 @@ Ctrl-^, (edit alternate/previous file, like ":e #").
 ```
 
 ### FOLDING
-
 ```
 (z looks like a folded piece of paper)  
 
@@ -70,7 +64,6 @@ za toggle folds (zo/zc)
 ```
 
 ### GLOBAL
-
 https://vim.fandom.com/wiki/Power_of_g
 
 ```
@@ -103,21 +96,18 @@ qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 ```
 
 ### history
-
 ```
 :history (or :Ctrl-f)
 history -> :his /
 ```
 
 ### INSERT MODE
-
 ```
 c<CMD> replace under CMD  
 Insert: C-o (temporary normal mode)
 ```
 
 ### JUMPS
-
 ```
 `[ Jump to beginning of last yanked text  
 `] Jump to end of last yanked text  
@@ -128,10 +118,10 @@ g, Jump back forward through the change list
 ### MARKS 
 
 :marks
-
-Arbitrary selection of text:  
+```
 ma, mz  
-y`a  
+y`a
+```  
 
 ### NAVIGATE
 
@@ -147,14 +137,10 @@ C-D C-U move down up half page
 % match next/prev ({[]})  
 ```
 
-### NORMAL
-
-```
-gv (go to last visual selection)
-```
-
 ### Objects to "speak" vim 
 
+- https://vimhelp.org/motion.txt.html#WORD
+- https://vimhelp.org/motion.txt.html#text-objects
 ```
 - verbs: v(isu), c(hange), d(elete), y(ank)
 - modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
@@ -174,9 +160,9 @@ t tag
 ```
 
 ### NORMAL
-
 ```
 g~ change capitalized
+gv (go to last visual selection)
 
 C change to eol
 D delete to eol
@@ -199,9 +185,8 @@ gp, gP like p,P and put cursor after
 
 ### REGEXP
 
-```
 https://vimregex.com
-
+```
 :h s_flags  (help flags)
 - c (confirm each)
 - g (all line occurences)
@@ -217,7 +202,6 @@ https://vimregex.com
 (4 readonly: .%:#) 
 
 ```
-
 "" default unnamed register (d,c,s,x)  
 ". last inserted text
 "0 last yank  
@@ -253,8 +237,7 @@ g& Repeat last substitution on all lines
 
 ### WINDOWS (SPLIT SCREEN)
 
-@ref: https://linuxhint.com/vim_split_screen 
-
+@ref: https://linuxhint.com/vim_split_screen
 ```
 :help split  
 :vsplit, :vsp [file], :sp [file]  
@@ -270,7 +253,9 @@ C-w>s or C-w>v => :sp or :vsp
 
 ### Save
 
-These are :wq <cr>, :x <cr> and ZZ
+```
+:wq <cr>, :x <cr> and ZZ
+```
   
 ### SEARCH / REPLACE 
 
@@ -299,6 +284,7 @@ These are :wq <cr>, :x <cr> and ZZ
 
 :ter (open a terminal inside)  
 :shell (back to the shell)
+
 
 ---------------
 --- PLUGINS ---
