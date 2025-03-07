@@ -6,20 +6,27 @@ VIM Samples
   b. Jumps
   c. Marks
   d. Navigate
-3. Insert Mode
-4. Command Mode
+  e. Repeat
+2. Insert Mode
+3. Command Mode
   a. Settings
   b. Buffer
   c. File
   d. Global
   e. History
-  f. Substitutes and commands
+  f. Registers
+  g. Save
+  h. Substitutes
+  i. Tabs
+  j. Windows Screen
+  k. Other
+4. Common
+  a. Objects to "speak" vim  
+  b. Regexp
 
 
-
-------------------------------------------
+---------------------------------------------------
 ## 1. Normal Mode
-------------------------------------------
 
 ```
 g~ change capitalized
@@ -83,11 +90,17 @@ C-D C-U move down up half page
 % match next/prev ({[]})  
 ```
 
+e. Repeat
+```
+. Repeat last change
+& Repeat last substitution on current line  
+g& Repeat last substitution on all lines  
+```
 
 
-------------------------------------------
+
+---------------------------------------------------
 ## 2. Insert Mode
-------------------------------------------
 
 ```
 c<CMD> replace under CMD  
@@ -96,9 +109,8 @@ Insert: C-o (temporary normal mode)
 
 
 
-------------------------------------------
+---------------------------------------------------
 ## 3. Command Mode
-------------------------------------------
 
 a. Settings
 ```
@@ -115,14 +127,14 @@ b. Buffer
 :bp, :bn, :bprev, :bnext
 ```
 
-c. FILE
+c. File
 ```
 :open <file>  
 :e  
 Ctrl-^, (edit alternate/previous file, like ":e #").
 ```
 
-d. GLOBAL
+d. Global
 https://vim.fandom.com/wiki/Power_of_g
 ```
 (ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
@@ -153,60 +165,17 @@ qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 :v/^.*DWN.*/d – Remove lines that do NOT match ^..DWN..$
 ```
 
-e. history
+e. History
 ```
 :history (or :Ctrl-f)
 history -> :his /
 ```
 
-### Objects to "speak" vim 
-
-- https://vimhelp.org/motion.txt.html#WORD
-- https://vimhelp.org/motion.txt.html#text-objects
+f. Registers 
 ```
-- verbs: v(isu), c(hange), d(elete), y(ank)
-- modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
-- text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag), "({
-  
-* ci": change inside quote
-* dty: delete until next "y"
-* vap: visual around paragraph
-
-w word
-s sentence
-b,(,) block inside ()
-B,{,} block inside {}
-<,>
-[,]
-t tag
-```
-
-### f. Substitutes and commands
-```
-- s/pattern/text   substitute first occurence  
-- s/pattern/text/g substitute all occurences on line
-- g/pattern/text   execute command on all lines
-```
-
-### REGEXP
-
-https://vimregex.com
-```
-:h s_flags  (help flags)
-- c (confirm each)
-- g (all line occurences)
-- i (ignore case)
-- I (don't ignore case)
-- n (report number of matches)
-- p/#/l (print line substitued, number, text)
-```
-
-### REGISTERS 
-
 :reg  all registers   
 (4 readonly: .%:#) 
 
-```
 "" default unnamed register (d,c,s,x)  
 ". last inserted text
 "0 last yank  
@@ -233,16 +202,39 @@ let @+=@% ("let" write to a register, copy the current file to the clipboard)
 and the others will have last 9 deleted text, being "1 the newest, and "9 the oldes
 ```
 
-### REPEAT
+g. Save
+```
+:wq <cr>, :x <cr> and ZZ
+```
+  
+h. Substitutes
+```
+- s/pattern/text   substitute first occurence  
+- s/pattern/text/g substitute all occurences on line
+- g/pattern/text   execute command on all lines
+```
 
 ```
-& Repeat last substitution on current line  
-g& Repeat last substitution on all lines  
+:[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
+:[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
+  
+:27,75 s/this/that  -  change first occurence of "this" to "that" between line 27 and 75  
+:.,$v/text/d  -  from here to end delete what doesn't contain "text"  
+:.,+21g/alpha/d  -  delete every line containing "alpha" from here and next 21 lines  
+  
+:% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
 ```
 
-### WINDOWS (SPLIT SCREEN)
+i. Tabs
+- https://vim.fandom.com/wiki/Using_tab_pages 
+```
+:tabs, :tp, :tn  
+:tab(new,n,p)
+:tabo(nly)
+```
 
-@ref: https://linuxhint.com/vim_split_screen
+j. Windows Screen
+- https://linuxhint.com/vim_split_screen
 ```
 :help split  
 :vsplit, :vsp [file], :sp [file]  
@@ -256,44 +248,51 @@ C-w q (close split)
 C-w>s or C-w>v => :sp or :vsp
 ```
 
-### Save
-
+k. Other
 ```
-:wq <cr>, :x <cr> and ZZ
-```
-  
-### SEARCH / REPLACE 
-
-```
-:[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
-:[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
-  
-:27,75 s/this/that  -  change first occurence of "this" to "that" between line 27 and 75  
-:.,$v/text/d  -  from here to end delete what doesn't contain "text"  
-:.,+21g/alpha/d  -  delete every line containing "alpha" from here and next 21 lines  
-  
-:% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
-```
-
-### TAB
-
-@ref: https://vim.fandom.com/wiki/Using_tab_pages 
-
-```
-:tabs, :tp, :tn  
-:tab(new,n,p)
-:tabo(nly)
-```
-
-### TERMINAL 
-
 :ter (open a terminal inside)  
 :shell (back to the shell)
+```
+
+---------------------------------------------------
+## 1. Common
+
+a. Objects to "speak" vim  
+(https://vimhelp.org/motion.txt.html#text-objects)  
+```
+- verbs: v(isu), c(hange), d(elete), y(ank)
+- modifiers: i(nside), a(round), t(ill find), f(ind), /(search)
+- text objects: w(ord), s(entence) p(aragraph) b(lock), t(ag), "({
+  
+* ci": change inside quote
+* dty: delete until next "y"
+* vap: visual around paragraph
+
+w word
+s sentence
+b,(,) block inside ()
+B,{,} block inside {}
+<,>
+[,]
+t tag
+```
+
+b. Regexp
+https://vimregex.com
+```
+:h s_flags  (help flags)
+- c (confirm each)
+- g (all line occurences)
+- i (ignore case)
+- I (don't ignore case)
+- n (report number of matches)
+- p/#/l (print line substitued, number, text)
+```
 
 
 ---------------
 --- PLUGINS ---
----------------
+
 
 ### Vimsurround
 
@@ -302,7 +301,7 @@ ds', cs'" (del or change ' to ")
 
 --------------
 --- VSCODE ---
---------------
+
 
 Vim.leader: <Space>
 Leader>f/b
