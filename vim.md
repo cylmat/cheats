@@ -3,10 +3,6 @@ VIM Samples
 
 Ref
 ---
-Vi & Vim:  
-- https://vimhelp.org/vi_diff.txt.html#vi-differences   
-- https://www.shell-tips.com/linux/vi-vs-vim/#gsc.tab=0   
-
 Motion & braquets:  
 - https://vimhelp.org/index.txt.html#%5B  
 - https://vimhelp.org/motion.txt.html  
@@ -331,8 +327,12 @@ VsCodeVim Module:
 ---
 **@ref**
 * https://vimhelp.org/quickref.txt.html
-* https://vim.rtorr.com/
+* https://vim.rtorr.com
 * http://tnerual.eriogerg.free.fr/vimqrc.html
 * https://vim.fandom.com/wiki/Vim_Tips_Wiki
 * http://www.viemu.com/vi-vim-cheat-sheet.gif
 * http://www.fprintf.net/vimCheatSheet.html
+
+see also: 
+- https://vimhelp.org/vi_diff.txt.html#vi-differences
+- https://www.shell-tips.com/linux/vi-vs-vim/#gsc.tab=0 
