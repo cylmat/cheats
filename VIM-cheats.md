@@ -2,42 +2,43 @@ VIM Samples
 ===========
 
 1. Normal Mode
-  a. Folding
-  b. Jumps
-  c. Marks
-  d. Navigate
-  e. Repeat
+  - Folding
+  - Jumps
+  - Marks
+  - Navigate
+  - Repeat
 2. Insert Mode
-3. Command Mode
-  a. Settings
-  b. Buffer
-  c. File
-  d. Global
-  e. History
-  f. Registers
-  g. Save
-  h. Substitutes
-  i. Tabs
-  j. Windows Screen
-  k. Other
-4. Common
-  a. Objects to "speak" vim  
-  b. Regexp
+3. Command Mode int
+  - Settings
+  - Global
+  - Substitutes
+  - History
+  - Registers
+  - Save
+4. Command Mode ext
+  - Buffer
+  - File
+  - Tabs
+  - Windows Screen
+  - Other
+5. Common
+  - Objects to "speak" vim  
+  - Regexp
 
 
----------------------------------------------------
+--------------------------------------------------------------------------------------
 ## 1. Normal Mode
 
 ```
 g~ change capitalized
 gv (go to last visual selection)
 
-C change to eol
-D delete to eol
-X delete char before
-s => ch + Insert
-~ change one char capital
-K keyword search
+C - change to eol
+D - delete to eol
+X - delete char before
+(s => ch + Insert)
+~ - change one char capital
+K - keyword search
 
 gi: go last Insert place
 .: repeat last change
@@ -51,33 +52,33 @@ gp, gP like p,P and put cursor after
 :.,+2y (yank from current to +2 line)
 ```
 
-a. Folding
+* Folding
+("z" looks like a folded piece of paper)
 ```
-(z looks like a folded piece of paper)  
+zf - operator creates a fold   
+zo - to unfold  
+zc - closes the fold  
+zM - and zR to close / open all the folds in the file  
+za - toggle folds (zo/zc)
+```
 
-zf operator creates a fold   
-zo to unfold  
-zc closes the fold  
-There is also zM and zR to close / open all the folds in the file  
-za toggle folds (zo/zc)
+* Jumps
 ```
-
-b. Jumps
-```
+:jumps
 `[ Jump to beginning of last yanked text  
 `] Jump to end of last yanked text  
 g; Jump to the last change you made  
 g, Jump back forward through the change list
 ```  
   
-c. Marks
+* Marks
 ```
 :marks
 ma, mz  
 y`a
 ```  
 
-d. Navigate
+* Navigate
 ```
 ^ g_ first last non-blank char  
 3/ 3? search next/prev 3d in all text  
@@ -90,7 +91,7 @@ C-D C-U move down up half page
 % match next/prev ({[]})  
 ```
 
-e. Repeat
+* Repeat
 ```
 . Repeat last change
 & Repeat last substitution on current line  
@@ -99,7 +100,7 @@ g& Repeat last substitution on all lines
 
 
 
----------------------------------------------------
+--------------------------------------------------------------------------------------
 ## 2. Insert Mode
 
 ```
@@ -109,8 +110,8 @@ Insert: C-o (temporary normal mode)
 
 
 
----------------------------------------------------
-## 3. Command Mode
+--------------------------------------------------------------------------------------
+## 3. Command Mode int
 
 a. Settings
 ```
@@ -120,21 +121,7 @@ unset options
 :set rnu!, :set nornu
 ```
 
-b. Buffer
-@ref: https://vim.fandom.com/wiki/Buffers
-```
-:buffers
-:bp, :bn, :bprev, :bnext
-```
-
-c. File
-```
-:open <file>  
-:e  
-Ctrl-^, (edit alternate/previous file, like ":e #").
-```
-
-d. Global
+b. Global
 https://vim.fandom.com/wiki/Power_of_g
 ```
 (ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
@@ -163,6 +150,24 @@ qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 (do NOT match grep)
 :g!/pattern/d – Remove lines that do NOT match the pattern.
 :v/^.*DWN.*/d – Remove lines that do NOT match ^..DWN..$
+```
+
+c. Substitutes
+```
+- s/pattern/text   substitute first occurence  
+- s/pattern/text/g substitute all occurences on line
+- g/pattern/text   execute command on all lines
+```
+
+```
+:[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
+:[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
+  
+:27,75 s/this/that  -  change first occurence of "this" to "that" between line 27 and 75  
+:.,$v/text/d  -  from here to end delete what doesn't contain "text"  
+:.,+21g/alpha/d  -  delete every line containing "alpha" from here and next 21 lines  
+  
+:% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
 ```
 
 e. History
@@ -202,30 +207,31 @@ let @+=@% ("let" write to a register, copy the current file to the clipboard)
 and the others will have last 9 deleted text, being "1 the newest, and "9 the oldes
 ```
 
-g. Save
+c. Save
 ```
 :wq <cr>, :x <cr> and ZZ
 ```
-  
-h. Substitutes
+
+
+
+--------------------------------------------------------------------------------------
+## 4. Command Mode ext
+
+a. Buffer
+@ref: https://vim.fandom.com/wiki/Buffers
 ```
-- s/pattern/text   substitute first occurence  
-- s/pattern/text/g substitute all occurences on line
-- g/pattern/text   execute command on all lines
+:buffers
+:bp, :bn, :bprev, :bnext
 ```
 
+b. File
 ```
-:[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
-:[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
-  
-:27,75 s/this/that  -  change first occurence of "this" to "that" between line 27 and 75  
-:.,$v/text/d  -  from here to end delete what doesn't contain "text"  
-:.,+21g/alpha/d  -  delete every line containing "alpha" from here and next 21 lines  
-  
-:% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
+:open <file>  
+:e  
+Ctrl-^, (edit alternate/previous file, like ":e #").
 ```
 
-i. Tabs
+c. Tabs
 - https://vim.fandom.com/wiki/Using_tab_pages 
 ```
 :tabs, :tp, :tn  
@@ -233,7 +239,7 @@ i. Tabs
 :tabo(nly)
 ```
 
-j. Windows Screen
+d. Windows Screen
 - https://linuxhint.com/vim_split_screen
 ```
 :help split  
@@ -248,14 +254,14 @@ C-w q (close split)
 C-w>s or C-w>v => :sp or :vsp
 ```
 
-k. Other
+e. Other
 ```
 :ter (open a terminal inside)  
 :shell (back to the shell)
 ```
 
----------------------------------------------------
-## 1. Common
+--------------------------------------------------------------------------------------
+## 5. Common
 
 a. Objects to "speak" vim  
 (https://vimhelp.org/motion.txt.html#text-objects)  
