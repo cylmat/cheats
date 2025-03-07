@@ -19,9 +19,10 @@ Tutos:
 ### Settings
 
 ```
-:noh(ighlight)
-:nu(mber)
-:r(el)nu(mber)
+:set wildmenu
+:hlsearch  (highlight)
+:nu  (number)
+:rnu (rel number)
 ```
 
 unset options
