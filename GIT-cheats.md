@@ -3,8 +3,8 @@ Git Sample
 
 1. Configuration
     - Autocompletion
-2. Current works
-3. Advanced
+2. Porcelain
+3. Plumbing
     - Submodules
     - Worktree
     - Other
@@ -36,12 +36,12 @@ git config --global credential.helper 'store --file ~/.my-credentials'
 
 
 --------------------------------------------------------------------------------------
-## 2. Current works
+## 2. Porcelain
 
 
 
 --------------------------------------------------------------------------------------
-## 3. Advanced
+## 3. Plumbing
 
 * Submodules
 
