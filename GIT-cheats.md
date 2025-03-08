@@ -1,8 +1,4 @@
-Ref: 
-- https://acompiler.com/git-tips
-- https://github.com/git-tips/tips
-- https://github.com/arslanbilal/git-cheat-sheet
-- https://maciejb2k.github.io/no-bs-git (Git no bs)
+### Git Sample
 
 ### Autocompletion
 
@@ -50,3 +46,10 @@ git pull --recurse-submodules
 Remove stages : git reset .    
 Remove changes : git restore .   
 Remove untracked changes : git clean -f -d  
+
+---
+**@Ref**  
+- https://acompiler.com/git-tips
+- https://github.com/git-tips/tips
+- https://github.com/arslanbilal/git-cheat-sheet
+- https://maciejb2k.github.io/no-bs-git (Git no bs)
