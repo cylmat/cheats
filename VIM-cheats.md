@@ -339,7 +339,7 @@ VsCodeVim Module:
 - gh Hovering the mouse
  
 ---
-**@ref**
+**@ref**  
 Motion & braquets:  
 - https://vimhelp.org/index.txt.html#%5B  
 - https://vimhelp.org/motion.txt.html  
