@@ -2,7 +2,7 @@ VIM Samples
 ===========
 
 1. Normal Mode
-  - Folding
+    - Folding
   - Jumps
   - Marks
   - Navigate
