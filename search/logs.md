@@ -15,6 +15,8 @@ u="this is a test" var=${u:10:4} echo "${var}"
 SUBSTR
 ------
 **terminal size**
+
+```
 export SIZE_TERM=$(stty size | cut -d ' ' -f 2)
 read myrows mycols < <(stty size)
 
@@ -22,6 +24,7 @@ cut -c -$SIZE_TERM file
 grep -Eo '.{80}' file
 awk '{print substr($0,1,80)}' file.txt
 sed 's/^\(.\{80\}\).*$/\1/' file.txt
+```
 
 *******
 http://nojhan.github.io/colout/
