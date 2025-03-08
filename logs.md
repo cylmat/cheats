@@ -1,5 +1,6 @@
 TAIL
 ----
+```
 tail -f  var/logs/dev.log | awk '
   /INFO/ {print "\033[32m" $0 "\033[39m"}
   /DEBUG/ {print "\033[31m" $0 "\033[39m"}'
@@ -11,6 +12,7 @@ tail -f var/logs/dev.log | sed --unbuffered \
 tail -f var/logs/dev.log | perl -pe 's/.*DEBUG.*/\e[1;31m$&\e[0m/g'
 
 u="this is a test" var=${u:10:4} echo "${var}"
+```
 
 SUBSTR
 ------
@@ -26,16 +28,25 @@ awk '{print substr($0,1,80)}' file.txt
 sed 's/^\(.\{80\}\).*$/\1/' file.txt
 ```
 
+CCZE
+----
+```
+tail -f var/logs/dev.log | ccze -A | grep --line-buffered 'WARNING'
+[//]: # tail -f -n 5 var/logs/dev.log | perl -pe 's#WARNING#\x1b[33m$&#; s#ERROR#\x1b[31m$&#; s#foo#\x1b[32m$&#' 
+```
+
 *******
-http://nojhan.github.io/colout/
+- http://nojhan.github.io/colout/
 *******
 
 **reorganize**
+```
 [//]: sed -E 's/(B1:.*)(A1:.*)/\2 \1/' ip.txt"
 [//]: awk -F'A1:' '{print $1 ~ /B1:/ ? FS $2 " " $1 : $0}' ip.txt
 
 awk -F":" '{print $1,$6}' /etc/passwd
 echo "Beam goes bla" | awk '/Beam/ {print $3}'
+```
 
 TPUT
 ----
@@ -51,19 +62,23 @@ tail -F myfile.log | sed "s/\(.ERROR.*\)/$red$bold\1$norm/g"
 
 grep
 ----
+```
 alias grep='grep --color=auto'
 grep "\(INFO\|SEVERE\)" /var/log/logname
 
 grep -Eo "[[:digit:]]{5}" 
 grep -Po '(?<=_)\d+' 
+```
 
 awk
 ---
+```
 grep --color=always "\(INFO\|SEVERE\)" /var/log/logname | tail -f | awk '{ print $1 }'
 
 tail -f /var/log/messages | awk '{if ($5 ~ /INFO/) print "\033[1;32m"$0"\033[0m"; else if ($1 ~ /SEVERE/) print "\033[1;31m"$0"\033[0m"; else print $0}'
+```
 
-***
+```
 name='someletters_12345_moreleters.ext'
 
 echo $name | sed 's/[^0-9]*//g'    # 12345
@@ -84,12 +99,11 @@ echo "$s2"
 > digits=$( echo $var | sed "s/.*_\([0-9]\+\).*/\1/p" -n )
 > echo $digits
 12345
-***
-
+```
 
 
 COLORTAIL
--------------------------------------------
+---
 ```
 #!/usr/bin/perl -w
 
@@ -105,21 +119,23 @@ while(<STDIN>) {
     print $line, "\n";
 }
 ```
-tail -f var/logs/dev.log | perl colortail.pl
-----------------------------------------------
 
 TAIL
 ----
+```
+tail -f var/logs/dev.log | perl colortail.pl
 tail -f /var/log/mylogfile | colout '^(\w+ \d+ [\d:]+)|(\w+\.py:\d+ .+\(\)): (.+)$' white,black,cyan bold,bold,normal
 
 tail -f <file> | fgrep "string" | sed 's/stuff//g' >> output.txt
 tail -f <file> | fgrep --line-buffered "string" | sed 's/stuff//g' >> output.txt
-
------------------------------------------------------------------
+```
 
 GRC
 ---
 @see https://github.com/manjuraj/config/blob/master/.grc/sample.conf
+
+apt-get install grc
+grc tail -f /var/log/apache2/error.log
 
 ```
 regexp=.*(select .*)$
@@ -141,15 +157,9 @@ regexp=.*http.*/M/.*\.(.*?Facade)/(\w*).*$
 colours=unchanged,underline green,underline magenta
 ```
 
+```
 grc  tail -f var/logs/dev.log      -c conf.grc
+```
 
 @see
-https://unix.stackexchange.com/questions/8414/how-to-have-tail-f-show-colored-output
-
-apt-get install grc
-grc tail -f /var/log/apache2/error.log
-
-CCZE
-----
-tail -f var/logs/dev.log | ccze -A | grep --line-buffered 'WARNING'
-[//]: # tail -f -n 5 var/logs/dev.log | perl -pe 's#WARNING#\x1b[33m$&#; s#ERROR#\x1b[31m$&#; s#foo#\x1b[32m$&#' 
+- https://unix.stackexchange.com/questions/8414/how-to-have-tail-f-show-colored-output
