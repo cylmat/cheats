@@ -620,7 +620,11 @@ git update-ref <ref> <commit>    -m "reset: Reset <branch> to <new commit>"
 
 + Samples  
 Get the number of frames    
-numframes=`gifsicle $1 -I | grep -P "\d+ images" --only-matching | grep -P "\d+" --only-matching`    
+numframes=`gifsicle $1 -I | grep -P "\d+ images" --only-matching | grep -P "\d+" --only-matching`
+
+- git assume-unchanged
+- git worktree add <répertoire> <branche>
+
 
 References
 ----------
@@ -651,7 +655,3 @@ Cheatsheets
 
 **Git to changelog**  
 * http://git.savannah.gnu.org/gitweb/?p=gnulib.git;a=blob_plain;f=build-aux/gitlog-to-changelog
-
----
-- git assume-unchanged
-- git worktree add <répertoire> <branche>
