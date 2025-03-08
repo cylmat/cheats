@@ -1,6 +1,5 @@
-###############
-# Composer v2 #
-###############
+# Composer 
+! @todo clear !
 
 Available commands:
   about                Shows the short information about Composer.
