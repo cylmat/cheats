@@ -3,27 +3,27 @@ VIM Samples
 
 1. Normal Mode
     - Folding
-  - Jumps
-  - Marks
-  - Navigate
-  - Repeat
+    - Jumps
+    - Marks
+    - Navigate
+    - Repeat
 2. Insert Mode
 3. Command Mode int
-  - Settings
-  - Global
-  - Substitutes
-  - History
-  - Registers
-  - Save
+    - Settings
+    - Global
+    - Substitutes
+    - History
+    - Registers
+    - Save
 4. Command Mode ext
-  - Buffer
-  - File
-  - Tabs
-  - Windows Screen
-  - Other
+    - Buffer
+    - File
+    - Tabs
+    - Windows Screen
+    - Other
 5. Common
-  - Objects to "speak" vim  
-  - Regexp
+    - Objects to "speak" vim  
+    - Regexp
 
 
 --------------------------------------------------------------------------------------
