@@ -1,6 +1,18 @@
-### Git Sample
+Git Sample
+==========
 
-### Autocompletion
+1. Configuration
+    - Autocompletion
+2. Current works
+3. Advanced
+    - Submodules
+    - Worktree
+    - Other
+
+--------------------------------------------------------------------------------------
+## 1. Configuration
+
+* Autocompletion
 
 https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash  
 https://www.oliverspryn.com/blog/adding-git-completion-to-zsh  
@@ -10,7 +22,6 @@ mkdir -p ~/.zsh  && cd ~/.zsh
 curl -o git-completion.zsh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 ```
 
-Load Git completion :  
 -> in ~/.zsh  
 ```
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
@@ -18,20 +29,21 @@ fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 ```
 
-### Config
-
+```
 git config --global credential.helper 'store --file ~/.my-credentials'
-
-### Misc
-
-```
-PREVIOUS_BRANCH=`git rev-parse --abbrev-ref HEAD -- | head -n 1`    
-NEW_RELEASE=`git branch --all | grep -o '\(release\)/[0-9]*' | sort -V | tail -n 1 | awk -F'[/.]' '{print "release/"$2"."$3"."$4+1}'`   
 ```
 
-Search in all files : git rev-list --all | xargs git grep -F '<Your search string>'  
 
-### Submodules
+
+--------------------------------------------------------------------------------------
+## 2. Current works
+
+
+
+--------------------------------------------------------------------------------------
+## 3. Advanced
+
+* Submodules
 
 ```
 git submodule init
@@ -41,11 +53,22 @@ git submodule foreach sh -c 'git pull'
 git pull --recurse-submodules 
 ```
 
-### Worktree
+* Worktree
 
+```
 Remove stages : git reset .    
 Remove changes : git restore .   
-Remove untracked changes : git clean -f -d  
+Remove untracked changes : git clean -f -d
+``` 
+
+* Other
+
+```
+PREVIOUS_BRANCH=`git rev-parse --abbrev-ref HEAD -- | head -n 1`    
+NEW_RELEASE=`git branch --all | grep -o '\(release\)/[0-9]*' | sort -V | tail -n 1 | awk -F'[/.]' '{print "release/"$2"."$3"."$4+1}'`   
+
+Search in all files : git rev-list --all | xargs git grep -F '<Your search string>'
+```
 
 ---
 **@Ref**  
