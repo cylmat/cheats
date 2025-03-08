@@ -53,6 +53,7 @@ gp, gP like p,P and put cursor after
 ```
 
 * Folding
+
 ("z" looks like a folded piece of paper)
 ```
 zf - operator creates a fold   
@@ -63,6 +64,7 @@ za - toggle folds (zo/zc)
 ```
 
 * Jumps
+
 ```
 :jumps
 `[ Jump to beginning of last yanked text  
@@ -72,6 +74,7 @@ g, Jump back forward through the change list
 ```  
   
 * Marks
+
 ```
 :marks
 ma, mz  
@@ -79,6 +82,7 @@ y`a
 ```  
 
 * Navigate
+
 ```
 ^ g_ first last non-blank char  
 3/ 3? search next/prev 3d in all text  
@@ -92,6 +96,7 @@ C-D C-U move down up half page
 ```
 
 * Repeat
+
 ```
 . Repeat last change
 & Repeat last substitution on current line  
@@ -114,6 +119,7 @@ Insert: C-o (temporary normal mode)
 ## 3. Command Mode int
 
 * Settings
+
 ```
 :set wildmenu, :hlsearch, :nu  (number), :rnu (relative number)
 
@@ -122,6 +128,7 @@ unset options
 ```
 
 * Global
+
 https://vim.fandom.com/wiki/Power_of_g
 ```
 (ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
@@ -153,6 +160,7 @@ qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 ```
 
 * Substitutes
+
 ```
 - s/pattern/text   substitute first occurence  
 - s/pattern/text/g substitute all occurences on line
@@ -171,12 +179,14 @@ qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
 ```
 
 * History
+
 ```
 :history (or :Ctrl-f)
 history -> :his /
 ```
 
-* Registers 
+* Registers
+
 ```
 :reg  all registers   
 (4 readonly: .%:#) 
@@ -208,6 +218,7 @@ and the others will have last 9 deleted text, being "1 the newest, and "9 the ol
 ```
 
 * Save
+
 ```
 :wq <cr>, :x <cr> and ZZ
 ```
@@ -218,6 +229,7 @@ and the others will have last 9 deleted text, being "1 the newest, and "9 the ol
 ## 4. Command Mode ext
 
 * Buffer
+
 @ref: https://vim.fandom.com/wiki/Buffers
 ```
 :buffers
@@ -232,6 +244,7 @@ Ctrl-^, (edit alternate/previous file, like ":e #").
 ```
 
 * Tabs
+
 - https://vim.fandom.com/wiki/Using_tab_pages 
 ```
 :tabs, :tp, :tn  
@@ -240,6 +253,7 @@ Ctrl-^, (edit alternate/previous file, like ":e #").
 ```
 
 * Windows Screen
+
 - https://linuxhint.com/vim_split_screen
 ```
 :help split  
@@ -255,6 +269,7 @@ C-w>s or C-w>v => :sp or :vsp
 ```
 
 * Other
+
 ```
 :ter (open a terminal inside)  
 :shell (back to the shell)
@@ -263,7 +278,8 @@ C-w>s or C-w>v => :sp or :vsp
 --------------------------------------------------------------------------------------
 ## 5. Common
 
-* Objects to "speak" vim  
+* Objects to "speak" vim
+
 (https://vimhelp.org/motion.txt.html#text-objects)  
 ```
 - verbs: v(isu), c(hange), d(elete), y(ank)
@@ -284,6 +300,7 @@ t tag
 ```
 
 * Regexp
+
 https://vimregex.com
 ```
 :h s_flags  (help flags)
@@ -300,6 +317,7 @@ https://vimregex.com
 --- PLUGINS ---
 
 * Vimsurround
+
 ```
 d/c/y s(urround)
 ds', cs'" (del or change ' to ")
