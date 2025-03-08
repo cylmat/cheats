@@ -1,5 +1,6 @@
 Find | xargs
 ===
+! @todo clear !
 
 ## Samples
 - Find file from root 
