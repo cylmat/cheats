@@ -14,8 +14,8 @@ Git Sample
 
 * Autocompletion
 
-https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash  
-https://www.oliverspryn.com/blog/adding-git-completion-to-zsh  
+https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash    
+https://www.oliverspryn.com/blog/adding-git-completion-to-zsh    
 
 ```
 mkdir -p ~/.zsh  && cd ~/.zsh       
@@ -76,3 +76,4 @@ Search in all files : git rev-list --all | xargs git grep -F '<Your search strin
 - https://github.com/git-tips/tips
 - https://github.com/arslanbilal/git-cheat-sheet
 - https://maciejb2k.github.io/no-bs-git (Git no bs)
+- https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain
