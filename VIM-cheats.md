@@ -11,6 +11,7 @@ VIM Samples
     - Navigate
     - Repeat
     - Search
+    - VisualMode
 2. Insert Mode
 3. Command Mode int
     - Settings
@@ -36,99 +37,110 @@ VIM Samples
 * Capitalize
 
 ```
-g~<object> - change capitalized
-g~w - change capitalized word
-~ - change one char capital
-gU - lower current line
-gUap - upper all paragraph
+g~<object> : change capitalized
+g~w        : change capitalized word
+~          : change one char capital
+gU         : lower current line
+gUap       : upper all paragraph
 ```
 
 * Change
 
 ```
-. (repeat last change) 
+.      : repeat last change
+c<cmd> : change <cmd>
+C      : change to eol
+D      : delete to eol
 gp, gP <=> pa, Pa (leave cursor after)
-c<cmd> - change <cmd>
-C - change to eol
-D - delete to eol
-s <=> "ch" + Insert
+s      <=> "ch" + Insert
 ```
 
 * Folding
 
 ("z" looks like a folded piece of paper)
 ```
-zf - operator creates a fold   
-zo - to unfold  
-zc - closes the fold  
-zM - and zR to close / open all the folds in the file  
-za - toggle folds (zo/zc)
+zf : operator creates a fold   
+zo : to unfold  
+zc : closes the fold  
+zM : and zR to close / open all the folds in the file  
+za : toggle folds (zo/zc)
 ```
 
 * Go
 
 ```
-48G <=> :48 - go to line 48
-gi - go last Insert place
-gv - go to last Visual selection
-gn, gN - go to last search + Visual
-dgn - delete last Visual match
+48G    : go to line 48
+gi     : go last Insert place
+gv     : go to last Visual selection
+gn, gN : go to last search + Visual
+dgn    : delete last Visual match
 zt, z<Enter> (center window with cursor on top)
-zz, z. (center window on cursor)
-zb, z- (center window cursor on bottom)
+zz, z.       (center window on cursor)
+zb, z-       (center window cursor on bottom)
+48G <=> :48 - go to line 48
 ```
 
 * Jumps
 
 ```
 :jumps
-C-o - move back on last jumps
-C-i - move forward on next jumps
-`[ Jump to beginning of last yanked text  
-`] Jump to end of last yanked text  
-g; Jump to the last change you made  
-g, Jump back forward through the change list
+C-o : move back on last jumps
+C-i : move forward on next jumps
+`[  : jump to beginning of last yanked text  
+`]  : jump to end of last yanked text  
+g;  : jump to the last change you made  
+g,  : jump back forward through the change list
 ```  
   
 * Marks
 
 ```
 :marks
-ma - mark "a"
-maB - mark "a" and "B"
-'a, `a - jumps to mark "a" (current buffer)
-'A - jamps to mark "a" (entire buffer)
-y`a - yank mark "a"
+ma     : mark "a"
+maB    : mark "a" and "B"
+'a, `a : jumps to mark "a" (current buffer)
+'A     : jumps to mark "a" (entire buffer)
+y`a    : yank mark "a"
 ```  
 
 * Navigate
 
 ```
-^, g_ - first/last non-blank char
-g0 - start of line
-3/<text>, 3?<text> - search 3rd next/prev <text> in all document 
-{, } - next/prev paragraph
-wW, bB - next/prev word/WORD  
-C-D, C-U (move down/up half page)
-C-B, C-F (move down/up one page)
-% - match next/prev "(, {, [, ], }, )"  
+^, g_    : first/last non-blank char
+g0       : start of line
+{, }     : next/prev paragraph
+wW, bB   : next/prev word/WORD  
+C-D, C-U :move down/up half page
+C-B, C-F :move down/up one page
+%        : match next/prev "(, {, [, ], }, )"  
+3/<text>, 3?<text> : search 3rd next/prev <text> in all document 
 ```
 
 * Repeat
 
 ```
-. - Repeat last change
-& - Repeat last substitution on current line  
-g& - Repeat last substitution on all lines  
+.  : Repeat last change
+&  : Repeat last substitution on current line  
+g& : Repeat last substitution on all lines  
 ```
 
 * Search
 
 ```
-*, # - search exact word 
-g*, g# - search into word
-K - keyword "man" search
-ga - get unicode of current char
+*, #   : search exact word 
+g*, g# : search into word
+K      : keyword "man" search
+ga     : get unicode of current char
+```
+
+* VisualMode
+
+```
+v,V,C-v : Visual mode, Visual line, Visual block
+o       : toggle the free end (start or end)
+Vr-     : replace line with -
+gv      : reselect last visual
+C-g     : switch to Insert (like "c")
 ```
 
 
