@@ -69,6 +69,8 @@ za - toggle folds (zo/zc)
 
 ```
 :jumps
+C-o - move back on last jumps
+C-i - move forward on next jumps
 `[ Jump to beginning of last yanked text  
 `] Jump to end of last yanked text  
 g; Jump to the last change you made  
@@ -79,8 +81,11 @@ g, Jump back forward through the change list
 
 ```
 :marks
-ma, mz  
-y`a
+ma - mark "a"
+maB - mark "a" and "B"
+'a, `a - jumps to mark "a" (current buffer)
+'A - jamps to mark "a" (entire buffer)
+y`a - yank mark "a"
 ```  
 
 * Navigate
