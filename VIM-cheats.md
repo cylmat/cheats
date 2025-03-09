@@ -48,6 +48,7 @@ gUap - upper all paragraph
 ```
 . (repeat last change) 
 gp, gP <=> pa, Pa (leave cursor after)
+c<cmd> - change <cmd>
 C - change to eol
 D - delete to eol
 s <=> "ch" + Insert
@@ -103,29 +104,28 @@ y`a - yank mark "a"
 * Navigate
 
 ```
-^ g_ first last non-blank char  
-3/ 3? search next/prev 3d in all text  
-*#  search for current word  
-{} next/prev paragraph  
- 
-wWbB next/prev word or WORD  
-  
-C-D C-U move down up half page  
-% match next/prev ({[]})  
+^, g_ - first/last non-blank char
+g0 - start of line
+3/<text>, 3?<text> - search 3rd next/prev <text> in all document 
+{, } - next/prev paragraph
+wW, bB - next/prev word/WORD  
+C-D, C-U (move down/up half page)
+C-B, C-F (move down/up one page)
+% - match next/prev "(, {, [, ], }, )"  
 ```
 
 * Repeat
 
 ```
-. Repeat last change
-& Repeat last substitution on current line  
-g& Repeat last substitution on all lines  
+. - Repeat last change
+& - Repeat last substitution on current line  
+g& - Repeat last substitution on all lines  
 ```
 
 * Search
 
 ```
-*, # -search exact word
+*, # - search exact word 
 g*, g# - search into word
 K - keyword "man" search
 ```
@@ -136,11 +136,16 @@ K - keyword "man" search
 ## 2. Insert Mode
 
 ```
-c<CMD> replace under CMD  
-Insert: C-o (temporary normal mode)
+C-o><cmd> (temporary normal mode)
+C-o>zz (middle the screen + Insert)
 ```
 
+Register
 
+```
+C-r>0 - yank from register "0"
+C-r>=<calcul> - expression register apply (ex: C-r>=6*35)
+```
 
 --------------------------------------------------------------------------------------
 ## 3. Command Mode int
@@ -257,10 +262,11 @@ and the others will have last 9 deleted text, being "1 the newest, and "9 the ol
 
 ```
 :e - reload file
-:wq
+:wq <file>
 :wqall - Write all changed buffers and exit
 :x => :wq
 ZZ => :x - Write current file (if modified) and close
+ZQ <=> :q! - Quit without checking change
 ```
 
 
