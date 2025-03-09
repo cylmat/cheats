@@ -37,21 +37,21 @@ g~w - change capitalized word
 
 Change
 . (repeat last change) 
-gn, gN apply change to next search match
-gp, gP like p,P and put cursor after
+gp, gP => pa, Pa (leave cursor after)
 
 Go
 gi - go last Insert place
-gv - go to last visual selection
+gv - go to last Visual selection
+gn, gN - go to last search + Visual
+dgn - delete last Visual match
 
 Line
 C - change to eol
 D - delete to eol
 x - delete char
 X - delete char before
-(s => "ch" + Insert)
+s => "ch" + Insert
 K - keyword "man" search
-
 ```
 
 * Folding
