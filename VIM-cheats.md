@@ -30,23 +30,28 @@ VIM Samples
 ## 1. Normal Mode
 
 ```
-g~ change capitalized
-gv (go to last visual selection)
+Capitalize
+g~<object> - change capitalized
+g~w - change capitalized word
+~ - change one char capital
 
+Go
+gi - go last Insert place
+gv - go to last visual selection
+
+Line
 C - change to eol
 D - delete to eol
+x - delete char
 X - delete char before
-(s => ch + Insert)
-~ - change one char capital
-K - keyword search
+(s => "ch" + Insert)
+K - keyword "man" search
 
-gi: go last Insert place
-.: repeat last change
+Change
+. (repeat last change) 
 gn, gN apply change to next search match
 gp, gP like p,P and put cursor after
 :reg <register>
-:x => wq
-:wqall
 :[range]action [register]
 -> 1,4d a (del 1 to 4 in register a)
 :.,+2y (yank from current to +2 line)
@@ -220,7 +225,11 @@ and the others will have last 9 deleted text, being "1 the newest, and "9 the ol
 * Save
 
 ```
-:wq <cr>, :x <cr> and ZZ
+:e - reload file
+:wq <cr>
+:wqall - Write all changed buffers and exit
+:x <cr> => :wq
+ZZ => :x - Write current file (if modified) and close
 ```
 
 
