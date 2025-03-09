@@ -35,6 +35,11 @@ g~<object> - change capitalized
 g~w - change capitalized word
 ~ - change one char capital
 
+Change
+. (repeat last change) 
+gn, gN apply change to next search match
+gp, gP like p,P and put cursor after
+
 Go
 gi - go last Insert place
 gv - go to last visual selection
@@ -47,14 +52,6 @@ X - delete char before
 (s => "ch" + Insert)
 K - keyword "man" search
 
-Change
-. (repeat last change) 
-gn, gN apply change to next search match
-gp, gP like p,P and put cursor after
-:reg <register>
-:[range]action [register]
--> 1,4d a (del 1 to 4 in register a)
-:.,+2y (yank from current to +2 line)
 ```
 
 * Folding
@@ -194,7 +191,12 @@ history -> :his /
 
 ```
 :reg  all registers   
-(4 readonly: .%:#) 
+:reg <register>
+(4 readonly: .%:#)
+
+:[range]action [register]
+-> 1,4d a (del 1 to 4 in register a)
+:.,+2y (yank from current to +2 line)
 
 "" default unnamed register (d,c,s,x)  
 ". last inserted text
