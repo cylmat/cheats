@@ -20,6 +20,7 @@ VIM Samples
     - History
     - Registers
     - Save
+    - Specific
 4. Command Mode ext
     - Buffer
     - File
@@ -289,6 +290,13 @@ and the others will have last 9 deleted text, being "1 the newest, and "9 the ol
 :x => :wq
 ZZ => :x - Write current file (if modified) and close
 ZQ <=> :q! - Quit without checking change
+```
+
+* Specific
+
+```
+@: repeat last command
+q: open history
 ```
 
 
