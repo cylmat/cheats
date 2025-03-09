@@ -2,11 +2,15 @@ VIM Samples
 ===========
 
 1. Normal Mode
+    - Capitalize
+    - Change
     - Folding
+    - Go
     - Jumps
     - Marks
     - Navigate
     - Repeat
+    - Search
 2. Insert Mode
 3. Command Mode int
     - Settings
@@ -29,29 +33,24 @@ VIM Samples
 --------------------------------------------------------------------------------------
 ## 1. Normal Mode
 
+* Capitalize
+
 ```
-Capitalize
 g~<object> - change capitalized
 g~w - change capitalized word
 ~ - change one char capital
+gU - lower current line
+gUap - upper all paragraph
+```
 
-Change
+* Change
+
+```
 . (repeat last change) 
-gp, gP => pa, Pa (leave cursor after)
-
-Go
-gi - go last Insert place
-gv - go to last Visual selection
-gn, gN - go to last search + Visual
-dgn - delete last Visual match
-
-Line
+gp, gP <=> pa, Pa (leave cursor after)
 C - change to eol
 D - delete to eol
-x - delete char
-X - delete char before
-s => "ch" + Insert
-K - keyword "man" search
+s <=> "ch" + Insert
 ```
 
 * Folding
@@ -63,6 +62,19 @@ zo - to unfold
 zc - closes the fold  
 zM - and zR to close / open all the folds in the file  
 za - toggle folds (zo/zc)
+```
+
+* Go
+
+```
+48G <=> :48 - go to line 48
+gi - go last Insert place
+gv - go to last Visual selection
+gn, gN - go to last search + Visual
+dgn - delete last Visual match
+zt, z<Enter> (center window with cursor on top)
+zz, z. (center window on cursor)
+zb, z- (center window cursor on bottom)
 ```
 
 * Jumps
@@ -110,6 +122,14 @@ C-D C-U move down up half page
 g& Repeat last substitution on all lines  
 ```
 
+* Search
+
+```
+*, # -search exact word
+g*, g# - search into word
+K - keyword "man" search
+```
+
 
 
 --------------------------------------------------------------------------------------
@@ -132,6 +152,10 @@ Insert: C-o (temporary normal mode)
 
 unset options
 :set rnu!, :set nornu
+
+get option
+:set expandtab? (get current "option"), :echo &expandtab (get current "variable")
+:set! all (display one per line)
 ```
 
 * Global
@@ -233,9 +257,9 @@ and the others will have last 9 deleted text, being "1 the newest, and "9 the ol
 
 ```
 :e - reload file
-:wq <cr>
+:wq
 :wqall - Write all changed buffers and exit
-:x <cr> => :wq
+:x => :wq
 ZZ => :x - Write current file (if modified) and close
 ```
 
@@ -289,6 +313,7 @@ C-w>s or C-w>v => :sp or :vsp
 ```
 :ter (open a terminal inside)  
 :shell (back to the shell)
+:compiler, :make, :version
 ```
 
 --------------------------------------------------------------------------------------
