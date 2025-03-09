@@ -128,6 +128,7 @@ g& - Repeat last substitution on all lines
 *, # - search exact word 
 g*, g# - search into word
 K - keyword "man" search
+ga - get unicode of current char
 ```
 
 
@@ -135,16 +136,25 @@ K - keyword "man" search
 --------------------------------------------------------------------------------------
 ## 2. Insert Mode
 
+* NormalInsert
+
 ```
 C-o><cmd> (temporary normal mode)
 C-o>zz (middle the screen + Insert)
 ```
 
-Register
+* Register
 
 ```
 C-r>0 - yank from register "0"
 C-r>=<calcul> - expression register apply (ex: C-r>=6*35)
+```
+
+* Unusual
+
+```
+C-v><ord> - insert char by ord (ex: C-v>065 write 'A')
+C-v><unicode> - insert unicode (C-v>u00bf write '¿')
 ```
 
 --------------------------------------------------------------------------------------
