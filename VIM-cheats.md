@@ -5,7 +5,7 @@ VIM Samples
     - Capitalize
     - Change
     - Folding
-    - Go
+    - Center
     - Jumps
     - Marks
     - Navigate
@@ -15,8 +15,8 @@ VIM Samples
 2. Insert Mode
 3. Command Mode int
     - Settings
-    - Global
     - Substitutes
+    - Global
     - History
     - Registers
     - Save
@@ -45,6 +45,14 @@ gU         : lower current line
 gUap       : upper all paragraph
 ```
 
+* Center
+
+```
+zt, z<Enter> (center window with cursor on top)
+zz, z.       (center window on cursor)
+zb, z-       (center window cursor on bottom)
+```
+
 * Change
 
 ```
@@ -65,20 +73,6 @@ zo : to unfold
 zc : closes the fold  
 zM : and zR to close / open all the folds in the file  
 za : toggle folds (zo/zc)
-```
-
-* Go
-
-```
-48G    : go to line 48
-gi     : go last Insert place
-gv     : go to last Visual selection
-gn, gN : go to last search + Visual
-dgn    : delete last Visual match
-zt, z<Enter> (center window with cursor on top)
-zz, z.       (center window on cursor)
-zb, z-       (center window cursor on bottom)
-48G <=> :48 - go to line 48
 ```
 
 * Jumps
@@ -107,8 +101,16 @@ y`a    : yank mark "a"
 * Navigate
 
 ```
+gg       : go to line 0
+G        : go to eof
+48G      : go to line 48
+48G <=>  : 48 - go to line 48
 ^, g_    : first/last non-blank char
-g0       : start of line
+0, g0    : start of line
+gi       : go last Insert place
+gv       : go to last Visual selection
+gn, gN   : go to last search + Visual
+dgn      : delete last Visual match
 {, }     : next/prev paragraph
 wW, bB   : next/prev word/WORD  
 C-D, C-U :move down/up half page
@@ -152,22 +154,27 @@ C-g     : switch to Insert (like "c")
 * NormalInsert
 
 ```
-C-o><cmd> (temporary normal mode)
-C-o>zz (middle the screen + Insert)
+C-o><cmd> - temporary normal mode
+C-o>zz    - middle the screen + Insert
 ```
 
 * Register
 
 ```
-C-r>0 - yank from register "0"
-C-r>=<calcul> - expression register apply (ex: C-r>=6*35)
+C-r>0                   - yank from register "0
+C-r>=<calcul>           - expression register apply (ex: C-r>=6*35)
+C-r>=system('ls <dir>') - import "!ls <dir>" under cursor
 ```
 
 * Unusual
 
 ```
-C-v><ord> - insert char by ord (ex: C-v>065 write 'A')
+C-v><ord>     - insert char by ord (ex: C-v>065 write 'A')
 C-v><unicode> - insert unicode (C-v>u00bf write '¿')
+```
+
+```
+:r {file} : Insert <file> content
 ```
 
 --------------------------------------------------------------------------------------
@@ -186,55 +193,55 @@ get option
 :set! all (display one per line)
 ```
 
-* Global
-
-https://vim.fandom.com/wiki/Power_of_g
-```
-(ex :g/alf/norm gUU -> uppercase lines where "alf" is present)  
-(ex: :g/console/g/two/d -> find "console", then "two" inside it, then delete)  
-
-change delimiters, :g@console@d
-g@one@s+const+let+g (use global and sub)    
-
-:g => :1,$g or :%g
-:g/^#/y A (append comment in "a" register)
-(Register "e replace, "E append in e)
-:g!/;$/norm A; (add ; only if not find)
-:g/^#/norm 0x (decrease the depth of markdown title)
-
-:g/pattern/<cmd> execute command on all lines
-:g/NOTE/m$ (move all line containing NOTE to eof)
-:g/^\s*$/d (Delete all blank lines)
-:g/\d/echo line('.')    (echo all lines that contain a digit)
-:g/^/pu =\"\n\" (space after all lines)
-:.,$g/Lesson/exe "norm! A;" (add ; to end of line containing "Lesson" from line to eof)
-
-(effect of these two command ?)
-qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
-:5,18g/^foo/s/^.\{-}=/
-
-(do NOT match grep)
-:g!/pattern/d – Remove lines that do NOT match the pattern.
-:v/^.*DWN.*/d – Remove lines that do NOT match ^..DWN..$
-```
-
 * Substitutes
 
 ```
 - s/pattern/text   substitute first occurence  
 - s/pattern/text/g substitute all occurences on line
 - g/pattern/text   execute command on all lines
+
+:[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
+:[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
 ```
 
 ```
-:[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
-:[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
-  
-:27,75 s/this/that  -  change first occurence of "this" to "that" between line 27 and 75  
-:.,$v/text/d  -  from here to end delete what doesn't contain "text"  
-:.,+21g/alpha/d  -  delete every line containing "alpha" from here and next 21 lines  
-  
-:% s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
+:27,75 s/this/that - change first occurence of "this" to "that" between line 27 and 75  
+:.,$v/text/d       - from here to end delete what doesn't contain "text"  
+:.,+21g/alpha/d    - delete every line containing "alpha" from here and next 21 lines  
+:%s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
+```
+
+* Global
+
+https://vim.fandom.com/wiki/Power_of_g
+```
+Pattern
+:g <=> :1,$g or :%g  - 1,$ or % is ALL by default
+:g/pattern/<cmd>     - Execute command on all lines
+:g/NOTE/m$           - Mmove all line containing NOTE to eof
+:g/^\s*$/d           - Delete all blank lines
+:g/\d/echo line('.') - Echo all lines that contain a digit
+:g/^/pu =\"\n\"      - Space after all lines
+:g/alf/norm gUU      - Uppercase lines where "alf" is present
+:g/console/g/two/d   - Find "console", then "two" inside it, then delete
+:.,$g/Lesson/exe "norm! A;" (add ; to end of line containing "Lesson" from line to eof)
+
+Register ("e replace, "E append in e)
+:g/^#/y A      - Append comment in "a" register
+:g/^#/norm 0x - Decrease the depth of markdown title
+
+Change delimiters
+:g@console@d
+:g@one@s+const+let+g (use global and sub)    
+
+Do NOT match grep
+:g!/pattern/d  – Remove lines that do NOT match the pattern
+:v/^.*DWN.*/d  – Remove lines that do NOT match ^..DWN..$
+:g!/;$/norm A; - Add ; only if not find
+
+(effect of these two command ?)
+qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
+:5,18g/^foo/s/^.\{-}=/
 ```
 
 * History
@@ -247,38 +254,37 @@ history -> :his /
 * Registers
 
 ```
-:reg  all registers   
+:reg - all registers   
 :reg <register>
-(4 readonly: .%:#)
+
+"" default unnamed register (with commands d,c,s,x)  
+
+"0 to "9
+"0      - the latest yank 
+"0..."9 - last 9 deleted text, with "1 the latest
+
+4 registers are readonly
+". last inserted text   
+"% current file path  
+": most recent command (@: to run this command again.)
+"# alternate file      (:h alternate-file, last edited file)  
+:e "#  -> Edit last opened file
 
 :[range]action [register]
--> 1,4d a (del 1 to 4 in register a)
+:1,4d a (del 1 to 4 in register a)
 :.,+2y (yank from current to +2 line)
 
-"" default unnamed register (d,c,s,x)  
-". last inserted text
-"0 last yank  
-"5 5th delete text    
-"% current file path    
-": most recent command  (@: to run this command again.)    
-"# alternate file  (:h alternate-file, last edited file)  
-  ":e #"
-
-"= expression one  (in INSERTMODE use <Ctrl-r>=) 
-  <Ctrl-r>=system('ls') -> import "!ls" under cursor
+"= expression one (in InsertMode use <Ctrl-r>=) 
+<Ctrl-r>=system('ls') -> import "!ls" under cursor
 
 "/ search register
-  use <Ctrl-r> / to import last search into command line
-  :%s/<Ctrl-r />/TERM/g (=> will display ":%s/search/TERM/g" in command line)
-  (replace last "/search" terme by TERM)
+use <Ctrl-r> / to import last search into command line
+:%s/<Ctrl-r />/TERM/g (=> will display ":%s/search/TERM/g" in command line)
+(replace last "/search" terme by TERM)
 
 :let @5='' clear register '5'   
 let @+=@% ("let" write to a register, copy the current file to the clipboard)
 :let @a=@_ (clearing register "a)
-
-"0 to "9.
-"0 will always have the content of the latest yank, 
-and the others will have last 9 deleted text, being "1 the newest, and "9 the oldes
 ```
 
 * Save
