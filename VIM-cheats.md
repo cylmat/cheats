@@ -103,8 +103,7 @@ y`a    : yank mark "a"
 ```
 gg       : go to line 0
 G        : go to eof
-48G      : go to line 48
-48G <=>  : 48 - go to line 48
+48G      : go to line 48 <=> :48
 ^, g_    : first/last non-blank char
 0, g0    : start of line
 gi       : go last Insert place
@@ -202,13 +201,9 @@ get option
 
 :[range]s[ubstitute]/{pattern}/{string}/[c][e][g][p][r][i][I] [count]  
 :[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
-```
 
-```
-:27,75 s/this/that - change first occurence of "this" to "that" between line 27 and 75  
-:.,$v/text/d       - from here to end delete what doesn't contain "text"  
-:.,+21g/alpha/d    - delete every line containing "alpha" from here and next 21 lines  
-:%s/\(.*text.*\)/\1new/g  replace all line with "text" occurence with "textnew"  
+:27,75s/this/that        - change first occurence of "this" to "that" between line 27 and 75  
+:%s/\(.*text.*\)/\1new/g - replace all line with "text" occurence with "textnew"  
 ```
 
 * Global
@@ -219,29 +214,30 @@ Pattern
 :g <=> :1,$g or :%g  - 1,$ or % is ALL by default
 :g/pattern/<cmd>     - Execute command on all lines
 :g/NOTE/m$           - Mmove all line containing NOTE to eof
+:.,+21g/alpha/d      - from here and next 21 lines, delete every line containing "alpha"  
 :g/^\s*$/d           - Delete all blank lines
 :g/\d/echo line('.') - Echo all lines that contain a digit
 :g/^/pu =\"\n\"      - Space after all lines
-:g/alf/norm gUU      - Uppercase lines where "alf" is present
 :g/console/g/two/d   - Find "console", then "two" inside it, then delete
-:.,$g/Lesson/exe "norm! A;" (add ; to end of line containing "Lesson" from line to eof)
+:5,18g/^foo/s/^.\{-}=/
+
+Normal mode
+:g/alf/norm gUU             - Uppercase lines where "alf" is present
+:g/^#/norm 0x               - Decrease the depth of markdown title
+:.,$g/Lesson/exe "norm! A;" - add ; to end of line containing "Lesson" from line to eof
 
 Register ("e replace, "E append in e)
 :g/^#/y A      - Append comment in "a" register
-:g/^#/norm 0x - Decrease the depth of markdown title
 
 Change delimiters
 :g@console@d
 :g@one@s+const+let+g (use global and sub)    
 
 Do NOT match grep
-:g!/pattern/d  – Remove lines that do NOT match the pattern
-:v/^.*DWN.*/d  – Remove lines that do NOT match ^..DWN..$
-:g!/;$/norm A; - Add ; only if not find
-
-(effect of these two command ?)
-qaq:g/pattern/y A (Copy all lines matching a pattern to register 'a'.)
-:5,18g/^foo/s/^.\{-}=/
+:g!/pattern/d   – Remove lines that do NOT match the pattern
+:g!/;$/norm A;  - Add ; only if not find 
+:v/^.*DWN.*/d   – Remove lines that do NOT match ^..DWN..$
+:.,$v/text/d    - from current line to end, delete what doesn't contain "text" 
 ```
 
 * History
@@ -257,44 +253,46 @@ history -> :his /
 :reg - all registers   
 :reg <register>
 
-"" default unnamed register (with commands d,c,s,x)  
-
-"0 to "9
-"0      - the latest yank 
-"0..."9 - last 9 deleted text, with "1 the latest
-
-4 registers are readonly
-". last inserted text   
-"% current file path  
-": most recent command (@: to run this command again.)
-"# alternate file      (:h alternate-file, last edited file)  
-:e "#  -> Edit last opened file
-
 :[range]action [register]
 :1,4d a (del 1 to 4 in register a)
 :.,+2y (yank from current to +2 line)
 
-"= expression one (in InsertMode use <Ctrl-r>=) 
-<Ctrl-r>=system('ls') -> import "!ls" under cursor
+Types
+"" default unnamed register (with commands d,c,s,x)  
+"0 to "9
+"0      - the latest yank 
+"0..."9 - last 9 deleted text, with "1 the latest
 
+Readonly : 4 registers are readonly
+". last inserted text   
+"% current file path  
+": most recent command (@: to run this command again.)
+"# alternate file      (last edited file)  
+:e "#  -> Edit last opened file
+
+Expression
+"= expression one   - in InsertMode use <Ctrl-r>= 
+<C-r =>system('ls') - import "!ls" under cursor
+
+Search
 "/ search register
-use <Ctrl-r> / to import last search into command line
+:C-r>/ (import last search term into command line)
 :%s/<Ctrl-r />/TERM/g (=> will display ":%s/search/TERM/g" in command line)
-(replace last "/search" terme by TERM)
 
-:let @5='' clear register '5'   
-let @+=@% ("let" write to a register, copy the current file to the clipboard)
-:let @a=@_ (clearing register "a)
+Clear
+:let @5='' - clear register '5'   
+:let @+=@% - "let" write to a register, copy the current file to the clipboard
+:let @a=@_ - clearing register "a
 ```
 
 * Save
 
 ```
-:e - reload file
+:e         - reload file
 :wq <file>
-:wqall - Write all changed buffers and exit
-:x => :wq
-ZZ => :x - Write current file (if modified) and close
+:wqall     - Write all changed buffers and exit
+:x <=> :wq
+ZZ <=> :x  - Write current file (if modified) and close
 ZQ <=> :q! - Quit without checking change
 ```
 
@@ -322,7 +320,7 @@ q: open history
 ```
 :open <file>  
 :e  
-Ctrl-^, (edit alternate/previous file, like ":e #").
+Ctrl-^, (edit alternate/previous file, like :e #).
 ```
 
 * Tabs
@@ -355,7 +353,7 @@ C-w>s or C-w>v => :sp or :vsp
 ```
 :ter (open a terminal inside)  
 :shell (back to the shell)
-:compiler, :make, :version
+:call, :compiler, :make, :version
 ```
 
 --------------------------------------------------------------------------------------
