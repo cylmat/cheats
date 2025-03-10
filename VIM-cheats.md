@@ -350,11 +350,13 @@ q/ cmdline search
 :buffers or :ls
 :bp, :bn, :bprev, :bnext
 
-:read <cmd>  - :r, place cmd in buffer (ex :read !ls)
-:read <file> - place content in current file
-:write <cmd> - :w, put in buffer
-:write !sh   - send buffer to shell
-:write! sh   - careful: override "sh" file
+:read <cmd>   - :r, place cmd in buffer (ex :read !ls)
+:read <file>  - place content in current file
+:write <cmd>  - :w, put in buffer
+:write !sh    - send buffer to shell
+:write! sh    - careful: override "sh" file
+:write | !ruby %
+:1,4write !sh - send lines 1 to 4 to shell
 ```
 
 * File
@@ -378,8 +380,10 @@ Ctrl-^, (edit alternate/previous file, like :e #).
 ```
 :!<cmd> - Run shell cmd
 :!ls    - (not :ls)
-:shell 
+:shell
 :write | !ruby %
+:1,4write !sh - send lines 1 to 4 to shell
+:5,16!sort -t',' -k2 (filter range on key2)
 ```
 
 * Windows Screen
