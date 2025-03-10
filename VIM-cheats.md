@@ -15,6 +15,7 @@ VIM Samples
 2. Insert Mode
 3. Command Mode int
     - Settings
+    - Prompt
     - Range
     - Substitutes
     - Global
@@ -26,6 +27,7 @@ VIM Samples
     - Buffer
     - File
     - Tabs
+    - Shell
     - Windows Screen
     - Other
 5. Common
@@ -184,6 +186,7 @@ C-v><unicode> - insert unicode (C-v>u00bf write '¿')
 
 ```
 :set wildmenu, :hlsearch, :nu  (number), :rnu (relative number)
+Navigate menu with Tab, C-n, C-p
 
 unset options
 :set rnu!, :set nornu
@@ -191,6 +194,17 @@ unset options
 get option
 :set expandtab? (get current "option"), :echo &expandtab (get current "variable")
 :set! all (display one per line)
+
+---
+.vimrc
+Set history=200
+```
+
+* Prompt
+```
+:C-r>/    - import last search term into command line
+:C-r>C-w> - Copy current word to prompt
+:s/text/<C-r><C-w>/g
 ```
 
 * Range
@@ -200,9 +214,11 @@ get option
 :1,20y(ank) x
 :20put x           - line from reg x
 :.-2,.2y i         - copy cursor-2,cursor+2 to reg i
+:.,.+3y            - yank from current to +3
 :1,20co(py) <addr> - <=> :1,20t<addr> (:1,20t4)
 :t. <=> yyp
 :6t.               - :6Gyy, then back current line, then C-o>p (is shorter)
+:3d <=> 3Gdd
 :1,20mo(ve) <addr> or :9m4
 :m$                - <=> dGp (move current line to end of file)
 :1,20join
@@ -316,8 +332,10 @@ ZQ <=> :q! - Quit without checking change
 * Specific
 
 ```
+%  is current filename
 @: repeat last command
 q: open history
+q/ cmdline search
 ```
 
 
@@ -329,8 +347,14 @@ q: open history
 
 @ref: https://vim.fandom.com/wiki/Buffers
 ```
-:buffers
+:buffers or :ls
 :bp, :bn, :bprev, :bnext
+
+:read <cmd>  - :r, place cmd in buffer (ex :read !ls)
+:read <file> - place content in current file
+:write <cmd> - :w, put in buffer
+:write !sh   - send buffer to shell
+:write! sh   - careful: override "sh" file
 ```
 
 * File
@@ -347,6 +371,15 @@ Ctrl-^, (edit alternate/previous file, like :e #).
 :tabs, :tp, :tn  
 :tab(new,n,p)
 :tabo(nly)
+```
+
+* Shell
+
+```
+:!<cmd> - Run shell cmd
+:!ls    - (not :ls)
+:shell 
+:write | !ruby %
 ```
 
 * Windows Screen
