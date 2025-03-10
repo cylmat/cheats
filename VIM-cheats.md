@@ -254,6 +254,9 @@ Pattern
 :g/console/g/two/d   - Find "console", then "two" inside it, then delete
 :5,18g/^foo/s/^.\{-}=/
 
+Macro
+:g/^fu.*().{$/normal! @e (exec macro "e" on each "function(){..." )
+
 Normal mode
 :g/alf/norm gUU             - Uppercase lines where "alf" is present
 :g/^#/norm 0x               - Decrease the depth of markdown title
@@ -405,8 +408,10 @@ C-w>s or C-w>v => :sp or :vsp
 * Other
 
 ```
-:ter   (open a terminal inside)  
-:shell (back to the shell)
+:ter   - open a terminal inside  
+:shell - back to the shell
+:source batch.vim (run all cmds)
+
 :call, :compiler, :make, :version
 ```
 
