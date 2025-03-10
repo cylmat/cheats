@@ -413,6 +413,9 @@ C-w>s or C-w>v => :sp or :vsp
 :source batch.vim (run all cmds)
 
 :call, :compiler, :make, :version
+
+vim *.html - open every files in args
+:args      - show "vim" command arguments
 ```
 
 --------------------------------------------------------------------------------------
