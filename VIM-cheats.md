@@ -15,6 +15,7 @@ VIM Samples
 2. Insert Mode
 3. Command Mode int
     - Settings
+    - Range
     - Substitutes
     - Global
     - History
@@ -192,6 +193,22 @@ get option
 :set! all (display one per line)
 ```
 
+* Range
+
+```
+:1,20d(elete) x    - del range into register x
+:1,20y(ank) x
+:20put x           - line from reg x
+:.-2,.2y i         - copy cursor-2,cursor+2 to reg i
+:1,20co(py) <addr> - <=> :1,20t<addr> (:1,20t4)
+:t. <=> yyp
+:6t.               - :6Gyy, then back current line, then C-o>p (is shorter)
+:1,20mo(ve) <addr> or :9m4
+:m$                - <=> dGp (move current line to end of file)
+:1,20join
+:'<,'>t0           - copy last visual to start of file
+```
+
 * Substitutes
 
 ```
@@ -351,7 +368,7 @@ C-w>s or C-w>v => :sp or :vsp
 * Other
 
 ```
-:ter (open a terminal inside)  
+:ter   (open a terminal inside)  
 :shell (back to the shell)
 :call, :compiler, :make, :version
 ```
