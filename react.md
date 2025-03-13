@@ -39,10 +39,81 @@ https://docs.npmjs.com/cli/v6/configuring-npm/package-json#local-paths
     "my_dependendy": "file:../../my_dir",
 ```
 
-## Full page sample with Fragment
+### CSS
 
 ```
+<img  style={{width:"100px"} as CSSProperties} alt="fs" src="png-image_4013555.jpg" />
+```
 
+### COMPONENT
+
+```
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render()
+const videoNames = response.data.map((video) => video.filename);
+```
+
+### Declare React
+
+```
+- composant fonctionnel:  
+  const App = ({ message }: AppProps) => <div>{message}</div>  
+  
+- composant fonctionnel par React ( vérification du type et l'autocomplétion ):  
+  const App: React.FC<{ message: string }> = ({ message }): JSX.Element => (  
+    <div>{message}</div>  
+  )
+```
+
+### Display
+
+```
+Variable:
+<div className={`signalement-filter-form ${showForm ? "opened" : "closed"}`}>
+
+Style:
+<div {...ModulesStyle} style={{ backgroundColor: theme.darkTheme ? "#342525" : "#ffffff" }}>  
+  {isLoading && <div className='p-4 text-center'>  
+    <Component/>  
+    </div>  
+  }
+
+Svg:
+  import { ReactComponent as MySvgFile } from './file.svg'
+  <MySvgFile />
+```
+
+### Effects
+
+@https://react.dev/reference/react/useDebugValue
+```
+ useEffect(() => {
+    // ..
+  }, [serverUrl, roomId]);
+  // -> will run after each change of serverUrl and roomId value
+ 
+# effect clean
+
+useEffect(() => {
+  // Avoid: Cleanup logic without corresponding setup logic
+  return () => {
+    doSomethingCleaning();
+  };
+}, []);
+
+useEffect(() => {
+    const connection = createConnection(serverUrl, roomId);
+    connection.connect();
+    return () => {
+      connection.disconnect();
+    };
+  }, [serverUrl, roomId]);
+ 
+  @https://gist.github.com/markselby9/59640ec27eba6c7a585c6aa71c6522ce
+```
+
+### Full page sample with Fragment
+
+```
 export const BlockRelatedElements: React.FC = ({}) => {
     return (<React.Fragment>aez</React.Fragment>);
 }
@@ -74,49 +145,6 @@ return (
 }
 ```
 
-### CSS
-
-```
-<img  style={{width:"100px"} as CSSProperties} alt="fs" src="png-image_4013555.jpg" />
-```
-
-### COMPONENT
-
-```
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render()
-const videoNames = response.data.map((video) => video.filename);
-```
-
-### Declare React
-
-```
-- composant fonctionnel:  
-  const App = ({ message }: AppProps) => <div>{message}</div>  
-  
-- composant fonctionnel par React ( vérification du type et l'autocomplétion ):  
-  const App: React.FC<{ message: string }> = ({ message }): JSX.Element => (  
-    <div>{message}</div>  
-  )
-```
-
-#### Display
-
-```
-Variable:
-<div className={`signalement-filter-form ${showForm ? "opened" : "closed"}`}>
-
-Style:
-<div {...ModulesStyle} style={{ backgroundColor: theme.darkTheme ? "#342525" : "#ffffff" }}>  
-  {isLoading && <div className='p-4 text-center'>  
-    <Component/>  
-    </div>  
-  }
-
-Svg:
-  import { ReactComponent as MySvgFile } from './file.svg'
-  <MySvgFile />
-```
-
 ### interface
 
 ```
@@ -132,35 +160,6 @@ const SignalFilterForm: React.FC<Props> = (props) => { ... }
 
 const [searchAutoComplete, setSearchAutoComplete] = useState<IAddress[]>([]);
 const [searchTerm, setSearchTerm] = useState<string>("");
-```
-
-### Effects
-
-@https://react.dev/reference/react/useDebugValue
-```
- useEffect(() => {
-    // ..
-  }, [serverUrl, roomId]);
-  // -> will run after each change of serverUrl and roomId value
- 
-# effect clean
-
-useEffect(() => {
-  // Avoid: Cleanup logic without corresponding setup logic
-  return () => {
-    doSomethingCleaning();
-  };
-}, []);
-
-useEffect(() => {
-    const connection = createConnection(serverUrl, roomId);
-    connection.connect();
-    return () => {
-      connection.disconnect();
-    };
-  }, [serverUrl, roomId]);
- 
-  @https://gist.github.com/markselby9/59640ec27eba6c7a585c6aa71c6522ce
 ```
 
 ### Loading comp
