@@ -65,6 +65,16 @@ export interface IUpdatableStatuses {
 }
 ```
 
+keyof
+```
+// key inside predefined set:
+let serviceFormComponents = {
+   key1: string
+   key2: string
+}
+myconfig={contractConfigurations[serviceName as keyof typeof serviceFormComponents]}
+```
+
 ### enum
 
 ```
