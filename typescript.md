@@ -32,6 +32,14 @@ console.log(myVal(5))
 type StringMap = { [key: string]: unknown };
 ```
 
+### callable
+
+```
+export interface InputProps {
+    onFocus?(e: React.FocusEvent<HTMLInputElement>): any;
+}
+```
+
 ### casting
 
 const test: unknown = 7  
