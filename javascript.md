@@ -114,6 +114,16 @@ let cloneUser = Object.assign({}, userDetails);
 let cloneUser = JSON.parse(JSON.stringify(userDetails));
 ```
 
+### destructuring
+
+```
+    let dynamicFormId = getFormId(newFormIndex)
+    let tmpFormData = {
+        ..._.cloneDeep(expertToolsFormData),
+        [dynamicFormId]: emptyExpertToolsFormData
+    }
+```
+
 ### Date
 
 ```
