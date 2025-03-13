@@ -240,6 +240,21 @@ interface ISignalDataPicture { picture: ISignalPicture; }
 const FileImage: React.FC<ISignalDataPicture> = ({picture}) => {}
 ```
 
+### re-render object
+
+useState to re-render with same objects : stringify or spread it
+```
+    const [externalsServices, setExternalsServices] = useState({})
+    let formData: any = externalsServices
+       
+    setExternalsServices([...formData])
+    setExternalsServices([...Object.values(filters)])
+
+    const json = JSON.stringify(filters);
+    const filters = JSON.parse(json);
+    setExternalsServices(filters  )
+```
+
 ### Reducer
 @ref: https://react-redux.js.org/api/hooks
 
