@@ -153,20 +153,13 @@ const point: Point = {x: 9, y: 5}
 logPoint(point)
 ```
 
-### object
-
-return errors.map((error: {name: string, message: string}) => {
-    if (error.name === "pattern") {
-    error.message = "Only digits are allowed"
-}
-    return error;
-});
-
 ### keyof
 
+```
 interface Person {name: string, age: number}  
 function printPerso(person: Person, property: keyof Person) {}  
-printPerso({name: "alpha", age: 9}, "not-name") // error: must be "name" or "age"  
+printPerso({name: "alpha", age: 9}, "not-name") // error: must be "name" or "age"
+```
 
 ### GENERIC
 
@@ -210,6 +203,24 @@ function createLoggedPair<S extends string | number, T extends string | number>(
 }
 ```
 
+### object
+
+```
+return errors.map((error: {name: string, message: string}) => {
+    if (error.name === "pattern") {
+    error.message = "Only digits are allowed"
+}
+    return error;
+});
+```
+
+objects with key:
+```
+type ExpertToolsParameters = {
+    expertToolsFormData: {[key: string]: string}
+};
+```
+
 ### return type
 
 @https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype
@@ -250,7 +261,7 @@ for fct: ReturnType, Parameters
 // is like array  
 declare function swap(x: [number, string]): [string, number];  
 
-###sample
+### sample
 
 type StringArray = Array<string>;    
 type NumberArray = Array<number>;    
