@@ -192,7 +192,10 @@ unset options
 :set rnu!, :set nornu
 
 get option
-:set expandtab? (get current "option"), :echo &expandtab (get current "variable")
+:set expandtab? (get current "option")
+:echo &expandtab (get current "variable")
+:verbose set expandtab?
+:echo &l:expandtab
 :set! all (display one per line)
 
 ---
