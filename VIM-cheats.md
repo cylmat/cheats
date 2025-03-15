@@ -508,6 +508,11 @@ https://vimregex.com
 - p/#/l (print line substitued, number, text)
 ```
 
+* Vim
+
+```
+vim +line_number <file> (Open file at a specified line)
+```
 
 ---------------
 --- PLUGINS ---
