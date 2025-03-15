@@ -225,7 +225,10 @@ Set history=200
 :1,20mo(ve) <addr> or :9m4
 :m$                - <=> dGp (move current line to end of file)
 :1,20join
-:'<,'>t0           - copy last visual to start of file
+:'<,'>t0           - ('< and '>) copy last Visual to start of file
+
+With shell
+:'<,'>!sort -gk 1 (sort visual range on column 1 as a number)
 ```
 
 * Substitutes
