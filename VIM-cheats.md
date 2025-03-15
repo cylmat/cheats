@@ -203,6 +203,14 @@ get option
 Set history=200
 ```
 
+* Map
+
+```
+sample:
+# Map-normal F2 key to `uuidgen`, trim `\n` and put in register `"=`
+nmap <F2> "= system("uuidgen")[:-2]<C-M>P
+```
+
 * Prompt
 ```
 :C-r>/    - import last search term into command line
@@ -261,6 +269,9 @@ Pattern
 :g/console/g/two/d   - Find "console", then "two" inside it, then delete
 :5,18g/^foo/s/^.\{-}=/
 
+Caution
+:g/FOO/d _   ("_" in the "d _" command ensures registers and clipboards are not changed)
+
 Macro
 :g/^fu.*().{$/normal! @e (exec macro "e" on each "function(){..." )
 
@@ -288,9 +299,25 @@ Do NOT match grep
 ```
 :history (or :Ctrl-f)
 history -> :his /
+
+(use clipboard to copy/paste)
 ```
 
 * Registers
+
+https://vimhelp.org/change.txt.html#registers
+```
+1. The unnamed register ""
+2. 10 numbered registers "0 to "9
+3. The small delete register "-
+4. 26 named registers "a to "z or "A to "Z
+5. Three read-only registers ":, "., "%
+6. Alternate buffer register "#
+7. The expression register "=
+8. The selection and drop registers "*, "+ and "~ 
+9. The black hole register "_
+10. Last search pattern register "/
+```
 
 ```
 :reg - all registers   
@@ -299,6 +326,9 @@ history -> :his /
 :[range]action [register]
 :1,4d a (del 1 to 4 in register a)
 :.,+2y (yank from current to +2 line)
+
+Blockhole
+"_     (ex: "_2yy) 
 
 Types
 "" default unnamed register (with commands d,c,s,x)  
