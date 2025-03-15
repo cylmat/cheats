@@ -239,7 +239,8 @@ Set history=200
 :[range]s[ubstitute] [c][e][g][r][i][I] [count] :[range]&[c][e][g][r][i][I] [count]  
 
 :27,75s/this/that        - change first occurence of "this" to "that" between line 27 and 75  
-:%s/\(.*text.*\)/\1new/g - replace all line with "text" occurence with "textnew"  
+:%s/\(.*text.*\)/\1new/g - replace all line with "text" occurence with "textnew"
+:%s/foo/bar/gc           - ask to manually confirm (`c` flag) each replacement
 ```
 
 * Global
@@ -327,12 +328,14 @@ Clear
 * Save
 
 ```
-:e         - reload file
+:e            - reload file
+:e <file>     - open <file>
+:split <file>
 :wq <file>
-:wqall     - Write all changed buffers and exit
+:wqall        - Write all changed buffers and exit
 :x <=> :wq
-ZZ <=> :x  - Write current file (if modified) and close
-ZQ <=> :q! - Quit without checking change
+ZZ <=> :x     - Write current file (if modified) and close
+ZQ <=> :q!    - Quit without checking change
 ```
 
 * Specific
@@ -399,11 +402,12 @@ Ctrl-^, (edit alternate/previous file, like :e #).
 :help split  
 :vsplit, :vsp [file], :sp [file]  
 C-w <v^> or C-w hjkl  
-C-w C-r (swap two windows)  
-C-w n (swap with window n)  
-C-w |_ (expand h)  
-C-w = (reset windows sizes)  
-C-w q (close split)  
+C-w C-r   - swap two windows
+C-w n     - swap with window n  
+C-w |_    - expand h  
+C-w =     - reset windows sizes  
+C-w q     - close split
+C-w C-w   - move cursor to another window (cycle)
 
 C-w>s or C-w>v => :sp or :vsp
 ```
