@@ -357,7 +357,10 @@ q/ cmdline search
 @ref: https://vim.fandom.com/wiki/Buffers
 ```
 :buffers or :ls
-:bp, :bn, :bprev, :bnext
+:bf(irst), :bp(rev), :bn(ext), :bl(ast)
+:b 2          - open buffer #2
+: bd 2        - delete buffer #2
+:n(ew), :vnew - open new buffer (or split)
 
 :read <cmd>   - :r, place cmd in buffer (ex :read !ls)
 :read <file>  - place content in current file
@@ -366,6 +369,11 @@ q/ cmdline search
 :write! sh    - careful: override "sh" file
 :write | !ruby %
 :1,4write !sh - send lines 1 to 4 to shell
+
+:wall (write all)
+:ball (open a window for all buffers)
+:bunload (removes buffer from window)
+:taball (open a tab for all buffers)
 ```
 
 * File
