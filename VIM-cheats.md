@@ -401,15 +401,20 @@ Ctrl-^, (edit alternate/previous file, like :e #).
 ```
 :help split  
 :vsplit, :vsp [file], :sp [file]  
+C-w>s or C-w>v <=> :sp or :vsp
 C-w <v^> or C-w hjkl  
-C-w C-r   - swap two windows
-C-w n     - swap with window n  
-C-w |_    - expand h  
-C-w =     - reset windows sizes  
-C-w q     - close split
-C-w C-w   - move cursor to another window (cycle)
-
-C-w>s or C-w>v => :sp or :vsp
+C-w> C-r>     - swap two windows
+C-w> n        - swap with window n  
+C-w> C-w>     - move cursor to another window (cycle)
+20<C-w>-/+    - expand/decrease 20size height (- or +)
+30<C-w></>    - decrease/expand 30size width (< or >)
+50<C-w>_      - Set height as 50% (C-w>_ <=> max height)
+70<C-w>|      - Set width as 70% (C-w>| <=> max widh)
+C-w>=         - reset windows sizes
+C-w>q         - close split 
+:hide (hide current)
+:sview <readonlyfile>
+:only (keep only current)
 ```
 
 * Other
