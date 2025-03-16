@@ -196,6 +196,7 @@ get option
 :echo &expandtab (get current "variable")
 :verbose set expandtab?
 :echo &l:expandtab
+:echo g:colors_name
 :set! all (display one per line)
 
 ---
