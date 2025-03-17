@@ -255,7 +255,18 @@ With shell
 :%s/foo/bar/gc           - ask to manually confirm (`c` flag) each replacement
 
 Magic (smagic and snomagic)
-%sno/regex/new_text/g
+:%sno/regex/new_text/g
+
+Flags (:h s_flags)
+:s/pattern/replace/FLAG
+c - ask for confirmation before each replacement
+g - replace all occurrences within a matching line
+i - ignore case for searchpattern (disable ignorecase' and 'smartcase')
+I - don't ignore case for searchpattern
+n - report the number of matches
+p - print the substitutes lines
+# - (p) and prepend line number
+l - (p) print text like list
 ```
 
 * Global
@@ -574,7 +585,8 @@ help
 * https://vim.fandom.com/wiki/Vim_Tips_Wiki
 * http://www.viemu.com/vi-vim-cheat-sheet.gif
 * http://www.fprintf.net/vimCheatSheet.html
-Tutos:  
+Tutos:
+- https://learnbyexample.github.io
 - https://learnvim.irian.to
 - https://vimtricks.com
 see also: 
