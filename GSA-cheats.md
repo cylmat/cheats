@@ -1,25 +1,25 @@
 # Grep-Sed-Awk text processing
 
-GSA
-- Grep
-- Sed
-- Awk
-Text
-- Cut
-- Diff
-- Sort
-- Tr(im)
-- Uniq
-- Wc
-Files
-- Find
-- Head
-- Tail
-- Xargs
-Misc
-- Join
-- Jq  
-- Paste
+1. GSA
+    - Grep
+    - Sed
+    - Awk
+2. Text
+    - Cut
+    - Diff
+    - Sort
+    - Tr
+    - Uniq
+    - Wc
+3. Files
+    - Find
+    - Head
+    - Tail
+    - Xargs
+4. Misc
+    - Join
+    - Jq  
+    - Paste
 
 
 
@@ -94,7 +94,7 @@ echo 'This' | cut -c -2
 
 ```
 
-### Tr
+### Tr (trim)
 
 ```
 cat file.txt | tr [:lower:] [:upper:]  
@@ -107,7 +107,7 @@ cat file.txt|tr –d ’ ’
 
 ```
 
-### Wc
+### Wc (word counts)
 
 ```
 
