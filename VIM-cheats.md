@@ -574,10 +574,6 @@ VsCodeVim Module:
  
 ---
 **@ref**  
-Motion & braquets:  
-- https://vimhelp.org/index.txt.html#%5B  
-- https://vimhelp.org/motion.txt.html  
-- https://vimhelp.org/map.txt.html#map-modes
 help
 * https://vimhelp.org/quickref.txt.html
 * https://vim.rtorr.com
@@ -589,6 +585,10 @@ Tutos:
 - https://learnbyexample.github.io
 - https://learnvim.irian.to
 - https://vimtricks.com
+Motion & braquets:  
+- https://vimhelp.org/index.txt.html#%5B  
+- https://vimhelp.org/motion.txt.html  
+- https://vimhelp.org/map.txt.html#map-modes
 see also: 
 - https://vimhelp.org/vi_diff.txt.html#vi-differences
 - https://www.shell-tips.com/linux/vi-vs-vim/#gsc.tab=0 
