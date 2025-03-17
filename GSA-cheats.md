@@ -17,17 +17,20 @@
     - Tail
     - Xargs
 4. Misc
+    - Fmt
     - Join
     - Jq  
     - Paste
-
-
-
-### Data
+    - Shuf
 
 ```
-
+### Fake data
+pip install Faker && echo "from faker import Faker \nfake=Faker()\nprint(fake.text(2500))" | python3 > ~/fake
+apt install -y wamerican && cat /usr/share/dict/words
+tr -dc '[:graph:]' < /dev/urandom | head -c 200
 ```
+
+
 
 --------------------------------------------------------------------------------------
 ## 1. GSA
@@ -146,6 +149,17 @@ cat file.txt|tr –d ’ ’
 --------------------------------------------------------------------------------------
 ## 4. Misc
 
+### Fmt
+
+```
+fmt = format -t (indentation) -s (divise longues lignes) -u (uniforme espaces) -w (line width)
+
+shuf -n 100 /usr/share/dict/words | fmt -w 72
+
+# with remove of proper nouns and possessives
+(sed -e "/^[A-Z]/d" -e "/'s\$/d" | shuf -n 100 | fmt -w 72) </usr/share/dict/words
+```
+
 ### Join
 
 ```
@@ -159,6 +173,12 @@ cat file.txt|tr –d ’ ’
 ```
 
 ### Paste
+
+```
+
+```
+
+### Shuf
 
 ```
 
