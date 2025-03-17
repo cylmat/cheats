@@ -253,6 +253,9 @@ With shell
 :27,75s/this/that        - change first occurence of "this" to "that" between line 27 and 75  
 :%s/\(.*text.*\)/\1new/g - replace all line with "text" occurence with "textnew"
 :%s/foo/bar/gc           - ask to manually confirm (`c` flag) each replacement
+
+Magic (smagic and snomagic)
+%sno/regex/new_text/g
 ```
 
 * Global
