@@ -133,3 +133,8 @@ nc -l localhost 80
 # socket statistics
 sudo ss -plunt | grep LISTEN
 ```
+
+Watch
+```
+watch ls mon_dossier_resultat
+```
