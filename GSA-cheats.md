@@ -8,14 +8,14 @@
     - Cat
     - Cut
     - Diff
+    - Head
+    - Tail
     - Sort
     - Tr
     - Uniq
     - Wc
 4. Files
     - Find
-    - Head
-    - Tail
     - Xargs
 5. Misc
     - Fmt
@@ -109,6 +109,18 @@ echo 'This' | cut -c -2
 
 ```
 
+### Head-Tail
+
+```
+head -n 5 <file>     (show first 5 lines)
+head -c 5 <file>     (show first 5 chars)
+
+# -li(n)es -f(ollow) -s(leep)
+tail -n 5 <file> -v  (show last 5 lines)
+tail -n +25 <file>   (show from line 25 to eof)
+tail -f <file> -s 3  (watch file every 3sec)
+```
+
 ### Sort
 
 ```
@@ -145,23 +157,12 @@ cat file.txt|tr –d ’ ’
 
 ```
 
-### Head
-
-```
-
-```
-
-### Tail
-
-```
-
-```
-
 ### Xargs
 
 ```
 
 ```
+
 
 
 --------------------------------------------------------------------------------------
