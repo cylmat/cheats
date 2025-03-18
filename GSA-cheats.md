@@ -5,18 +5,19 @@
     - Sed
     - Awk
 2. Text
+    - Cat
     - Cut
     - Diff
     - Sort
     - Tr
     - Uniq
     - Wc
-3. Files
+4. Files
     - Find
     - Head
     - Tail
     - Xargs
-4. Misc
+5. Misc
     - Fmt
     - Join
     - Jq  
@@ -25,7 +26,7 @@
 
 ```
 ### Fake data
-pip install Faker && echo "from faker import Faker \nfake=Faker()\nprint(fake.text(2500))" | python3 > ~/fake
+pip install Faker && echo "from faker import Faker \nfake=Faker()\nprint(fake.text(2500))" | python3 > /tmp/fake
 apt install -y wamerican && cat /usr/share/dict/words
 tr -dc '[:graph:]' < /dev/urandom | head -c 200
 ```
@@ -38,6 +39,8 @@ tr -dc '[:graph:]' < /dev/urandom | head -c 200
 ### Grep
 
 ```
+grep '^root' /etc/passwd   (<=> cat /etc/passwd | grep '^root')
+
 # -li(n)e -(w)ord -(r)ecursive -r(e)gexp
 * grep -nwr 'dossier' -e 'expression'  
 
@@ -71,6 +74,21 @@ xargs -n 1 -I{} echo Blah {} blabla {}.. < <(seq 1 5)
 
 --------------------------------------------------------------------------------------
 ## 2. Text
+
+### Cat
+
+```
+# -n(umber lines) -b(number without blank)
+# -v(noprinting) -E(eol$) -T(^I Tabs)
+# -e(=vE) -t(=vT) -A(ll=vET) 
+cat -A fichier1.txt     (display "^Iwith tabs$")
+
+# sample
+cat fichier1.txt fichier2.txt fichier3.txt > concatenation.txt
+cat f - g               (Output f's contents, then input, then g's contents)
+cat - > path/to/file    (Write `stdin` to a file:)
+Buffer=`< /etc/passwd`  (<=> Buffer=`cat /etc/passwd`)
+```
 
 ### Cut
 
