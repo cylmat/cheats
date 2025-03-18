@@ -8,7 +8,7 @@
     - Cat
     - Cut
     - Diff
-    - Head
+    - Head-Tail
     - Tail
     - Sort
     - Tr
@@ -19,9 +19,8 @@
     - Xargs
 5. Misc
     - Fmt
-    - Join
+    - Join-Paste
     - Jq  
-    - Paste
     - Shuf
 
 ```
@@ -179,19 +178,20 @@ shuf -n 100 /usr/share/dict/words | fmt -w 72
 (sed -e "/^[A-Z]/d" -e "/'s\$/d" | shuf -n 100 | fmt -w 72) </usr/share/dict/words
 ```
 
-### Join
+### Join-Paste
 
+use "sort -k 1b,1 file1" before
 ```
-
+# merge 2 files with common column with ',' as sep (t)
+# on field3 of file(1) with field5 of file(2)
+# with (a) line for each unpairable line for file1
+# (o)n format "1.1,2.2,1.2" 
+join -t ',' -1 3 -2 5 -a 1 -o 1.1,2.2,1.2 file1 file2
+   
+cat file1 | join - file2
 ```
 
 ### Jq
-
-```
-
-```
-
-### Paste
 
 ```
 
