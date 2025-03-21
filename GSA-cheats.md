@@ -78,6 +78,11 @@ https://www.gnu.org/software/sed/manual/sed.html
 sed -i 's/text/sub\/stit/flag' FILE
 sed -i 's|text|sub/stit|flag' FILE
 
+# Add and delete (with /x\)
+sed '/^$/d' <file>        (remove empty lines)
+sed '/Once/i\Chapter 1'   (insert line before patterns)
+sed '/happily/a\The end'  (add line after patterns)
+
 # Filters
 #  -n (quiet, no print pattern)
 sed "2p" -n FILE          (print 2nd "paragraph")
@@ -86,11 +91,18 @@ sed '/pattern/,7p' -n     (from all patterns to +7 lines)
 sed '/sstart/,/send/p' -n (from start pattern to end pattern)
 sed '$p' FILE -n          (print last line)
 
-# Flag
-(i)nsensitive, (g)lobal, (P)rint, (w)rite
+# Flag and regexp
+(d)elete, (i)nsensitive/(i)nsert, (g)lobal, (P)rint, (w)rite
+sed -E "s/([0-9])-([0-9])/\2-\1/" ("\num" rearrange order)
+
+# Multi
+# (N)ext line, (P)rint, (D)elete next line
+sed 'N;s/\n / /g;P;D;' <file>      (replace newlines with spaces)
+sed ':a;N;$!ba;s/\n/\na/g' <file>  (replace newlines)
 
 # Misc
 sed -E 's/pattern/new/' <<< "input string"
+sed -i -E "/^\s*$/d" FILE   (remove empty lines)
 ```
 
 ### Awk
