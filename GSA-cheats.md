@@ -97,8 +97,8 @@ sed -E "s/([0-9])-([0-9])/\2-\1/" ("\num" rearrange order)
 
 # Multi
 # (N)ext line, (P)rint, (D)elete next line
-sed 'N;s/\n / /g;P;D;' <file>      (replace newlines with spaces)
-sed ':a;N;$!ba;s/\n/\na/g' <file>  (replace newlines)
+sed 'N;s/\n/OK\n/g;P;D;' <file>  (add OK at eoline)
+sed ':a;N;$!ba;s/\n/./g' <file>  (replace newlines with dot)
 
 # Misc
 sed -E 's/pattern/new/' <<< "input string"
