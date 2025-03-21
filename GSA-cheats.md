@@ -75,8 +75,9 @@ https://www.gnu.org/software/sed/manual/sed.html
 # Usage
 # -i(nplace, edit file) -E(xtended) -n (quiet, no print pattern)
 # -z(eoline with NULL) -e(xpression, same without)
+# -f(ilescript.sed)
 sed -i 's/text/sub\/stit/flag' FILE
-sed -i 's|text|sub/stit|flag' FILE
+sed -i 's|text|sub/stit|flag' -f script.sed FILE
 
 # Add and delete (with /x\)
 sed '/^$/d' <file>        (remove empty lines)
