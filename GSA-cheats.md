@@ -4,8 +4,9 @@
     - Grep
     - Sed
     - Awk
+    - Perl
 2. Text
-    - Cat
+    - Cat / Tac
     - Cut
     - Diff
     - Head-Tail
@@ -69,12 +70,18 @@ xargs echo "\n" - <file.txt
 xargs -n 1 -I{} echo Blah {} blabla {}.. < <(seq 1 5)
 ```
 
+### Perl
+
+```
+
+```
+
 
 
 --------------------------------------------------------------------------------------
 ## 2. Text
 
-### Cat
+### Cat / Tac
 
 ```
 # -n(umber lines) -b(number without blank)
