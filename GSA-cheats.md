@@ -39,13 +39,32 @@ tr -dc '[:graph:]' < /dev/urandom | head -c 200
 ### Grep
 
 ```
+# usage
+# -f <fromfile> -B(efore) -A(fter) 
+# -E(xtended) -w(ords only) -x(lines only) -o(nly matching)
+# -R(ecursive) -n(umber) -H (with filename)
+grep -B 5 -A 10 -o REGEXP <file>
+grep -F "[my\!string)" match exact "[my\!string)"
+grep REG - (wait for INPUT) or cat "text" | grep REG
+
+# exclude
+# -F(ixed string, no regexp) -m(ax results)
+# -in(v)ert (NOT match) -h (without filename)
+# -z (end data with NULL)
+grep --include="*.js" --exclude-dir={.bzr,.git} -r <div> <regexp>
+
+# match whole word and display numbers
+grep -nr <dir> -we <wordregexp>
+
+# grep BRE (Basic RE) vs grep -E(xtended)
+# ?, +, {, |, (, and ) as literals
+grep '(p'    -> "(p"
+grep '\(p'   -> unmatched ")"
+grep -E '\(p'   -> "(p"
+grep -E '(p'    -> unmatched ")"
+
+# misc
 grep '^root' /etc/passwd   (<=> cat /etc/passwd | grep '^root')
-
-# -li(n)e -(w)ord -(r)ecursive -r(e)gexp
-* grep -nwr 'dossier' -e 'expression'  
-
-# Recherche uniquement dans les fichiers .php
-grep --include=*.php -rnw 'dossier de recherche' -e 'expression à rechercher' --exclude-dir=/etc
 ```
 
 ### Sed
@@ -112,7 +131,14 @@ echo 'This' | cut -c -2
 ### Diff
 
 ```
+# -u(nified, readable git-like patch file) -y (site by site)
+# -w (ignore all spaces) -b (ignore space change) -B (ignore empty line) -Z(eol space)
+# -r(ecursive directories)  -N (absent file as empty)
+# (in script: -q are differ ? -s are same ?)
+diff <file1> <file2>
 
+diff - <file2>   (diff with INPUT and file2)
+diff -qr <dir1> <dir2>   (directory diff git-style)
 ```
 
 ### Head-Tail
