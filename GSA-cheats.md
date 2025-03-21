@@ -39,7 +39,7 @@ tr -dc '[:graph:]' < /dev/urandom | head -c 200
 ### Grep
 
 ```
-# usage
+# Usage
 # -f <fromfile> -B(efore) -A(fter) 
 # -E(xtended) -w(ords only) -x(lines only) -o(nly matching)
 # -R(ecursive) -n(umber) -H (with filename)
@@ -47,29 +47,49 @@ grep -B 5 -A 10 -o REGEXP <file>
 grep -F "[my\!string)" match exact "[my\!string)"
 grep REG - (wait for INPUT) or cat "text" | grep REG
 
-# exclude
+# Exclude
 # -F(ixed string, no regexp) -m(ax results)
 # -in(v)ert (NOT match) -h (without filename)
 # -z (end data with NULL)
 grep --include="*.js" --exclude-dir={.bzr,.git} -r <div> <regexp>
 
-# match whole word and display numbers
+# Match whole word and display numbers
 grep -nr <dir> -we <wordregexp>
 
-# grep BRE (Basic RE) vs grep -E(xtended)
+# Grep BRE (Basic RE) vs grep -E(xtended)
 # ?, +, {, |, (, and ) as literals
 grep '(p'    -> "(p"
 grep '\(p'   -> unmatched ")"
 grep -E '\(p'   -> "(p"
 grep -E '(p'    -> unmatched ")"
 
-# misc
+# Misc
 grep '^root' /etc/passwd   (<=> cat /etc/passwd | grep '^root')
 ```
 
-### Sed
+### Sed (Stream EDitor)
+https://www.gnu.org/software/sed/manual/sed.html
+- Replace, insert and filters
 
 ```
+# Usage
+# -i(nplace, edit file) -E(xtended) -n (quiet, no print pattern)
+# -z(eoline with NULL) -e(xpression, same without)
+sed -i 's/text/sub\/stit/flag' FILE
+sed -i 's|text|sub/stit|flag' FILE
+
+# Filters
+#  -n (quiet, no print pattern)
+sed "2p" -n FILE          (print 2nd "paragraph")
+sed "2,9p" -n FILE        (print 2nd to 9th line)
+sed '/pattern/,7p' -n     (from all patterns to +7 lines)
+sed '/sstart/,/send/p' -n (from start pattern to end pattern)
+sed '$p' FILE -n          (print last line)
+
+# Flag
+(i)nsensitive, (g)lobal, (P)rint, (w)rite
+
+# Misc
 sed -E 's/pattern/new/' <<< "input string"
 ```
 
