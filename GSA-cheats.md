@@ -76,7 +76,7 @@ https://www.gnu.org/software/sed/manual/sed.html#sed-commands-summary
 # Usage
 # -i(nplace, edit file) -E(xtended) -n (quiet, no print pattern)
 # -z(eoline with NULL) -e(xpression, same without)
-# -f(ilescript.sed)
+# -f(ilescript.sed) -l(ine display with "\t"pattern"$")
 sed -i.bak 's/text/sub\/stit/flag' FILE (save <file>.bak)
 sed -i 's|text|sub/stit|flag' -f script.sed FILE
 
@@ -88,8 +88,11 @@ sed -n '4,17!s/hello/world/'    (replace from 1 to 3, and 18 to eof)
 sed -n '4,/(mylastmatch)/p'     (print from 4 to match)
 sed -n '4,+3p'                  (from 4 to 7)
 sed -n '0~4p'                   (print from 0, every 4 lines)
+# Remove last 10 lines
+sed -e :a -e '$d;N;2,10ba' -e 'P;D'
+sed -n -e :a -e '1,10!{P;N;D;};N;ba' 
 
-# Add and delete (with /x\)
+# Add and delete (with /i\ /a\)
 sed '/^$/d' <file>        (remove empty lines)
 sed '3,25d' file          (remove from 3 to 25)
 sed '/Once/i\Chapter 1'   (insert line before patterns)
@@ -104,13 +107,18 @@ sed '/sstart/,/send/p' -n (from start pattern to end pattern)
 sed '$p' FILE -n          (print last line)
 
 # Flag modifyers and regexp
-(d)elete, (i)nsensitive/(i)nsert, (g)lobal, (P)rint, (w)rite
+# (d)elete, (i)nsensitive/(i)nsert, (g)lobal, (P)rint, (w)rite
+# "\1" (group), s/pat/rep/"1" (replace 1st occurence)
 sed "s/\([\0-9\]\)-\([\0-9\]\)/\2-\1/" (not using -E)
-sed -E "s/([0-9])-([0-9])/\2-\1/" ("\num" rearrange order)
+sed -E "s/([0-9])-([0-9])/\2-\1/"      ("\num" rearrange order)
+sed "s/pattern/replace/3"              (replace only 3rd occurence)
 
 # Multi
+# https://www.gnu.org/software/sed/manual/sed.html#Multiline-techniques
 # (N)ext line, (P)rint, (D)elete next line
-sed 'N;s/\n/OK\n/g;P;D;' <file>  (add OK at eoline)
+sed 'N;s/\n/OK\n/g;P;D;' <file> (add OK at eoline)
+sed -e '1,$ s/t/b/2' <file>     (from 0 to la$t, replace for 2nd occurence)
+sed '0~3d' in.txt               (delete a line every 3)
 
 # Loop throught all lines
 (:a label, append "N"ext line, if not"!" la"$"t line "b"ranch to ":a")
