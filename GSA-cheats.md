@@ -21,7 +21,8 @@
 5. Misc
     - Fmt
     - Join-Paste
-    - Jq  
+    - Jq
+    - Nl
     - Shuf
 
 ```
@@ -272,6 +273,12 @@ cat file1 | join - file2
 ```
 
 ### Jq
+
+```
+
+```
+
+### Nl (num lines)
 
 ```
 
