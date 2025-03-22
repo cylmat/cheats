@@ -81,13 +81,12 @@ sed -i 's|text|sub/stit|flag' -f script.sed FILE
 
 # Commands
 # sed '<addr>{cmd;cmd2;cmd3}/flag
-# (!exclude) (:label) ($last line) (first~step) (=num line)
+# (!exclude) (:label for "b"ranch) ($last line) (first~step) (=num line)
 sed -n '/apple/!s/hello/world/' (replace if NOT match "apple")
 sed -n '4,17!s/hello/world/'    (replace from 1 to 3, and 18 to eof)
 sed -n '4,/(mylastmatch)/p'     (print from 4 to match)
 sed -n '4,+3p'                  (from 4 to 7)
 sed -n '0~4p'                   (print from 0, every 4 lines)
-sed ':a;N;$!ba;s/\n/./g'        (replace newlines with dot)
 
 # Add and delete (with /x\)
 sed '/^$/d' <file>        (remove empty lines)
@@ -111,6 +110,10 @@ sed -E "s/([0-9])-([0-9])/\2-\1/" ("\num" rearrange order)
 # Multi
 # (N)ext line, (P)rint, (D)elete next line
 sed 'N;s/\n/OK\n/g;P;D;' <file>  (add OK at eoline)
+
+# Loop throught all lines
+(:a label, append "N"ext line, if not"!" la"$"t line "b"ranch to ":a")
+sed ':a;N;$!ba;s/\n/./g'
 
 # Misc
 sed -E 's/pattern/new/' <<< "input string"
