@@ -242,7 +242,23 @@ cat file.txt|tr –d ’ ’
 ### Find
 
 ```
+# Usage
+# -type f -type d -print0 (remove \n)
+# -delete -perm 777 -size
+find . -type f -name '*.txt' -perm 777 (only files with perm 777)
+find . -name '*.txt' -size +5M -delete
 
+# Exec
+find . -name '*.txt' -exec rm '{}' \;
+
+# Xargs
+find -perm -4000 -type f -print0 | xargs -I '{}' -0 \ls -l '{}'
+
+# Samples
+# Find files with size bigger than 5 Mb and sort them by size:
+find . -size +5M -type f -print0 | xargs -0 ls -Ssh | sort -z
+# Find files bigger thank 2 MB and list them:
+find . -type f -size +2M -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
 ```
 
 ### Xargs
