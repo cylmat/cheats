@@ -40,9 +40,9 @@ tr -dc '[:graph:]' < /dev/urandom | head -c 200
 
 ```
 # Usage
-# -f <fromfile> -B(efore) -A(fter) 
+# -f <fromfile> -B(efore) -A(fter) -c(ount)
 # -E(xtended) -w(ords only) -x(lines only) -o(nly matching)
-# -R(ecursive) -n(umber) -H (with filename)
+# -R(ecursive) -n(umber) -H (with filename) -l(ines matches)
 grep -B 5 -A 10 -o REGEXP <file>
 grep -F "[my\!string)" match exact "[my\!string)"
 grep REG - (wait for INPUT) or cat "text" | grep REG
@@ -50,7 +50,7 @@ grep REG - (wait for INPUT) or cat "text" | grep REG
 # Exclude
 # -F(ixed string, no regexp) -m(ax results)
 # -in(v)ert (NOT match) -h (without filename)
-# -z (end data with NULL)
+# -z (end data with NULL) -L(ines NO-matches)
 grep --include="*.js" --exclude-dir={.bzr,.git} -r <div> <regexp>
 
 # Match whole word and display numbers
