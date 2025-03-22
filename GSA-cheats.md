@@ -246,7 +246,7 @@ cat file.txt|tr –d ’ ’
 # -type f(ile) d(ir) l(ink) -print0 (remove \n)
 # -maxdepth 2 -mtime +7d -perm 777 -size 2k -user root 
 # ACTION: -delete -ls(list)
-find . -type f -name '*.txt' -perm 777 (only files with perm 777)
+find . -type f -iname '*.txt' -perm 777 (only files with perm 777)
 find . -name '*.txt' -size +5M -user root -delete
 
 # Pattern (-(i)path, -(i)wholename) -> no "/" or "."
