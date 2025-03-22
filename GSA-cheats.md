@@ -252,8 +252,9 @@ find . -name '*.txt' -size +5M -user root -delete
 # Pattern (-(i)path, -(i)wholename) -> no "/" or "."
 find . -path "./sr*sc"  (affichera ./src/misc)
 
-# Are NOT .txt files types
-find . \! -name '*.txt' -ls
+# Are NOT
+find . \! -name '*.txt' -ls            (are not .txt files types)
+find . \! -iwholename '*.git*' -type f (everything not in .git dir)
 
 # Exec
 find . -name '*.txt' -exec rm '{}' \;     (remove txt files)
