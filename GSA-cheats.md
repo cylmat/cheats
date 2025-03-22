@@ -243,13 +243,21 @@ cat file.txt|tr –d ’ ’
 
 ```
 # Usage
-# -type f -type d -print0 (remove \n)
-# -delete -perm 777 -size
+# -type f(ile) d(ir) l(ink) -print0 (remove \n)
+# -maxdepth 2 -mtime +7d -perm 777 -size 2k -user root 
+# ACTION: -delete -ls(list)
 find . -type f -name '*.txt' -perm 777 (only files with perm 777)
-find . -name '*.txt' -size +5M -delete
+find . -name '*.txt' -size +5M -user root -delete
+
+# Pattern (-(i)path, -(i)wholename) -> no "/" or "."
+find . -path "./sr*sc"  (affichera ./src/misc)
+
+# Are NOT .txt files types
+find . \! -name '*.txt' -ls
 
 # Exec
-find . -name '*.txt' -exec rm '{}' \;
+find . -name '*.txt' -exec rm '{}' \;     (remove txt files)
+find . -type d -empty -exec rmdir {} \;   (delete empty directories)
 
 # Xargs
 find -perm -4000 -type f -print0 | xargs -I '{}' -0 \ls -l '{}'
