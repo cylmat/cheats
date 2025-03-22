@@ -240,6 +240,7 @@ cat file.txt|tr –d ’ ’
 ## 3. Files
 
 ### Find
+https://man7.org/linux/man-pages/man1/find.1.html
 
 ```
 # Usage
@@ -263,11 +264,17 @@ find . -type d -empty -exec rmdir {} \;   (delete empty directories)
 # Xargs
 find -perm -4000 -type f -print0 | xargs -I '{}' -0 \ls -l '{}'
 
-# Samples
+### Samples
+
 # Find files with size bigger than 5 Mb and sort them by size:
 find . -size +5M -type f -print0 | xargs -0 ls -Ssh | sort -z
 # Find files bigger thank 2 MB and list them:
 find . -type f -size +2M -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
+
+# Rename .png to .jpg, use `\;` instead of `\+`, with "mv".
+find . -type f -iname '*.png' -exec bash -c 'mv "$0" "${0%.*}.jpg"' {} \;
+# Grouping to delete extension-specific files.
+find \( -iname "*.jpg" -or -iname "*.sfv" -or -iname "*.xspf" \) -type f -delete
 ```
 
 ### Xargs
