@@ -68,7 +68,7 @@ grep '^root' /etc/passwd   (<=> cat /etc/passwd | grep '^root')
 ```
 
 ### Sed (Stream EDitor)
-https://www.gnu.org/software/sed/manual/sed.html
+https://www.gnu.org/software/sed/manual/sed.html#sed-commands-summary
 - Replace, insert and filters
 
 ```
@@ -76,30 +76,41 @@ https://www.gnu.org/software/sed/manual/sed.html
 # -i(nplace, edit file) -E(xtended) -n (quiet, no print pattern)
 # -z(eoline with NULL) -e(xpression, same without)
 # -f(ilescript.sed)
-sed -i 's/text/sub\/stit/flag' FILE
+sed -i.bak 's/text/sub\/stit/flag' FILE (save <file>.bak)
 sed -i 's|text|sub/stit|flag' -f script.sed FILE
+
+# Commands
+# sed '<addr>{cmd;cmd2;cmd3}/flag
+# (!exclude) (:label) ($last line) (first~step) (=num line)
+sed -n '/apple/!s/hello/world/' (replace if NOT match "apple")
+sed -n '4,17!s/hello/world/'    (replace from 1 to 3, and 18 to eof)
+sed -n '4,/(mylastmatch)/p'     (print from 4 to match)
+sed -n '4,+3p'                  (from 4 to 7)
+sed -n '0~4p'                   (print from 0, every 4 lines)
+sed ':a;N;$!ba;s/\n/./g'        (replace newlines with dot)
 
 # Add and delete (with /x\)
 sed '/^$/d' <file>        (remove empty lines)
+sed '3,25d' file          (remove from 3 to 25)
 sed '/Once/i\Chapter 1'   (insert line before patterns)
 sed '/happily/a\The end'  (add line after patterns)
 
 # Filters
-#  -n (quiet, no print pattern)
+# -n (quiet, no print pattern) -p(rint, like grep)
 sed "2p" -n FILE          (print 2nd "paragraph")
 sed "2,9p" -n FILE        (print 2nd to 9th line)
 sed '/pattern/,7p' -n     (from all patterns to +7 lines)
 sed '/sstart/,/send/p' -n (from start pattern to end pattern)
 sed '$p' FILE -n          (print last line)
 
-# Flag and regexp
+# Flag modifyers and regexp
 (d)elete, (i)nsensitive/(i)nsert, (g)lobal, (P)rint, (w)rite
+sed "s/\([\0-9\]\)-\([\0-9\]\)/\2-\1/" (not using -E)
 sed -E "s/([0-9])-([0-9])/\2-\1/" ("\num" rearrange order)
 
 # Multi
 # (N)ext line, (P)rint, (D)elete next line
 sed 'N;s/\n/OK\n/g;P;D;' <file>  (add OK at eoline)
-sed ':a;N;$!ba;s/\n/./g' <file>  (replace newlines with dot)
 
 # Misc
 sed -E 's/pattern/new/' <<< "input string"
