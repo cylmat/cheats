@@ -281,14 +281,21 @@ find \( -iname "*.jpg" -or -iname "*.sfv" -or -iname "*.xspf" \) -type f -delete
 
 ```
 # Usage
-# -n (max args by line) -0 (separate with null)
+# -a <fromfile> -n (max args by line)
 # --verbose (print each command)
 echo "." | xargs ls  <=> ls .
 
+# Zero -0 / --null (get input from null instead of space)
+find . -name "*txt" -type f -print0 | xargs -0 rm -f
+
+# Multi
+echo "arguments" | xargs --verbose sh -c "cmd1 && cmd2 | cmd3"
+# Replace each instance of "%" by input "args"
+echo 'args' | xargs -I % sh -c 'cmd1 %; cmd2 %'
+
 # Sample
-echo "cmd1 \cmd2 \n gdsfgdsdg" | xargs => "cmd1 cmd2"
-printf '%d ' {1..9} | xargs -n 3       => 1 2 3\n4 5 6\n7 8 9
-\ls -l | xargs -0                      => ls -l 
+echo "arg1\n arg2\n" | xargs      => "arg1 arg2"
+printf '%d ' {1..9}  | xargs -n 3 => "1 2 3\n4 5 6\n7 8 9"
 ```
 
 
