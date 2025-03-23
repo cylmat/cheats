@@ -281,12 +281,16 @@ find \( -iname "*.jpg" -or -iname "*.sfv" -or -iname "*.xspf" \) -type f -delete
 
 ```
 # Usage
-# -a <fromfile> -n (max args by line)
-# --verbose (print each command)
+# -a <fromfile> -n (max args by line) -p(rompt, ask each command)
+# -t / --verbose (print each command) -P 2 (max processes)
 echo "." | xargs ls  <=> ls .
+echo 'dir1 dir2 dir3' | xargs -t -P max-procs mkdir   (create each directory)
 
-# Zero -0 / --null (get input from null instead of space)
-find . -name "*txt" -type f -print0 | xargs -0 rm -f
+# Zero
+# -0 / --null (get input from null instead of space)
+# -d(elimiter)
+find . -name "*txt" -type f -print0 | xargs -0 -p rm -f  (ask if rm each file)
+echo "dir1*dir2*dir3" | xargs -d '*' | xargs mkdir
 
 # Multi
 echo "arguments" | xargs --verbose sh -c "cmd1 && cmd2 | cmd3"
@@ -294,8 +298,9 @@ echo "arguments" | xargs --verbose sh -c "cmd1 && cmd2 | cmd3"
 echo 'args' | xargs -I % sh -c 'cmd1 %; cmd2 %'
 
 # Sample
-echo "arg1\n arg2\n" | xargs      => "arg1 arg2"
-printf '%d ' {1..9}  | xargs -n 3 => "1 2 3\n4 5 6\n7 8 9"
+echo "arg1\narg2\n" | xargs         => "arg1 arg2"
+printf '%d' {1..9}  | xargs -n 3    => "123\n456\n789"
+cut -d ':' -f1 < /etc/passwd | sort | xargs (sort list)
 ```
 
 
