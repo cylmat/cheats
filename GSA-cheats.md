@@ -301,6 +301,9 @@ echo 'args' | xargs -I % sh -c 'cmd1 %; cmd2 %'
 echo "arg1\narg2\n" | xargs         => "arg1 arg2"
 printf '%d' {1..9}  | xargs -n 3    => "123\n456\n789"
 cut -d ':' -f1 < /etc/passwd | sort | xargs (sort list)
+
+# other
+find . -name "*.1" -maxdepth 1 | xargs -I{} -n1 echo '&blob{}='
 ```
 
 
