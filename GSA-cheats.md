@@ -280,7 +280,15 @@ find \( -iname "*.jpg" -or -iname "*.sfv" -or -iname "*.xspf" \) -type f -delete
 ### Xargs
 
 ```
+# Usage
+# -n (max args by line) -0 (separate with null)
+# --verbose (print each command)
+echo "." | xargs ls  <=> ls .
 
+# Sample
+echo "cmd1 \cmd2 \n gdsfgdsdg" | xargs => "cmd1 cmd2"
+printf '%d ' {1..9} | xargs -n 3       => 1 2 3\n4 5 6\n7 8 9
+\ls -l | xargs -0                      => ls -l 
 ```
 
 
