@@ -294,16 +294,18 @@ echo "dir1*dir2*dir3" | xargs -d '*' | xargs mkdir
 
 # Multi
 echo "arguments" | xargs --verbose sh -c "cmd1 && cmd2 | cmd3"
+
+# Format -I
 # Replace each instance of "%" by input "args"
 echo 'args' | xargs -I % sh -c 'cmd1 %; cmd2 %'
+xargs -I "{fff}" -n 1 echo '&{fff}='          (echo "&input=" format)
+echo "/mydir" | xargs -I _ ls _ _             (ls "/mydir" "/mydir")
+find -name *.pdf | xargs -I{} -n1 echo '&{}=' ("&filename.pdf=")
 
 # Sample
-echo "arg1\narg2\n" | xargs         => "arg1 arg2"
+echo "arg1\narg2\n" | xargs ls      => "ls arg1 arg2"
 printf '%d' {1..9}  | xargs -n 3    => "123\n456\n789"
 cut -d ':' -f1 < /etc/passwd | sort | xargs (sort list)
-
-# other
-find . -name "*.1" -maxdepth 1 | xargs -I{} -n1 echo '&blob{}='
 ```
 
 
