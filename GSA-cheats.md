@@ -4,7 +4,6 @@
     - Grep
     - Sed
     - Awk
-    - Perl
 2. Text
     - Cat / Tac
     - Cut
@@ -31,7 +30,6 @@ pip install Faker && echo "from faker import Faker \nfake=Faker()\nprint(fake.te
 cpan install Data::Faker && perl -e 'use Data::Faker;$faker=Data::Faker->new();for($i=0;$i<50;$i++){print $faker->street_address."\n"};' > /tmp/fake2
 apt install -y wamerican && cat /usr/share/dict/words
 tr -dc '[:graph:]' < /dev/urandom | head -c 200
-
 ---
 curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes
 ```
@@ -147,12 +145,6 @@ cat file.txt | while read in; do echo "$in"; done
 while IFS='$\n' read line; do echo "$line"; done < file.txt
 xargs echo "\n" - <file.txt
 xargs -n 1 -I{} echo Blah {} blabla {}.. < <(seq 1 5)
-```
-
-### Perl
-
-```
-
 ```
 
 
@@ -342,9 +334,15 @@ cat file1 | join - file2
 ```
 
 ### Jq
+curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes
 
 ```
-
+# Usage:
+# -c(ompact) -n(ull value)
+# -arg a v (arg $a to value v)
+echo '{"foo":0}' | jq .                          - {"foo":0}
+echo '{"foo":"res"}' | jq .foo                   - "res"
+echo '[{"foo":"res"},{"two":"net"}]' | jq '.[1]' - {"two":"net"}
 ```
 
 ### Nl (num lines)
