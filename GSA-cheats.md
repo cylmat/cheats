@@ -31,6 +31,9 @@ pip install Faker && echo "from faker import Faker \nfake=Faker()\nprint(fake.te
 cpan install Data::Faker && perl -e 'use Data::Faker;$faker=Data::Faker->new();for($i=0;$i<50;$i++){print $faker->street_address."\n"};' > /tmp/fake2
 apt install -y wamerican && cat /usr/share/dict/words
 tr -dc '[:graph:]' < /dev/urandom | head -c 200
+
+---
+curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes
 ```
 
 
