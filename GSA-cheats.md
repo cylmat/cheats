@@ -334,7 +334,8 @@ cat file1 | join - file2
 ```
 
 ### Jq
-curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes
+curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes  
+curl 'https://api.github.com/repos/jqlang/jq/commits?per_page=5' | jq '.[0]'  
 
 ```
 # Usage:
@@ -343,6 +344,58 @@ curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes
 echo '{"foo":0}' | jq .                          - {"foo":0}
 echo '{"foo":"res"}' | jq .foo                   - "res"
 echo '[{"foo":"res"},{"two":"net"}]' | jq '.[1]' - {"two":"net"}
+```
+
+```
+JSON = {
+  "recipes": [
+    {"id": 33, "name": "Margherita", "ingredients": ["salt", "pepper"]},
+    {"id": 55, "name": "Stir", "ingredients": ["tomato", "mozza", "fresh basil", "ananas"]}
+  ]}
+
+
+# DISPLAY
+jq '.recipes[] .id'                     => 33 55
+jq '.recipes[] | .id'                   => 33 55
+jq '.recipes[1].ingredients'            => ["tomato", "mozza", "fresh basil", "ananas"]
+jq  '.recipes[1].ingredients | .[1:4]'  => ["tomato, mozza, fresh basil"]
+
+jq '. | length'  => 2
+
+# entries (k => v) / map (val)
+jq '.recipes | to_entries'                         =>  [{"key": 0, "value": {"id": 33 ...}}, {"key": "1", "value": {"id": 55 ... }}]
+jq '.recipes[0] | to_entries | .[] | "\(.key)" '   => "id" "name" "ingredients"
+
+jq  '.recipes |  map(.name)'       => ["Margherita", "Stir"]
+jq  '.recipes | map({name, id})'   => [{"name":"Margherita","id":33},{"name":"Stir-Fry","id":55}]
+echo "[33,55]" | jq  'map(.) '     =>  [33,55]
+echo "[33,55]" | jq  'map([.]) '   =>  [[33],[55]]
+echo '[{"id": 5},{"id": 18}]' | jq 'map(.id+1)'
+
+jq --(s)lurp '.' file1 file2       =>   [{"recipes": {...}, {"recipes": {...}]
+
+# SPECIFIC
+# select (null/regexp) / group / sort
+jq '.recipes[] | select(.id == 33)'                 => {"id": 33,"name": "Margherita"}
+jq  '.recipes[] | select(.name? | match("Mar.+"))'  => {"id": 33,"name": "Margherita"}
+
+jq '.recipes | group_by(.rating > 30)'              => [{"id": 33,"name": "Margherita"}, {"id": 55,"name": "Stir"}]
+jq '.recipes | sort_by(.rating) | reverse'          =>    [{"id": 55, "rating":4}, {"id": 33, "rating":"3}]
+jq '.recipes[0].ingredients | unique | sort'
+
+# CHANGE
+# to object
+jq '.recipes[] | {n: .id, o: .name}'   => {"n": 33,"o": "Margherita"}, {"n": 55,"o": "Stir"}
+jq '.recipes[0] | {n: .id, o: .name}'  => {"n": 33,"o": "Margherita"}
+
+# = / + / add / del
+jq '.recipes[1] | .name="newone"'                        =>  {"id": 55,"name": "newone"}
+jq '.recipes | map(.name) | add'                         =>   "MargheritaStir"
+jq '.recipes[0].ingredients[0] +"#"+ .recipes[0].ingredients[1]'    => "salt#pepper"
+jq  '.recipes[0].ingredients + .recipes[1].ingredients'  =>  ["salt", "pepper", "tomato"]
+jq '.recipes[1] | del(.id)'                              =>  {"name": "Margherita"}
+
+jq  '(.recipes | map(.name) | unique | sort) as $cols | (.recipes | map(.id)) as $row |  $cols | map($row[.]) | @csv' json
 ```
 
 ### Nl (num lines)
