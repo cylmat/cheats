@@ -24,3 +24,8 @@ shuf -n 100 /usr/share/dict/words | fmt -w 72
 # with remove of proper nouns and possessives
 (sed -e "/^[A-Z]/d" -e "/'s\$/d" | shuf -n 100 | fmt -w 72) </usr/share/dict/words
 ```
+
+**@ref**  
+- https://www.api-ninjas.com/api/loremipsum
+- https://randommer.io/
+- https://www.mockaroo.com/
