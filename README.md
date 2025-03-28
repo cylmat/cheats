@@ -46,6 +46,11 @@ cat /etc/passwd | sort | uniq | tr ':' '-' | tr '[:lower:]' '[:upper:]' | tr –
 join <(sort fichier1.txt) <(sort fichier2.txt)
 ```
 
+Date
+```
+date '+%Y-%m-%d'
+```
+
 FAKER
 ```
 pip install Faker
@@ -101,6 +106,12 @@ diff <(date -d 'yesterday') <(date -d 'tomorrow')
 sed 's/We/They/; s/Linux/Windows/' <<< "We love Linux."
 # var
 var=`cat /etc/passwd` ; echo ${#var}
+```
+
+Printf
+```
+printf '%s\n' this is a list of of random words with duplicate words | sort -u
+printf '%d\n' {1..9} 10 11 | sort -n
 ```
 
 Networks & Ports
