@@ -119,6 +119,12 @@ printf '%s\n' this is a list of of random words with duplicate words | sort -u
 printf '%d\n' {1..9} 10 11 | sort -n
 ```
 
+Process
+```
+- detail of process: extra(F)ull, BSD(l)ong, ww(ide unlimited)
+ps -Flww -p <PID>
+```
+
 Networks & Ports
 - ipconfig.me
 
