@@ -121,6 +121,7 @@ printf '%d\n' {1..9} 10 11 | sort -n
 
 Process
 ```
+ps aux (all user withtty)
 - detail of process: extra(F)ull, BSD(l)ong, ww(ide unlimited)
 ps -Flww -p <PID>
 ```
