@@ -93,9 +93,14 @@ PASS=date +%s | sha256sum | base64 | head -c 16 ; echo
 echo -n $PASS | base64 -w 0
 ```
 
+Hexa
+```
+vim -b(inary) then :%!xxd
+```
+
 Rsync files
 ```
-rsync -av . dest
+rsync -av src dest
 ```
 
 Pipe and process
