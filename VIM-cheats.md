@@ -235,9 +235,20 @@ nmap <F2> "= system("uuidgen")[:-2]<C-M>P
 :m$                - <=> dGp (move current line to end of file)
 :1,20join
 :'<,'>t0           - ('< and '>) copy last Visual to start of file
+```
 
-With shell
+* Shell
+
+```
 :'<,'>!sort -gk 1 (sort visual range on column 1 as a number)
+
+exemple command:
+{
+   "_id": "67e6c8",
+   "age": 40,
+   "balance": "$3.58"
+}
+:1,5!jq '{ref: ._id, account: "\(.balance) \(.age)"}'
 ```
 
 * Substitutes
@@ -342,7 +353,7 @@ https://vimhelp.org/change.txt.html#registers
 :1,4d a (del 1 to 4 in register a)
 :.,+2y (yank from current to +2 line)
 
-Blockhole
+Blackhole
 "_     (ex: "_2yy) 
 
 Types
