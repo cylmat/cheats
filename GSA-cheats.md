@@ -395,6 +395,9 @@ jq '.recipes[0].ingredients[0] +"#"+ .recipes[0].ingredients[1]'    => "salt#pep
 jq  '.recipes[0].ingredients + .recipes[1].ingredients'  =>  ["salt", "pepper", "tomato"]
 jq '.recipes[1] | del(.id)'                              =>  {"name": "Margherita"}
 
+# string interpolation with "\(.field) \(.field2)"
+jq '.recipes[0] | {ref: 9, account: "\(.id) \(.name)"}' => { "ref": "9", "account": "33 Margherita" }
+
 jq  '(.recipes | map(.name) | unique | sort) as $cols | (.recipes | map(.id)) as $row |  $cols | map($row[.]) | @csv' json
 ```
 
