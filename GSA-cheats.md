@@ -335,8 +335,9 @@ cat file1 | join - file2
 
 ### Jq
 curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes  
-curl 'https://api.github.com/repos/jqlang/jq/commits?per_page=5' | jq '.[0]'  
+curl 'https://api.github.com/repos/jqlang/jq/commits?per_page=5' | jq '.[0]'    
 
+cat file.json | jq '.'  <=>   jq "." < file.json  <=>  jq "." file.json  
 ```
 # Usage:
 # -c(ompact) -n(ull value)
