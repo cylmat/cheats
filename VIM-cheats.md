@@ -31,6 +31,7 @@ VIM Samples
     - Windows Screen
     - Other
 5. Common
+    - Vim command
     - Objects to "speak" vim  
     - Regexp
 
@@ -499,6 +500,22 @@ vim *.html - open every files in args
 
 --------------------------------------------------------------------------------------
 ## 5. Common
+
+* Vim command
+
+```
+$ vim -b(inary mode) -l(isp mode) -e(x mode) -v(i mode)
+$ vim -D(ebug mode) -R(eadonly view) -m(odif not allowed)
+$ vim -L : list temporary ".swap" files
+
+$ vim -c <cmd>    (run command)
+$ vim -n(o swap file, memory only)
+$ vim --clean     (nocompatible, no plugins)
+$ vim --cmd <cmd> (loaded before vimrc)
+$ view            (vim in ReadOnly mode)
+$ vimdiff         <=> vim -d
+
+```
 
 * Objects to "speak" vim
 
