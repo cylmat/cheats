@@ -193,22 +193,26 @@ C-v><unicode> - insert unicode (C-v>u00bf write '¿')
 :set rnu!, :set nornu
 
 # get option
-:set expandtab?          (get current "option")
-:echo &expandtab         (get current "variable")
+:set expandtab?    (get current "option")
+:echo &expandtab   (get current "variable")
 :verbose set expandtab?
 :echo &l:expandtab
 :echo g:colors_name
-:set! all                (display one per line)
+:set! all          (display one per line)
 
 # useful
-:set spell               (syntax check)
+:set spell      (syntax check)
 :setlocal spell spelllang=fr
 :vert diffsplit fichier2 (open diff vertical)
+:set ignorecase
+:set showmode   (affiche mode edition)
+:set ruler
+:set showcmd    (affiche les commandes incomplètes)
 
 ---
 .vimrc
 set history=200
-set diffopt=vertical     (open "diff" vetical by default)
+set diffopt=vertical   (open "diff" vetical by default)
 ```
 
 * Map
@@ -500,8 +504,9 @@ set diffopt=vertical
 * Other
 
 ```
-:ter   - open a terminal inside  
-:shell - back to the shell
+:term      - open a terminal inside
+:vert term - vertical term
+:shell     - back to the shell
 :source batch.vim (run all cmds)
 
 :call, :compiler, :make, :version
@@ -520,13 +525,13 @@ $ vim -b(inary mode) -l(isp mode) -e(x mode) -v(i mode)
 $ vim -D(ebug mode) -R(eadonly view) -m(odif not allowed)
 $ vim -L : list temporary ".swap" files
 
-$ vim -c <cmd>    (run command)
+$ vim -c <cmd>     (run command)
 $ vim -n(o swap file, memory only)
-$ vim --clean     (nocompatible, no plugins)
-$ vim --cmd <cmd> (loaded before vimrc)
-$ view            (vim in ReadOnly mode)
-$ vimdiff         <=> vim -d
-
+$ vim --clean      (nocompatible, no plugins)
+$ vim --cmd <cmd>  (loaded before vimrc)
+$ vim +line_number <file> (Open file at a specified line)
+$ view             (vim in ReadOnly mode)
+$ vimdiff          <=> vim -d
 ```
 
 * Objects to "speak" vim
@@ -561,12 +566,6 @@ https://vimregex.com
 - I (don't ignore case)
 - n (report number of matches)
 - p/#/l (print line substitued, number, text)
-```
-
-* Vim
-
-```
-vim +line_number <file> (Open file at a specified line)
 ```
 
 ---------------
