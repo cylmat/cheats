@@ -238,25 +238,6 @@ nmap <F2> "= system("uuidgen")[:-2]<C-M>P
 :'<,'>t0           - ('< and '>) copy last Visual to start of file
 ```
 
-* Shell
-
-```
-# Sort visual range on column 1 as a number
-:'<,'>!sort -gk 1
-
-# Open file in hexadecimal
-vim -b(inary) (or :set binary) then :%!xxd
-:%!xxd -r to back to normal mode
-
-# Exemple command with jq:
-{
-   "_id": "67e6c8",
-   "age": 40,
-   "balance": "$3.58"
-}
-:1,5!jq '{ref: ._id, account: "\(.balance) \(.age)"}'
-```
-
 * Substitutes
 
 ```
@@ -466,6 +447,21 @@ Ctrl-^, (edit alternate/previous file, like :e #).
 :write | !ruby %
 :1,4write !sh - send lines 1 to 4 to shell
 :5,16!sort -t',' -k2 (filter range on key2)
+
+# Sort visual range on column 1 as a number
+:'<,'>!sort -gk 1
+
+# Open file in hexadecimal
+vim -b(inary) (or :set binary) then :%!xxd
+:%!xxd -r to back to normal mode
+
+# Exemple command with jq:
+{
+   "_id": "67e6c8",
+   "age": 40,
+   "balance": "$3.58"
+}
+:1,5!jq '{ref: ._id, account: "\(.balance) \(.age)"}'
 ```
 
 * Windows Screen
