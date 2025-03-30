@@ -427,17 +427,17 @@ jq  '(.recipes | map(.name) | unique | sort) as $cols | (.recipes | map(.id)) as
 
 ```
 
----
-@ref
-- [corporesano.org: Grep Sed Awk](http://www.corporesano.org/doc-site/grepawksed.html) 
-- [Manipulation de texte avancée - gitlab.mbb.cnrs.fr](https://gitlab.mbb.cnrs.fr/f/site/form1/ttext)
+---  
+@ref  
+- [corporesano.org: Grep Sed Awk](http://www.corporesano.org/doc-site/grepawksed.html)  
+- [Manipulation de texte avancée - gitlab.mbb.cnrs.fr](https://gitlab.mbb.cnrs.fr/f/site/form1/ttext)    
 Grep  
-* https://www.gnu.org/software/grep/manual/grep.html
-* https://www.malekal.com/grep-egrep-fgrep-rgrep-quelles-sont-les-differences
+* https://www.gnu.org/software/grep/manual/grep.html  
+* https://www.malekal.com/grep-egrep-fgrep-rgrep-quelles-sont-les-differences  
 Sed
-* https://www.gnu.org/software/sed/manual/sed.html
+* https://www.gnu.org/software/sed/manual/sed.html  
 Awk
-* https://www.funix.org/fr/unix/awk.htm
-* https://www.gnu.org/software/gawk/manual/gawk.html
-* https://www.linuxtricks.fr/wiki/awk-chercher-et-manipuler-du-texte-mais-pas-que
+* https://www.funix.org/fr/unix/awk.htm  
+* https://www.gnu.org/software/gawk/manual/gawk.html  
+* https://www.linuxtricks.fr/wiki/awk-chercher-et-manipuler-du-texte-mais-pas-que  
   
