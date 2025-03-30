@@ -241,9 +241,14 @@ nmap <F2> "= system("uuidgen")[:-2]<C-M>P
 * Shell
 
 ```
-:'<,'>!sort -gk 1 (sort visual range on column 1 as a number)
+# Sort visual range on column 1 as a number
+:'<,'>!sort -gk 1
 
-exemple command:
+# Open file in hexadecimal
+vim -b(inary) (or :set binary) then :%!xxd
+:%!xxd -r to back to normal mode
+
+# Exemple command with jq:
 {
    "_id": "67e6c8",
    "age": 40,
