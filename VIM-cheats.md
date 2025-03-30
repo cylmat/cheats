@@ -186,23 +186,29 @@ C-v><unicode> - insert unicode (C-v>u00bf write '¿')
 * Settings
 
 ```
-:set wildmenu, :hlsearch, :nu  (number), :rnu (relative number)
-Navigate menu with Tab, C-n, C-p
+:set wildmenu, :hlsearch, :nu (number), :rnu (relative number)
+# Navigate menu with Tab, C-n, C-p
 
-unset options
+# unset options
 :set rnu!, :set nornu
 
-get option
-:set expandtab? (get current "option")
-:echo &expandtab (get current "variable")
+# get option
+:set expandtab?          (get current "option")
+:echo &expandtab         (get current "variable")
 :verbose set expandtab?
 :echo &l:expandtab
 :echo g:colors_name
-:set! all (display one per line)
+:set! all                (display one per line)
+
+# useful
+:set spell               (syntax check)
+:setlocal spell spelllang=fr
+:vert diffsplit fichier2 (open diff vertical)
 
 ---
 .vimrc
-Set history=200
+set history=200
+set diffopt=vertical     (open "diff" vetical by default)
 ```
 
 * Map
@@ -484,6 +490,11 @@ C-w>q         - close split
 :hide (hide current)
 :sview <readonlyfile>
 :only (keep only current)
+
+# split
+:vert file1 fichier2
+(ajouter  dans .vimrc pour être par defaut)
+set diffopt=vertical
 ```
 
 * Other
