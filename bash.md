@@ -6,7 +6,7 @@ Ref
 ## Shortcut
 
 ```
-
+@see https://kapeli.com/cheat_sheets/Bash_Shortcuts.docset/Contents/Resources/Documents/index
 ```
 
 ### Arithmetic operation
