@@ -178,6 +178,23 @@ const LoadingWrapper = ({ children, isLoading }: Props): JSX.Element => {
 };
 ```
 
+### Local install
+
+utiliser un widget comme dépendance en local
+```
+# docker-compose.yml
+  my_app:
+    volumes:
+      - 'path_to_your_project/mywidget:/home/node/app/mywidget'
+      - 'node_modules:/home/node/app/mywidget/node_modules/'
+  volumes:
+    node_modules:
+
+# packages.json
+   dependencies:
+      "@package/mywidget": "link:mywidget"
+```
+
 ### MODULES
 
 ```
