@@ -1,9 +1,13 @@
 Ref
-- https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bourne-Shell-Builtins
 - https://github.com/onceupon/Bash-Oneliner
+- https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bourne-Shell-Builtins
+- https://kapeli.com/cheat_sheets/Bash_Shortcuts.docset/Contents/Resources/Documents/index
 
-**Return when sourced or bashed script**  
-[[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"  
+## Shortcut
+
+```
+
+```
 
 ### Arithmetic operation
 
@@ -35,7 +39,6 @@ done
 longoptions with getopt
 - https://www.baeldung.com/linux/bash-parse-command-line-arguments
 ```
-
 VALID_ARGS=$(getopt -o abg:d: --long alpha,beta,gamma:,delta: -- "$@")
 
 # if last command return is not zero, exit with error
@@ -119,6 +122,12 @@ One random num from 0 to 9
 ```
 shuf -i0-9 -n1
 echo $(($RANDOM%(20-10+1)+10))
+```
+
+### Return when sourced or bashed script
+
+```
+[[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"
 ```
 
 ### Variables
