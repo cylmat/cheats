@@ -90,3 +90,36 @@ jq '.recipes[0] | {ref: 9, account: "\(.id) \(.name)"}' => { "ref": "9", "accoun
 
 jq  '(.recipes | map(.name) | unique | sort) as $cols | (.recipes | map(.id)) as $row |  $cols | map($row[.]) | @csv' json
 ```
+
+
+# SAMPLE #
+
+```
+jq -r '(map(keys) | add | unique | sort) as $cols \
+    | .[] as $row | $cols | map($row[.]) | @csv'
+
+jq \
+  '.value |= (
+    group_by(.ShippedDate[:4])
+    | map(.[:2])
+    | flatten
+  )' \
+  Summary.json \
+  > subset.json
+
+SAMPLE2
+
+{"a": 1, "b": 2, "c": 3}
+{"a": 4, "b": 5, "d": 6}
+
+jq -r keys[] example | sort -u 
+jq -n '[inputs | keys[]] | unique | sort' input.json
+
+jq 'reduce .[] as $a ([]; if IN(.[]; $a) then . else . += [$a] end)' file.json
+jq -n 'reduce (inputs | keys[]) as $k ({}; .[$k] = null) | keys' input.json
+jq -n 'foreach (inputs | keys[]) as $k ({}; .[$k]+=1; if .[$k]==1 then $k else empty end)' input.json
+
+jq --stream -n 'foreach inputs[0][-1] as $k ({}; .[$k]+=1; if .[$k]==1 then $k else empty end)' input.json
+
+map({key:.,value:1})|from_entries|keys_unsorted
+```
