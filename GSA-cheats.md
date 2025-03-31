@@ -41,6 +41,8 @@ curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes
 
 ### Grep
 
+regular expressions:   
+- https://linuxize.com/post/regular-expressions-in-grep
 ```
 # Usage
 # -f <fromfile> -B(efore) -A(fter) -c(ount)
@@ -71,9 +73,9 @@ grep '^root' /etc/passwd   (<=> cat /etc/passwd | grep '^root')
 ```
 
 ### Sed (Stream EDitor)
+
 https://www.gnu.org/software/sed/manual/sed.html#sed-commands-summary
 - Replace, insert and filters
-
 ```
 # Usage
 # -i(nplace, edit file) -E(xtended) -n (quiet, no print pattern)
