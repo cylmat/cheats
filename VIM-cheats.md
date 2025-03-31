@@ -612,6 +612,13 @@ VsCodeVim Module:
 - gh Hovering the mouse
  
 ---
+@see also:  
+- https://fzheng.me/2018/03/17/practical-vim-modes  
+- https://fzheng.me/2018/03/19/practical-vim-files  
+- https://fzheng.me/2018/03/20/practical-vim-getting-around-faster  
+- https://fzheng.me/2018/03/24/practical-vim-registers
+
+---
 **@ref**  
 help
 * https://vimhelp.org/quickref.txt.html
