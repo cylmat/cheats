@@ -418,20 +418,6 @@ cat json | jq -r ".recipes[] | [.name, .id] | @csv" > file.csv
 jq '.recipes[0] | {ref: 9, account: "\(.id) \(.name)"}' => { "ref": "9", "account": "33 Margherita" }
 
 jq  '(.recipes | map(.name) | unique | sort) as $cols | (.recipes | map(.id)) as $row |  $cols | map($row[.]) | @csv' json
-
-# SAMPLE #
-
-jq -r '(map(keys) | add | unique | sort) as $cols \
-    | .[] as $row | $cols | map($row[.]) | @csv'
-
-jq \
-  '.value |= (
-    group_by(.ShippedDate[:4])
-    | map(.[:2])
-    | flatten
-  )' \
-  Summary.json \
-  > subset.json
 ```
 
 ### Nl (num lines)
