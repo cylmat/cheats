@@ -557,7 +557,8 @@ t tag
 
 * Regexp
 
-https://vimregex.com
+- https://vimregex.com  
+- https://vimhelp.org/pattern.txt.html  
 ```
 :h s_flags  (help flags)
 - c (confirm each)
