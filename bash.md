@@ -7,6 +7,7 @@ Ref
 
 ```
 @see https://kapeli.com/cheat_sheets/Bash_Shortcuts.docset/Contents/Resources/Documents/index
+@see https://gist.github.com/tuxfight3r/60051ac67c5f0445efee
 ```
 
 ### Arithmetic operation
