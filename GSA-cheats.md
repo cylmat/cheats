@@ -360,7 +360,7 @@ JSON = { "recipes": [
     {"id": 55, "name": "Stir", "ingredients": ["tomato", "mozza", "fresh basil", "ananas"]}
 ] }
 
-# DISPLAY
+# DISPLAY #
 
 jq '.recipes[] .id'                    => 33 55
 jq '.recipes[] | .id'                  => 33 55
@@ -385,7 +385,7 @@ echo { "b": "beta", "a": "alpha" } | jq -c 'to_entries' =>  [{"key":"b","value":
 echo '[{ "key": "beta", "value": "alpha" }]' | jq -c 'from_entries'   {"beta":"alpha"}
 echo '{"a": 1, "b": 2}'  | jq -c 'with_entries(.key |= "KEY_" + .)'  => {"KEY_a":1,"KEY_b":2}
 
-# SPECIFIC
+# SPECIFIC #
 
 # select (null/regexp) / group / sort
 jq '.recipes[] | select(.id == 33)'                 => {"id": 33,"name": "Margherita"}
@@ -395,7 +395,7 @@ jq '.recipes | group_by(.rating > 30)'              => [{"id": 33,"name": "Margh
 jq '.recipes | sort_by(.rating) | reverse'          =>    [{"id": 55, "rating":4}, {"id": 33, "rating":"3}]
 jq '.recipes[0].ingredients | unique | sort'
 
-# CHANGE
+# CHANGE #
 
 # to object
 jq '.recipes[] | {n: .id, o: .name}'   => {"n": 33,"o": "Margherita"}, {"n": 55,"o": "Stir"}
@@ -408,13 +408,30 @@ jq '.recipes[0].ingredients[0] +"#"+ .recipes[0].ingredients[1]'    => "salt#pep
 jq  '.recipes[0].ingredients + .recipes[1].ingredients'  =>  ["salt", "pepper", "tomato"]
 jq '.recipes[1] | del(.id)'                              =>  {"name": "Margherita"}
 
-# csv
+# |= (https://jqlang.org/manual/#update-assignment)
+echo '{"foo":2,"bar":5}' | jq -c '(.foo, .bar) |= .+1'   => {"foo":3,"bar":6}
+
+# Csv
 cat json | jq -r ".recipes[] | [.name, .id] | @csv" > file.csv
 
-# string interpolation with "\(.field) \(.field2)"
+# String interpolation with "\(.field) \(.field2)"
 jq '.recipes[0] | {ref: 9, account: "\(.id) \(.name)"}' => { "ref": "9", "account": "33 Margherita" }
 
 jq  '(.recipes | map(.name) | unique | sort) as $cols | (.recipes | map(.id)) as $row |  $cols | map($row[.]) | @csv' json
+
+# SAMPLE #
+
+jq -r '(map(keys) | add | unique | sort) as $cols \
+    | .[] as $row | $cols | map($row[.]) | @csv'
+
+jq \
+  '.value |= (
+    group_by(.ShippedDate[:4])
+    | map(.[:2])
+    | flatten
+  )' \
+  Summary.json \
+  > subset.json
 ```
 
 ### Nl (num lines)
