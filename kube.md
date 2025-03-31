@@ -75,6 +75,14 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
+### logs
+
+```
+# Multi logs with common labels
+k describe pod <mypod>   -> get labels
+k logs -l app.kubernetes.io/instance=mylabelinstance --max-log-requests 8 -f 
+```
+
 ### nginx command & cache
 
 ``` 
