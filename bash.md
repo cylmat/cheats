@@ -17,6 +17,8 @@ use $(()) or $[]
 i=$(($i%12))
 echo $[a+b]
 echo $((a-b))
+
+zsh -c 'echo $((2**63))'
 ```
 
 ### Array
