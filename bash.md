@@ -170,10 +170,22 @@ done
 
 ### Random
 
-One random num from 0 to 9
+https://manpages.ubuntu.com/manpages/bionic/fr/man4/random.4.html
 ```
+# One random num from 0 to 9
 shuf -i0-9 -n1
-echo $(($RANDOM%(20-10+1)+10))
+
+# /dev/random, /dev/urandom and $RANDOM
+echo $(( $RANDOM % (10 - 5 + 1 ) + 5 ))
+shuf -i 1-100 -n 1 (generate number)
+awk -v min=5 -v max=10 'BEGIN{srand(); print int(min+rand()*(max-min+1))}'
+
+python -c "import random; print(random.randint(5,10))"
+head -20 /dev/urandom | cksum | cut -f1 -d " "
+
+# sequence
+seq -s "-" 1 2 10
+echo {A..C}-5  => A-5 B-5 C-5
 ```
 
 ### read
