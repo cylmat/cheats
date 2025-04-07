@@ -12,7 +12,7 @@ Ref
 
 ### Arithmetic operation
 
-use $(()) or $[]
+use $(( )) or $[ ]
 ```
 i=$(($i%12))
 echo $[a+b]
@@ -75,6 +75,15 @@ pattern only with [[ ]]
 files
 [[ ! -e $filename ]] && echo
 [ ! -e “$filename” ] && echo
+```
+
+### expr
+
+```
+$(n=3; expr $n % 2) => 1
+
+expr 15+9 => "15+9"
+expr 15 + 9 => 24
 ```
 
 ### Options
