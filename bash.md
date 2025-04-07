@@ -37,6 +37,44 @@ for i in ${!myArray[@]}; do
 done
 ```
 
+### brackets
+
+https://www.baeldung.com/linux/bash-single-vs-double-brackets
+```
+type [  => [ is a shell builtin    
+type [[  => [[ is a shell keyword   
+
+[ is an alternative command for the test built-in command (POSIX)
+$ [ 3 -eq 3 ] && echo “ equal”
+$ test 3 -eq 3 && echo “ equal”
+
+$ [ 3 -eq 3 -a 4 -eq 4 ] && echo “ equal”
+$ [[ 3 -eq 3 && 4 -eq 4 ]] && echo “equal”
+
+[[ is a convenient alternative to single brackets (from ksh)
+$ [[ 1 < 2 ]] && echo “1 is less than 2”
+
+for single [ Bash treated the < operator as a file redirection operator
+$ [ 1 < 2 ] && echo “1 is less than 2” bash: 2: No such file or directory
+use "\"
+$ [ 1 \< 2 ] && echo “1 is less than 2” 1 is less than 2
+
+group
+[[ 3 -eq 3 && (2 -eq 2 && 1 -eq 1) ]]
+[ 3 -eq 3 -a \( 2 -eq 2 -a 1 -eq 1 \) ] && echo
+
+pattern only with [[ ]]
+[[ $name = *c* ]] && echo
+[ $name = *c* ] && echo   => ERROR
+
+~ is regular expression
+[[ $name =~ ^Alpha ]] && echo
+
+files
+[[ ! -e $filename ]] && echo
+[ ! -e “$filename” ] && echo
+```
+
 ### Options
 
 longoptions with getopt
