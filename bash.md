@@ -12,9 +12,11 @@ Ref
 
 ### Arithmetic operation
 
-use $(()) ex: 
+use $(()) or $[]
 ```
 i=$(($i%12))
+echo $[a+b]
+echo $((a-b))
 ```
 
 ### Array
@@ -33,13 +35,6 @@ done
 for i in ${!myArray[@]}; do
   echo "element $i is ${myArray[$i]}"
 done
-```
-
-### calcul operation
-
-```
-echo $[a+b]
-echo $((a-b))
 ```
 
 ### Options
