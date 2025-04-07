@@ -149,6 +149,16 @@ xargs echo "\n" - <file.txt
 xargs -n 1 -I{} echo Blah {} blabla {}.. < <(seq 1 5)
 ```
 
+```
+# awk /regexp/ -F (field split) $0 (all line) $NF (dernier champs)
+awk -F":" '{print $1,$6}' /etc/passwd
+cat /etc/passwd | awk -F ":" '{print $1}'
+df | awk '/run/ && !/vm/ {print $0}'
+
+# begin (once on start) and end (once too)
+awk 'BEGIN{print "ok"} /system/{++n} END{print "in",n,"line"}' /etc/passwd
+```
+
 
 
 --------------------------------------------------------------------------------------
