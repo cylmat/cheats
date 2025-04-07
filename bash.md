@@ -10,7 +10,7 @@ Ref
 @see https://gist.github.com/tuxfight3r/60051ac67c5f0445efee
 ```
 
-### IFS
+### IFS (Internal Field Separator)
 
 https://www.malekal.com/bash-ifs-utilisation-exemples
 
