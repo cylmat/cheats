@@ -86,6 +86,13 @@ expr 15+9 => "15+9"
 expr 15 + 9 => 24
 ```
 
+### loop
+
+```
+for i in $(seq 1 $END); do echo $i; done
+for i in $(seq 1 99); do if [ $(($i % 2)) -ne 0 ]; then echo $i; fi; done
+```
+
 ### Options
 
 longoptions with getopt
@@ -207,6 +214,15 @@ echo $((a-b))
 
 ```
 [[ "${BASH_SOURCE[0]}" != "${0}" ]] && echo "source" || echo "bash"
+```
+
+### test
+
+```
+$ [ -f /etc/groupe ] && echo 'y' || echo 'n
+$ test -f /etc/group && echo 'y' || echo 'n
+$ echo $?
+$ [ -w /etc/group ] (write rights)
 ```
 
 ### Variables
