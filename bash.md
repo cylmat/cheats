@@ -97,6 +97,17 @@ for i in $(seq 1 $END); do echo $i; done
 for i in $(seq 1 99); do if [ $(($i % 2)) -ne 0 ]; then echo $i; fi; done
 ```
 
+### match regexp
+
+use tilde ~
+```
+# sample: ABCDE-12345
+re="^([^-]+)-(.*)$"
+[[ "ABCDE-123456" =~ $re ]] && var1="${BASH_REMATCH[1]}" && var2="${BASH_REMATCH[2]}"
+echo $var1
+echo $var2
+```
+
 ### Options
 
 longoptions with getopt
@@ -212,6 +223,13 @@ read a
 read b
 echo $[a+b]
 echo $((a-b))
+```
+
+```
+# Read input and remove carriage return ?(chatgpt)
+read input
+input="${input//$'\r'/}"
+echo "$input"
 ```
 
 ### Return when sourced or bashed script
