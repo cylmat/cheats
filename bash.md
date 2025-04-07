@@ -35,6 +35,13 @@ for i in ${!myArray[@]}; do
 done
 ```
 
+### calcul operation
+
+```
+echo $[a+b]
+echo $((a-b))
+```
+
 ### Options
 
 longoptions with getopt
@@ -123,6 +130,21 @@ One random num from 0 to 9
 ```
 shuf -i0-9 -n1
 echo $(($RANDOM%(20-10+1)+10))
+```
+
+### read
+
+```
+INPUT = "5\n2"
+RET=$(read -d '' x; echo "$x" | tr "\n" ' ')
+read -r x y <<<$(echo $"$RET")
+
+or
+
+read a
+read b
+echo $[a+b]
+echo $((a-b))
 ```
 
 ### Return when sourced or bashed script
