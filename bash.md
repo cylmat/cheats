@@ -10,6 +10,10 @@ Ref
 @see https://gist.github.com/tuxfight3r/60051ac67c5f0445efee
 ```
 
+### IFS
+
+https://www.malekal.com/bash-ifs-utilisation-exemples
+
 ### Arithmetic operation
 
 use $(( )) or $[ ]
