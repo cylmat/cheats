@@ -1,9 +1,10 @@
 ### USEFULS
-
-**curl cheat.sh/bash**
  
 [Cylmat/Git Cheats](https://github.com/cylmat/cheats/blob/main/GIT-cheats.md) - [Cylmat/GSA Cheats](https://github.com/cylmat/cheats/blob/main/GSA-cheats.md) - [Cylmat/Vim Cheats](https://github.com/cylmat/cheats/blob/main/VIM-cheats.md)    
 [Onceupon/Bash Oneliner](https://github.com/onceupon/Bash-Oneliner)    
+
+- CHEATS SHEET
+**curl cheat.sh/bash**
 
 Bash
 ```
