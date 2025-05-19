@@ -105,4 +105,6 @@ k get secrets mysecretscontainer -o yaml
 k apply -n env-int -f url-secret-int.yaml
 k apply -f app-secrets.yaml
 kubectl -n $NAMESPACE apply -f url-secret-$ENV.yaml
+
+kubectl delete secret app-saml-secret app-server-secret
 ```
