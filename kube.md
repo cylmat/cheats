@@ -89,6 +89,14 @@ k logs -l app.kubernetes.io/instance=mylabelinstance --max-log-requests 8 -f
 k exec -it deploy/global-portal-api-symfony -- su nginx -s /bin/sh -c 'bin/console cache:pool:clear cache.app' 
 ```
 
+### Remote mysql connection
+
+```
+kubectl run --rm -it mysql-client --image=mysql:5.7 /bin/bash
+# inside pod:
+mysql --default-character-set=utf8 -h myhost -u "user" -ppass
+```
+
 ### secrets
 
 ```
