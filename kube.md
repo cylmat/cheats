@@ -108,3 +108,9 @@ kubectl -n $NAMESPACE apply -f url-secret-$ENV.yaml
 
 kubectl delete secret app-saml-secret app-server-secret
 ```
+
+convert to mono-line
+```
+IDP_CERT=`cat cert-$ENV/server/idp.crt | tr -d '\n'`
+kubectl create secret generic $APP_NAME-saml-secret --from-literal=idp.crt=''"${IDP_CERT}"'' --from-literal=sp.crt=''"${SP_CERT}"'' --from-literal=sp.key=''"${SP_KEY}"''
+```
