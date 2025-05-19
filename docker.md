@@ -120,6 +120,13 @@ docker compose --profile myProfil up
 docker run --rm -it mysql --name mysql-client /bin/bash  
 ```
 
+### stop running containers
+
+```
+# stop all running container
+docker stop $(docker ps -aq)
+```
+
 ### volume
 
 Remove all dangling
