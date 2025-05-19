@@ -5,6 +5,12 @@ mysql> source \home\user\Desktop\test.sql;
 mysql -h hostname -u user database < path/to/test.sql
 ```
 
+### dump
+
+```
+mysqldump -p -h host.azure.com -u usesrname database_name > db_dump.sql
+```
+
 ### Procédures stockées / Fct
 
 ```
