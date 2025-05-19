@@ -8,6 +8,15 @@ with bom: "\xEF\xBB\xBF" (UTF-8)
 fwrite($fw, "\xEF\xBB\xBF" . file_get_contents(__DIR__.'/local/export-with-bom.csv'));
 ```
 
+### Dateinterval 
+
+```
+P[n]Y[n]M[n]DT[n]H[n]M[n]S   (ISO 8601 duration format)
+
+(P start date, T start time)
+new DateInterval ('PT24H')    -> 24 hours
+```
+
 ## For loop : declare array
 ```
 for ($l = array(1,1), $i = 2, $x = 0; $i < $length; $i++)
