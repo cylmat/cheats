@@ -1,4 +1,12 @@
-## SHA
+
+### rsa
+
+```
+openssl genrsa -aes256 -passout pass:`cat passphrase.txt` -out private.pem 8912
+openssl rsa -in private.pem -passin pass:`cat passphrase.txt` -pubout -out public.pem
+```
+
+### SHA
 
 ```
 export SHA512=$(curl https://archive.sha512 | cut -d' ' -f 1)  
