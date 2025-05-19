@@ -114,6 +114,12 @@ COMPOSE_PROFILES=debug docker compose up
 docker compose --profile myProfil up
 ```
 
+### remote connection
+
+```
+docker run --rm -it mysql --name mysql-client /bin/bash  
+```
+
 ### volume
 
 Remove all dangling
