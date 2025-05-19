@@ -47,6 +47,13 @@ sudo cat /etc/sudoers
 * -(a)rchive -(z)compress -(e)remote  
 rsync -av -e 'ssh -p 22000' localhost:src_old_machine_file dst_new_machine_file
 
+### systemctl
+
+```
+rm -rf var/cache/* && supervisorctl restart all
+sudo systemctl disable snapd 
+```
+
 ### USER
 
 ```
