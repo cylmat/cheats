@@ -23,6 +23,10 @@
     - Jq
     - Nl
     - Shuf
+  
+Sample
+- Read first field
+- Remove new line
 
 ```
 ### Fake data
@@ -447,6 +451,37 @@ jq  '(.recipes | map(.name) | unique | sort) as $cols | (.recipes | map(.id)) as
 
 ```
 
+```
+-----------------------------------------------------------
+## Sample
+---
+
+### Read first field
+
+```
+awk '{print $1}'
+cut -d' ' -f1
+perl -lane 'print $F[0]'
+sed 's/^\([^ ]*\).*/\1/'
+python -c "import sys; [print(line.split()[0]) for line in sys.stdin]"
+while read -r first _; do; echo "$first"; done < input.txt
+```
+
+### Remove newlines
+
+```
+awk '!/pattern/' file > temp && mv temp file
+ruby -i.bak -ne 'print if not /test/' file
+perl -ni.bak -e "print unless /pattern/" file
+while read -r line; do; [[ ! $line =~ pattern ]] && echo "$line"; done <file > o
+```
+
+### Move o file
+
+```
+grep -v "pattern" file > temp && mv temp file
+sed -n '/pattern/!p' file
+sed -i '/pattern to match/d' ./infile
 ```
 
 ---  
