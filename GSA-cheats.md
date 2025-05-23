@@ -190,6 +190,13 @@ echo 'Pierre,John,Satia,Henrick' | cut -d ',' -f -2
 
 # last 2 characters
 echo 'This' | cut -c -2
+
+# cut -c RANGE/LIST
+echo "alpha beta, gamma and &epsilon" | cut -c 2,5,8 
+echo "alpha beta, gamma and &epsilon" | cut -c -15   (begining to 15)
+echo "alpha beta, gamma and &epsilon" | cut -d ' ' -f 3
+echo "alpha beta, gamma and &epsilon" | cut -d ' ' -f 3 --complement   (inverse)
+echo "alpha beta, gamma and &epsilon" | cut -d ' ' -f 2-3  --output-delimiter '%'
 ```
 
 ### Diff
