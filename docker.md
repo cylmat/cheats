@@ -137,6 +137,8 @@ docker volume rm $(docker volume ls -qf dangling=true)
 ### restart
 - docker compose -f docker-compose.yml restart user-request
 
+---
+
 # Error
 
 - bug on windows:
@@ -146,3 +148,15 @@ docker volume rm $(docker volume ls -qf dangling=true)
 in /etc/wsl.conf:  
 Remove/add [network] generateResolvConf = false
 
+* Error "is the daemon running ?"
+```
+- journalctl -xeu docker.service
+   - docker.service: Start request repeated too quickly.
+   - docker.service: Failed with result 'exit-code'.
+
+solve:
+- sudo vim /usr/lib/systemd/system/docker.service
+- add  ExecStart=/usr/bin/dockerd  --data-root /home/docker
+- systemctl daemon-reload
+- sudo service docker start
+```
