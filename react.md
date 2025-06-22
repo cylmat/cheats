@@ -111,6 +111,17 @@ useEffect(() => {
   @https://gist.github.com/markselby9/59640ec27eba6c7a585c6aa71c6522ce
 ```
 
+### Event
+
+```
+// stop event (draggable, other.) on mouse click e.stopPropagation()
+<i
+	onClick={() => setDisplayFilters(!displayFilters)}
+	onMouseDown={(e) => e.stopPropagation()}
+	onMouseUp={(e) => e.preventDefault()}
+></i>
+```
+
 ### Full page sample with Fragment
 
 ```
