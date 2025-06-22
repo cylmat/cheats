@@ -333,6 +333,23 @@ export default connect(mapStateToProps)(HomePage);
 }
 ```
 
+### SVG
+
+```
+ // SVG WITH PROPS
+import React from 'react'
+
+const SvgDot: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & { title?: string }
+> = ({ title, ...props }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+        <circle cx="6" cy="6.5" r="6" fill={props.color} />
+    </svg>
+);
+
+export default SvgDot
+```
+
 --- -----------------------------------------------------------------------------
 ## TIPS & ERRORS --------------
 --- ----------------------------------------------------------------------------
