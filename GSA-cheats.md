@@ -429,6 +429,14 @@ jq '.recipes[0].ingredients[0] +"#"+ .recipes[0].ingredients[1]'    => "salt#pep
 jq  '.recipes[0].ingredients + .recipes[1].ingredients'  =>  ["salt", "pepper", "tomato"]
 jq '.recipes[1] | del(.id)'                              =>  {"name": "Margherita"}
 
+# create output object 
+# input: [{ "label": "Hydraulique", "id": "1010"}, {"label": "Autres énergies","id": "1030"}]
+# output {"Hydraulique": "1010","Autres énergies": "1030"}
+jq '. | map({(.label): .externalId}) | add' 
+# to sort it
+jq 'map({(.label): .id}) | add | to_entries | sort_by(.key) | from_entries' input.json > output.json
+
+
 # |= (https://jqlang.org/manual/#update-assignment)
 echo '{"foo":2,"bar":5}' | jq -c '(.foo, .bar) |= .+1'   => {"foo":3,"bar":6}
 
