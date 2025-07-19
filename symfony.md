@@ -9,6 +9,21 @@ parameters:
       api_version: '%env(BUILD_VERSION)%'
 ```
 
+### Form validation
+
+```
+ENTITY
+ * @UniqueEntity(fields={"contract", "key"}, message="key already in use for this contract.")
+
+CONTROLLER
+        $contractMetadata = (new ContractMetadata())->setContract($contract);
+        $contract->addContractMetadata($contractMetadata);
+
+// set entity before form->submit()
+        $form = $this->createForm(ContractMetadataType::class, $contractMetadata);
+        $form->submit($data);
+```
+
 ### Query as boolean
 
 ```
@@ -16,7 +31,7 @@ parameters:
 $myquery = json_decode($request->query->get('booleanQuery')); // json_decode evaluate boolean value on string
 ```
 
-### services
+### Services
 
 Constants in services.yml
 ```
