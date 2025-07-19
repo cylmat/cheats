@@ -83,6 +83,12 @@ k describe pod <mypod>   -> get labels
 k logs -l app.kubernetes.io/instance=mylabelinstance --max-log-requests 8 -f 
 ```
 
+### Mysql deploy
+
+```
+kubectl create deployment mysql-client-deploy --image mysql-client --port=78 
+```
+
 ### nginx command & cache
 
 ``` 
