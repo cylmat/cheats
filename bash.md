@@ -81,6 +81,14 @@ files
 [ ! -e “$filename” ] && echo
 ```
 
+### directory
+current one
+
+```
+# get bash script dir
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+```
+
 ### expr
 
 ```
