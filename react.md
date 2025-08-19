@@ -23,6 +23,7 @@
 
 - https://fireart.studio/blog/9-react-best-practices-to-improve-your-react-code/
 - https://www.uxpin.com/studio/blog/react-best-practices/
+- https://www.developerway.com/posts/react-re-renders-guide
 
 - https://www.freecodecamp.org/news/best-practices-for-react/
 - https://technostacks.com/blog/react-best-practices/
