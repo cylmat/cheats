@@ -83,8 +83,9 @@ $formBuilder->addEventListener(FormEvents::PRE_SUBMIT,
 
 
 ### TO AVOID UPDATE child entity (for exemple a referential)
-
 // if static referential is updated instead of child data
+
+ex1
 ```
  private function copyCurrentDataToUpdatedObject(Industrial $updatedIndustrial): void
  {
@@ -98,7 +99,10 @@ $formBuilder->addEventListener(FormEvents::PRE_SUBMIT,
          $this->entityManager->persist($metadata[$key]);
      }
  }
+```
 
+ex2
+```
 private function copyCurrentContactsIntoUpdatedSite(Industrial $updatedIndustrial): void
 {
      $updatedIndustrial->getIndustrialDescription()->setContacts(new ArrayCollection()); // EMPTY ENTITY VALUES
@@ -114,3 +118,24 @@ private function copyCurrentContactsIntoUpdatedSite(Industrial $updatedIndustria
 }
 ```
 
+ex3
+```
+   // doesn't works (object is collection empty)
+   $contractMetadatas = clone $contract->getContractMetadatas();
+   $contract->setContractMetadatas(new ArrayCollection);
+   $this->entityManager->persist($contract);
+   $contract->setContractMetadatas($contractMetadatas);
+   $this->entityManager->persist($contract);
+   $this->entityManager->flush();
+
+   // use collection full, clone each object
+   $contractMetadatas = new ArrayCollection;
+   foreach ($contract->getContractMetadatas() as $contractMetadata) {
+      $contractMetadatas->add(clone $contractMetadata);
+   }
+   $contract->setContractMetadatas(new ArrayCollection);
+   $this->entityManager->persist($contract);
+   $contract->setContractMetadatas($contractMetadatas);
+   $this->entityManager->persist($contract);
+   $this->entityManager->flush();
+```
