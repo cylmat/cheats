@@ -6,9 +6,9 @@
 
 ### apt
 
-- Update va rechercher les mises à jour disponibles et mettre à jour l'index en se basant sur les sources définies dans /etc/apt/source.list
-- Upgrade installe les mises à jour identifiée avec apt update sans supprimer les paquets installés.
-- Full-upgrade Si de nouveaux paquets doivent être installés, ils le seront. Ceux qui ne sont plus utiles, sont supprimés
+- Update va rechercher les mises à jour disponibles et mettre à jour l'index en se basant sur les sources définies dans /etc/apt/source.list  
+- Upgrade installe les mises à jour identifiée avec apt update sans supprimer les paquets installés.  
+- Full-upgrade Si de nouveaux paquets doivent être installés, ils le seront. Ceux qui ne sont plus utiles, sont supprimés  
 
 ### BASE 64
 
