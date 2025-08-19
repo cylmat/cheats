@@ -19,6 +19,15 @@
 - rjsf-team.github.io/react-jsonschema-form/
 ```
 
+## Best practices
+
+- https://fireart.studio/blog/9-react-best-practices-to-improve-your-react-code/
+- https://www.uxpin.com/studio/blog/react-best-practices/
+
+- https://www.freecodecamp.org/news/best-practices-for-react/
+- https://technostacks.com/blog/react-best-practices/
+- https://medium.com/front-end-weekly/top-react-best-practices-in-2025-a06cb92def81
+
 Info
 - https://nextjs.org/docs/app/building-your-application/data-fetching/fetching
 
