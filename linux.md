@@ -4,6 +4,12 @@
 "unix: do one thing, and do it well"
 ```
 
+### apt
+
+- Update va rechercher les mises à jour disponibles et mettre à jour l'index en se basant sur les sources définies dans /etc/apt/source.list
+- Upgrade installe les mises à jour identifiée avec apt update sans supprimer les paquets installés.
+- Full-upgrade Si de nouveaux paquets doivent être installés, ils le seront. Ceux qui ne sont plus utiles, sont supprimés
+
 ### BASE 64
 
 echo '613f892e-953c-418a-9aed-73100d9f6d30' | base64  
