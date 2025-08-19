@@ -83,6 +83,21 @@ let serviceFormComponents = {
 myconfig={contractConfigurations[serviceName as keyof typeof serviceFormComponents]}
 ```
 
+ex2
+```
+export const widgetMapper = {
+    'IndustrialSite/DailyMonthChartWidget': DailyMonthChartWidget,
+    'IndustrialSite/GaugeChartWidget': GaugeChartWidget,
+    'IndustrialSite/StackedChartWidget': StackedChartWidget
+}
+
+const WidgetComponent = widgetMapper[widget.path] // ERROR
+Element implicitly has an 'any' type because expression of type 'string' can't be used to index type
+
+// OK
+const WidgetComponent = widgetMapper[widget.path as keyof typeof widgetMapper]
+```
+
 ### enum
 
 ```
