@@ -116,6 +116,16 @@ echo $var1
 echo $var2
 ```
 
+```
+# $ ./script.sh --image-tag=5.6
+
+if [[ "$@" =~ --image-tag=([0-9\.]+) ]]; then
+   echo "Matched!"
+   echo "Full match: ${BASH_REMATCH[0]}"
+   echo "Captured version: ${BASH_REMATCH[1]}"
+fi
+```
+
 ### Options
 
 longoptions with getopt
