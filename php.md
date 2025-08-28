@@ -77,6 +77,25 @@ passthru(sprintf('%s %s', $console, 'doctrine:schema:create'));
 passthru(sprintf(%s %s', $console, 'doctrine:fixtures:load --no-interaction'));
 ```
 
+bootstrap.php
+```
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
+use Symfony\Component\Dotenv\Dotenv;
+
+// Assuming the command is registered in your application bootstrap
+$application = new Application($kernel);
+$application->setAutoExit(false);
+
+  $input = new ArrayInput( [
+            'command' => 'doctrine:database:drop',
+            '--force' => true,
+        ]);
+  $output = new ConsoleOutput();
+  $application->run($input, $output);
+```
+
 ---
 @ref:
 * [https://www.php.net/manual/en/types.comparisons.php](https://www.php.net/manual/en/types.comparisons.php)
