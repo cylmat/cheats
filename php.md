@@ -63,6 +63,16 @@ preg_replace_callback
 
 ## Tests
 
+database test
+```
+docker exec va-cal-mysql mysql -u root -e "
+    CREATE DATABASE IF NOT EXISTS va_cal_test; \
+    CREATE USER 'va_cal_test'@'%' IDENTIFIED BY 'va_cal_test'; \
+    GRANT ALL PRIVILEGES ON va_cal_test.* TO 'va_cal_test'@'%';
+    FLUSH PRIVILEGES;
+"
+```
+
 bootstrap.php
 ```
 // Mandatory to avoid Phpunit error
