@@ -293,6 +293,16 @@ alias wrap_args='sh -c '\''echo before "$@" after'\'' _'
 alias mkcd='_mkcd(){ mkdir "$1"; cd "$1";}; _mkcd'
 ```
 
+```
+_f() {
+  tmpfile=$(mktemp /tmp/function.req.XXXXXX)
+  trap 'rm -f "$tmpfile"' EXIT
+  echo "$@" > "$tmpfile"
+  my_command --prompt-from-file "$tmpfile"
+}
+alias f=_f
+```
+
 **Bash substitution**
 source <(sudo cat /etc/bash.bashrc)
 
