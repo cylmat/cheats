@@ -103,6 +103,12 @@ kubectl run --rm -it mysql-client --image=mysql:5.7 /bin/bash
 mysql --default-character-set=utf8 -h myhost -u "user" -ppass
 ```
 
+### scale
+
+```
+kubectl scale deployment dploy-symfony --replicas=0
+```
+
 ### secrets
 
 ```
