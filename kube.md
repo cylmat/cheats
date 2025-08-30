@@ -97,11 +97,17 @@ k exec -it deploy/global-portal-api-symfony -- su nginx -s /bin/sh -c 'bin/conso
 
 ### port forward and database
 
+```
+kubectl -n ${NAMESPACE} port-forward svc/postgres-tunnel-$USER 54320:5432
+```
+
 to connect to an external database with application (ex Dbeaver)   
-shell script to open a SOCAT socket to expose port forward 
+shell script to open a SOCAT socket to expose port forward  
 
 ```shell
 #!/bin/bash
+# In another terminal, connect using your favorite postgres client using localhost:54320
+
 export NAMESPACE=default
 export POSTGRES_SERVICE_NAME=postgres.database.azure.com
 export CONTEXT=default
