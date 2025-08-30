@@ -95,6 +95,31 @@ kubectl create deployment mysql-client-deploy --image mysql-client --port=78
 k exec -it deploy/global-portal-api-symfony -- su nginx -s /bin/sh -c 'bin/console cache:pool:clear cache.app' 
 ```
 
+### port forward and database
+
+to connect to an external database with application (ex Dbeaver)   
+shell script to open a SOCAT socket to expose port forward 
+
+```shell
+#!/bin/bash
+export NAMESPACE=default
+export POSTGRES_SERVICE_NAME=postgres.database.azure.com
+export CONTEXT=default
+export REMOTEPORT=5432
+export LOCALPORT=54320
+ctrl_c() {
+    echo "Ctrl+C pressed. Cleaning up..."
+    kubectl --context ${CONTEXT} -n ${NAMESPACE} delete svc postgres-tunnel-$USER
+    kubectl --context ${CONTEXT} -n ${NAMESPACE} delete pod postgres-tunnel-$USER
+}
+# Set the trap to catch SIGINT (Ctrl+C)
+trap ctrl_c INT
+# kubectl --context ${CONTEXT} -n ${NAMESPACE} run postgres-tunnel-$USER -it --tty --rm --image=alpine/socat --expose=true --port=$REMOTEPORT tcp-listen:$REMOTEPORT,fork,reuseaddr tcp-connect:${POSTGRES_SERVICE_NAME}:$REMOTEPORT
+kubectl --context ${CONTEXT} -n ${NAMESPACE} run postgres-tunnel-$USER --image=alpine/socat --expose=true --port=$REMOTEPORT tcp-listen:$REMOTEPORT,fork,reuseaddr tcp-connect:${POSTGRES_SERVICE_NAME}:$REMOTEPORT
+echo "wait 5 seconds ..."; sleep 5
+kubectl --context ${CONTEXT} -n ${NAMESPACE} port-forward svc/postgres-tunnel-$USER $LOCALPORT:$REMOTEPORT
+```
+
 ### Remote mysql connection
 
 ```
