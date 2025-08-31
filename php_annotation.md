@@ -61,6 +61,33 @@ sample attributes
     )]
 ```
 
+sample
+```
+use FOS\RestBundle\Controller\Annotations as FOS;
+use Nelmio\ApiDocBundle\Attribute\Model;
+use OpenApi\Attributes as OA;
+
+#[FOS\Get(path: "/api/contract")]
+#[OA\Get( summary: "Get all contract" )]
+#[OA\Parameter(
+      name: "filter[q]",
+      in: "query",
+      description: "search in label",
+      required: false,
+      schema: new OA\Schema(type: "array", items: new OA\Items(type: "string"))
+)]
+#[OA\RequestBody(
+        required: true,
+        description: 'Area',
+        content: new OA\JsonContent(ref: '#/components/schemas/Area')
+    )]
+#[OA\Response(
+      response: 200,
+      description: "Returned when all data",
+      content: new OA\JsonContent(ref: new Model(type: Contract::class))
+)]
+```
+
 annotations
 ```
 /**
