@@ -1,4 +1,4 @@
-
+doctrine
 ```
 use Doctrine\ORM\Mapping as ORM;
 @https://www.doctrine-project.org/projects/doctrine-orm/en/2.14/reference/annotations-reference.html
@@ -21,10 +21,48 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 ```
 
-sample
+sample attributes
 - https://github.com/zircote/swagger-php
+
 ```
 
+### zircote object
+
+#[OA\Parameter(
+        name: 'geojson',
+        in: 'query',
+        required: false,
+        description: 'GeoJSON location filter (e.g., geojson[latitude]=5.123&geojson[longitude]=2.1231564)',
+        style: 'deepObject',
+        explode: true,
+        schema: new OA\Schema(
+            type: 'object',
+            properties: [
+                new OA\Property(property: 'latitude', type: 'number', format: 'float'),
+                new OA\Property(property: 'longitude', type: 'number', format: 'float'),
+            ]
+        )
+    )]
+    public function getAllAction(Request $request)
+    {
+        $geojson = $request->query->all('geojson');
+/* 
+['longitude'=>2.1231564, 'latitude' => 5.123] 
+*/
+
+// or
+
+ #[OA\Parameter(
+        name: 'geojson[ longitude ]',
+        in: 'query',
+        description: 'request in this geojson longitude',
+        required: false,
+        schema: new OA\Schema(type: 'array', items: new OA\Items(type: "string"))
+    )]
+```
+
+annotations
+```
 /**
    * @Route("/api/request/{requestTypeId}/{schemaType}", methods={"GET"}, name="get_request_schema")
    *
