@@ -8,7 +8,12 @@ mysql -h hostname -u user database < path/to/test.sql
 ### dump
 
 ```
-mysqldump -p -h host.azure.com -u usesrname database_name > db_dump.sql
+mysqldump -p -h host.azure.com -u username database_name > db_dump.sql
+```
+
+direct migration
+```
+mysqldump -pPasssss -h host.azure.com -u username database_name | mysql -h hostname -u user -pPawwww database2
 ```
 
 ### Procédures stockées / Fct
