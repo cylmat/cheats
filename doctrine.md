@@ -1,5 +1,4 @@
-- tips
- 
+
 WORKS BY OBJECT REFERENCE ! AND NOT BY ID
 ```
 # [ MapEntity ] Entity $object
@@ -151,4 +150,13 @@ $uuid = (new UuidFactory())->fromString($uuidValue);
 $metadata = $manager->getClassMetaData($entity::class);
 $metadata->setIdGenerator(new AssignedGenerator());
 $metadata->setFieldValue($entity, 'id', $uuid);
+```
+
+# Error
+
+The metadata storage is not up to date, please run the sync-metadata-storage command to fix this issue
+```
+- soluce
+must have url with exact serverVersion: 
+DATABASE_URL=mysql://root:@127.0.0.1:3306/testtest?serverVersion=mariadb-10.4.11
 ```
