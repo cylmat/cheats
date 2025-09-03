@@ -5,8 +5,15 @@ echo * | head -n1 | awk '{print $1;}'
 echo * | head -n1 | sed -e 's/\s.*$//'  
 ```
 
-## Shell
-clear: Ctrl+u
+## Correct last command
+
+```
+$ sudo apt install typo
+# ERR "typo" not found
+
+^typo^python
+# $ sudo apt install python...
+```
 
 ## Null
 echo "Hello" >/dev/null  
@@ -15,6 +22,9 @@ echo "Hello" >/dev/null
 echo "Error" 1 >& 2  
 error 2>/dev/null >/dev/null
 error >/dev/null 2>&1
+
+## Shell
+clear: Ctrl+u
 
 Stderr-out
 ---
