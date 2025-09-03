@@ -68,6 +68,21 @@ sudo chmod g+rwx "$HOME/.docker" -R
 sudo usermod -aG docker $USER
 
 gpasswd -a $USER docker
+
+
+sudo groupadd docker 
+sudo usermod -aG docker $USER 
+cat /etc/group
+
+#  RESTART shell   
+exec su -l $USER
+sudo reboot
+
+# check groups 
+# groups is for session, for user: groups $USER
+groups $USER
+id -nG
+
 ```
 
 Exec command as user 'www-data'
