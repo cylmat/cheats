@@ -34,3 +34,10 @@ tasklist /FI "PID eq 4400"
 Get-Process -Id 4400
 ```
 
+stop process
+```
+Stop-Process -Id <process_id> -Force
+  or
+taskkill /PID <process_id> /F
+```
+
