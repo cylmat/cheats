@@ -43,6 +43,24 @@ parameters:
     bar: !php/const PHP_INT_MAX
 ```
 
+mock http client for tests
+```
+ services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: true
+
+    App\Importer\AdvIndicatorValueImporter:
+        arguments:
+            $wasteApi: '@fixtures.http_client.mock'
+
+    fixtures.http_client.mock:
+        class: Symfony\Component\HttpClient\MockHttpClient
+        factory: ['App\DataFixtures\Factory\MockHttpClientFactory', 'create']
+```
+
+
 ### Error
 
 Toolbar debug display :
