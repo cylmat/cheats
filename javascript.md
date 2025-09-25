@@ -201,6 +201,24 @@ console.log(word!.toLowerCase())
 
 {enabled: !!currentContract}
 
+### object
+
+remove object key
+```
+// _ is ignored by js
+// Used to remove a property from an object without mutating the original
+
+const prev = { a: 1, b: 2, c: 3 };
+const filterKey = 'b';
+const { [filterKey]: _, ...rest } = prev;
+rest = { a: 1, c: 3 };
+
+function removeKey(obj, keyToRemove) {
+  const { [keyToRemove]: _, ...rest } = obj;
+  return rest;
+}
+```
+
 ### Params
 
 ```
