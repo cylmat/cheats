@@ -15,6 +15,12 @@ $ sudo apt install typo
 # $ sudo apt install python...
 ```
 
+## run as user
+
+```
+su nginx -s /bin/bash
+```
+
 ## Null
 echo "Hello" >/dev/null  
 
