@@ -75,6 +75,13 @@ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stabl
    sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
+### labels
+
+```
+kubectl get pod <pod> -o yaml | grep label  
+kubectl -n $NAMESPACE logs -l app.kubernetes.io/name=ingress-nginx
+```
+
 ### logs
 
 ```
