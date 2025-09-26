@@ -15,6 +15,17 @@ $ sudo apt install typo
 # $ sudo apt install python...
 ```
 
+global replacement
+```
+# First match only
+^old^new^
+^conf^css^
+
+# All matches globally
+!!:gs/old/new/
+!!:gs/conf/css/
+```
+
 ## run as user
 
 ```
