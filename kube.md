@@ -102,6 +102,14 @@ kubectl create deployment mysql-client-deploy --image mysql-client --port=78
 k exec -it deploy/global-portal-api-symfony -- su nginx -s /bin/sh -c 'bin/console cache:pool:clear cache.app' 
 ```
 
+### patch ingress
+
+```
+kubectl patch ingress mdm-symfony -n namespace-int --type='json' -p='[{ "op": "replace", "value": "maintenance-page-simple",
+    "path": "/spec/rules/0/http/paths/0/backend/service/name"
+}]'
+```
+
 ### port forward and database
 
 ```
