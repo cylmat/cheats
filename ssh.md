@@ -14,6 +14,15 @@ echo 'root' > /pass
 
 ### keygen
 
+github
+```
+ssh-keygen -t ed25519 -C "your_email@example.com"
+#   (to $HOME/.ssh/id_ed25519.github)
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_ed25519.github
+ssh-copy-id -i ~/.ssh/id_ed25519.github.pub <user>@<host>
+```
+
 ```
 eval `ssh-agent -s`  
 ssh-add $HOME/.ssh/id_rsa 
