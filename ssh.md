@@ -14,8 +14,8 @@ systemctl enable ssh
 echo 'root' > /pass
 
 eval `ssh-agent -s`  
-ssh-add ~/.ssh/id_rsa 
+ssh-add $HOME/.ssh/id_rsa 
 
-ssh-keygen -t rsa -f /root/.ssh/id_rsa -P ''
-sshpass -f /pass ssh-copy-id -i ~/.ssh/id_rsa user@host
+ssh-keygen -t rsa -f $HOME/.ssh/id_rsa -P ''
+sshpass -f /pass ssh-copy-id -i $HOME/.ssh/id_rsa user@host
 ```
