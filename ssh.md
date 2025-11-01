@@ -4,15 +4,17 @@
 sudo apt install ssh
 sudo vi /etc/ssh/sshd_config   #   port 22000
 sudo service ssh restart
+
+ or
+
+apt-get update && apt-get install -y openssh-server
+systemctl enable ssh
+echo 'root' > /pass
 ```
 
 ### keygen
 
 ```
-apt-get update && apt-get install -y openssh-server
-systemctl enable ssh
-echo 'root' > /pass
-
 eval `ssh-agent -s`  
 ssh-add $HOME/.ssh/id_rsa 
 
