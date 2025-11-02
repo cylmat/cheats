@@ -23,6 +23,12 @@ ssh-add ~/.ssh/id_ed25519.github
 ssh-copy-id -i ~/.ssh/id_ed25519.github.pub <user>@<host>
 ```
 
+### public key
+
+```
+ssh-keygen -y -f id_ed25519 > id_ed25519.github.pub
+```
+
 ```
 eval `ssh-agent -s`  
 ssh-add $HOME/.ssh/id_rsa 
