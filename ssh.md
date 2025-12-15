@@ -12,7 +12,7 @@ systemctl enable ssh
 echo 'root' > /pass
 ```
 
-### keygen
+### Keygen
 
 github
 ```
@@ -21,6 +21,11 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_ed25519.github
 ssh-copy-id -i ~/.ssh/id_ed25519.github.pub <user>@<host>
+```
+
+testing remote host
+```
+ssh -vT git@github.com
 ```
 
 ### public key
