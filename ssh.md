@@ -25,6 +25,7 @@ ssh-copy-id -i ~/.ssh/id_ed25519.github.pub <user>@<host>
 
 ### public key
 
+Display public key
 ```
 ssh-keygen -y -f id_ed25519 > id_ed25519.github.pub
 ```
