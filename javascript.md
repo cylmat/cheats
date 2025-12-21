@@ -49,6 +49,21 @@ f().catch(alert); // TypeError: failed to fetch // (*)
 
 sample
 ```
+ const a = await asyncFunc1(); // waits for asyncFunc1
+const b = await asyncFunc2(); // waits for asyncFunc2
+
+
+equivalent to
+
+asyncFunc1().then(a => {
+  asyncFunc2().then(b => {
+    // use a and b
+  });
+});
+```
+
+sample2
+```
 ### js async sample
 
 const getUserOrganizationsRequestTypes = async (): Promise<any[]> => {
