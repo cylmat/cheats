@@ -67,6 +67,7 @@ MySQL DATETIME does not store timezone information, and if the column is DATETIM
 → Your input:
 2025-11-14T12:28:49Z
 
+The Z is removed because DATETIME cannot keep timezone.
 → PHP parses this as UTC, When saving to MySQL DATETIME(3) or DATETIME(6), MySQL stores:
 2025-11-14 12:28:49.000
 ```
