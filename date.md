@@ -1,5 +1,21 @@
 # Date
 
+Best practice: Store UTC (Z time) -> Display local  
+
+You should always store UTC in MySQL, then convert on the frontend.
+```
+ Your API gives a UTC timestamp:
+2025-11-14T10:00:00Z (Append "Z" to force UTC)
+
+Exemple
+- Stored: 2025-11-14 10:00:00 (UTC)
+// UTC
+console.log("UTC:", date.toISOString());
+ // Local timezone (ex: Europe/Paris +1)
+console.log("Local:", date.toString());
+Display locally: 2025-11-14 11:00:00 (local)
+```
+
 ## difference Z and P
 
 what difference between Z and P in php 'Y-m-d\TH:i:sP' or 'Y-m-d\TH:i:sZ'
@@ -32,4 +48,17 @@ P[n]Y[n]M[n]DT[n]H[n]M[n]S   (ISO 8601 duration format)
 
 (P start date, T start time)
 new DateInterval ('PT24H')    -> 24 hours
+```
+
+## Mysql !
+
+```
+How MySQL Actually Stores Dates
+1. DATETIME
+    Stores exact date & time you give it
+    No timezone information
+    MySQL does not convert the value
+    It's stored as YYYY-MM-DD HH:MM:SS
+Example:
+If you insert 2025-11-14 10:00:00, MySQL stores exactly that, regardless of server timezone
 ```
