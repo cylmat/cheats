@@ -1,6 +1,15 @@
+```
+    Doctrine tracks by object identity, not by data.
+    clone in PHP is shallow by default → only top-level properties are copied.
+    Always deep-clone relations when you want to avoid auto-flushes.
+    Alternatively, detach the entity to break Doctrine’s tracking.
+```
+
 - tips
- !! Caution !! #[MapEntity] with Symfony form on Update 
--> is reference and modify repository fetched objects with $form->handleRequest($request)
+
+ !! Caution !!   
+ #[MapEntity] with Symfony form on Update    
+-> is reference and modify repository fetched objects with $form->handleRequest($request)  
 
 WORKS BY OBJECT REFERENCE ! AND NOT BY ID
 ```
