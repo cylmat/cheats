@@ -279,6 +279,30 @@ fetchPromise
    });
 ```
 
+resolv vs reject
+```
+new Promise(() => {}) 
+never resolves or rejects, so it never returns a value and never triggers .then() or .catch() 
+
+const promise = new Promise((resolve, reject) => {
+   // you must call resolve(...) or reject(...) here
+}); 
+
+✅ If you call resolve(value) → the promise fulfills with that value. 
+✅ If you call reject(error) → the promise rejects with that error.
+ ❌ If you call neither → it just hangs forever.
+--------------
+
+return new Promise((resolve, reject) => {
+  resolve(dynamicWidgets); // ✅ this will settle the promise
+});
+
+But since async functions automatically wrap their return value in a resolved promise, you can (and should) simplify to, That’s 100% equivalent to:
+async function f() { 
+   return dynamicWidgets;
+}
+```
+
 ### Storage
 
 ```
