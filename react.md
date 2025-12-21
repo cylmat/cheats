@@ -293,6 +293,13 @@ useState to re-render with same objects : stringify or spread it
     setExternalsServices(filters  )
 ```
 
+### useState
+
+update state
+```
+ setFormValues(prevFormValues => ({ ...prevFormValues, [characteristic]: valueData[characteristic] }))
+```
+
 ### Reducer
 @ref: https://react-redux.js.org/api/hooks
 
