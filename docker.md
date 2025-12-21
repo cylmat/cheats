@@ -44,6 +44,21 @@ if [ ! -S "$DOCKER_SOCK" ]; then
 fi
 ```
 
+### DNS
+
+```
+Option A: Set DNS in docker run
+docker run --dns=1.1.1.1 --dns=8.8.8.8 <your-image> npm install
+
+Option B: Set DNS in Docker daemon globally
+    Edit Docker daemon config:
+    On Linux: /etc/docker/daemon.json
+    On Windows (Docker Desktop): Settings → Docker Engine
+{
+  "dns": ["1.1.1.1", "8.8.8.8"]
+}
+```
+
 ### Compose
 
 docker compose -f "docker-compose.yaml" up -d --build  
