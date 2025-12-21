@@ -3,7 +3,26 @@
 @https://www.w3schools.com/typescript  
 
 - Build  
-Gulp, Browserify, terser, or Watchify to the gulp pipeline, Babelify.  
+Gulp, Browserify, terser, or Watchify to the gulp pipeline, Babelify.
+
+exemple
+```
+ export type ValueRealTimeData = {
+    [TypeCode: string]: {
+        [subjectType: string]: {
+            [subjectRef: string]: Value[]
+        }
+    }
+}
+
+indicator: ValueRealTimeData = {
+   '040567': {
+    'subject1' : {
+        'L1': myIndicator
+     }
+  }
+}
+```
 
 ### Alias
 
