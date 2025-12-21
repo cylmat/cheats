@@ -61,4 +61,12 @@ How MySQL Actually Stores Dates
     It's stored as YYYY-MM-DD HH:MM:SS
 Example:
 If you insert 2025-11-14 10:00:00, MySQL stores exactly that, regardless of server timezone
+
+---
+MySQL DATETIME does not store timezone information, and if the column is DATETIME(3) or higher precision, it always appends fractional seconds (e.g., .000).
+→ Your input:
+2025-11-14T12:28:49Z
+
+→ PHP parses this as UTC, When saving to MySQL DATETIME(3) or DATETIME(6), MySQL stores:
+2025-11-14 12:28:49.000
 ```
