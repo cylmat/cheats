@@ -29,6 +29,34 @@ or
 $em->detach($entity)
 ```
 
+## Deep cloning
+
+ Doctrine clone and detach only detach FIRST LEVEL, not child objects
+```
+e.g. 
+IndicatorSource
+    IndicatorSubjects[]
+
+To avoid form and 
+ #[MapEntity(mapping: ['indicatorSourceId' => 'id'])] IndicatorSource $indicatorSource,
+to instantly update entity children when submitting form, use
+
+IndicatorSource
+    public function __clone()
+    {
+        $this->id = null; // reset id for cloned entity
+
+        // Deep clone of indicatorSubjects
+        $clonedSubjects = new ArrayCollection();
+        foreach ($this->indicatorSubjects as $subject) {
+            $clonedSubject = clone $subject;
+            $clonedSubject->setIndicatorSource($this);
+            $clonedSubjects->add($clonedSubject);
+        }
+        $this->indicatorSubjects = $clonedSubjects;
+    }
+```
+
 ## VALIDATION Manager
 
 ```
