@@ -1,8 +1,16 @@
 # Date
 
-Best practice: Store UTC (Z time) -> Display local  
+Industry-standard Best practice: Server-Store UTC (Z time) -> Client-Display local    
 
-You should always store UTC in MySQL, then convert on the frontend.
+A. Store, calculate, compare, and log in UTC.  
+   $dt = new DateTime("2025-11-05T09:20", new DateTimeZone("America/New_York"));  
+   $dt->setTimezone(new DateTimeZone("UTC")); ( new DateTimeZone('Z'))  
+B. Never store local times in the DB. Never store a timezone offset in the column.  
+C. Always output API's timestamps in UTC in ISO-8601 ->format('Y-m-d\TH:i:s\Z').  
+   (e.g. 2025-11-05T14:20:00Z, or 2025-11-05T14:20:00+00:00)  
+D. Convert from UTC → user’s local timezone on DST (Day saving time) the JS/React client.  
+  
+You should always store UTC in MySQL, then convert on the frontend.  
 ```
  Your API gives a UTC timestamp:
 2025-11-14T10:00:00Z (Append "Z" to force UTC)
