@@ -57,6 +57,22 @@ IndicatorSource
     }
 ```
 
+## Form
+
+ChoiceType(Doctrine) vs EntityType(Symfony)
+```
+EntityType is special — it talks directly to Doctrine.
+It loads choices using the repository, and when the form is submitted, it automatically replaces the value with a managed entity from Doctrine (via its ID or other identifier).
+So EntityType → managed object
+Custom form type → new object (unless you intervene)
+-----
+
+If you really want to use your own sub-form instead of EntityType, you must ensure it loads the existing entity instead of creating a new one.
+There are a few ways to do this:
+🧩 Option A: Use a DataTransformer inside your custom form type
+Option B: Handle it in your controller or form handler
+```
+
 ## VALIDATION Manager
 
 ```
