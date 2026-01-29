@@ -482,3 +482,7 @@ useEffect(() => {
     console.log(`a has changed from ${previousA} to ${a}`);
   }
 ```
+
+## info
+
+- https://www.developerway.com/posts/react-re-renders-guide
