@@ -249,6 +249,11 @@ interface ISuccessModalProps {
     onClose(): any; 
 }
 ```
+
+### prompt
+
+var led = prompt("which one")
+
 ### sleep
 
 ```
