@@ -614,6 +614,7 @@ VsCodeVim Module:
  
 ---
 @see also:  
+- https://vimsheet.com/
 - https://fzheng.me/2018/03/17/practical-vim-modes  
 - https://fzheng.me/2018/03/19/practical-vim-files  
 - https://fzheng.me/2018/03/20/practical-vim-getting-around-faster  
