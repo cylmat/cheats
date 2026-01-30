@@ -95,7 +95,7 @@ $        end of line                                    failed$
 \a       bell                                           \a
 \e       escape                                         \e
 
-🔹 UNICODE & BYTES
+🔹 BYTES & UNICODE (use final "/u")
 \xHH     hex byte                                       \x3a
 \x{HHHH} Unicode code point                             \x{20AC}
 \p{L}    Unicode letter                                 \p{L}+
@@ -103,7 +103,8 @@ $        end of line                                    failed$
 \p{N}    any Unicode number
 
   ex: grep -P '\x3a'
-  ex: grep -P '\x{20AC}' 
+  ex: grep -P '\x{20AC}'
+  ex: /^[\p{L}\p{N}]+$/u   (alphanumeric with accents, unicode) 
 
 
 🔹 CONDITIONAL / LOGICAL
