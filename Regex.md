@@ -45,19 +45,24 @@ $        end of line                                    failed$
 \2       backreference to group 2                       (a)(b)\2
 
 🔹 LOOKAROUNDS (ADVANCED)
-(?=...)  positive lookahead                             error(?=\s\d+)
-(?!...)  negative lookahead                             error(?!\signored)
-(?<=...) positive lookbehind                            (?<=user=)\w+
-(?<!...) negative lookbehind                            (?<!/)root
+(?=...)  positive lookahead                             error(?=\s\d+)     Match only if followed by something
+(?!...)  negative lookahead                             error(?!\signored) Match only if NOT followed by something
+(?<=...) positive lookbehind                            (?<=user=)\w+      Match only if something comes before
+(?<!...) negative lookbehind                            (?<!/)root         Match only if NOT preceded by something
 
+  ex: grep -P 'error(?=\s+\d+)'   match: error 404      not: error input
+  ex: grep -P '(?<=user7)\w+'     match: user7alice     not: alice
 
 ⚠ Lookbehind must be fixed-length in grep -P
 
-🔹 LAZY (NON-GREEDY) QUANTIFIERS
+🔹 LAZY (NON-GREEDY) QUANTIFIERS  (Minimal match)
 *?       lazy zero or more                               <.*?>
-+?       lazy one or more                                ".+?"
++?       lazy one or more                                ".+?"    Matches quoted strings one at a time
 ??       lazy optional                                  colou??r
 {n,m}?   lazy bounded                                   \d{2,5}?
+
+  ex: GREEDY grep -P '<.*>'    <tag>one</tag><tag>two</tag>   match: <tag>one</tag><tag>two</tag>
+  ex: LAZY   grep -P '<.*?>'   <tag>one</tag><tag>two</tag>   match: <tag> or </tag>
 
 🔹 INLINE MODIFIERS (PCRE)
 (?i)     case-insensitive                                (?i)error
@@ -118,7 +123,7 @@ last occurence (<occurence>, not followed by <occurence>)
 '/(.*;)(?!.*;)$/'
 ```
 
-## Modifiers
+### Modifiers
 [https://www.php.net/manual/en/reference.pcre.pattern.modifiers.php]
 - i: ignore case
 - m: multilines matcher
@@ -133,6 +138,33 @@ last occurence (<occurence>, not followed by <occurence>)
 - X: extra functionality Pcre incompatible with Perl
 
 e.g.: (?im-sx) is multimatching insensitive, and unset dotall extended
+
+### Sample
+
+match IPv4 address
+```
+grep -P '\b(?:\d{1,3}\.){3}\d{1,3}\b'
+```
+
+alternation grouping
+```
+grep -P '(error|warning|fatal):\s+.*'
+```
+
+match password but hide value
+```
+grep -P '(?<=password=)[^&\s]+'
+```
+
+Match .log files but not .gz
+```
+grep -P '\.log(?!\.gz)'
+```
+
+Match email domains but exclude gmail.com
+```
+grep -P '(?<=@)(?!gmail\.com)\w+\.\w+' 
+```
 
 ---
 **@ref** 
