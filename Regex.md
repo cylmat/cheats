@@ -31,6 +31,9 @@ $        end of line                                    done$
 {n,}     n or more                                      \d{2,}
 {n,m}    between n and m                                \d{2,4}
 
+  ex: grep -P '\bcat\b'     match: cat         not: catenate
+  ex: grep -P '\Bcat\B'     match: catalog     not: cat
+
 🔹 LINE / INPUT ANCHORS
 ^        start of line                                  ^INFO
 $        end of line                                    failed$
@@ -44,14 +47,20 @@ $        end of line                                    failed$
 \1       backreference to group 1                       (\w+)\s+\1
 \2       backreference to group 2                       (a)(b)\2
 
+  ex: grep -P '\b(\w+)\s+\1\b'      match: gamma gamma
+
+
 🔹 LOOKAROUNDS (ADVANCED)
 (?=...)  positive lookahead                             error(?=\s\d+)     Match only if followed by something
 (?!...)  negative lookahead                             error(?!\signored) Match only if NOT followed by something
 (?<=...) positive lookbehind                            (?<=user=)\w+      Match only if something comes before
 (?<!...) negative lookbehind                            (?<!/)root         Match only if NOT preceded by something
+(?>...)  prevent backtracking                                              Used to avoid backtracking in big patterns
+(?|...)                                                                    Reset capture group numbers
 
   ex: grep -P 'error(?=\s+\d+)'   match: error 404      not: error input
   ex: grep -P '(?<=user7)\w+'     match: user7alice     not: alice
+  ex: grep -P '(?>\d+)\w' file
 
 ⚠ Lookbehind must be fixed-length in grep -P
 
@@ -70,6 +79,14 @@ $        end of line                                    failed$
 (?s)     dot matches newline                             (?s)BEGIN.*END
 (?x)     free-spacing + comments                         (?x)a  # comment
 
+  ex: grep -P '(?i)error'
+  ex: grep -P '(?x)
+    \b\d{4}     # year
+    -\d{2}      # month
+    -\d{2}\b    # day
+  ' file
+
+
 🔹 CHARACTER ESCAPES
 \n       newline                                        \n
 \t       tab                                            \t
@@ -83,6 +100,11 @@ $        end of line                                    failed$
 \x{HHHH} Unicode code point                             \x{20AC}
 \p{L}    Unicode letter                                 \p{L}+
 \P{L}    not Unicode letter                             \P{L}+
+\p{N}    any Unicode number
+
+  ex: grep -P '\x3a'
+  ex: grep -P '\x{20AC}' 
+
 
 🔹 CONDITIONAL / LOGICAL
 |        OR                                             error|warn
@@ -164,6 +186,16 @@ grep -P '\.log(?!\.gz)'
 Match email domains but exclude gmail.com
 ```
 grep -P '(?<=@)(?!gmail\.com)\w+\.\w+' 
+```
+
+Match variable names, not inside words
+```
+grep -P '\b[A-Za-z_]\w*\b'  <file>
+```
+
+Match TODO comments
+```
+grep -P '(?i)\bTODO\b.*$' 
 ```
 
 ---
