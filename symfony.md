@@ -24,6 +24,33 @@ CONTROLLER
         $form->submit($data);
 ```
 
+with api,  Symfony Forms cannot strictly validate JSON structure.
+
+```
+"status": {
+  "idblop1": "inProgress", //ignored with "allow_extra_fields")
+  "label": "inProgress"
+}
+
+Why NotNull is not triggered❗ Not submitted ≠ null Since id is not submitted at all, Symfony never calls:
+required=true does NOT mean “required in JSON”
+so "status": { "label": "inProgress" } is submitted, id is not present so is valid
+
+* Solution (BEST) — Stop using Forms for APIs
+
+class Status {
+    #[Constraints\NotBlank()]
+    public string $id;
+
+    #[Constraints\NotBlank()]
+    public string $label;
+}
+
+KEY VALIDATION! :
+  $data = $serializer->deserialize( $request->getContent(), RequestStatus::class, 'json' ); 
+  $form->submit($data, true);
+```
+
 ### Query as boolean
 
 ```
