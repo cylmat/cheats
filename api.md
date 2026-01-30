@@ -17,3 +17,15 @@ https://data.opendatasoft.com/api/explore/v2.1/console
 
 - https://designer.mocky.io
 - https://swagger.io/tools/swagger-codegen/  
+
+### error response
+
+```
+{
+  "type": "https://api.example.com/errors/invalid-parameter",
+  "title": "Invalid request parameter",
+  "status": 400,
+  "detail": "The field `email` is required",
+  "instance": "/users"
+}
+```
