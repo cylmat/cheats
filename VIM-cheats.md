@@ -125,9 +125,10 @@ C-B, C-F :move down/up one page
 * Repeat
 
 ```
-.  : Repeat last change
-&  : Repeat last substitution on current line  
-g& : Repeat last substitution on all lines  
+.   : Repeat last change
+&   : Repeat last substitution on current line  (doesn't keep flags)
+&&  : keep the flags.
+g&  : Repeat last substitution on all lines  (Synonym for :%s//~/&)
 ```
 
 * Search
