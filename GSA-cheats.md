@@ -45,6 +45,60 @@ curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes
 
 ### Grep
 
+```
+1. grep -G, --basic-regexp (BRE) — Basic Regular Expressions
+🔹 Default mode (used if you don’t specify any option)
+🔹 Metacharacters like . * [] work without escaping
+🔹 Other operators must be escaped to have special meaning
+
+Examples:
+  grep 'a\+' file     # + means "one or more" (escaped)
+  grep '(abc)' file   # parentheses are literal, not grouping
+
+Special characters that MUST be escaped:
++  ?  |  (  )  {  }
+
+2. -E, --extended-regexp (ERE) — Extended Regular Expressions
+🔹 More expressive and easier to read
+🔹 Equivalent to the egrep command (deprecated, but still works)
+🔹 No need to escape common operators (Cleaner syntax than BRE)
+📌 Most users prefer -E over basic regex
+
+Examples:
+  grep -E 'a+' file        # + means "one or more"
+  grep -E '(abc|def)' file
+
+Common operators supported directly:
++  ?  |  (  )  {  }
+
+3. -F, --fixed-strings — Literal Strings (No Regex)
+🔹 Fastest option
+🔹 Pattern is treated exactly as text, not a regex
+🔹 No metacharacters at all
+🔹 Best when you don’t need pattern matching
+📌 Use this when you want exact text matches
+
+Examples:
+  grep -F 'a+b' file     # matches literal "a+b"
+  grep -F '(test)' file
+
+4. -P, --perl-regexp — Perl-Compatible Regular Expressions (PCRE)
+🔹 Most powerful
+🔹 Supports advanced regex features
+🔹 Not always available on all systems
+⚠️ Slightly slower and less portable
+
+Supports features like:
+    Lookahead / lookbehind
+    \d, \w, \s
+    Non-capturing groups (?:...)
+    Lazy quantifiers *?, +?
+
+Examples:
+  grep -P '\d{3}-\d{2}-\d{4}' file
+  grep -P '(?<=error )\w+' file
+```
+
 regular expressions:   
 - https://linuxize.com/post/regular-expressions-in-grep
 ```
