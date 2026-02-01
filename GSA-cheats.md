@@ -48,12 +48,13 @@ curl 'https://dummyjson.com/recipes?limit=3&select=' > /tmp/json_recipes
 ```
 1. grep -G, --basic-regexp (BRE) — Basic Regular Expressions
 🔹 Default mode (used if you don’t specify any option)
-🔹 Metacharacters like . * [] work without escaping
+🔹 Metacharacters like . * [] ^ $ work without escaping
 🔹 Other operators must be escaped to have special meaning
 
 Examples:
   grep 'a\+' file     # + means "one or more" (escaped)
   grep '(abc)' file   # parentheses are literal, not grouping
+  grep -G "a.*b" file.txt    MATCH: a123b 
 
 Special characters that MUST be escaped:
 +  ?  |  (  )  {  }
@@ -71,7 +72,7 @@ Examples:
 Common operators supported directly:
 +  ?  |  (  )  {  }
 
-3. -F, --fixed-strings — Literal Strings (No Regex)
+3. -F, --fixed-strings — Literal Strings (No Regex at all)
 🔹 Fastest option
 🔹 Pattern is treated exactly as text, not a regex
 🔹 No metacharacters at all
@@ -81,6 +82,7 @@ Common operators supported directly:
 Examples:
   grep -F 'a+b' file     # matches literal "a+b"
   grep -F '(test)' file
+  grep -F "a.*b" file.txt    MATCH literal: "a.*b" 
 
 4. -P, --perl-regexp — Perl-Compatible Regular Expressions (PCRE)
 🔹 Most powerful
