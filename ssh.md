@@ -26,6 +26,9 @@ ssh-copy-id -i ~/.ssh/id_ed25519.github.pub <user>@<host>
 testing remote host
 ```
 ssh -vT git@github.com
+
+localhost : ssh-keygen -lf ~/.ssh/id_ed25519.github -E sha256
+remote : ssh-keygen -lf ~/.ssh/authorized_keys -E sha256
 ```
 
 ### public key
