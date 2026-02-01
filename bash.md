@@ -3,6 +3,8 @@ Ref
 - https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Bourne-Shell-Builtins
 - https://kapeli.com/cheat_sheets/Bash_Shortcuts.docset/Contents/Resources/Documents/index
 
+(https://github.com/cheat/cheatsheets)  
+
 ## Shortcut
 
 ```
