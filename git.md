@@ -1,3 +1,10 @@
+# GIT
+
+ref
+- https://www.conventionalcommits.org/en/v1.0.0/#summary  
+- https://commitlint.js.org/reference/rules  (https://github.com/conventional-changelog/commitlint)  
+
+
 ```
     get all conflict files
 
