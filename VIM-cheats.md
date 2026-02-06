@@ -570,6 +570,16 @@ t tag
 - p/#/l (print line substitued, number, text)
 ```
 
+---------------------------
+------ quickfix window ----
+---------------------------
+
+https://medium.com/@EduardoRodriguesF/vim-start-using-quickfix-lists-e43a7a29ba52  
+https://vonheikemen.github.io/devlog/tools/vim-and-the-quickfix-list  
+```
+:copen → opens the quickfix window with matches
+```
+
 ---------------
 --- PLUGINS ---
 
