@@ -1,0 +1,173 @@
+ FD + RIPGREP + FZF
+INTEGRATION WITH VIM & NUSHELL
+================================
+
+TOOLS ROLE
+----------
+fd   → find files (fast, git-aware)
+rg   → search file contents
+fzf  → interactive selection
+vim  → act on results
+nu   → structured pipelines
+
+==================================================
+SECTION 1 — VIM INTEGRATION
+==================================================
+
+--------------------------------------------------
+1. OPEN FILES FOUND BY FD
+--------------------------------------------------
+
+Open a file interactively:
+  :edit $(fd | fzf)
+
+Shell equivalent:
+  fd | fzf | xargs vim
+
+--------------------------------------------------
+2. SEARCH TEXT THEN OPEN FILE
+--------------------------------------------------
+
+Search text, pick match, open file:
+  rg 'UserRepository' | fzf | cut -d: -f1 | uniq | xargs vim
+
+--------------------------------------------------
+3. SEARCH + PREVIEW (BEST WORKFLOW)
+--------------------------------------------------
+
+rg with file preview in fzf:
+  rg --line-number --no-heading 'TODO' \
+  | fzf --delimiter : \
+        --preview 'bat --style=numbers --color=always {1} --line-range {2}:'
+
+--------------------------------------------------
+4. VIM MAPPINGS (PUT IN vimrc)
+--------------------------------------------------
+
+Find file:
+  nnoremap <leader>f :edit $(fd | fzf)<CR>
+
+Search text:
+  nnoremap <leader>g :edit $(rg -l "" | fzf)<CR>
+
+Search TODOs:
+  nnoremap <leader>t :edit $(rg -l 'TODO' | fzf)<CR>
+
+--------------------------------------------------
+5. OPEN ALL MATCHES AT ONCE
+--------------------------------------------------
+
+Open all files containing a symbol:
+  vim $(rg -l '\boldFunctionName\b')
+
+==================================================
+SECTION 2 — NUSHELL INTEGRATION
+==================================================
+
+--------------------------------------------------
+1. FD IN NUSHELL
+--------------------------------------------------
+
+List PHP files:
+  fd -e php | lines
+
+Recently changed files:
+  fd . --changed-within 2d | lines
+
+--------------------------------------------------
+2. RIPGREP IN NUSHELL
+--------------------------------------------------
+
+Search errors:
+  rg 'error|fail|fatal' | lines
+
+Search and extract filenames:
+  rg 'UserRepository' | lines | split column ":" | get column1 | uniq
+
+--------------------------------------------------
+3. OPEN RESULTS IN VIM FROM NUSHELL
+--------------------------------------------------
+
+Search then open:
+  rg 'UserRepository'
+  | lines
+  | split column ":"
+  | get column1
+  | uniq
+  | each { |f| vim $f }
+
+--------------------------------------------------
+4. FD + RG COMBINED (NUSHELL)
+--------------------------------------------------
+
+Search text only in PHP files:
+  fd -e php
+  | lines
+  | each { |f| rg 'Entity' $f }
+
+--------------------------------------------------
+5. INTERACTIVE WITH FZF IN NUSHELL
+--------------------------------------------------
+
+Pick file, open in Vim:
+  fd | fzf | vim (in)
+
+Search text, pick match:
+  rg 'TODO' | fzf | vim (split column ":" | get column1 | uniq | first)
+
+==================================================
+SECTION 3 — FZF POWER RECIPES
+==================================================
+
+--------------------------------------------------
+1. FILE PREVIEW
+--------------------------------------------------
+
+fd | fzf --preview 'bat --style=numbers --color=always {}'
+
+--------------------------------------------------
+2. CONTENT PREVIEW
+--------------------------------------------------
+
+rg 'UserRepository' \
+| fzf --delimiter : \
+      --preview 'bat --color=always {1} --line-range {2}:'
+
+--------------------------------------------------
+3. MULTI-SELECT
+--------------------------------------------------
+
+Open multiple files:
+  fd | fzf -m | xargs vim
+
+==================================================
+SECTION 4 — REAL-WORLD WORKFLOWS
+==================================================
+
+Find where something is defined:
+  rg 'class\s+User'
+
+Find where it is used:
+  rg '\bUser\b'
+
+Refactor safely:
+  rg -l 'oldName' | xargs sed -i 's/oldName/newName/g'
+
+Audit secrets:
+  rg -i 'password|secret|token|apikey'
+
+Find missing things:
+  fd -e php | rg -L 'strict_types'
+
+==================================================
+CORE PATTERN (MEMORIZE THIS)
+==================================================
+
+fd → scope files
+rg → search contents
+fzf → choose interactively
+vim → act
+
+vim $(rg -l 'something')
+
+==================================================
