@@ -92,7 +92,7 @@ VS CODE ONE PAGE CHEAT
 
 ---
 
-## ADVANCED SEARCH & REPLACE
+## SEARCH & REPLACE
 
 - `Ctrl+Shift+H` : Replace in files  
 - `Alt+Enter` : Select all find matches  
