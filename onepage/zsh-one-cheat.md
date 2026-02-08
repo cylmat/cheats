@@ -1,4 +1,4 @@
-ZSH DAILY EXPERT SHORTCUTS — SENIOR PRO
+ZSH DAILY SHORTCUTS
 ===
 
 ## COMMAND LINE NAVIGATION
@@ -94,5 +94,132 @@ ZSH DAILY EXPERT SHORTCUTS — SENIOR PRO
 - Command edit in $EDITOR for complex multi-line commands: Ctrl+X Ctrl+E
 - Combine completion + multi-arg substitution: Tab + Alt+. + Ctrl+Y
 
-Cyril MATTÉ
-06 65 46 75 05
+
+---
+
+ZSH WORKFLOW SEQUENCES — DAILY USE
+===
+
+RAPID FILE NAVIGATION & EDITING
+```
+# Jump to recent directories, find files, edit quickly
+cd ~/projects # go to project root
+pushd . # save current dir
+ls -lah # list contents
+Ctrl+R + 'vim' # reverse search last vim command
+vim $(fzf) # fuzzy find file, open in editor
+Alt+. # insert last argument from previous command
+Ctrl+X Ctrl+E # edit complex command in $EDITOR
+: wq # save & exit editor → executes command
+```
+
+HISTORY-BASED REUSE WORKFLOW
+```
+Ctrl+R + 'git commit' # search history for git commit
+Alt+. # reuse last argument from previous git command
+!! # repeat last command
+!!:gs/old/new/ # replace text in last command before executing
+fc # open last command in editor for multi-line edit
+Ctrl+P / Ctrl+N # scroll through history quickly
+Esc+. # cycle previous arguments from history
+```
+
+MULTI-COMMAND & PIPELINE EXECUTION
+```
+# Chain commands without breaking flow
+cmd1 && cmd2 && cmd3 # sequential execution, stop on fail
+cmd1 | tee out.log | less # pipeline with logging & paging
+cmd1 & # background process
+jobs # list background jobs
+fg %1 # bring job #1 to foreground
+kill %2 # terminate background job #2
+```
+
+DIRECTORY STACK & PROJECT SWITCHING
+```
+pushd ~/project1
+pushd ~/project2
+dirs # show directory stack
+popd # return to previous directory quickly
+cd - # jump to last directory
+fzf + cd # fuzzy search directories for instant jump
+Alt+. for last argument paths # reuse last directory/file
+```
+
+AUTO-COMPLETION & EXPERT EDITING
+```
+Tab # complete command or path
+Alt+Tab # cycle multiple completions
+setopt AUTO_LIST # list completion automatically
+setopt CORRECT # autocorrect commands
+Ctrl+U / Ctrl+K / Ctrl+W # delete to start / end / previous word
+Ctrl+Y # paste last kill
+Alt+Y # cycle through previous kills
+Esc+T / Ctrl+T # transpose words / characters
+Alt+U / Alt+L / Alt+C # uppercase / lowercase / capitalize word
+```
+
+ENVIRONMENT & QUICK SWITCH
+```
+export VAR=value # set variable
+echo $VAR # show variable
+source ~/.zshrc # reload config without restarting
+alias gs='git status' # define shortcut
+unalias gs # remove shortcut
+Ctrl+X Ctrl+E # edit complex env commands in $EDITOR
+history | grep pattern # search history with grep
+```
+
+FZF + FUZZY NAVIGATION WORKFLOWS
+```
+# Fast file/project navigation
+fzf # fuzzy find files or history
+fzf + Alt+. # reuse previous argument or directory
+ctrl-r + fzf # reverse search with fuzzy filter
+ctrl-x ctrl-e # edit selected command in $EDITOR
+pushd $(fzf) # jump to fuzzy-selected directory
+```
+
+PROCESS MANAGEMENT WORKFLOW
+```
+Ctrl+Z # suspend current process
+bg # resume background
+fg # bring to foreground
+jobs # list jobs
+kill %1 # terminate job #1
+ps aux | grep process_name # search running processes
+Ctrl+C # terminate foreground process immediately
+```
+
+SEARCH & REPLACE IN COMMANDS
+```
+Ctrl+R + partial command # search previous commands incrementally
+!!:gs/old/new/ # replace text in last command
+Alt+. # insert last argument from previous command
+fc # edit previous command in $EDITOR
+Ctrl+R → Alt+. # chain history reuse + last argument insertion
+```
+
+🔟 EXPERT DAILY WORKFLOWS
+```
+# 1. Rapid project jump + edit
+pushd ~/projects && ls -lah && vim $(fzf)
+
+# 2. Multi-command git workflow
+Ctrl+R 'git status' → Alt+. → git add file → Ctrl+R 'git commit' → Alt+. → !! → Ctrl+X Ctrl+E for multi-line message
+
+# 3. Background build + terminal focus
+make & → jobs → fg %1 → Ctrl+C to stop if needed → repeat
+
+# 4. Bulk edit history commands
+history | grep pattern → fc → edit in $EDITOR → execute multiple commands
+
+# 5. Complex pipelines
+cmd1 | cmd2 | tee output.log | less → Ctrl+Y / Alt+Y to reuse pipe results
+
+# 6. Multi-directory workflow
+pushd dir1 → pushd dir2 → popd → cd - → Alt+. for quick argument reuse
+
+# 7. Fuzzy search everywhere
+fzf → Ctrl+R → Alt+. → Ctrl+X Ctrl+E → execute multi-step command sequence
+```
