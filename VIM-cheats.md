@@ -118,6 +118,7 @@ dgn      : delete last Visual match
 wW, bB   : next/prev word/WORD  
 C-D, C-U :move down/up half page
 C-B, C-F :move down/up one page
+C-Y, C-E :scroll up/down one line (no cursor move)
 %        : match next/prev "(, {, [, ], }, )"  
 3/<text>, 3?<text> : search 3rd next/prev <text> in all document 
 ```
