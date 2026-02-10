@@ -1,14 +1,13 @@
-### USEFULS
+### Uuseful cheats
 
 ---
-curl cheat.sh/bash
+One page cheats: [Cylmat/Git OnePage](https://github.com/cylmat/cheats/blob/main/onepage/git-one-cheat.md) - [Cylmat/Vim OnePage](https://github.com/cylmat/cheats/blob/main/onepage/vim-one-cheat.md) - [Cylmat/VsCode OnePage](https://github.com/cylmat/cheats/blob/main/onepage/vsc-one-cheat.md) - [Cylmat/Zsh OnePage](https://github.com/cylmat/cheats/blob/main/onepage/zsh-one-cheat.md)
 
----
- 
-[Cylmat/Git Cheats](https://github.com/cylmat/cheats/blob/main/GIT-cheats.md) - [Cylmat/GSA Cheats](https://github.com/cylmat/cheats/blob/main/GSA-cheats.md) - [Cylmat/Vim Cheats](https://github.com/cylmat/cheats/blob/main/VIM-cheats.md)    
-[Onceupon/Bash Oneliner](https://github.com/onceupon/Bash-Oneliner)    
+Detailed cheats: [Cylmat/Git Cheats](https://github.com/cylmat/cheats/blob/main/GIT-cheats.md) - [Cylmat/GSA Cheats](https://github.com/cylmat/cheats/blob/main/GSA-cheats.md) - [Cylmat/Vim Cheats](https://github.com/cylmat/cheats/blob/main/VIM-cheats.md)    
+   
 
 Bash
+[Onceupon/Bash Oneliner](https://github.com/onceupon/Bash-Oneliner) 
 ```
 for i in `seq 1 15`;do echo "$i";done
 ```
