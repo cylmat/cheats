@@ -1,11 +1,10 @@
 ### Useful cheats
 
----
 One page cheats: [Git OnePage](https://github.com/cylmat/cheats/blob/main/onepage/git-one-cheat.md) - [Vim OnePage](https://github.com/cylmat/cheats/blob/main/onepage/vim-one-cheat.md) - [VsCode OnePage](https://github.com/cylmat/cheats/blob/main/onepage/vsc-one-cheat.md) - [Zsh OnePage](https://github.com/cylmat/cheats/blob/main/onepage/zsh-one-cheat.md)
 
 Detailed cheats: [Cylmat/Git Cheats](https://github.com/cylmat/cheats/blob/main/GIT-cheats.md) - [Cylmat/GSA Cheats](https://github.com/cylmat/cheats/blob/main/GSA-cheats.md) - [Cylmat/Vim Cheats](https://github.com/cylmat/cheats/blob/main/VIM-cheats.md)    
 
----
+
 ### Daily ones
 
 Bash
