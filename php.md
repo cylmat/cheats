@@ -17,6 +17,29 @@ P[n]Y[n]M[n]DT[n]H[n]M[n]S   (ISO 8601 duration format)
 new DateInterval ('PT24H')    -> 24 hours
 ```
 
+### form error full display
+
+```
+ trait ErrorTrait
+{
+    private function getFormErrorsAsString(Form $form): string
+    {
+        $errors = $form->getErrors(true, true);
+
+        $errorMessages = [];
+        foreach ($errors as $error) {
+            $parameterMessages = '';
+            foreach ($error->getMessageParameters() as $value) {
+                $parameterMessages .= " $value ";
+            }
+            $errorMessages[] = $error->getMessage() . ": " . $parameterMessages;
+        }
+
+        return implode("; ", $errorMessages);
+    }
+}
+```
+
 ## For loop : declare array
 ```
 for ($l = array(1,1), $i = 2, $x = 0; $i < $length; $i++)
