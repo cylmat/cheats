@@ -635,21 +635,24 @@ VsCodeVim Module:
 
 ---
 **@ref**  
-help
-* https://vimhelp.org/quickref.txt.html
+help:
 * https://vim.rtorr.com
+* https://vimhelp.org/quickref.txt.html
 * http://tnerual.eriogerg.free.fr/vimqrc.html
 * https://vim.fandom.com/wiki/Vim_Tips_Wiki
 * http://www.viemu.com/vi-vim-cheat-sheet.gif
-* http://www.fprintf.net/vimCheatSheet.html
+* http://www.fprintf.net/vimCheatSheet.html  
+
 Tutos:
 - https://learnbyexample.github.io
 - https://learnvim.irian.to
 - https://vimtricks.com
+
 Motion & braquets:  
 - https://vimhelp.org/index.txt.html#%5B  
 - https://vimhelp.org/motion.txt.html  
 - https://vimhelp.org/map.txt.html#map-modes
+
 see also: 
 - https://vimhelp.org/vi_diff.txt.html#vi-differences
 - https://www.shell-tips.com/linux/vi-vs-vim/#gsc.tab=0 
