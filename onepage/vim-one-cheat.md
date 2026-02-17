@@ -9,8 +9,8 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 - % : jump to matching bracket/parenthesis  
 - [[ / ]] : jump to previous/next function/start-of-section  
 - `^ : last insert start  
-- `'.` : last change line  
-- `g;` / `g,` : older / newer change  
+- '. : last change line  
+- g; / g, : older / newer change  
 
 - H / M / L : move cursor to top / middle / bottom of screen
 - Ctrl-d / Ctrl-u : half page down/up
@@ -22,11 +22,11 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 
 ## SEARCH & REPLACE
 
-- `/` / `?` : forward / backward search  
-- `n` / `N` : repeat search forward / backward  
-- `*` / `#` : search word under cursor forward / backward  
-- `:%s/foo/bar/gc` : search & replace with confirmation  
-- `gn` / `gN` : select next / previous search match
+- / or ? : forward / backward search  
+- n / N : repeat search forward / backward  
+- * / # : search word under cursor forward / backward  
+- :%s/foo/bar/gc : search & replace with confirmation  
+- gn / gN : select next / previous search match
 
 - \c / \C : ignore / match case
 - \v : very magic regex mode
@@ -37,10 +37,10 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 
 ## REGISTERS & CLIPBOARD
 
-- `"ayy` : yank line to register `a`  
-- `"ap` : paste from register `a`  
-- `"_d` : delete to black hole (no yank)  
-- `"+y` / `"+p` : system clipboard yank / paste  
+- "ayy : yank line to register `a`  
+- "ap : paste from register `a`  
+- "_d : delete to black hole (no yank)  
+- "+y / "+p : system clipboard yank / paste  
 
 - :reg : list all registers
 - :let @a='text': assign text to register a
@@ -51,9 +51,9 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 
 ## MACROS & REPEAT
 
-- `qa…q` : record macro to register `a`  
-- `@a` / `@@` : play macro `a` / repeat last macro  
-- `.` : repeat last edit  
+- qa…q : record macro to register `a`  
+- @a / @@ : play macro `a` / repeat last macro  
+- . : repeat last edit  
 
 - q: : edit last command-line command
 - q/ : edit last search
@@ -66,12 +66,12 @@ Tips
 
 ## MARKS & JUMP LIST (summary)
 
-- `ma–mz` : local mark  
-- `mA–mZ` : global mark  
-- `'a` / `` `a `` : jump to line / exact position  
-- `<C-o>` / `<C-i>` : older / newer jump list  
-- `:marks` : show marks  
-- `:jumps` : show jump list
+- ma–mz : local mark  
+- mA–mZ : global mark  
+- 'a / `a : jump to line / exact position  
+- <C-o> / `<C-i>` : older / newer jump list  
+- :marks : show marks  
+- :jumps : show jump list
 
 Workflows:
 - mf / mt / mr " function / TODO / return anchor
