@@ -69,7 +69,7 @@ Tips
 - ma–mz : local mark  
 - mA–mZ : global mark  
 - 'a / `a : jump to line / exact position  
-- <C-o> / `<C-i>` : older / newer jump list  
+- <C-o> / <C-i> : older / newer jump list  
 - :marks : show marks  
 - :jumps : show jump list
 
@@ -78,23 +78,23 @@ Workflows:
 - `f / `t / `r " precise teleport
 
 **Special marks:**  
-- `''` : previous line  
-- '```` : previous exact position  
-- `'.` : last change  
-- `'^` : last insert exit  
-- `'[` / `']` : start/end of last change  
+- '' : previous line  
+- '` : previous exact position  
+- '. : last change  
+- '^ : last insert exit  
+- '[ / '] : start/end of last change  
 
 
 ---
 
 ## EDITING POWER MOVES
 
-- `ciw` / `daw` : change / delete inner word  
-- `di(` / `da(` : delete inside / around parentheses  
-- `>` / `<` : indent / unindent visual selection  
-- `gq` : reformat paragraph  
-- `J` : join lines  
-- `xp` : swap two characters  
+- ciw / daw : change / delete inner word  
+- di( / da( : delete inside / around parentheses  
+- > / < : indent / unindent visual selection  
+- gq : reformat paragraph  
+- J : join lines  
+- xp : swap two characters  
 
 Undo/Redo:
 - u : undo
@@ -106,20 +106,20 @@ Undo/Redo:
 
 ## UNDO & REDO
 
-- `u` : undo  
-- `<C-r>` : redo  
-- `:earlier 5m` : go 5 minutes earlier  
-- `:later 5m` : go 5 minutes later  
+- u : undo  
+- <C-r> : redo  
+- :earlier 5m : go 5 minutes earlier  
+- :later 5m : go 5 minutes later  
 
 ---
 
 ## WINDOWS & TABS
 
-- `:split` / `:vsplit` : horizontal / vertical split  
-- `<C-w>w` : switch window  
-- `<C-w>q` : close window  
-- `:tabnew` : open new tab  
-- `gt` / `gT` : next / previous tab  
+- :split / :vsplit : horizontal / vertical split  
+- <C-w>w : switch window  
+- <C-w>q : close window  
+- :tabnew : open new tab  
+- gt / gT : next / previous tab  
 
 - <C-w T : move window to new tab
 - <C-w K / H / J / L : move split to top / left / bottom / right
@@ -129,9 +129,9 @@ Undo/Redo:
 
 ## FOLDING & OUTLINE
 
-- `za` / `zc` / `zo` : toggle / close / open fold  
-- `zR` / `zM` : open all / close all folds  
-- `zf{motion}` : create fold over motion  
+- za / zc / zo : toggle / close / open fold  
+- zR / zM : open all / close all folds  
+- zf{motion} : create fold over motion  
 
 - zd : delete fold
 - zE : eliminate all folds
@@ -145,13 +145,13 @@ Tip:
 
 ## 🔟 UNCOMMON BUT USEFUL
 
-- `:keepjumps` : execute without affecting jump list  
-- `:normal` : run normal mode command on range  
-- `:global /pattern/command` : run command on all matching lines  
-- `:registers` : list all registers  
-- `gd` / `gD` : go to local / global declaration  
-- `CTRL-G` : file info + cursor position  
-- `:!command` : run shell command  
+- :keepjumps : execute without affecting jump list  
+- :normal : run normal mode command on range  
+- :global /pattern/command : run command on all matching lines  
+- :registers : list all registers  
+- gd / gD : go to local / global declaration  
+- CTRL-G : file info + cursor position  
+- :!command : run shell command  
 
 - :source % : reload current vim file
 - :read !ls : insert shell output
@@ -169,7 +169,7 @@ Tip:
 - :keepjumps when using macros to avoid polluting jump list
 - Ctrl-O / Ctrl-I + backtick + marks = teleport like a wizard
 
-- Always use backtick `` ` `` for exact positions
+- Always use backtick ` for exact positions
 - Combine marks + jump list + folds = instant context jumps
 - Capital marks (A–Z) = long-term anchors across files
 - View marks often with :marks
