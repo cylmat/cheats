@@ -200,7 +200,7 @@ fc # edit previous command in $EDITOR
 Ctrl+R → Alt+. # chain history reuse + last argument insertion
 ```
 
-🔟 EXPERT DAILY WORKFLOWS
+EXPERT DAILY WORKFLOWS
 ```
 # 1. Rapid project jump + edit
 pushd ~/projects && ls -lah && vim $(fzf)
