@@ -75,7 +75,7 @@ Tips
 
 Workflows:
 - mf / mt / mr : function / TODO / return anchor
-- `f / `t / `r : precise teleport
+- (`f) / (`t) / (`r) : precise teleport
 
 **Special marks:**  
 - '' : previous line  
@@ -137,7 +137,7 @@ Tip:
 
 ---
 
-## 🔟 UNCOMMON BUT USEFUL
+## UNCOMMON BUT USEFUL
 
 - :keepjumps : execute without affecting jump list  
 - :normal : run normal mode command on range  
