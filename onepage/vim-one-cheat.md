@@ -90,8 +90,8 @@ Workflows:
 ## EDITING POWER MOVES
 
 - ciw / daw : change / delete inner word  
-- di( / da( : delete inside / around parentheses  
-- > / < : indent / unindent visual selection  
+- di[ / da[ : delete inside / around brackets  
+- (>) / (<) : indent / unindent visual selection  
 - gq : reformat paragraph  
 - J : join lines  
 - xp : swap two characters  
