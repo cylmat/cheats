@@ -75,7 +75,7 @@ Tips
 
 Workflows:
 - mf / mt / mr : function / TODO / return anchor
-- (`f) / (`t) / (`r) : precise teleport
+- (`f / t / r) : precise teleport
 
 **Special marks:**  
 - '' : previous line  
