@@ -22,16 +22,16 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 
 ## SEARCH & REPLACE
 
-- / or ? : forward / backward search  
+- (/) / (?) : forward / backward search  
 - n / N : repeat search forward / backward  
-- `*` / # : search word under cursor forward / backward  
+- (*) / (#) : search word under cursor forward / backward  
 - :%s/foo/bar/gc : search & replace with confirmation  
 - gn / gN : select next / previous search match
 
 - \c / \C : ignore / match case
 - \v : very magic regex mode
-- :vimgrep /pattern/ **/*.ext | copen " search in multiple files
-- :cfdo %s/old/new/gc " apply change in all matches
+- (:vimgrep /pattern/ **/*.ext | copen) : search in multiple files
+- (:cfdo %s/old/new/gc) : apply change in all matches
 
 ---
 
