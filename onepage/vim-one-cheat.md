@@ -3,7 +3,7 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 
 ## MOVEMENT & NAVIGATION
 
-- `gg` / `G` : go to start / end of file  
+- gg / G : go to start / end of file  
 - `0` / `^` / `$` : start of line / first non-blank / end of line  
 - `w` / `e` / `b` : word motions  
 - `%` : jump to matching bracket/parenthesis  
