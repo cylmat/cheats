@@ -24,7 +24,7 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 
 - / or ? : forward / backward search  
 - n / N : repeat search forward / backward  
-- * / # : search word under cursor forward / backward  
+- `*` / # : search word under cursor forward / backward  
 - :%s/foo/bar/gc : search & replace with confirmation  
 - gn / gN : select next / previous search match
 
