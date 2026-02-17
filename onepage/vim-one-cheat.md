@@ -69,13 +69,13 @@ Tips
 - ma–mz : local mark  
 - mA–mZ : global mark  
 - 'a / `a : jump to line / exact position  
-- <C-o> / <C-i> : older / newer jump list  
+- (Ctrl-o) / (Ctrl-i) : older / newer jump list  
 - :marks : show marks  
 - :jumps : show jump list
 
 Workflows:
-- mf / mt / mr " function / TODO / return anchor
-- `f / `t / `r " precise teleport
+- mf / mt / mr : function / TODO / return anchor
+- `f / `t / `r : precise teleport
 
 **Special marks:**  
 - '' : previous line  
@@ -96,18 +96,12 @@ Workflows:
 - J : join lines  
 - xp : swap two characters  
 
-Undo/Redo:
-- u : undo
-- <C-r> : redo
-- :earlier 5m : jump to 5 min earlier
-- :later 5m : jump to 5 min later
-
 ---
 
 ## UNDO & REDO
 
 - u : undo  
-- <C-r> : redo  
+- (Ctrl-r) : redo  
 - :earlier 5m : go 5 minutes earlier  
 - :later 5m : go 5 minutes later  
 
@@ -116,13 +110,13 @@ Undo/Redo:
 ## WINDOWS & TABS
 
 - :split / :vsplit : horizontal / vertical split  
-- <C-w>w : switch window  
-- <C-w>q : close window  
+- (Ctrl-w)w : switch window  
+- (Ctrl-w)q : close window  
 - :tabnew : open new tab  
 - gt / gT : next / previous tab  
 
-- <C-w T : move window to new tab
-- <C-w K / H / J / L : move split to top / left / bottom / right
+- (Ctrl-w T) : move window to new tab
+- (Ctrl-w K) / H / J / L : move split to top / left / bottom / right
 
 
 ---
@@ -161,11 +155,11 @@ Tip:
 ## TIPS & BEST PRACTICES
 
 - Use marks + capital marks + jump list for instant zero-scroll teleportation
-- Use visual selection + `:` + normal for batch transformations:  `:'<,'>normal I// ` : add comment to selection
-- Quick search + change in multiple files: `:vimgrep /pattern/ **/*.ext | cfdo %s/old/new/gc`
+- Use visual selection + (:) + normal for batch transformations :  (:'<,'>normal I// ) : add comment to selection
+- Quick search + change in multiple files: (:vimgrep /pattern/ **/*.ext | cfdo %s/old/new/gc)
 - Combine folds + zz / zt / zb for fast context navigation
 - Macros + registers + marks + jump list = “multi-file refactor in <10s”
-- Use gn / gN + . for blazing fast search-and-change
+- Use (gn / gN + .) for blazing fast search-and-change
 - :keepjumps when using macros to avoid polluting jump list
 - Ctrl-O / Ctrl-I + backtick + marks = teleport like a wizard
 
