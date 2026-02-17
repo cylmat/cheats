@@ -4,10 +4,10 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 ## MOVEMENT & NAVIGATION
 
 - gg / G : go to start / end of file  
-- `0` / `^` / `$` : start of line / first non-blank / end of line  
-- `w` / `e` / `b` : word motions  
-- `%` : jump to matching bracket/parenthesis  
-- `[[` / `]]` : jump to previous/next function/start-of-section  
+- 0 / ^ / $ : start of line / first non-blank / end of line  
+- w / e / b : word motions  
+- % : jump to matching bracket/parenthesis  
+- [[ / ]] : jump to previous/next function/start-of-section  
 - `` `^ `` : last insert start  
 - `'.` : last change line  
 - `g;` / `g,` : older / newer change  
