@@ -66,10 +66,10 @@ ZSH DAILY - ONE FILE CHEAT
 
 ## PIPES, REDIRECTION & FILE SHORTCUTS
 - | : Pipe output to next command
-- > : Redirect output to file (overwrite)
-- >> : Append output to file
-- 2> : Redirect stderr
-- &> : Redirect stdout and stderr
+- `>` : Redirect output to file (overwrite)
+- `>>` : Append output to file
+- `2>` : Redirect stderr
+- `&>` : Redirect stdout and stderr
 - Ctrl+Alt+F : (custom) navigate directory fast (with fzf)
 - cd - : Go to previous directory
 - pushd/popd : Directory stack navigation
