@@ -8,7 +8,7 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 - w / e / b : word motions  
 - % : jump to matching bracket/parenthesis  
 - [[ / ]] : jump to previous/next function/start-of-section  
-- `` `^ `` : last insert start  
+- `^ : last insert start  
 - `'.` : last change line  
 - `g;` / `g,` : older / newer change  
 
