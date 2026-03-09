@@ -47,6 +47,8 @@ VIM GOLD COMMANDS ONE-PAGE CHEAT
 - :put a : paste register a below cursor
 - "0p : paste last yank (not delete)
 
+- :'<,'>!xclip -selection clipboard 
+
 ---
 
 ## MACROS & REPEAT
