@@ -34,6 +34,14 @@ kubectl exec -it job/cronjob_name -- bash
 kubectl delete job/cronjob_name
 ```
 
+### dump mysql
+
+```
+kubectl run --rm -it mysql-client --image=mysql:8.0  -- bash
+mysqldump -u mysqladmin -p -h mysql-flex.mysql.database.azure.com database area > db_dump.sql 
+kubectl cp mysql-client:/dump_area_int.sql ./dump_area_int.sql
+```
+
 ### deploy / ingress
 
 k get deploy   
