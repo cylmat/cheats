@@ -12,8 +12,16 @@
 
 ### BASE 64
 
+```
 echo '613f892e-953c-418a-9aed-73100d9f6d30' | base64  
 echo 'YWZjNDRjZjctZGMzYy00MzNkLTg1YjItYzEwODU1ZTI4MDM1' | base64 -d  
+```
+
+### clipboard
+
+```
+kube get pod | grep -E 'portal-front' | awk '{print $1}' > xclip 
+```
 
 ### Checksum
 
@@ -50,8 +58,10 @@ sudo cat /etc/sudoers
 
 ### RSYNC
 
+```
 * -(a)rchive -(z)compress -(e)remote  
 rsync -av -e 'ssh -p 22000' localhost:src_old_machine_file dst_new_machine_file
+```
 
 ### systemctl
 
