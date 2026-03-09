@@ -396,6 +396,14 @@ ZZ <=> :x     - Write current file (if modified) and close
 ZQ <=> :q!    - Quit without checking change
 ```
 
+* clipboard
+
+send it to clipboard option (mandatory to use ctrl-v to paste)  
+(use brew install xclip)
+```
+:'<,'>!xclip -selection clipboard 
+```
+
 * Specific
 
 ```
