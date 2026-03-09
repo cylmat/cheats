@@ -401,7 +401,8 @@ ZQ <=> :q!    - Quit without checking change
 send it to clipboard option (mandatory to use ctrl-v to paste)  
 (use brew install xclip)
 ```
-:'<,'>!xclip -selection clipboard 
+:'<,'>!xclip -selection clipboard         - remove current selection
+:'<,'>w !xclip -selection clipboard       - copy current selection
 ```
 
 * Specific
