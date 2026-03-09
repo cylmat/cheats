@@ -10,7 +10,20 @@ use JMS\Serializer\Annotation as JMS;
 @https://jmsyst.com/libs/serializer/master/reference/annotations
 
 use Ramsey\Uuid\UuidInterface;
-@https://github.com/ramsey/uuid-doctrine
+@https://github.com/ramsey/uuid-doctrineCan configure OA Swagger POST with Body from Symfony Form Type
+
+#[Route('/api/industrial-site/{industrialSiteId}/industrial-site-indicator/configuration', methods: ['POST'])]
+    #[OA\Parameter(
+        name: 'industrialSiteId',
+        in: 'path',
+        required: true,
+        description: 'The UUID of the IndustrialSite',
+        schema: new OA\Schema(type: 'string', format: 'uuid')
+    )]
+    #[OA\RequestBody(
+        required: true,
+        content: new OA\JsonContent(ref: new Model(type: IndicatorSitesConfigType::class))
+    )]
 
 use Swagger\Annotations as SWG;
 @https://zircote.github.io/swagger-php/reference/annotations.html
@@ -143,4 +156,22 @@ annotations
    * )
    * @OA\Tag(name="RequestTypeDefinition")
    */
+```
+
+## POST
+
+Can configure OA Swagger POST with Body from Symfony Form Type
+```
+#[Route('/api/industrial-site/{industrialSiteId}/industrial-site-indicator/configuration', methods: ['POST'])]
+    #[OA\Parameter(
+        name: 'industrialSiteId',
+        in: 'path',
+        required: true,
+        description: 'The UUID of the IndustrialSite',
+        schema: new OA\Schema(type: 'string', format: 'uuid')
+    )]
+    #[OA\RequestBody(
+        required: true,
+        content: new OA\JsonContent(ref: new Model(type: IndicatorSitesConfigType::class))
+    )]
 ```
