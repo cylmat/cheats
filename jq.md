@@ -29,7 +29,8 @@ JSON = { "recipes": [
 ] }
 ```
 
-# DISPLAY
+## DISPLAY
+
 ```
 
 jq '.recipes[] .id'                    => 33 55
@@ -56,19 +57,15 @@ echo '[{ "key": "beta", "value": "alpha" }]' | jq -c 'from_entries'   {"beta":"a
 echo '{"a": 1, "b": 2}'  | jq -c 'with_entries(.key |= "KEY_" + .)'  => {"KEY_a":1,"KEY_b":2}
 ```
 
-# SPECIFIC
+## regexp 
 
 ```
-# select (null/regexp) / group / sort
-jq '.recipes[] | select(.id == 33)'                 => {"id": 33,"name": "Margherita"}
-jq  '.recipes[] | select(.name? | match("Mar.+"))'  => {"id": 33,"name": "Margherita"}
-
-jq '.recipes | group_by(.rating > 30)'              => [{"id": 33,"name": "Margherita"}, {"id": 55,"name": "Stir"}]
-jq '.recipes | sort_by(.rating) | reverse'          =>    [{"id": 55, "rating":4}, {"id": 33, "rating":"3}]
-jq '.recipes[0].ingredients | unique | sort'
+jq -r '.[]
+  | select(.data.ingredients[] | test("Tomato"; "i"))
+  | .name' ~/json
 ```
 
-# CHANGE
+## CHANGE
 
 ```
 # to object
@@ -92,7 +89,19 @@ jq  '(.recipes | map(.name) | unique | sort) as $cols | (.recipes | map(.id)) as
 ```
 
 
-# SAMPLE #
+## SPECIFIC
+
+```
+# select (null/regexp) / group / sort
+jq '.recipes[] | select(.id == 33)'                 => {"id": 33,"name": "Margherita"}
+jq  '.recipes[] | select(.name? | match("Mar.+"))'  => {"id": 33,"name": "Margherita"}
+
+jq '.recipes | group_by(.rating > 30)'              => [{"id": 33,"name": "Margherita"}, {"id": 55,"name": "Stir"}]
+jq '.recipes | sort_by(.rating) | reverse'          =>    [{"id": 55, "rating":4}, {"id": 33, "rating":"3}]
+jq '.recipes[0].ingredients | unique | sort'
+```
+
+## SAMPLE #
 
 ```
 jq -r '(map(keys) | add | unique | sort) as $cols \
