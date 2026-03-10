@@ -115,6 +115,37 @@ $qb
 return $qb->addOrderBy('n.date', 'DESC');
 ```
 
+### collection
+
+ filter by subject NOT in collection
+```
+class IndicatorValue
+{
+    /**  @var \Doctrine\Common\Collections\Collection<int, \App\Entity\Indicator\IndicatorSubject>  */
+    #[ORM\ManyToMany(targetEntity: IndicatorSubject::class, cascade: ['persist', 'remove'])]
+    private Collection $subjects;
+...
+}
+
+if ($notSubjectCodes) {
+            $qb
+                ->andWhere(
+                    $qb->expr()->not(
+                        $qb->expr()->exists(
+                            $qb->getEntityManager()->createQueryBuilder()
+                                ->select('1')
+                                ->from(IndicatorValue::class, 'iv2')
+                                ->innerJoin('iv2.subjects', 's')
+                                ->where('iv2 = iv')
+                                ->andWhere('s.code IN (:notSubjectCodes)')
+                                ->getDQL()
+                        )
+                    )
+                )
+                ->setParameter('notSubjectCodes', $notSubjectCodes);
+        }
+```
+
 ### SSL
 
 ```
