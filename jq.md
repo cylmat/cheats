@@ -57,14 +57,6 @@ echo '[{ "key": "beta", "value": "alpha" }]' | jq -c 'from_entries'   {"beta":"a
 echo '{"a": 1, "b": 2}'  | jq -c 'with_entries(.key |= "KEY_" + .)'  => {"KEY_a":1,"KEY_b":2}
 ```
 
-## regexp 
-
-```
-jq -r '.[]
-  | select(.data.ingredients[] | test("Tomato"; "i"))
-  | .name' ~/json
-```
-
 ## CHANGE
 
 ```
@@ -88,6 +80,41 @@ jq '.recipes[0] | {ref: 9, account: "\(.id) \(.name)"}' => { "ref": "9", "accoun
 jq  '(.recipes | map(.name) | unique | sort) as $cols | (.recipes | map(.id)) as $row |  $cols | map($row[.]) | @csv' json
 ```
 
+## filter
+
+- find item name where is present "tomato" in ingredients
+```
+{
+  "name": "first",
+  "data": {
+    "ingredients": [
+      "Pizza dough",
+      "Tomato sauce",
+      "Fresh mozzarella"
+    ]
+  }
+}
+{
+  "name": "second",
+  "data": {
+    "ingredients": [
+      "Tofu, cubed",
+      "Broccoli florets",
+      "Carrots, sliced"
+    ]
+  }
+}
+
+jq -r '.[] | select(.data.ingredients[] == "Tomato sauce") | .name' /tmp/test.json
+```
+
+## regexp 
+
+```
+jq -r '.[]
+  | select(.data.ingredients[] | test("Tomato"; "i"))
+  | .name' ~/json
+```
 
 ## SPECIFIC
 
