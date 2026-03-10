@@ -60,6 +60,17 @@ public function change() {
 }
 ```
 
+## regexp
+
+capturing group 
+```
+$text = "alpha beta gamma beta epsilon beta choose";
+preg_match('/^(.*?\bbeta\b)(.*)$/', $text, $matches);
+
+$part1 = $matches[1]; // alpha beta
+$part2 = $matches[2]; // beta gamma beta espilon...
+```
+
 ## sscanf %[^<char>] Get an input without limits until <char>
 ```
 sscanf("3 5 9 11 109 8\n", "%[^\n]", $arr_temp);
