@@ -34,6 +34,8 @@ suivre les vrais mouvements du marché plutôt que la foule
 > Le Smart Money, ce sont les gros acteurs du marché qui utilisent leur puissance financière et leur savoir-faire pour orienter le prix et récupérer la liquidité,
 > et suivre ou comprendre leurs mouvements est crucial pour éviter de se faire piéger en trading.
 
+
+
 | Hedge Funds  │ Trader individuel │
 | ------------ | ----------------- |
 │ Institutions │ (petits traders)  │
