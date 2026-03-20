@@ -74,3 +74,14 @@ Règles de base :
 - trading de tendance
 - avec supports / résistances
 - et bonne gestion du risque
+
+---
+
+Ref:
+- Voici quelques termes typiques :
+- Support / Résistance → zones où le prix rebondit souvent
+- Tendance (trend) → haussière, baissière, latérale
+- Breakout → cassure d’un niveau important
+- Pullback → retour du prix après une cassure
+- Figure chartiste → triangle, double top, head & shoulders
+- Indicateurs techniques → RSI, MACD, moyennes mobiles
