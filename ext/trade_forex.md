@@ -340,11 +340,34 @@ Accepter que certaines journées soient sans trade
 
 > Même un bon trader peut perdre 3 à 4 trades d’affilée. Le secret est de ne jamais détruire le capital et de rester constant dans sa méthode.
 
-! Penser en risque, pas en levier !    
-👉 Un débutant pense :  
+---
+
+## ⚠️ Gestion du risque ⚠️
+
+👉 ! Penser en risque, pas en levier ! 👈   
+
+- Un débutant pense :  
 “Je mets du levier 1:100 pour gagner plus”  
-👉 Un pro pense :  
+- Un pro pense :  
 “Combien je suis prêt à perdre sur ce trade ?”  
+
+- Le levier sert uniquement à :  
+ouvrir la position nécessaire  
+pas à “prendre plus de risque”   
+
+- exemple:   
+Compte : 10 000€  
+Risque max : 1% = 100€  
+- On calcule :  
+où placer le stop-loss  
+puis ajustent la taille du trade  
+➡️ Résultat :  
+peu importe le levier, on ne risquent que 100€ max  
+
+- On placent le stop là où l'idée est invalide  
+➡️ Pas un stop arbitraire
+
+👉 “Le levier n’est pas dangereux — ce qui est dangereux, c’est de ne pas contrôler le risque.”
 
 ---
 
