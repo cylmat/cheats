@@ -36,7 +36,7 @@ suivre les vrais mouvements du marché plutôt que la foule
 
 
 
-# II. Pour éviter les pièges des institutions et des mouvements Smart Money
+# II. Pour éviter les pièges des institutions et des mouvements
 
 Il faut comprendre que la plupart des pertes des petits traders viennent de l’ignorance des zones de liquidité,  
 de la psychologie de masse et des faux signaux.  
