@@ -1,4 +1,4 @@
-# Exemple: Strategy Smart Money
+# Exemple: Strategie Smart Money
 
 Parfait ! Voici une mini-stratégie concrète Smart Money que tu peux appliquer sur un graphique crypto comme Bitcoin,  
 en respectant les concepts de BOS, Order Block, FVG et zones de liquidité. 
