@@ -71,12 +71,15 @@ Les vrais mouvements des institutions sont souvent accompagnés d’un volume é
 Si le prix bouge rapidement mais le volume reste faible → possible faux signal.
 
  **Ne pas suivre la foule**  
-Beaucoup de traders débutants se font piéger par le FOMO.
+Beaucoup de traders débutants se font piéger par le FOMO (fear of missing out).  
 Le Smart Money profite souvent de ces comportements pour déclencher stop hunts ou fake breakouts.
 
  **Récapitulatif**  
 Pour éviter les pièges :  
- Stops stratégiques, pas au hasard Identifier zones de liquidité et Order Blocks Attendre confirmation (BOS, rebond sur FVG) Gestion stricte du risque Observer le volume et le contexte Ne pas suivre la foule
+ Stops stratégiques, pas au hasard Identifier zones de liquidité et Order Blocks   
+ Attendre confirmation (BOS, rebond sur FVG)   
+ Gestion stricte du risque Observer le volume et le contexte  
+ Ne pas suivre la foule  
 
 
 
