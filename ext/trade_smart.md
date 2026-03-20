@@ -77,6 +77,13 @@ Quand le prix revient dans cette zone :
  il peut rebondir fortement.  
 
 
+**Imbalances**   
+les imbalances ou “déséquilibres” se manifestent lorsque l’offre et la demande sur une certaine plage de prix ne sont pas équilibrées.  
+
+les Order Blocks et les Imbalances sont souvent interconnectés.   
+C’est-à-dire qu’un Order Block peut conduire à un déséquilibre (imbalance), et vice versa.  
+
+
  **Fair Value Gap (FVG)**  
 C’est une zone où le prix a bougé très rapidement, laissant un “vide” de liquidité.  
 Souvent, le marché revient combler ce gap avant de repartir.  
