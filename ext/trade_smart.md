@@ -36,6 +36,62 @@ suivre les vrais mouvements du marché plutôt que la foule
 
 ---
 
+### Smart Money Concept 
+
+La stratégie Smart Money est une méthode de trading qui consiste à suivre les mouvements des institutions (banques, hedge funds, gros investisseurs).  
+L’idée est simple : les petits traders suivent souvent le prix, tandis que les institutions créent les mouvements. 
+Les institutions peuvent être des acteurs majeurs comme BlackRock ou JPMorgan Chase, qui gèrent des milliards et peuvent influencer les marchés.
+
+
+**Principe du Smart Money Concept (SMC)**  
+Le but est d’identifier où les institutions achètent et vendent.  
+Les traders SMC regardent surtout :    
+la liquidité  
+les zones d’accumulation  
+les cassures de structure.  
+
+
+ **Liquidité**  
+La liquidité correspond aux zones où beaucoup d’ordres sont placés.  
+Exemples :  
+stop-loss des traders  
+sommets récents  
+creux récents.  
+
+Les institutions peuvent pousser le prix vers ces zones pour récupérer de la liquidité, notamment sur des marchés comme Bitcoin.
+
+
+ **Break of Structure (BOS)**  
+C’est quand la structure du marché change.  
+Exemple :  
+tendance baissière  
+cassure d’un sommet important  
+possible retournement haussier.  
+
+Les traders Smart Money entrent souvent après cette cassure.  
+
+
+ **Order Block**
+Un order block est une zone où les institutions ont placé de gros ordres.  
+Quand le prix revient dans cette zone :  
+ il peut rebondir fortement.  
+
+
+ **Fair Value Gap (FVG)**  
+C’est une zone où le prix a bougé très rapidement, laissant un “vide” de liquidité.  
+Souvent, le marché revient combler ce gap avant de repartir.  
+
+
+**Exemple simplifié**  
+Un trader Smart Money peut voir :  
+ liquidation des stops cassure de structure retour sur un order block  
+ entrée en position.    
+
+
+Beaucoup de traders crypto utilisent cette méthode sur des actifs comme Ethereum ou Solana.
+
+---
+
 # II. Pour éviter les pièges des institutions et des mouvements
 
 Il faut comprendre que la plupart des pertes des petits traders viennent de l’ignorance des zones de liquidité,  
