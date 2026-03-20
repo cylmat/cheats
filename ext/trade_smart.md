@@ -39,7 +39,7 @@ suivre les vrais mouvements du marché plutôt que la foule
 
 # Exemple: Strategie Smart Money
 
-Parfait ! Voici une mini-stratégie concrète Smart Money que tu peux appliquer sur un graphique crypto comme Bitcoin,  
+Mini-stratégie concrète Smart Money à appliquer sur un graphique crypto comme Bitcoin,  
 en respectant les concepts de BOS, Order Block, FVG et zones de liquidité. 
 
 
