@@ -272,7 +272,7 @@ Fonctionne bien sur EUR/USD, GBP/USD, USD/JPY
 
 ---
 
-**Les 7 bases**
+**Les 7 règles**
 
 7 erreurs qui font perdre 90 % des traders particuliers, avec des étapes simples à appliquer dès maintenant. 
  
