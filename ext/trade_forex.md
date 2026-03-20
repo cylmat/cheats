@@ -133,8 +133,8 @@ I. Stratégie de suivi de tendance (Moving Average)
 II. Stratégie support / résistance  
 III. Stratégie breakout (cassure)  
 
----
-I. Stratégie de suivi de tendance (Moving Average)
+
+I. **Stratégie de suivi de tendance (Moving Average)**
  
 C’est une des stratégies les plus utilisées.
 
@@ -154,8 +154,8 @@ Le marché est en tendance baissière
  Simple Fonctionne bien sur EUR/USD et GBP/USD  
  Bon pour trading 4H ou Daily    
 
----
-II. Stratégie support / résistance
+
+II. **Stratégie support / résistance**
 
 Très populaire chez les traders professionnels.
 
@@ -174,8 +174,7 @@ stop loss sous le support
 take profit avant la résistance  
 
 
----
-III. Stratégie breakout (cassure)
+III. **Stratégie breakout (cassure)**
 
 Elle consiste à trader la cassure d’un niveau important.
 
@@ -188,18 +187,75 @@ Très utilisée pendant :
 - l’ouverture de New York
 
 
----
- Les règles essentielles (plus importantes que la stratégie)
-Même la meilleure stratégie ne fonctionne pas sans discipline.
-Règles de base :
- - Risquer 1 % du capital par trade Ratio gain/perte minimum 1:2
- - Ne pas overtrader Éviter le trading émotionnel
+ **Les règles essentielles (plus importantes que la stratégie)**  
+ 
+Même la meilleure stratégie ne fonctionne pas sans discipline.  
+Règles de base :  
+ - Risquer 1 % du capital par trade Ratio gain/perte minimum 1:2  
+ - Ne pas overtrader Éviter le trading émotionnel  
+
+
+ En réalité, la stratégie la plus rentable sur le long terme est souvent   
+- trading de tendance  
+- avec supports / résistances   
+- et bonne gestion du risque  
 
 ---
- En réalité, la stratégie la plus rentable sur le long terme est souvent :
-- trading de tendance
-- avec supports / résistances
-- et bonne gestion du risque
+
+# Plan de trade (exemple)
+
+Une stratégie forex simple sur 15 minutes adaptée pour du scalping ou du day trading.   
+Elle combine tendance + support/résistance, facile à suivre et à gérer avec un stop loss strict.
+
+
+1️⃣ **Configuration de base**
+
+Unité de temps : 15 minutes (M15)  
+Paires forex recommandées : EUR/USD, GBP/USD, USD/JPY  
+Indicateurs :  
+Moyenne mobile 50 EMA (exponentielle)  
+Moyenne mobile 200 EMA  
+Niveaux de support et résistance récents  
+
+
+2️⃣ **Détecter la tendance**  
+Haussière : 50 EMA au-dessus de 200 EMA  
+Baissière : 50 EMA en dessous de 200 EMA  
+> On ne trade que dans le sens de la tendance pour réduire le risque.  
+
+
+3️⃣ **Identifier les zones d’entrée**  
+
+Chercher un retracement vers la MM50 ou un support/résistance clé  
+Confirmer avec une bougie d’avalement ou marteau (reversal)  
+Exemple d’entrée :  
+Tendance haussière (50 EMA > 200 EMA)  
+Le prix recule vers la MM50 ou un support  
+Bougie haussière de retournement → entrée long  
+
+
+4️⃣ **Stop Loss et Take Profit**  
+
+Stop Loss : juste sous le support / bougie d’entrée  
+Take Profit : 2 à 3 fois le risque (ratio 1:2 ou 1:3)  
+> Exemple :  
+Risque = 10 pips → Take Profit = 20–30 pips  
+
+
+5️⃣ **Règles de gestion du risque**
+
+Risquer 1 % maximum du capital par trade  
+Pas plus de 3 à 5 trades par session  
+Ne pas “chasser” le marché si pas de configuration claire  
+
+✅ Avantages de cette stratégie 15 minutes  
+
+Simple à suivre  
+Basée sur la tendance → moins de faux signaux  
+Adaptée aux traders débutants et intermédiaires   
+Fonctionne bien sur EUR/USD, GBP/USD, USD/JPY   
+
+
 
 ---
 
