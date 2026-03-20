@@ -43,7 +43,7 @@ de la psychologie de masse et des faux signaux.
 
 Méthode claire étape par étape :
 
- **Ne pas placer ses stops au hasard**
+ **Ne pas placer ses stops au hasard**  
 Les stops juste sous un support ou au-dessus d’une résistance sont des appâts pour les institutions.  
 Astuce : placer les stops légèrement plus loin, derrière une zone de structure clé ou Order Block.  
 Exemple : si support Bitcoin = 25 500 €, ne pas mettre ton stop à 25 495 €, mais peut-être à 25 400 € pour éviter la chasse aux stops.  
@@ -56,25 +56,25 @@ les creux et sommets récents
 les niveaux psychologiques (ex : 25 000 €, 30 000 €)  
 les Order Blocks (zones où les institutions accumulent)  
 
- **Attendre la confirmation**
+ **Attendre la confirmation**  
 Ne pas acheter ou vendre dès que le prix touche un support/résistance.  
 Attendre un Break of Structure (BOS) ou un rebond clair sur un Order Block / FVG.  
 Cela réduit le risque de faux breakouts.  
 
- **Gérer le risque correctement**
+ **Gérer le risque correctement**  
 Ne jamais risquer plus de 1 à 2 % du capital par trade.
 Placer un stop-loss logique et définir un take profit réaliste.
 Même si le marché se fait manipuler, les pertes restent limitées.
 
- **Observer le volume**
+ **Observer le volume**  
 Les vrais mouvements des institutions sont souvent accompagnés d’un volume élevé.
 Si le prix bouge rapidement mais le volume reste faible → possible faux signal.
 
- **Ne pas suivre la foule**
+ **Ne pas suivre la foule**  
 Beaucoup de traders débutants se font piéger par le FOMO.
 Le Smart Money profite souvent de ces comportements pour déclencher stop hunts ou fake breakouts.
 
- **Récapitulatif**
+ **Récapitulatif**  
 Pour éviter les pièges :  
  Stops stratégiques, pas au hasard Identifier zones de liquidité et Order Blocks Attendre confirmation (BOS, rebond sur FVG) Gestion stricte du risque Observer le volume et le contexte Ne pas suivre la foule
 
