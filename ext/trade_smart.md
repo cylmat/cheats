@@ -43,6 +43,28 @@ suivre les vrais mouvements du marché plutôt que la foule
 │ BOS, Order   │ Stop-loss         │  
 │ Blocks, FVG  │ FOMO/Emotions     │  
 
+Piège classique pour petits traders :  
+1️⃣ Stop hunting : déclenche les stop-loss   
+2️⃣ Fake breakout : fausse cassure qui piège les entrées   
+3️⃣ Liquidation cascade : mouvements rapides sur effet de levier   
+
+1. Market Makers
+Fournissent la liquidité de base, pour que tout le monde puisse acheter ou vendre sans trop bouger le prix.
+
+2. Hedge Funds / Institutions
+Utilisent Smart Money, BOS, Order Blocks, FVG.
+Poussent le prix pour récupérer de la liquidité ou créer des mouvements favorables à leurs positions.
+
+3. Traders individuels
+Placent souvent leurs stops au mauvais endroit, paniquent, suivent le FOMO.
+Se font piéger lors des faux breakouts ou des chasses aux stops.
+
+
+Pour les éviter :  
+1. Identifier zones de liquidité et Order Blocks  
+2. Ne pas placer ses stops au hasard  
+3. Attendre la confirmation après BOS ou FVG  
+
 ---
 
 ### Smart Money Concept 
