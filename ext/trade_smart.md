@@ -64,7 +64,32 @@ Se font piéger lors des faux breakouts ou des chasses aux stops.
 Pour les éviter :  
 1. Identifier zones de liquidité et Order Blocks  
 2. Ne pas placer ses stops au hasard  
-3. Attendre la confirmation après BOS ou FVG  
+3. Attendre la confirmation après BOS ou FVG
+
+**Exemple d'une phase d'institution**   
+ Phase 1 : Création de la liquidité  
+Les institutions veulent accumuler des positions longues.  
+Pour cela, elles poussent le prix légèrement sous 25 500 €, déclenchant les stop-loss des traders débutants.  
+
+Résultat : petites positions vendues automatiquement → prix chute → les institutions récupèrent des bitcoins à meilleur prix.  
+
+ Phase 2 : Fake breakout / retour  
+Après avoir chassé les stops, le prix rebondit rapidement au-dessus du support.   
+Les traders qui ont acheté la cassure initiale (faux breakout) se retrouvent en perte.   
+Les institutions ont maintenant accumulé des positions longues à prix réduit.  
+
+ Phase 3 : Break of Structure (BOS)  
+Une fois que la liquidité a été récupérée, le prix fait un creux plus haut, cassant la structure baissière précédente.  
+Cela signale un possible retournement haussier pour les traders Smart Money.  
+
+ Phase 4 : Entrée sur Order Block  
+Les institutions utilisent des zones d’Order Block pour ajouter encore plus de positions longues.  
+Les traders qui observent ces zones peuvent entrer après la confirmation du rebond, plutôt que d’acheter pendant le faux breakout.  
+
+ Phase 5 : Suivi de tendance et Take Profit  
+Le prix continue à monter, suivant la tendance haussière initiée par les institutions.  
+Les traders Smart Money prennent progressivement leurs profits sur les niveaux de Fair Value Gap (FVG) ou résistances.  
+
 
 ---
 
