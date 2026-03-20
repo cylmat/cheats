@@ -270,7 +270,57 @@ Basée sur la tendance → moins de faux signaux
 Adaptée aux traders débutants et intermédiaires   
 Fonctionne bien sur EUR/USD, GBP/USD, USD/JPY   
 
+---
+Tips:
+Quand un marché monte, il ne monte jamais en ligne droite. Il fait :  
+impulsion (hausse)  
+correction (petit recul)  
 
+👉 Acheter après une correction permet :  
+1. Réduire le risque  
+Tu entres à un prix plus bas, donc :  
+ton stop-loss peut être plus proche  
+tu perds moins si le trade échoue  
+
+2. Améliorer le gain potentiel  
+Si la tendance reprend :  
+tu es entré “en promo”  
+donc plus de potentiel de hausse  
+
+3. Suivre la logique du marché  
+Les corrections sont normales :  
+prises de profit  
+respiration du marché
+
+Entrer là, c’est trader avec la structure, pas contre.  
+
+
+🚫 Pourquoi ne pas acheter au sommet ?  
+Acheter en haut (après une forte hausse) est risqué :  
+
+1. Risque de retournement
+Le sommet est souvent :
+une zone où les gros acteurs vendent
+une zone de prise de liquidité
+Tu peux acheter juste avant une chute.
+
+2. Mauvais ratio risque/rendement  
+Si tu achètes trop haut :  
+ton stop doit être loin  
+ton potentiel de gain est limité  
+Exemple :  
+tu risques 50€ pour gagner 20€ → pas intéressant  
+
+3. Piège émotionnel (FOMO)  
+Acheter au sommet, c’est souvent :  
+“le prix monte, je ne veux pas rater”  
+Résultat :  
+entrée tardive  
+souvent mauvais timing  
+
+Résumé simple  
+✔️ Après correction → meilleur prix + moins de risque   
+❌ Au sommet → plus risqué + souvent trop tard  
 
 ---
 
