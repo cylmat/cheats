@@ -202,7 +202,7 @@ Règles de base :
 
 ---
 
-# Plan de trade (exemple)
+## Plan de trade (exemple)
 
 Une stratégie forex simple sur 15 minutes adaptée pour du scalping ou du day trading.   
 Elle combine tendance + support/résistance, facile à suivre et à gérer avec un stop loss strict.
