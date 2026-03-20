@@ -52,7 +52,7 @@ les cassures de structure.
 
 
  **Liquidité**  
-La liquidité correspond aux zones où beaucoup d’ordres sont placés.  
+La liquidité correspond aux zones où beaucoup d’ordres sont placés.    
 Exemples :  
 stop-loss des traders  
 sommets récents  
@@ -70,8 +70,10 @@ possible retournement haussier.
 
 Les traders Smart Money entrent souvent après cette cassure.  
 "cassure":  signal de retournement ou continuation après chasse de liquidité
+Exemple : un sommet est cassé, le prix revient tester la zone et rebondit → signal d’entrée.
 
 📌 BOS = point clé pour savoir quand la tendance pourrait changer.
+
 
  **Fair Value Gap (FVG)**  (Gap de valeur équitable)  
 C’est une zone où le prix a bougé très rapidement, laissant un “vide” de liquidité,  
