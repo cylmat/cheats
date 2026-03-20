@@ -268,9 +268,96 @@ Acheter après une correction. Ne pas acheter au sommet.
 Simple à suivre  
 Basée sur la tendance → moins de faux signaux  
 Adaptée aux traders débutants et intermédiaires   
-Fonctionne bien sur EUR/USD, GBP/USD, USD/JPY   
+Fonctionne bien sur EUR/USD, GBP/USD, USD/JPY  
 
 ---
+
+**Les 7 bases**
+
+7 erreurs qui font perdre 90 % des traders particuliers, avec des étapes simples à appliquer dès maintenant. 
+ 
+1. Gérer le risque 
+Risque maximal par trade : 1 % du capital  
+Toujours placer un stop loss  
+Ne jamais “chasser” un trade pour récupérer une perte précédente  
+
+Exemple :  
+Capital : 10 000 €  
+Risque par trade : 100 €  
+Stop loss = 10 pips → taille de position calculée pour que 10 pips = 100 €  
+
+
+2. Limiter le nombre de trades  
+Ne trader que les configurations les plus fiables  
+Objectif : 2 à 5 trades par jour / session  
+Patience > activité  
+
+> Beaucoup débutants perdent en essayant de “toujours être dans le marché”.  
+
+
+3. Contrôler ses émotions  
+Toujours suivre le plan de trading  
+Décisions basées sur analyse + stratégie, pas sur le sentiment  
+Astuce : après une perte, faire une pause, ne pas trader immédiatement  
+
+
+4. Utiliser des stratégies simples  
+Les stratégies simples et claires fonctionnent mieux  
+Exemples efficaces :  
+Tendance + retracement (M15 ou H1)  
+Breakout sur support/résistance  
+Suivi de tendance avec moyennes mobiles  
+
+Trop d’indicateurs = confusion → erreurs
+
+
+5. Levier contrôlé  
+Ne jamais utiliser un levier trop élevé   
+Commencer avec 1:10 ou 1:20 pour limiter les risques  
+Vérifier le risque réel en €, pas seulement le levier  
+
+
+6. Tenir compte des frais  
+Toujours inclure spreads et commissions dans vos calculs de profit et perte  
+Préférer les brokers avec spreads serrés et régulés  
+
+
+7. Tenir un journal de trading  
+Noter chaque trade :  
+Paire et unité de temps  
+Prix d’entrée / sortie  
+Stop loss / Take profit  
+Raisons de l’entrée  
+Résultat  
+
+Après 50 à 100 trades, analyser ce qui fonctionne et ce qui échoue  
+Ajuster la stratégie sur données réelles, pas sur “feeling”  
+
+ Bonus : Discipline + patience
+Respecter toujours le plan
+Attendre les bonnes configurations
+Accepter que certaines journées soient sans trade
+
+> Même un bon trader peut perdre 3 à 4 trades d’affilée. Le secret est de ne jamais détruire le capital et de rester constant dans sa méthode.
+
+---
+
+## Checklist 
+
+ Checklist “anti-erreurs” pour chaque trade
+ 
+1. Tendance confirmée ? 
+2. Support / résistance identifié ? 
+3. Stop loss fixé ? 
+4. Risque ≤ 1 % du capital ? 
+5. Take profit avec ratio ≥ 1:2 ? 
+6. Émotionnellement prêt ? 
+7. Trade journalisé ? 
+
+> Si toutes les cases sont cochées → trade à prendre. Sinon → passer.
+
+---
+
 **Tips**
 
 Quand un marché monte, il ne monte jamais en ligne droite. Il fait :  
