@@ -1,5 +1,5 @@
 # Strategie
----
+
 
 **Trend following**  
 
