@@ -35,6 +35,7 @@ suivre les vrais mouvements du marché plutôt que la foule
 > et suivre ou comprendre leurs mouvements est crucial pour éviter de se faire piéger en trading.
 
 
+**Hedge funds vs Retails**
 
 | Hedge Funds  │ Trader individuel │  
 | ------------ | ----------------- |  
