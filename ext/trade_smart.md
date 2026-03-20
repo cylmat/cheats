@@ -10,7 +10,7 @@ Hedge funds et fonds d’investissement → suivent des stratégies avancées (t
 Whales crypto → possèdent une grande quantité d’actifs et peuvent créer des mouvements significatifs  
 
 
- **Comment le Smart Money agit:**  
+ **Comment le Smart Money agit**  
 Ils ne suivent pas les tendances visibles du marché comme la majorité des petits traders.  
 Ils utilisent des techniques comme :  
 Break of Structure (BOS) → cassure de tendance  
