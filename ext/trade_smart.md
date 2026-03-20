@@ -62,13 +62,31 @@ Les institutions peuvent pousser le prix vers ces zones pour récupérer de la l
 
 
  **Break of Structure (BOS)**  
-C’est quand la structure du marché change.  
+C’est quand la structure du marché change de manière claire.  
 Exemple :  
 tendance baissière  
 cassure d’un sommet important  
 possible retournement haussier.  
 
 Les traders Smart Money entrent souvent après cette cassure.  
+"cassure":  signal de retournement ou continuation après chasse de liquidité
+
+📌 BOS = point clé pour savoir quand la tendance pourrait changer.
+
+ **Fair Value Gap (FVG)**  (Gap de valeur équitable)  
+C’est une zone où le prix a bougé très rapidement, laissant un “vide” de liquidité,  
+où le marché n’a pas “échangé” tous les ordres.  
+Souvent, le marché revient combler ce gap avant de repartir.  
+
+📌 Les traders Smart Money peuvent utiliser ce retour pour entrer ou ajouter à leur position.  
+
+ **Relation BOS + FVG**  
+
+BOS indique que la structure du marché change → signal d’entrée potentiel.  
+FVG montre où le prix pourrait revenir pour compléter les zones laissées vides → timing précis de l’entrée ou ajout de position.  
+
+ - BOS = confirmation que les gros acteurs prennent le contrôle  
+ - FVG = zone idéale pour entrer avec risque limité.  
 
 
  **Order Block**
@@ -76,17 +94,11 @@ Un order block est une zone où les institutions ont placé de gros ordres.
 Quand le prix revient dans cette zone :  
  il peut rebondir fortement.  
 
-
 **Imbalances**   
 les imbalances ou “déséquilibres” se manifestent lorsque l’offre et la demande sur une certaine plage de prix ne sont pas équilibrées.  
 
-les Order Blocks et les Imbalances sont souvent interconnectés.   
+📌 les Order Blocks et les Imbalances sont souvent interconnectés.   
 C’est-à-dire qu’un Order Block peut conduire à un déséquilibre (imbalance), et vice versa.  
-
-
- **Fair Value Gap (FVG)**  
-C’est une zone où le prix a bougé très rapidement, laissant un “vide” de liquidité.  
-Souvent, le marché revient combler ce gap avant de repartir.  
 
 
 **Exemple simplifié**  
