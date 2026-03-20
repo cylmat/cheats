@@ -36,12 +36,12 @@ suivre les vrais mouvements du marché plutôt que la foule
 
 
 
-| Hedge Funds  │ Trader individuel │
-| ------------ | ----------------- |
-│ Institutions │ (petits traders)  │
-│ Smart Money  │ Achats/ventes     │
-│ BOS, Order   │ Stop-loss         │
-│ Blocks, FVG  │ FOMO/Emotions     │
+| Hedge Funds  │ Trader individuel │  
+| ------------ | ----------------- |  
+│ Institutions │ (petits traders)  │  
+│ Smart Money  │ Achats/ventes     │  
+│ BOS, Order   │ Stop-loss         │  
+│ Blocks, FVG  │ FOMO/Emotions     │  
 
 ---
 
