@@ -3,9 +3,9 @@
 Voici 3 stratégies de trading forex simples et connues, utilisées par beaucoup de traders.  
 Elles sont relativement faciles à comprendre et peuvent fonctionner si on respecte bien la gestion du risque. 
 
-I. Stratégie de suivi de tendance (Moving Average)
-II. Stratégie support / résistance
-III. Stratégie breakout (cassure)
+I. Stratégie de suivi de tendance (Moving Average)  
+II. Stratégie support / résistance  
+III. Stratégie breakout (cassure)  
 
 ---
 I. Stratégie de suivi de tendance (Moving Average)
