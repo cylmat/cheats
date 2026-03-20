@@ -34,7 +34,7 @@ suivre les vrais mouvements du marché plutôt que la foule
 > Le Smart Money, ce sont les gros acteurs du marché qui utilisent leur puissance financière et leur savoir-faire pour orienter le prix et récupérer la liquidité,
 > et suivre ou comprendre leurs mouvements est crucial pour éviter de se faire piéger en trading.
 
-
+---
 
 # II. Pour éviter les pièges des institutions et des mouvements
 
@@ -81,7 +81,7 @@ Pour éviter les pièges :
  Gestion stricte du risque Observer le volume et le contexte  
  Ne pas suivre la foule  
 
-
+---
 
 # III. Exemple: Strategie Smart Money
 
@@ -89,17 +89,15 @@ Mini-stratégie concrète Smart Money à appliquer sur un graphique crypto comme
 en respectant les concepts de BOS, Order Block, FVG et zones de liquidité. 
 
 
----
-Mini-stratégie Smart Money sur Bitcoin  
+**Mini-stratégie Smart Money sur Bitcoin**   
 Contexte  
 Actif : Bitcoin  
 Graphique : 4h (H4)  
 Capital : montant fictif pour l’exemple (1 000 €)  
 Objectif : suivre les mouvements du Smart Money, éviter les pièges
 
----
 
-1️⃣ Identifier les zones clés
+1️⃣ **Identifier les zones clés**
 
 1. Support/Résistance principal
 Repérer les creux et sommets récents (ex : support ~25 500 €, résistance ~26 500 €)
@@ -114,25 +112,24 @@ Zone laissée par un mouvement rapide à combler : 25 900–26 100 €
 4. Liquidité
 Stop-loss des petits traders juste sous 25 500 €  
 
----
-2️⃣ Observer la structure du marché
+
+2️⃣ **Observer la structure du marché**
 
 Vérifier si le BOS est en place :  
 Tendance précédente : baissière  
 BOS haussier : creux plus haut après chasse aux stops → signal potentiel d’entrée
 
----
-3️⃣ Entrée sur le trade
+3️⃣ **Entrée sur le trade**
 
 Attendre retour sur Order Block / FVG après BOS  
 Entrée longue : ~25 550 €  
 Stop-loss : juste sous Order Block (~25 400 €)  
 Take Profit 1 : FVG haut (~26 100 €)  
 Take Profit 2 : résistance suivante (~26 500 €)  
-✅ Cela permet de suivre le mouvement du Smart Money tout en limitant le risque.
+- Cela permet de suivre le mouvement du Smart Money tout en limitant le risque.
 
----
-4️⃣ Gestion du trade  
+
+4️⃣ **Gestion du trade**  
 1. Fractionner la position :  
 50 % à Take Profit 1  
 50 % à Take Profit 2  
@@ -144,8 +141,8 @@ Volume faible → prudence, possible faux breakout
 3. Ne pas suivre la foule :   
 Acheter après confirmation, pas au sommet ou dans le FOMO  
 
----
-💡 Règles clés pour Smart Money
+
+ **Règles clés pour Smart Money**
 1. Identifier zones de liquidité, OB et FVG
 2. Attendre BOS pour confirmation
 3. Entrée sur retour vers OB/FVG
