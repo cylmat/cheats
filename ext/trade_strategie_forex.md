@@ -22,10 +22,11 @@ Le marché est en tendance haussière
 
 - Signal de vente
 La MM50 passe en dessous de la MM200  
-Le marché est en tendance baissière
+Le marché est en tendance baissière  
 
 - Avantages
- Simple Fonctionne bien sur EUR/USD et GBP/USD Bon pour trading 4H ou Daily
+ Simple Fonctionne bien sur EUR/USD et GBP/USD  
+ Bon pour trading 4H ou Daily    
 
 ---
 II. Stratégie support / résistance
