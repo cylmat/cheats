@@ -271,7 +271,8 @@ Adaptée aux traders débutants et intermédiaires
 Fonctionne bien sur EUR/USD, GBP/USD, USD/JPY   
 
 ---
-Tips:
+**Tips**
+
 Quand un marché monte, il ne monte jamais en ligne droite. Il fait :  
 impulsion (hausse)  
 correction (petit recul)  
