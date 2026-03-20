@@ -227,11 +227,15 @@ Baissière : 50 EMA en dessous de 200 EMA
 3️⃣ **Identifier les zones d’entrée**  
 
 Chercher un retracement vers la MM50 ou un support/résistance clé  
-Confirmer avec une bougie d’avalement ou marteau (reversal)  
-Exemple d’entrée :  
-Tendance haussière (50 EMA > 200 EMA)  
+Confirmer avec une bougie d’avalement ou marteau (reversal)   
+Haussière : marteau, avalement haussier   
+Baissière : étoile filante, avalement baissier    
+
+Exemple d’entrée :    
+Tendance haussière (50 EMA > 200 EMA)   
 Le prix recule vers la MM50 ou un support  
 Bougie haussière de retournement → entrée long  
+
 
 
 4️⃣ **Stop Loss et Take Profit**  
@@ -245,8 +249,18 @@ Risque = 10 pips → Take Profit = 20–30 pips
 5️⃣ **Règles de gestion du risque**
 
 Risquer 1 % maximum du capital par trade  
+Position : acheter ou vendre selon la tendance  
 Pas plus de 3 à 5 trades par session  
 Ne pas “chasser” le marché si pas de configuration claire  
+Stop Loss : sous le support / MM50 (long) ou au-dessus de résistance (short)  
+Take Profit : 2 à 3 fois la distance du stop (ratio gain/perte ≥ 1:2)  
+
+Et aussi  
+Ne pas trader sur des news majeures (risque volatilité extrême)  
+Tenir un journal de trading : date, heure, prix, stop, TP, résultat, notes  
+Confirmer le signal avec RSI ou stochastique pour plus de précision  
+Patience : attendre le bon signal plutôt que de multiplier les trades  
+
 
 ✅ Avantages de cette stratégie 15 minutes  
 
