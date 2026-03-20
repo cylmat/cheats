@@ -340,6 +340,12 @@ Accepter que certaines journées soient sans trade
 
 > Même un bon trader peut perdre 3 à 4 trades d’affilée. Le secret est de ne jamais détruire le capital et de rester constant dans sa méthode.
 
+! Penser en risque, pas en levier !    
+👉 Un débutant pense :  
+“Je mets du levier 1:100 pour gagner plus”  
+👉 Un pro pense :  
+“Combien je suis prêt à perdre sur ce trade ?”  
+
 ---
 
 ## Checklist 
