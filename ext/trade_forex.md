@@ -1,4 +1,48 @@
-# Strategie
+# Strategie & méthode
+
+**Methodes de trading**  
+
+Prédire les mouvements du Forex n’est jamais sûr à 100 %, mais les traders utilisent surtout trois grandes méthodes pour essayer d’anticiper les variations
+
+1. L’analyse technique
+C’est la méthode la plus utilisée par les traders.  
+Elle consiste à analyser les graphiques de prix pour repérer des tendances ou des schémas qui se répètent.  
+Les traders regardent par exemple :  
+les tendances (hausse ou baisse  
+les supports et résistances (zones où le prix rebondit souvent)  
+les indicateurs techniques comme :    
+RSI   
+moyennes mobiles  
+MACD  
+
+Exemple : si la paire EUR/USD monte depuis plusieurs jours, certains traders pensent que la tendance peut continuer.
+
+
+2. L’analyse fondamentale
+Cette méthode consiste à analyser l’économie des pays derrière les monnaies.  
+Les traders surveillent par exemple :  
+les décisions de la Federal Reserve  
+les décisions de la European Central Bank  
+l’inflation  
+le chômage  
+la croissance économique.  
+
+Exemple : si les taux d’intérêt augmentent aux United States, le dollar peut se renforcer.
+
+
+3. Le sentiment du marché  
+Ici, les traders essaient de comprendre ce que la majorité des investisseurs pensent.  
+Ils regardent :  
+les actualités  
+les positions des grands investisseurs  
+les réactions du marché.  
+
+Par exemple, lors du Brexit, beaucoup d’investisseurs ont vendu la livre sterling par peur de l’impact économique.  
+
+✅ Important :
+Même les meilleurs traders ne prédisent pas parfaitement le marché.  
+Ils essaient seulement d’avoir plus de probabilités de gagner que de perdre.   
+les traders professionnels passent plus de temps à gérer le risque qu’à prédire le marché.  
 
 
 **Trend following**  
