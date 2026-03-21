@@ -1,6 +1,6 @@
 # Trading mémo
 
-## ⚡ Daily
+## 👉 Daily
 
 Les annonces macro qui font le plus bouger le Forex
 
@@ -45,7 +45,7 @@ Permet de suivre :
 - devises
 
 
-## Patterns
+## 👉 Patterns
 
 Les 5 patterns de trading les plus connus
 
@@ -91,7 +91,7 @@ Les traders entrent car le mouvement peut devenir très rapide.
 
 ---
 
-## Méthodes
+## 👉 Méthodes
 
 **L’analyse technique.**
 
@@ -116,7 +116,7 @@ C'est l’économie des pays derrière les monnaies.
 
 ---
 
-## Stratégies
+## 👉 Stratégies
 
 **Trend following** 
 
@@ -173,7 +173,7 @@ Très utilisée pendant :
 
 ---
 
-## Tips
+## 👉 Tips
 
 **Ce que font vraiment les traders rentables**
 
