@@ -201,12 +201,18 @@ Exemple d’entrée :
 - Stop Loss : juste sous le support / bougie d’entrée
 - Take Profit : 2 à 3 fois le risque (ratio 1:2 ou 1:3)
 
-Exemple :  
-Risque = 10 pips → Take Profit = 20–30 pips
-
-✅ Avantages: 
+Avantages:  
 - Simple à suivre
 - Basée sur la tendance → moins de faux signaux
 - Adaptée aux traders débutants et intermédiaires
 - Fonctionne bien sur EUR/USD, GBP/USD, USD/JPY
 
+✅ Checklist “anti-erreurs” pour chaque trade
+
+- Tendance confirmée ?
+- Support / résistance identifié ?
+- Stop loss fixé ?
+- Risque ≤ 1 % du capital ?
+- Take profit avec ratio ≥ 1:2 ?
+- Émotionnellement prêt ?
+- Trade journalisé ?
