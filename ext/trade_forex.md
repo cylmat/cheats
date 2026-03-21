@@ -395,7 +395,7 @@ Pour le trading Forex, il faut suivre 2 types d’informations :
 
 
  1. Journaux économiques incontournables
- 2. 
+    
 Ces médias donnent les informations macroéconomiques qui font bouger les devises.
 
  Internationaux  
@@ -414,7 +414,7 @@ Le Nouvel Économiste – Magazine économique destiné aux décideurs et invest
 
 
 2. Sites spécialisés Forex (traders)
-3. 
+   
 Ces sites sont souvent plus importants que les journaux pour un trader.  
  Les plus utilisés  
 FXStreet – News, analyses et calendrier économique très complet.  
