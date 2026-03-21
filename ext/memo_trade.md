@@ -6,42 +6,43 @@ Les 5 patterns de trading les plus connus
 
 **Double Bottom (double creux)**
 
-Signal de retournement haussier. Structure :  
+Signal de retournement haussier.
+Les traders achètent au breakout.   
+Structure :  
 - le prix tombe
 - rebond  
 - retombe au même niveau  
 - repart à la hausse.  
-Les traders achètent au breakout.   
 
 **Double Top (double sommet)**  
 
-Inverse du précédent. Deux sommets au même niveau, cassure du support.   
+Inverse du précédent. 
+Deux sommets au même niveau, cassure du support.   
 - Signal baissier.
 
 **Triangle**
 
 Le prix se compresse avant un mouvement fort.  
+Quand il casse la structure → gros mouvement possible.      
 Types :
 - triangle ascendant
 - triangle descendant
 - triangle symétrique.
-Quand il casse la structure → gros mouvement possible.
 
 **Support / résistance**
 
+Le prix rebondit souvent sur certaines zones.  
 C’est la base du trading technique.  
-Le prix rebondit souvent sur certaines zones.
 - support → zone d’achat
 - résistance → zone de vente.
 
 **Breakout**
 
-Quand le prix casse une zone importante :  
+Quand le prix casse une zone importante.   
+Les traders entrent car le mouvement peut devenir très rapide.
 - résistance
 - triangle
 - range.
-
-Les traders entrent car le mouvement peut devenir très rapide.
 
 ---
 
