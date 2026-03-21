@@ -387,6 +387,65 @@ peu importe le levier, on ne risquent que 100€ max
 
 ---
 
+## Newsreader
+
+Pour le trading Forex, il faut suivre 2 types d’informations :  
+- Les journaux économiques / financiers
+- Les calendriers économiques et sites spécialisés Forex
+
+
+ 1. Journaux économiques incontournables
+ 2. 
+Ces médias donnent les informations macroéconomiques qui font bouger les devises.
+
+ Internationaux  
+Bloomberg – News ultra rapides sur marchés, banques centrales, taux.  
+Reuters – Une des sources les plus utilisées par les traders institutionnels.  
+CNBC – Couverture en direct des marchés et interviews d’économistes.  
+Financial Times – Analyse macro et politique monétaire.  
+
+ Journaux financiers  
+The Wall Street Journal – Journal économique très influent fondé en 1889 et lu par les investisseurs du monde entier.   
+The Economist – Analyses macro profondes.  
+
+ En français  
+Les Échos – Très bon pour l’économie européenne.  
+Le Nouvel Économiste – Magazine économique destiné aux décideurs et investisseurs.   
+
+
+2. Sites spécialisés Forex (traders)
+3. 
+Ces sites sont souvent plus importants que les journaux pour un trader.  
+ Les plus utilisés  
+FXStreet – News, analyses et calendrier économique très complet.  
+Forex Factory – Calendrier économique + forum de traders.  
+Investing.com – News + calendrier macro très populaire.  
+FX Empire – Analyses Forex, graphiques et news globales.   
+
+Les traders gardent souvent un calendrier économique ouvert en permanence pour surveiller les annonces (taux d’intérêt, inflation, NFP…). 
+
+
+ 3. Les annonces économiques à surveiller
+    
+Les plus importantes pour le Forex :  
+Décisions de taux (Fed, ECB, BOE, BOJ)  
+NFP (Non-Farm Payrolls)  
+Inflation (CPI)  
+PIB  
+Discours des banques centrales  
+
+Ces événements peuvent provoquer de très fortes volatilités sur les devises.  
+
+
+ Ce que font la plupart des traders pro, pendant le trading ils ont souvent :  
+- Graphiques (TradingView ou MT4)  
+- Forex Factory / calendrier économique  
+- Bloomberg ou Reuters headlines  
+
+
+
+---
+
 **Tips**
 
 Quand un marché monte, il ne monte jamais en ligne droite. Il fait :  
