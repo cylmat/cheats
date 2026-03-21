@@ -148,14 +148,14 @@ Ils utilisent :
 Plus importantes que la stratégie!     
 Même la meilleure stratégie ne fonctionne pas sans discipline.   
 
-Risquer 1 % maximum du capital par trade !  
-Position : acheter ou vendre selon la tendance  
-Ne pas overtrader: Pas plus de 3 à 5 trades par session  
-Ne pas “chasser” le marché si pas de configuration claire  
-Stop Loss : sous le support / MM50 (long) ou au-dessus de résistance (short)  
-Take Profit : 2 à 3 fois la distance du stop (ratio gain/perte ≥ 1:2)  
+- Risquer 1 % maximum du capital par trade !  
+- Position : acheter ou vendre selon la tendance  
+- Ne pas overtrader: Pas plus de 3 à 5 trades par session  
+- Ne pas “chasser” le marché si pas de configuration claire  
+- Stop Loss : sous le support / MM50 (long) ou au-dessus de résistance (short)  
+- Take Profit : 2 à 3 fois la distance du stop (ratio gain/perte ≥ 1:2)  
 
-Et aussi
+Et aussi  
 Éviter le trading émotionnel  
 Ne pas trader sur des news majeures (risque volatilité extrême)  
 Tenir un journal de trading : date, heure, prix, stop, TP, résultat, notes  
