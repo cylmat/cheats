@@ -445,91 +445,91 @@ Ces événements peuvent provoquer de très fortes volatilités sur les devises.
 
 ⚡ **Daily**
 
-Voici les deux choses essentielles que la plupart des traders Forex suivent tous les jours :
-Les 5 annonces macro qui font le plus bouger le Forex
-Ces publications provoquent souvent les plus gros mouvements de marché (volatilité).
+Voici les deux choses essentielles que la plupart des traders Forex suivent tous les jours :  
+Les 5 annonces macro qui font le plus bouger le Forex  
+Ces publications provoquent souvent les plus gros mouvements de marché (volatilité).  
 
-1️⃣ Décisions de taux d’intérêt
+1️⃣ Décisions de taux d’intérêt  
 
-Quand une banque centrale change les taux, les devises bougent très fortement.
-Les principales banques à surveiller :
-Federal Reserve (USD)
-European Central Bank (EUR)
-Bank of England (GBP)
-Bank of Japan (JPY)
+Quand une banque centrale change les taux, les devises bougent très fortement.  
+Les principales banques à surveiller :  
+Federal Reserve (USD)   
+European Central Bank (EUR)  
+Bank of England (GBP)  
+Bank of Japan (JPY)  
 
-Pourquoi :
-Les taux influencent directement l’attractivité d’une devise pour les investisseurs.
-
-
-2️⃣ NFP – Non-Farm Payrolls (emploi américain)
-
-Publication mensuelle sur l’emploi aux États-Unis.
-Publié par le U.S. Bureau of Labor Statistics
-Impact majeur sur USD et toutes les paires Forex
-
-C’est souvent l’annonce la plus volatile du mois.
+Pourquoi :  
+Les taux influencent directement l’attractivité d’une devise pour les investisseurs.   
 
 
-3️⃣ Inflation (CPI)
+2️⃣ NFP – Non-Farm Payrolls (emploi américain)  
 
-L’indice des prix à la consommation indique si l’inflation monte ou baisse.
-Exemple :
-CPI américain
-CPI européen
+Publication mensuelle sur l’emploi aux États-Unis.  
+Publié par le U.S. Bureau of Labor Statistics  
+Impact majeur sur USD et toutes les paires Forex  
 
-Impact :
-Inflation élevée → possibilité de hausse des taux → devise peut monter.
+C’est souvent l’annonce la plus volatile du mois.  
+
+
+3️⃣ Inflation (CPI)  
+
+L’indice des prix à la consommation indique si l’inflation monte ou baisse.  
+Exemple :  
+CPI américain  
+CPI européen  
+
+Impact :  
+Inflation élevée → possibilité de hausse des taux → devise peut monter.  
 
 
 4️⃣ PIB (GDP)
 
-La croissance économique d’un pays.
-Un PIB fort peut soutenir la monnaie car il indique une économie solide.
+La croissance économique d’un pays.  
+Un PIB fort peut soutenir la monnaie car il indique une économie solide.  
 
 
-5️⃣ Discours des banques centrales
+5️⃣ Discours des banques centrales  
 
-Les discours des présidents peuvent faire bouger les marchés.
-Exemples connus :
-Jerome Powell
-Christine Lagarde
+Les discours des présidents peuvent faire bouger les marchés.  
+Exemples connus :  
+Jerome Powell  
+Christine Lagarde  
 
-Même une phrase sur l’inflation ou les taux peut faire bouger le Forex.
-
-
-
-- Les 3 sites gratuits que les traders Forex utilisent tous les jours
-
-1️⃣ TradingView
-
-Utilisé pour :
-graphiques
-analyse technique
-indicateurs
-
-C’est la plateforme graphique la plus populaire aujourd’hui.
+Même une phrase sur l’inflation ou les taux peut faire bouger le Forex.  
 
 
-2️⃣ Forex Factory
 
-Très célèbre pour son calendrier économique.
-Les traders regardent :
-annonces macro
-volatilité attendue
-impact (faible / moyen / fort)
+- Les 3 sites gratuits que les traders Forex utilisent tous les jours  
+ 
+1️⃣ TradingView  
 
-Beaucoup de traders laissent ce calendrier ouvert toute la journée.
+Utilisé pour :  
+graphiques  
+analyse technique  
+indicateurs  
+
+C’est la plateforme graphique la plus populaire aujourd’hui.  
 
 
-3️⃣ Investing.com
+2️⃣ Forex Factory  
 
-Permet de suivre :
-news macro
-calendrier économique
-indices
-matières premières
-devises
+Très célèbre pour son calendrier économique.  
+Les traders regardent :  
+annonces macro  
+volatilité attendue  
+impact (faible / moyen / fort)  
+
+Beaucoup de traders laissent ce calendrier ouvert toute la journée.  
+
+
+3️⃣ Investing.com  
+
+Permet de suivre :  
+news macro  
+calendrier économique  
+indices  
+matières premières  
+devises  
 
 C’est un hub complet pour les marchés.
 
