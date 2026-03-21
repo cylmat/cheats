@@ -137,20 +137,76 @@ Ils utilisent :
 - toujours une gestion du risque stricte
 - beaucoup de patience.
 
-
 **La stratégie la plus rentable sur le long terme est souvent**
 
 - trading de tendance
 - avec supports / résistances
 - et bonne gestion du risque
 
-**Les règles essentielles**  
+🥇 **Règles essentielles de gestion du risque**
 
-Plus importantes que la stratégie   
-Même la meilleure stratégie ne fonctionne pas sans discipline.     
+Plus importantes que la stratégie!     
+Même la meilleure stratégie ne fonctionne pas sans discipline.   
 
-Règles de base :
-- Risquer 1 % du capital par trade Ratio gain/perte minimum 1:2
-- Ne pas overtrader.
-- Éviter le trading émotionnel
+Risquer 1 % maximum du capital par trade !  
+Position : acheter ou vendre selon la tendance  
+Ne pas overtrader: Pas plus de 3 à 5 trades par session  
+Ne pas “chasser” le marché si pas de configuration claire  
+Stop Loss : sous le support / MM50 (long) ou au-dessus de résistance (short)  
+Take Profit : 2 à 3 fois la distance du stop (ratio gain/perte ≥ 1:2)  
+
+Et aussi
+Éviter le trading émotionnel  
+Ne pas trader sur des news majeures (risque volatilité extrême)  
+Tenir un journal de trading : date, heure, prix, stop, TP, résultat, notes  
+Confirmer le signal avec RSI ou stochastique pour plus de précision  
+Patience : attendre le bon signal plutôt que de multiplier les trades  
+Acheter après une correction. Ne pas acheter au sommet.  
+
+---
+
+# PLAN DE TRADE
+
+Une stratégie forex sur 15 minutes (scalping ou du day trading).
+
+**Configuration de base**
+
+- Unité de temps : 15 minutes (M15)
+- Paires forex recommandées : EUR/USD, GBP/USD, USD/JPY
+Indicateurs :
+- Moyenne mobile 50 EMA (exponentielle)
+- Moyenne mobile 200 EMA
+- Niveaux de support et résistance récents
+
+**Détecter la tendance**
+
+On ne trade que dans le sens de la tendance pour réduire le risque.
+- Haussière : 50 EMA au-dessus de 200 EMA
+- Baissière : 50 EMA en dessous de 200 EMA
+
+**Identifier les zones d’entrée**
+
+- Chercher un retracement vers la MM50 ou un support/résistance clé
+- Confirmer avec une bougie d’avalement ou marteau (reversal)
+- Haussière : marteau, avalement haussier
+- Baissière : étoile filante, avalement baissier
+
+Exemple d’entrée :
+- Tendance haussière (50 EMA > 200 EMA)
+- Le prix recule vers la MM50 ou un support
+- Bougie haussière de retournement → entrée long
+
+**Stop Loss et Take Profit**
+
+- Stop Loss : juste sous le support / bougie d’entrée
+- Take Profit : 2 à 3 fois le risque (ratio 1:2 ou 1:3)
+
+Exemple :  
+Risque = 10 pips → Take Profit = 20–30 pips
+
+✅ Avantages: 
+- Simple à suivre
+- Basée sur la tendance → moins de faux signaux
+- Adaptée aux traders débutants et intermédiaires
+- Fonctionne bien sur EUR/USD, GBP/USD, USD/JPY
 
