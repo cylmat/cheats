@@ -1,5 +1,50 @@
 # Trading mémo
 
+## ⚡ Daily
+
+Les annonces macro qui font le plus bouger le Forex
+
+**Décisions de taux d’intérêt**
+
+- Federal Reserve (USD), European Central Bank (EUR)
+- Bank of England (GBP), Bank of Japan (JPY)
+
+**NFP – Non-Farm Payrolls (emploi américain)**
+
+- Publication mensuelle sur l’emploi aux États-Unis.
+- Publié par le U.S. Bureau of Labor Statistics
+
+**Inflation (CPI)**
+
+L’indice des prix à la consommation indique si l’inflation monte ou baisse.  
+- CPI américain, CPI européen
+
+**PIB (GDP)**
+
+La croissance économique d’un pays.  
+
+**Discours des banques centrales**
+
+Les discours des présidents peuvent faire bouger les marchés. 
+
+**Forex Factory**
+
+- annonces macro
+- volatilité attendue
+- impact (faible / moyen / fort)
+
+**Investing.com** 
+- Bloomberg
+- Reuters
+
+Permet de suivre :
+- news macro
+- calendrier économique
+- indices
+- matières premières
+- devises
+
+
 ## Patterns
 
 Les 5 patterns de trading les plus connus
@@ -141,6 +186,7 @@ Ils utilisent :
 
 - trading de tendance
 - avec supports / résistances
+- acheter lors d'une correction, pas au sommet
 - et bonne gestion du risque
 
 🥇 **Règles essentielles de gestion du risque**
