@@ -8,12 +8,13 @@ Les 5 patterns de trading les plus connus
 
 Signal de retournement haussier. Structure :  
 - le prix tombe
-- rebond
-- retombe au même niveau
-- repart à la hausse.
-Les traders achètent au breakout.
+- rebond  
+- retombe au même niveau  
+- repart à la hausse.  
+Les traders achètent au breakout.   
 
-**Double Top (double sommet)**
+**Double Top (double sommet)**  
+
 Inverse du précédent. Deux sommets au même niveau, cassure du support.   
 - Signal baissier.
 
