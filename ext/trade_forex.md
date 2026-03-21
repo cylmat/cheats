@@ -8,7 +8,7 @@ Prédire les mouvements du Forex n’est jamais sûr à 100 %, mais les traders 
 C’est la méthode la plus utilisée par les traders.  
 Elle consiste à analyser les graphiques de prix pour repérer des tendances ou des schémas qui se répètent.  
 Les traders regardent par exemple :  
-les tendances (hausse ou baisse  
+les tendances (hausse ou baisse)  
 les supports et résistances (zones où le prix rebondit souvent)  
 les indicateurs techniques comme :    
 RSI   
