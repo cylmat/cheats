@@ -260,6 +260,16 @@ interface ISuccessModalProps {
 
 var led = prompt("which one")
 
+### Reload page
+
+ Detect page reload
+```
+  let navEntry: PerformanceNavigationTiming = window?.performance?.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    if (navEntry?.type === "reload") {
+        console.log("Page was reloaded");
+    }
+```
+
 ### sleep
 
 ```
