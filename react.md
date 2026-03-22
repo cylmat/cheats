@@ -199,6 +199,38 @@ const LoadingWrapper = ({ children, isLoading }: Props): JSX.Element => {
 };
 ```
 
+### Loader
+
+Easy way to handle values and errors  
+// status comment: undefined -> value or null (error)  
+// better : const [error, setError] = useState(false)  
+// best : const [state, setState] = useState<"loading, error, success">({ status: "loading" })  
+```
+const [comments, setComments] = useState<IIncidentComments[]|null>()
+const [loaderComments, setLoaderComments] = useState<boolean>(false)
+
+getData(() => {
+        setLoaderComment(true)
+        setComments(undefined)
+
+        try {
+              DataService.getComments()
+                     .then((res) => {
+                           if (!data?.comments?.length) { setComments([]) }
+                           else setComments(data.comments))
+                      )
+         } catch (err) {
+               setComments(null)
+         }
+})
+
+useEffect(() => {
+        if (undefined !== comments) {
+            setLoaderComments(false)
+        }
+    }, [comments])
+```
+
 ### Local install
 
 utiliser un widget comme dépendance en local
