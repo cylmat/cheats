@@ -176,6 +176,12 @@ export default defineConfig(({ command, mode }) => {
 })
 ```
 
+### history change
+
+```
+window.history.pushState({}, '', '/app-incidents/' + incidentId);
+```
+
 ### Interface
 
 ```
