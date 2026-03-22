@@ -1,3 +1,26 @@
+# Windows
+
+### Shortcuts
+
+```
+Win + S                → instant search (apps, files, settings)
+Win + V                → multi-copy history + pin items
+Win + . (or Win + ;)   → Emoji panel
+Win + L                → Lock
+Win + , (hold)         → Peek desktop
+
+Win + ← / →            →  snap left/right
+Win + ↑ / ↓            →  maximize/minimize
+Win + Z                →  open snap layouts (super useful on Windows 11)
+Win + Ctrl + D         →  new desktop
+Win + Ctrl + ← / →     →  switch desktops
+
+Win + Shift + S        → Better screenshot tool
+Win + G                → Game bar (screen recording)
+Win + R                → Run dialog
+Ctrl + Shift + V       → Paste as plain text (in many apps)
+```
+
 ### RUN linux command
 
 ```
