@@ -364,6 +364,65 @@ export const GroupedTemplates = {
         const currentRequest = useSelector((state: any) => state.request.currentRequest)
 ```
 
+### Store easy 
+
+without context
+```
+use state without REACT redux
+
+// ---
+// APP/list.reducer.js
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+export interface ListType {
+    currentPage ?: number,
+    fromDetail ?: boolean;
+}
+
+const initialState: ListType = {
+    currentPage : 1,
+    fromDetail: false,
+};
+
+const listSlice = createSlice({
+    name: "list",
+    initialState,
+    reducers: {
+        setCurrentListPage: (state, action: PayloadAction<ListType>) => {
+            state.currentPage = action.payload.currentPage;
+        },
+        setComingFromDetail: (state, action: PayloadAction<ListType>) => {
+console.log(action)
+            state.fromDetail = action.payload.fromDetail;
+        },
+    },
+});
+
+export const { setCurrentListPage, setComingFromDetail } = listSlice.actions;
+export default listSlice.reducer;
+
+// ---
+// APP/store.js
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import listReducer from "./list.reducer";
+
+const rootReducer = combineReducers({
+    listReducer
+});
+const store = configureStore({
+    reducer: rootReducer,
+});
+
+export type RootState = ReturnType<typeof rootReducer>;
+export default store;
+
+// ---
+// usage:
+
+store.dispatch(setComingFromDetail({ fromDetail: true }));
+console.log(store.getState().listReducer.fromDetail)
+```
+
 ### Query & form
 
 ```
