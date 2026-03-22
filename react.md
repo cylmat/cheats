@@ -330,6 +330,9 @@ useState to re-render with same objects : stringify or spread it
 update state
 ```
  setFormValues(prevFormValues => ({ ...prevFormValues, [characteristic]: valueData[characteristic] }))
+
+ setTriggerChangeIndustrialSite((prev) => !prev)
+
 ```
 
 ### Reducer
