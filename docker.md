@@ -156,14 +156,24 @@ docker volume rm $(docker volume ls -qf dangling=true)
 
 # Error
 
-- bug on windows:
-~/.docker/config.json change credsStore to credStore
+bug on windows:
+```
+~/.docker/config.json -> change credsStore to credStore
+```
 
-* if HOST NOT FOUND  
+_zshz_update_datafile:print:57: write error: no space left on device
+```
+docker system df
+docker system prune -a --volumes
+```
+
+if HOST NOT FOUND
+```
 in /etc/wsl.conf:  
 Remove/add [network] generateResolvConf = false
+```
 
-* Error "is the daemon running ?"
+Error "is the daemon running ?"
 ```
 - journalctl -xeu docker.service
    - docker.service: Start request repeated too quickly.
