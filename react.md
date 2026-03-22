@@ -331,8 +331,7 @@ update state
 ```
  setFormValues(prevFormValues => ({ ...prevFormValues, [characteristic]: valueData[characteristic] }))
 
- setTriggerChangeIndustrialSite((prev) => !prev)
-
+ setTriggerChange((prev) => !prev)
 ```
 
 ### Reducer
