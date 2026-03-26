@@ -45,6 +45,14 @@ new DateInterval ('PT24H')    -> 24 hours
 for ($l = array(1,1), $i = 2, $x = 0; $i < $length; $i++)
 ```
 
+## JMS
+
+ jms for display time, not using php default timezone
+```
+#[JMS\Type("DateTimeImmutable<'Y-m-d\\TH:i:s\\Z', 'UTC'>")]
+#[JMS\Type("DateTimeImmutable<'c', 'UTC'>")]
+```
+
 ## map text as callback name:   
 ```
 array_map('intval', preg_split('/ /', $arr_temp, -1, PREG_SPLIT_NO_EMPTY));
