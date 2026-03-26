@@ -1,5 +1,11 @@
 # Date
 
+Règle d'or pour le stockage des dates (par exemple pour événement récurrent)
+```
+1. Toujours stocker la date au format UTC
+2. Toujours stocker la time zone au format Iana (ex Europe/Paris) et non pas en chiffre qui peut changer au cours de l'année (ex +2 en été)
+```
+
 Industry-standard Best practice: Server-Store UTC (Z time) -> Client-Display local    
 
 A. Store, calculate, compare, and log in UTC.  
