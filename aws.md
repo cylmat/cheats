@@ -1,6 +1,6 @@
 # AWS
 
-#### lambda function
+### lambda function
 
 ```
 console.log('Loading function');
@@ -26,3 +26,20 @@ export const handler = async (event, context) => {
     // throw new Error('Something went wrong');
 };
 ```
+
+### SES (Mod'op)
+
+1. Configurer une identité (domain)
+
+2. Creer le sous domain "aws".mydomain.com dans Ovh
+
+3. Placer les 3 CNAME dans Ovh pour aws.mydomain.com
+
+(attention aux doublons aws.mydomain.com.mydomain.com)
+```
+375upx6f._domainkey.aws.mydomain.com IN CNAME 375upx6f.dkim.amazonses.com.
+  et
+_dmarc.host.fr.    0 	DMARC 	v=DMARC1; p=none; aspf=r
+```
+
+4. 
