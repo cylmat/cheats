@@ -5,6 +5,12 @@
 ```
 console.log('Loading function');
 
+// When S3 bucket send event to lambda, this is the event body
+/*array (
+  '{"Records":_{"eventVersion":"2_1","eventSource":"aws:s3","awsRegion":"eu-west-3","eventTime":"18:54:38_999Z","eventName":"ObjectCreated:Put","userIdentity":{"principalId":"AWS:ARO"},"requestParameters":{"sourceIPAddress":"10_143"},"responseElements":{"x-amz-request-id":"10DZ","x-amz-id-2":"HlwHArs' => '"},"s3":{"s3SchemaVersion":"1.0","configurationId":"call-lambda-email","bucket":{"name":"stockage-ses","ownerIdentity":{"principalId":"A3"},"arn":"arn:aws:s3:::stockage-email-ses"},"object":{"key":"import/p5qr1","size":6222,"eTag":"0e2b155","sequencer":"006F8"}}}]}',
+)*/
+
+
 export const handler = async (event, context) => {
     //console.log('Received event:', JSON.stringify(event, null, 2));
     console.log('value1 =', event.key1);
