@@ -7,6 +7,7 @@ import axios from "axios"
 import {S3Client, paginateListBuckets, paginateListObjectsV2, GetObjectCommand} from '@aws-sdk/client-s3';
 
 // @https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/getting-started.html
+// @https://mintlify.wiki/aws/aws-sdk-js-v3/api/s3#getobjectcommand-download-an-object
 const s3client = new S3Client({ region: 'eu-west-3' }); 
 
 // When S3 bucket send event to lambda, this is the event body
