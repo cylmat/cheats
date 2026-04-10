@@ -3,7 +3,11 @@
 ### lambda function
 
 ```
-console.log('Loading function');
+import axios from "axios"
+import {S3Client, paginateListBuckets, paginateListObjectsV2, GetObjectCommand} from '@aws-sdk/client-s3';
+
+// @https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/getting-started.html
+const s3client = new S3Client({ region: 'eu-west-3' }); 
 
 // When S3 bucket send event to lambda, this is the event body
 /*array (
@@ -12,10 +16,38 @@ console.log('Loading function');
 
 
 export const handler = async (event, context) => {
-    //console.log('Received event:', JSON.stringify(event, null, 2));
-    console.log('value1 =', event.key1);
-    console.log('value2 =', event.key2);
-    console.log('value3 =', event.key3);
+    try {
+    
+
+    for (const record of event.Records) {
+        const bucket = record.s3.bucket.name
+        const key = decodeURIComponent(record.s3.object.key.replace(/\+/, ' '))
+        
+        const params = {
+          Bucket: bucket,
+          Key: key
+        }
+        const s3Response = await s3client.send(
+          new GetObjectCommand(params)
+        )
+
+        const body = await s3Response.Body?.transformToString(); //.toString('utf-8'); 
+
+        await axios.post("https://myresponsehost.com/api.php", JSON.stringify({
+          "params": params,
+          "body":body
+        }))
+          
+        console.log('body', body);
+      }
+       
+    } catch (err) {
+        console.error('AXIOS ERROR', err)
+    }
+      return "ok4"
+   
+    // throw new Error('Something went wrong');
+}
 
     return   {
         statusCode: 201,
