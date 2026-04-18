@@ -1,5 +1,6 @@
 ZSH DAILY - ONE FILE CHEAT
 ===
+- https://copperlight.github.io/shell/zsh-keyboard-shortcuts
 
 ## COMMAND LINE NAVIGATION
 - Ctrl+A : Move cursor to beginning of line
