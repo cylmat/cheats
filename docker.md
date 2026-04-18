@@ -8,6 +8,13 @@ docker compose down --remove-orphans
 docker compose -f 'docker-compose.yml' up -d --build
 ```
 
+from remote
+```
+# in case of manual build :
+docker build --tag dockerregistry.azurecr.io/sites:0.56.6  --build-arg BUILD_VERSION=0.56.6 .
+docker push dockerregistry.azurecr.io/sites:0.56.6
+```
+
 ### cli
 
 ```
