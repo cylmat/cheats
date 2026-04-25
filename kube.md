@@ -74,6 +74,15 @@ k -n user-request-int- logs user-request-xxxx
 API_KEY = $(shell kubectl -n container-int get secrets prj-secrets -o jsonpath="{.data.api-key}" | base64 --decode)
 ```
 
+### grep text in ALL pods
+
+```
+for pod in $(kubectl get pods --all-namespaces -o jsonpath='{.items[*].metadata.name}' | tr " " "\n" | grep -E "PODNAME"); do
+  echo "---- $pod ----"
+  kubectl exec  $pod -- grep -R "MYTEXT" src/ 2>/dev/null
+done 
+```
+
 ### install
 
 ```
