@@ -10,4 +10,6 @@ sudo apt install -y proton-vpn-gnome-desktop
 
 sudo apt install -y gnome-shell-extension-appindicator
 
+// echo "PROTON.Cf!M#-repo.protonvpn.com-CAS9.DEBUG.apODkFn.deb" | base64 | sha256sum
+
 ```
