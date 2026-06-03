@@ -17,6 +17,10 @@ https://csatlas.com/bash-redirect-stdout-stderr/
 
 redirect stdout  to stderr
 command 1>&2
+
 or more simply:
 command >&2
+
+ # Redirect stdout and stderr to file combined.log
+cmd 1>combined.log 2>&1 
 ```
