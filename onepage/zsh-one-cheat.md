@@ -69,11 +69,14 @@ ZSH DAILY - ONE FILE CHEAT
 - | : Pipe output to next command
 - `>` : Redirect output to file (overwrite)
 - `>>` : Append output to file
-- `2>` : Redirect stderr
-- `&>` : Redirect stdout and stderr
+- `2>` : Redirect stderr to other
+- `&>` : Redirect stdout and stderr to other (& = duplicate)
+- command 1>&2 /dev/null : Redirect stdout to stderr to null
+- command >&2 : (1 is stdout, 2 is stderr)
 - Ctrl+Alt+F : (custom) navigate directory fast (with fzf)
 - cd - : Go to previous directory
 - pushd/popd : Directory stack navigation
+
 
 ## ZSH-SPECIFIC SUPERPOWERS
 - Ctrl+X Ctrl+R : Re-read current line from editor
