@@ -71,8 +71,8 @@ ZSH DAILY - ONE FILE CHEAT
 - `>>` : Append output to file
 - `2>` : Redirect stderr to other
 - `&>` : Redirect stdout and stderr to other (& = duplicate)
-- command 1>&2 /dev/null : Redirect stdout to stderr to null
-- command >&2 : (1 is stdout, 2 is stderr)
+- command 1>&2 /dev/null : Redirect stdout to stderr
+- command  >&2 /dev/null : (same..)
 - Ctrl+Alt+F : (custom) navigate directory fast (with fzf)
 - cd - : Go to previous directory
 - pushd/popd : Directory stack navigation
