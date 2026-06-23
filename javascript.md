@@ -360,6 +360,7 @@ let user = JSON.parse( localStorage.user );
 ## info
 
 - https://www.reddit.com/r/UXDesign/comments/16ugv25/what_are_alternatives_to_atomic_design_language
+- https://medium.com/@rohitkuwar/javascript-es6-features-every-developer-should-know-0ab1ce227430
 
 UMD ≠ ESM:
 - ESM: https://webpack.js.org/guides/ecma-script-modules/ 
