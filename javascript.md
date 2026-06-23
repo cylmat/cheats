@@ -212,6 +212,15 @@ Object.entries(requestObject).forEach(([key, items]: [string, any]) => {
         })
 ```
 
+### number
+
+```
+let decNum: number = 10.6; // floating point number
+let binNum: number = 0b101001; // binary number
+let octNum: number = 0o45; // octal number
+let hexNum: number = 0x80fd; // hexadecimal number
+```
+
 ### NULLable !
 
 - @https://blog.logrocket.com/understanding-exclamation-mark-typescript/  
