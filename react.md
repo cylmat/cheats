@@ -19,6 +19,10 @@
 - rjsf-team.github.io/react-jsonschema-form/
 ```
 
+## advanced formation
+-  https://dyma.fr/formations/react
+- https://www.orsys.fr/formation-reactjs-programmation-avancee.html
+
 ## Best practices
 
 - https://fireart.studio/blog/9-react-best-practices-to-improve-your-react-code/
