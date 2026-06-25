@@ -1,13 +1,13 @@
 # CSS
 
-## Flex Golden Rules
+## 🟡 Flex Golden Rules
 
--> Flex Grid : Page layout     <-
--> Flex Flow : Elements inside <-
+-> Flex Grid : Page layout     <-  
+-> Flex Flow : Elements inside <-  
 -> Flex table: Data model      <-
 
 ```
-🟡 Layout Golden Rules (practical version)
+Layout Golden Rules (practical version)
 
 1. Use ONE layout system → prefer flex (avoid table for layout)
 
