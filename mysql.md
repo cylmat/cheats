@@ -5,37 +5,6 @@ mysql> source \home\user\Desktop\test.sql;
 mysql -h hostname -u user database < path/to/test.sql
 ```
 
-### dump
-
-```
-mysqldump -p -h host.azure.com -u username database_name > db_dump.sql
-```
-
-direct migration
-```
-mysqldump -pPasssss -h host.azure.com -u username database_name | mysql -h hostname -u user -pPawwww database2
-```
-
-### Procédures stockées / Fct
-
-```
-SELECT * FROM information_schema.routines
-
-SHOW FUNCTION STATUS like 'uuid_to_ouuid'
-```
-
-### Remote docker connection
-
-```
-docker run --rm -it mysql-client --image=mysql /bin/bash
-# inside pod:
-mysql --default-character-set=utf8 -h myhost -u "user" -ppass
-```
-
-```
-kubectl run --rm -it mysql-client --image=mysql:5.7 /bin/bash
-```
-
 ### Create user
 
 mysql -u root -e "
@@ -82,4 +51,43 @@ FROM indicator isi
 JOIN sites.indicator_type it ON isi.indicator_type_id = it.id
 WHERE iu.industrial_site_id = '20584b83'
 AND it.code LIKE 'C%';
+```
+
+### dump
+
+```
+mysqldump -p -h host.azure.com -u username database_name > db_dump.sql
+```
+
+direct migration
+```
+mysqldump -pPasssss -h host.azure.com -u username database_name | mysql -h hostname -u user -pPawwww database2
+```
+
+### Procédures stockées / Fct
+
+```
+SELECT * FROM information_schema.routines
+
+SHOW FUNCTION STATUS like 'uuid_to_ouuid'
+```
+
+### Remote docker connection
+
+```
+docker run --rm -it mysql-client --image=mysql /bin/bash
+# inside pod:
+mysql --default-character-set=utf8 -h myhost -u "user" -ppass
+```
+
+```
+kubectl run --rm -it mysql-client --image=mysql:5.7 /bin/bash
+```
+
+### update on the fly
+
+```
+update va_sites.indicator_subject
+set code=CONCAT(code,'-',value)
+where code='producer';
 ```
