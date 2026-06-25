@@ -2,9 +2,12 @@
 
 ## 🟡 Flex Golden Rules
 
--> Flex Grid : Page layout     <-  
--> Flex Flow : Elements inside <-  
--> Flex table: Data model      <-
+✅ The stable combo
+
+bootstrap (grid if needed, lightly)
+-> Flex Grid : Page layout     <-   + div grid (structure)
+-> Flex Flow : Elements inside <-   + flex (layout)
+-> Flex table: Data model      <-   + table (data only)
 
 ```
 Layout Golden Rules (practical version)
@@ -53,6 +56,33 @@ Scroll needs min-height: 0.
 ✅ flex parent with fixed height
 ✅ child flex: 1
 ✅ min-height: 0 + overflow
+```
+
+ | System        | Use it for                     | How it works                          | Height behavior                         | Golden rule                                   | Avoid when…                         |
+|--------------|-------------------------------|----------------------------------------|------------------------------------------|-----------------------------------------------|-------------------------------------|
+| table        | Tabular data (real tables)     | Browser-controlled layout              | Content-driven, hard to control          | Never use for layout                          | You need scroll / flex / resizing    |
+| bootstrap    | Page structure (grid)          | row = flex, col = flex items           | Needs parent height                      | Use for layout skeleton only                  | You need precise height control      |
+| div (block)  | Basic structure                | Stacks vertically                      | Auto height (content-based)              | Default building block                        | You need alignment or distribution   |
+| flex         | Layout, alignment, distribution| 1D layout (row OR column)              | Controlled via flex + parent height      | Your main layout tool                         | You need 2D grid (rare case)         |
+
+
+- Ultra-simple decision guide
+
+Need columns layout? → flex or bootstrap  
+Need precise control (scroll, fill, spacing)? → flex  
+Need simple stacking? → div  
+Need real data table? → table (ONLY here)  
+Height rules (the part that breaks everything)  
+
+```
+1. Height must come from ONE parent
+2. flex: 1 replaces height: 100%
+3. Scroll needs:
+   - flex: 1
+   - min-height: 0
+   - overflow: auto
+
+X -----------------> table + flex + bootstrap + height: 100% = chaos
 ```
 
 ### css flow
