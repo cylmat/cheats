@@ -1,5 +1,60 @@
 # CSS
 
+## Flex Golden Rules
+
+-> Flex Grid : Page layout     <-
+-> Flex Flow : Elements inside <-
+-> Flex table: Data model      <-
+
+```
+🟡 Layout Golden Rules (practical version)
+
+1. Use ONE layout system → prefer flex (avoid table for layout)
+
+2. Define height ONLY once (top container)
+   → example: height: 200px or height: 100%
+
+3. Never rely on height: 100% unless ALL parents have a height
+
+4. In flex:
+   - Parent → display: flex
+   - Growing child → flex: 1
+   (NOT height: 100%)
+
+5. For scrollable areas:
+   - flex: 1
+   - min-height: 0   ← REQUIRED
+   - overflow: auto
+
+6. If scroll doesn’t work:
+   → you forgot min-height: 0 somewhere
+
+7. Bootstrap:
+   - .row = flex container
+   - .col = flex item
+   → don’t fight it, extend it
+
+8. Tables:
+   - only for data
+   - never for layout
+-------
+One-line mental model
+
+Height comes from ONE parent.
+Space is distributed with flex.
+Scroll needs min-height: 0.
+------
+ for scrolling
+
+❌ table + height → unreliable
+❌ height: 100% chain → broken
+❌ no min-height: 0 → no scroll
+
+✅ flex parent with fixed height
+✅ child flex: 1
+✅ min-height: 0 + overflow
+```
+
 ### css flow
 
 ✅ why min-height-0 important: “You ARE allowed to shrink smaller than your content.”
