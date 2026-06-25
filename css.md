@@ -5,9 +5,9 @@
 ✅ The stable combo
 
 bootstrap (grid if needed, lightly)  
--> Flex Grid : Page layout     <-   + div grid (structure)  
--> Flex Flow : Elements inside <-   + flex (layout)  
--> Flex table: Data model      <-   + table (data only)  
+-> Flex Grid : Page layout     <-   div grid (structure)  
+-> Flex Flow : Elements inside <-   flex (layout)  
+-> Flex table: Data model      <-   table (data only)  
 
 ```
 Layout Golden Rules (practical version)
