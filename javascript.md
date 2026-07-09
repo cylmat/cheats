@@ -176,6 +176,19 @@ export default defineConfig(({ command, mode }) => {
 })
 ```
 
+### filter
+
+on mapping (item, item, undefined, item), use:     
+ .filter(Boolean) as Type  
+```
+const displayedModels: Widget[] = []
+  let p = Object.entries(widgetsConfig).map((item) => {
+         let widgetId = item[0]
+         return industrialSiteWidgets.find((w) => w.id === widgetId)
+     })
+  .filter(Boolean) as Widget[] // filter undefined and cast to Widget[]
+```
+
 ### history change
 
 ```
