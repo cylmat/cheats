@@ -88,6 +88,22 @@ doctrine:
  */
 ```
 
+### copy already exist entity children
+
+```
+(avoid modify when changing parent entity)
+
+ private function copyCurrentContacts(Site $updatedSite): void
+{
+    $currentSite = $this->getById($updatedSite->getId());
+    $updatedSite
+        ->getSiteDescription()
+            ->setContacts(
+                $currentSite->getSiteDescription()->getContacts(),
+            );
+}
+```
+
 ### DQL
 
 command line
