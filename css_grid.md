@@ -1,5 +1,8 @@
 # CSS
 
+- https://developer.mozilla.org/fr/docs/Web/CSS/Guides/Grid_layout
+- https://developer.mozilla.org/fr/docs/Web/CSS/Guides/Flexible_box_layout
+
 ## 🟡 Flex Golden Rules
 
 ✅ The stable combo
@@ -97,6 +100,69 @@ X -----------------> table + flex + bootstrap + height: 100% = chaos
     Legend replies: “too bad, I won’t shrink” ❌ 
     overflow: auto finally works ✅
 ```
+
+## Grid / box
+
+- display : grid pour la structure globale de la page
+- display : flex pour les alignements du reste
+
+Par exemple :
+```
+Page (Grid)
+├── Header (Flexbox)
+├── Sidebar
+├── Main
+│   ├── Toolbar (Flexbox)
+│   └── Cards (Grid)
+└── Footer
+```
+
+### CSS Alignment
+
+Avec Flexbox
+```
+Alignement sur l'axe principal :
+
+justify-content: center;
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly;
+justify-content: flex-end;
+
+Alignement sur l'axe secondaire :
+align-items: center;
+align-items: start;
+align-items: end;
+align-items: stretch;
+```
+
+Avec Grid
+```
+Alignement du contenu dans une cellule :
+justify-items: center;
+align-items: center;
+
+Alignement d'un élément particulier :
+justify-self: center;
+align-self: center;
+
+Raccourci :
+place-items: center;
+  ou
+place-self: center;
+```
+
+Avec BOX
+
+Ce qu'on rencontre le plus en pratique
+```
+    margin: 0 auto
+    text-align: center
+    display: flex + justify-content / align-items
+    display: grid + place-items
+    position: absolute / fixed
+```
+
 
 ### d-flex usages
 
