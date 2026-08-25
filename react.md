@@ -338,7 +338,15 @@ update state
  setTriggerChange((prev) => !prev)
 ```
 
+### Query & form
+
+```
+const { data, isError, isLoading, isSuccess } = useQuery(['organizations', my.id, queryFilter, currentPage], fetchData);
+
+```
+
 ### Reducer
+
 @ref: https://react-redux.js.org/api/hooks
 
 ```
@@ -429,14 +437,8 @@ store.dispatch(setComingFromDetail({ fromDetail: true }));
 console.log(store.getState().listReducer.fromDetail)
 ```
 
-### Query & form
-
-```
-const { data, isError, isLoading, isSuccess } = useQuery(['organizations', my.id, queryFilter, currentPage], fetchData);
-
-```
-
 ### STATE
+
 @https://react-redux.js.org/using-react-redux/connect-mapstate
 
 ```
@@ -473,6 +475,37 @@ const SvgDot: React.FunctionComponent<
 );
 
 export default SvgDot
+```
+
+```
+// app/node_modules/react-scripts/lib/react-app.d.ts
+
+declare module '*.svg' {
+  import * as React from 'react';
+
+  export const ReactComponent: React.FunctionComponent<React.SVGProps<
+    SVGSVGElement
+  > & { title?: string }>;
+
+  const src: string;
+  export default src;
+}
+
+////////// ou alors
+
+ // declare.d.ts
+
+declare module '*.svg' {
+  const svgUrl: string;
+  const svgComponent: SvgrComponent;
+
+  export { svgComponent as ReactComponent }
+}
+
+/////////// Usage.tsx
+
+import { ReactComponent as MetabaseLogo } from "../assets/icon/database_search.svg";
+import { ReactComponent as SignalLogo } from "../assets/icon/alert-diamond.svg";
 ```
 
 --- -----------------------------------------------------------------------------
