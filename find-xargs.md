@@ -2,6 +2,18 @@ Find | xargs
 ===
 ! @todo clear !
 
+### grep
+
+```
+# alternatives to grep on filenames
+
+find . -iname "*.jpg" -exec sh -c 'printf "%s\n" "$1" | grep concept' _ {} \;
+find . -iname "*.jpg" -print | grep 'concept'
+find . -iname "*.jpg" -printf '%f\n' | grep 'concept'
+find . -iname "*concept*.jpg"
+find . -iname "*.jpg" -print | grep concept
+```
+
 ## Samples
 - Find file from root 
 find / -name <file>
