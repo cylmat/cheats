@@ -344,6 +344,20 @@ const displayedModels: Widget[] = []
 window.history.pushState({}, '', '/app-incidents/' + incidentId);
 ```
 
+### image
+
+```
+ onLoad={() => {
+     URL.revokeObjectURL(file.preview)
+ }}
+
+if(isFileImage(file.type)) {
+     Object.assign(file, {
+         preview: URL.createObjectURL(file)
+     })
+ }
+```
+
 ### Interface
 
 ```
