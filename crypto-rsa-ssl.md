@@ -1,5 +1,7 @@
 # Generate key
 
+- https://httpd.apache.org/docs/2.4/fr/misc/password_encryptions.html
+
 ### apr1 (apache)
 
 ```
