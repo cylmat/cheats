@@ -1,5 +1,11 @@
 # Generate key
 
+### apr1 (apache)
+
+```
+openssl passwd -apr1 -salt zqp1ib8d g6Z2h8-1z2H7Ad8
+htpasswd -nbm user g6Z2h8-1z2H7Ad8 
+```
 
 ### rsa
 
