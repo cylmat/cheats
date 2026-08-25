@@ -1,6 +1,9 @@
 Find | xargs
 ===
+
 ! @todo clear !
+
+- https://www.everythingcli.org/find-exec-vs-find-xargs/
 
 ### grep
 
@@ -14,12 +17,29 @@ find . -iname "*concept*.jpg"
 find . -iname "*.jpg" -print | grep concept
 ```
 
+```
+ // cheat  SH
+sh -c 'COMMAND' name arg1 arg2 ...
+
+// will execute grep inside files (like grep -E "pattern" ./image.jpg)
+find . -iname "*.jpg" -exec grep -E "pattern" {} \;
+
+// will execute grep on filenames
+find . -iname "*.jpg" -print | grep -E "pattern" 
+
+// sh -c args
+find . -iname "*.jpg" -exec sh -c 'printf "%s\n" "$1" | grep -E "pattern"' _dummy {} \;
+```
+
 ## Samples
+
+```
 - Find file from root 
 find / -name <file>
 
 - Sed each .sh files
 find . -name "*.sh" -exec sed -i 's/search/replace/' {} \;
+```
 
 - test itération sur les fichiers logs
 find ./src -iregex '.*\.log$' -print0 | xargs -0 file  
@@ -45,9 +65,7 @@ find . -name 'test*' -exec echo {} \;
 where find . -name 'test*' -exec echo {} \+
 - ./test.c ./test.cpp ./test.new
 
----
-# sample
-- https://www.everythingcli.org/find-exec-vs-find-xargs/
+### sample
 
 1. Search within files
 Search for files only that end with .php and look for the string $test inside those files:
@@ -62,7 +80,6 @@ find . -name \*.php -type f -print0 | xargs -0 -n1 grep -Hn '$test'
 
 # time find -exec \;
 find . -name \*.php -type f -exec grep -Hn '$test' {} \; | wc -l
-  2213
 
 No difference either, let’s look at the commands in detail.
 1.1 What is equal in find -exec
