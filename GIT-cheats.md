@@ -3,7 +3,7 @@ Git Sample
 
 1. Configuration
     - Autocompletion
-2. Porcelain
+2. Branch and merge
 3. Plumbing
     - Submodules
     - Worktree
@@ -36,9 +36,10 @@ git config --global credential.helper 'store --file ~/.my-credentials'
 
 
 --------------------------------------------------------------------------------------
-## 2. Porcelain
+## 2. Branch and merge
 
-
+**Squash**
+`git merge --squash feature`
 
 --------------------------------------------------------------------------------------
 ## 3. Plumbing
