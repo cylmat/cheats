@@ -1,13 +1,8 @@
 Git Sample
 ==========
 
-1. Configuration
-    - Autocompletion
-2. Branch and merge
-3. Plumbing
-    - Submodules
-    - Worktree
-    - Other
+ref:
+- https://git-scm.com/docs
 
 --------------------------------------------------------------------------------------
 ## 1. Configuration
