@@ -1,11 +1,18 @@
 ### Build  
 
+### Build
+
 use https://hub.docker.com/r/moby/buildkit  
 ```
 docker build --pull --rm -f ".\Dockerfile" -t name:latest "api" --build-arg="ARG=VAL" --target base --build-context context=".\"
 
 docker compose down --remove-orphans
 docker compose -f 'docker-compose.yml' up -d --build
+```
+
+```
+ docker buildx --tag myregistry.azurecr.io/myimage:latest
+docker push myregistry.azurecr.io/myimage:latest
 ```
 
 from remote
