@@ -40,6 +40,42 @@ mkdir -p -m o=,ug=rwx alphadir
 (drwxrwx--- alphadir)
 ```
 
+### Process list of file
+
+```
+while IFS= read -r file; do
+    echo "Processing: $file"
+    # Replace this with your actual command:
+    chmod +x "$file"  # Example: make each file executable
+done < <(cat <<'EOF'
+./memory_prep/releases/19/backend/bin/composer
+./memory_prep/releases/17/backend/bin/composer
+./memory_prep/releases/18/backend/bin/composer
+EOF
+)
+
+# OR
+
+while read -r file; do
+    echo "process $file"
+done <<EOF
+/homez.230/composer
+/homez.230/.composer/2019-04-09_17-46-47-1.8.5-old.phar
+/homez.230/.composer/2021-04-01_10-14-59-2.0.12-old.phar
+EOF
+
+# from file
+
+while IFS= read -r file; do
+    echo "Running on: $file"
+    ./"$file"  # or any command
+done < composer_files.txt
+
+# or
+
+echo "$your_list" | xargs -I{} sh -c 'echo "Running: {}"; ./{}'
+```
+
 ### ROOT / SUDO
 
 @https://doc.ubuntu-fr.org/sudoers  
