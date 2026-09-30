@@ -217,3 +217,11 @@ solve:
 - systemctl daemon-reload
 - sudo service docker start
 ```
+
+### Zscaler
+
+```
+ COPY ZscalerIntermediateCertificate-2048-SHA256.crt /usr/local/share/ca-certificates
+COPY ZscalerRootCertificate-2048-SHA256.crt /usr/local/share/ca-certificates
+RUN chmod 644 /usr/local/share/ca-certificates/Zsc*  && update-ca-certificates 
+```
