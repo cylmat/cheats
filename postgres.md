@@ -1,15 +1,25 @@
-Sql  
+## Sql  
 ```
 psql -U postgres -c "CREATE DATABASE keycloak;";
 psql -U postgres keycloak < ./data/keycloak/keycloak.pgsql
 ```
 
-Dump  
+## Dump  
 ```
 pg_dump -U postgres keycloak > ./data/keycloak/keycloak.pgsql
 ```
 
-Sample SQL
+## Grant user
+```
+ CREATE USER sites_u WITH ENCRYPTED PASSWORD 'sites_p';
+    CREATE DATABASE sites_db;
+    ALTER DATABASE sites_indus_db OWNER TO sites_u;
+    ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO sites_u;
+    GRANT ALL PRIVILEGES ON DATABASE sites_db TO site_u;
+    GRANT ALL ON DATABASE sites_db TO sites_u;
+```
+
+## Sample SQL
 ```
  WITH cabinet_paths AS (
     SELECT
