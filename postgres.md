@@ -19,6 +19,52 @@ pg_dump -U postgres keycloak > ./data/keycloak/keycloak.pgsql
     GRANT ALL ON DATABASE sites_db TO sites_u;
 ```
 
+## WITH as a parallele select and JSON
+
+- WITH aggregated values 
+- COALESCE(subjects.subjects, '[]'::jsonb) AS subjects
+```
+WITH aggregated_values AS ( 
+        SELECT
+            grouped_subject.id AS grouped_subject_id,
+            grouped_subject.code AS grouped_subject_code,
+            DATE_TRUNC('month', iv.date_time_immutable AT TIME ZONE 'UTC') AS month_start,
+            SUM(COALESCE(iv.value_float, 0)) AS value_float
+        FROM indicator_value iv
+            LEFT JOIN industrial_site_indicator isi ON isi.id = iv.industrial_site_indicator_id
+            LEFT JOIN indicator_subject grouped_subject           ON grouped_subject.id = ivis.indicator_subject_id
+        WHERE iss.id = :industrialSiteId
+            AND grouped_subject.value IS NOT NULL
+        GROUP BY
+            grouped_subject.id, grouped_subject.code, grouped_subject.label, grouped_subject.value,
+            grouped_subject_type.code, grouped_subject_type.name,
+            DATE_TRUNC('month', iv.date_time_immutable AT TIME ZONE 'UTC')
+)
+
+            SELECT av.*, COALESCE(subjects.subjects, '[]'::jsonb) AS subjects
+            FROM aggregated_values av
+
+            LEFT JOIN LATERAL (
+                SELECT jsonb_agg(
+                DISTINCT jsonb_build_object(
+                    'code', s.code,
+                    'label', s.label,
+                    'value', s.value,
+                    'indicatorSubjectType', jsonb_build_object(
+                        'code', st.code,
+                        'name', st.name
+                    )
+                )
+            ) AS subjects
+                FROM indicator_value iv2
+                    LEFT JOIN indicator_value_indicator_subject ivis_group  ON ivis_group.indicator_value_id = iv2.id
+                    LEFT JOIN indicator_value_indicator_subject ivis_all    ON ivis_all.indicator_value_id = iv2.id
+                WHERE iv2.industrial_site_indicator_id = av.industrial_site_indicator_id
+                    AND DATE_TRUNC('month', iv2.date_time_immutable AT TIME ZONE 'UTC') = av.month_start
+                    AND ivis_group.indicator_subject_id = av.grouped_subject_id
+            ) subjects ON true
+```
+
 ## Sample SQL
 ```
  WITH cabinet_paths AS (
