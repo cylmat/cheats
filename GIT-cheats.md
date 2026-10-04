@@ -36,9 +36,7 @@ git config --global credential.helper 'store --file ~/.my-credentials'
 **Squash**
 `git merge --squash feature`
 
-## Common ancestor
-
-common point where branches are diverging
+**Common ancestor** (common point where branches are diverging)
 ```
 git merge-base HEAD feature/my-branch
 ```
