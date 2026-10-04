@@ -57,6 +57,11 @@ AND it.code LIKE 'C%';
 
 ```
 mysqldump -p -h host.azure.com -u username database_name > db_dump.sql
+
+  # or
+
+mysql -u root -p -e "CREATE DATABASE new_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+mysqldump -h old_host -u old_user -p --routines --triggers --events --single-transaction old_db | mysql -h new_host -u new_user -p new_db
 ```
 
 direct migration
