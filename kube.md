@@ -166,6 +166,30 @@ kubectl run --rm -it mysql-client --image=mysql:5.7 /bin/bash
 mysql --default-character-set=utf8 -h myhost -u "user" -ppass
 ```
 
+### remote postgres
+
+```
+# INT
+export NAMESPACE=zeus-int
+export POSTGRES_SERVICE_NAME=my.postgres.database.azure.com
+
+This is only required on WINDOWS Powershell: make sure $USER contains your username
+$USER = $env:UserName
+
+Create a socat container to tunnel to the postgres service
+This will run in foreground so you'll need a separate terminal to open the port-forward
+
+kubectl -n ${NAMESPACE} run postgres-tunnel-$USER -it --image=alpine/socat --tty --rm --expose=true --port=5432 tcp-listen:5432,fork,reuseaddr tcp-connect:${POSTGRES_SERVICE_NAME}:5432
+
+Open a port-forward to the socat container
+
+kubectl -n ${NAMESPACE} port-forward svc/postgres-tunnel-$USER 54320:5432
+
+Now you can connect using your favorite postgres client using
+- host: localhost
+- port: 54320
+```
+
 ### scale
 
 ```
