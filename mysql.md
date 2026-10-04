@@ -84,6 +84,15 @@ mysql --default-character-set=utf8 -h myhost -u "user" -ppass
 kubectl run --rm -it mysql-client --image=mysql:5.7 /bin/bash
 ```
 
+### rename database
+
+```
+CREATE DATABASE _legacy;
+
+SELECT concat ('rename table ', table_schema, '.',table_name,' to ', "_", table_schema, '.',table_name,';')
+FROM information_schema.tables WHERE table_schema = 'my_database'
+```
+
 ### update on the fly
 
 ```
