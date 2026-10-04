@@ -1,5 +1,8 @@
 ### Create project
 
+ref
+- https://www.developerway.com/posts/react-re-renders-guide
+
 ```
 - https://vitejs.dev
 - nextjs.org / https://remix.run
@@ -613,6 +616,29 @@ useEffect(() => {
   }
 ```
 
-## info
+## wrapper hook for router
 
-- https://www.developerway.com/posts/react-re-renders-guide
+```
+ import React from 'react'
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+
+function withRouter(Component: any) {
+  function ComponentWithRouterProps(props: any) {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const params = useParams();
+
+    return (
+      <Component
+        {...props}
+        router={{ location, navigate, params }}
+      />
+    );
+  }
+
+  return ComponentWithRouterProps;
+}
+
+export default withRouter;
+```
+
