@@ -268,6 +268,20 @@ const rootReducer = combineReducers({
 export type RootState = ReturnType<typeof rootReducer>
 ```
 
+### SVG module
+
+```
+ // interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
+
+declare module '*.svg' {
+  const svgUrl: string;
+  // const svgComponent: SvgrComponent;
+  const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
+  export default svgUrl;
+  export { ReactComponent }
+}
+```
+
 ### utilities
 
 ```
