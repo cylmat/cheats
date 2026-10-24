@@ -445,41 +445,6 @@ interface ISuccessModalProps {
 
 var led = prompt("which one")
 
-### Reload page
-
- Detect page reload
-```
-  let navEntry: PerformanceNavigationTiming = window?.performance?.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-    if (navEntry?.type === "reload") {
-        console.log("Page was reloaded");
-    }
-```
-
-### sleep
-
-```
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-Or as a one-liner:
-await new Promise(r => setTimeout(r, 2000));
-As a function:
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-or in Typescript:
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-use it as:
-await sleep(<duration>);
-```
-
-### sort and date
-
-```
-requests.sort(function(a: IPceRequest, b: IPceRequest) {
-    return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
-})
-```
-
 ### Promise
 
 ```
@@ -522,6 +487,47 @@ But since async functions automatically wrap their return value in a resolved pr
 async function f() { 
    return dynamicWidgets;
 }
+```
+
+### Reload page
+
+ Detect page reload
+```
+  let navEntry: PerformanceNavigationTiming = window?.performance?.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    if (navEntry?.type === "reload") {
+        console.log("Page was reloaded");
+    }
+```
+
+### sleep
+
+```
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+Or as a one-liner:
+await new Promise(r => setTimeout(r, 2000));
+As a function:
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+or in Typescript:
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+use it as:
+await sleep(<duration>);
+```
+
+### sort and date
+
+```
+requests.sort(function(a: IPceRequest, b: IPceRequest) {
+    return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+})
+```
+
+## trace
+
+```
+console.trace('who called me?')
 ```
 
 ### Storage
