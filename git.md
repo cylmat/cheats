@@ -18,3 +18,13 @@ git checkout --ours PATH/FILE
 
 grep -lr '<<<<<<<' . | xargs git checkout --ours
 ```
+
+### worktrees
+
+```
+api-recettes/                  (dépôt principal, branche main)
+    .trees/
+      fix-auth-401/                (agent Claude Code)
+      pagination-v2/                (agent Cursor)
+      tests-integration/            (agent Codex CLI)
+```
