@@ -1,5 +1,20 @@
 # JS
 
+### packages
+
+!!! MOST ERRORS COMES FROM NOT SAME VERSION OF PACKAGES !!!
+
+> ! Important ! <  
+Resolutions must fix same version for react (here react 16.14.x) and displayer (here: react-dom 16.14.x)
+
+use Resolutions:
+```
+"resolutions": {
+     "react-calendar": "3.9.0",
+     "react-date-picker": "9.0.0"
+ }
+```
+
 ### syntax sugar
 
 ```
