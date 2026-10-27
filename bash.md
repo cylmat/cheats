@@ -308,7 +308,7 @@ alias f=_f
 **Bash substitution**
 source <(sudo cat /etc/bash.bashrc)
 
-## Prompt
+### Prompt
 ```
 export PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
 PS2=>
@@ -316,7 +316,13 @@ PS3=
 PS4=+
 ```
 
-## Tr
+### SET
+
+```
+set -e active l’option errexit : le shell quitte le script si une commande — ou un pipeline — renvoie un code de sortie non nul, plutôt que de poursuivre. C’est une façon de repérer certains échecs tôt. 4
+```
+
+### Tr
 ```
 echo "Hello!" | tr "[:lower:]" "[:upper:]"
 HELLO!
