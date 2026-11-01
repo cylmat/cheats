@@ -22,6 +22,17 @@ curl "$REQUEST_URL/url" \
   -d "@data/fixtures/data.json"
 ```
 
+### MCP
+
+```
+curl -i -X POST 'https://api.githubcopilot.com/mcp/' \
+  -H "Authorization: Bearer github_pat_11.." \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json, text/event-stream' \
+  -H 'MCP-Protocol-Version: 2025-03-26' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"curl-test","version":"1.0"}}}'
+```
+
 **In target dir**   
 curl -fLo ~ /target/dir --create-dirs https://source-of.file
 
