@@ -1,5 +1,11 @@
 # Grep-Sed-Awk text processing
 
+ref
+- https://grep-sed-awk.com
+
+# this works:
+find . -name "*composer" -exec echo {} \; | grep "com"
+
 1. GSA
     - Grep
     - Sed
@@ -315,7 +321,8 @@ cat file.txt|tr –d ’ ’
 ## 3. Files
 
 ### Find
-https://man7.org/linux/man-pages/man1/find.1.html
+
+- https://man7.org/linux/man-pages/man1/find.1.html
 
 ```
 # Usage
@@ -351,6 +358,8 @@ find . -type f -iname '*.png' -exec bash -c 'mv "$0" "${0%.*}.jpg"' {} \;
 # Grouping to delete extension-specific files.
 find \( -iname "*.jpg" -or -iname "*.sfv" -or -iname "*.xspf" \) -type f -delete
 ```
+
+find . -name "*composer" -exec echo {} \; | grep "com"
 
 ### Xargs
 
