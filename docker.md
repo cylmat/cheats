@@ -122,6 +122,12 @@ networks:
       name: default_existing_networks
 ```
 
+### force recreate
+
+```
+docker compose up -d --force-recreate n8n
+```
+
 ### heredoc
 
 ```
