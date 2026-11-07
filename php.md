@@ -17,6 +17,9 @@ P[n]Y[n]M[n]DT[n]H[n]M[n]S   (ISO 8601 duration format)
 new DateInterval ('PT24H')    -> 24 hours
 ```
 
+Date format
+- https://www.php.net/manual/fr/datetime.formats.php
+
 ### form error full display
 
 ```
