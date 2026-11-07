@@ -211,6 +211,8 @@ box-sizing: border-box;
   --primary-brand: var(--green-default);
   --primary-brand-light: var(--green-default);
 }
+// or outside
+$signal: green
 ```
 
 ### selector 
