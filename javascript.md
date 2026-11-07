@@ -15,6 +15,18 @@ use Resolutions:
  }
 ```
 
+export 
+```
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index-for-browser.js",
+      "require": "./dist/cjs/index-for-node.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/styles.min.css"
+  },
+```
+
 ### syntax sugar
 
 ```
