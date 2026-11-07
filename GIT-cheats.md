@@ -3,6 +3,7 @@ Git Sample
 
 ref:
 - https://git-scm.com/docs
+- https://conventionalcommits.org
 
 --------------------------------------------------------------------------------------
 ## 1. Configuration
