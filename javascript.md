@@ -1,6 +1,6 @@
 # JS
 
-### packages
+## Packages
 
 !!! MOST ERRORS COMES FROM NOT SAME VERSION OF PACKAGES !!!
 
@@ -27,7 +27,15 @@ export
   },
 ```
 
-### syntax sugar
+git
+```
+{ "dependencies": { "package-name": "git+https://github.com/user/repo.git#commit-hash" } } 
+{ "dependencies": { "package-name": "git+ssh://git@github.com:user/repo.git#commit-hash" } }
+{ "dependencies": { "private-package": "git+https://<TOKEN>@github.com/username/repo.git#commit-hash" } }
+"@env/react-theme-components": "git+https://ghptoken@github.com/env/repo.git#hash", 
+```
+
+### Syntax sugar
 
 ```
  // Remove falsy values
