@@ -71,6 +71,22 @@ NEW_RELEASE=`git branch --all | grep -o '\(release\)/[0-9]*' | sort -V | tail -n
 Search in all files : git rev-list --all | xargs git grep -F '<Your search string>'
 ```
 
+### Range
+
+commit-range notations:
+```
+A..B means commits reachable from B but not from A,
+A...B means commits reachable from either side but not from their common ancestor.
+    git log A..B shows commits that are in B only.
+    git log A...B shows commits that are in A or B, but not both.
+    git diff A..B is effectively the same as comparing the two endpoints directly,
+        while git diff A...B compares B against the merge base of A and B.
+
+A practical way to think about it:
+    .. = what B has that A does not
+    ... = what changed on either side since they diverged
+```
+
 ---
 **@Ref**  
 - https://acompiler.com/git-tips
