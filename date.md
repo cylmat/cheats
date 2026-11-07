@@ -65,6 +65,10 @@ P[n]Y[n]M[n]DT[n]H[n]M[n]S   (ISO 8601 duration format)
 new DateInterval ('PT24H')    -> 24 hours
 ```
 
+## Format
+
+@https://www.php.net/manual/fr/datetime.formats.php
+
 ## Mysql !
 
 ```
