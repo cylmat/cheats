@@ -203,6 +203,16 @@ Modèle de boîte
 box-sizing: border-box;
 ```
 
+### root
+
+```
+:root {
+  --green-default: #9BCD41;
+  --primary-brand: var(--green-default);
+  --primary-brand-light: var(--green-default);
+}
+```
+
 ### selector 
 
 ```
