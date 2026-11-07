@@ -202,3 +202,13 @@ Modèle de boîte
 
 box-sizing: border-box;
 ```
+
+### selector 
+
+```
+ &.btn-small {
+    [class^='icon-bold'],  // class begin with "icon-bold"-xxxxxx
+    [class*='icon-bold']  // class contain xxx-"icon-bold"-xxxx
+}
+
+```
