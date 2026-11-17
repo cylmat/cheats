@@ -9,7 +9,5 @@ echo "0b14e71586b22e498eb20926c48c7b434b751149b1f2af9902ef1cfe6b03e180 protonvpn
 sudo apt install -y proton-vpn-gnome-desktop
 
 sudo apt install -y gnome-shell-extension-appindicator
-
-# echo "PROTON.repo.protonvpn.com-Cf!M#CAS9apODkFn.deb" | base64 | sha256sum
-# echo "tmp._hEt8JEH8i2n24Ks.backup" | base64 | sha256sum     
+     
 ```
